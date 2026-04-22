@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>早川まい | HP制作サンプルギャラリー</title>
+<meta name="description" content="早川まい（AI×Web制作フリーランス）が制作した業種別HP制作サンプル。8業種のプレミアムデザインをご覧いただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root { --ink:#0a1929; --accent:#cc785c; --paper:#fafaf8; --gray:#666; --border:rgba(10,25,41,0.08); }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);line-height:1.7;background:var(--paper);letter-spacing:0.03em;font-weight:300}
+a{color:inherit;text-decoration:none}
+
+.header{padding:100px 40px 60px;background:linear-gradient(135deg,#0a1929 0%,#1e3a5f 100%);color:white;text-align:center;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;inset:0;background-image:linear-gradient(45deg,transparent 49%,rgba(204,120,92,0.04) 49.5%,rgba(204,120,92,0.04) 50.5%,transparent 51%);background-size:60px 60px}
+.header-inner{position:relative;z-index:2}
+.header .badge{display:inline-block;padding:8px 20px;background:rgba(204,120,92,0.2);color:var(--accent);font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.4em;margin-bottom:28px;border-radius:30px;font-style:italic}
+.header h1{font-family:'Noto Serif JP',serif;font-size:clamp(32px,4.5vw,54px);font-weight:500;margin-bottom:20px;letter-spacing:0.1em}
+.header p{font-size:15px;opacity:0.9;max-width:700px;margin:0 auto 12px;line-height:2;letter-spacing:0.08em}
+.header .subtitle{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.5em;color:var(--accent);font-style:italic;margin-top:20px;opacity:0.95}
+
+main{max-width:1300px;margin:80px auto;padding:0 32px}
+.intro{text-align:center;max-width:780px;margin:0 auto 80px}
+.intro h2{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:500;margin-bottom:16px;letter-spacing:0.08em}
+.intro p{color:var(--gray);font-size:14px;line-height:2.1}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(10,25,41,0.06);transition:all 0.4s;border:1px solid var(--border)}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(10,25,41,0.12)}
+.card-thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:40px;color:white}
+.card-thumb-content{text-align:center;position:relative;z-index:2}
+.card-thumb .en{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.4em;opacity:0.75;font-style:italic;margin-bottom:10px;display:block}
+.card-thumb .jp{font-family:'Noto Serif JP',serif;font-size:28px;letter-spacing:0.15em;font-weight:500}
+.card-thumb-deco{position:absolute;font-family:'Cormorant Garamond',serif;font-size:200px;opacity:0.08;line-height:1;right:-20px;bottom:-40px;font-style:italic}
+
+.thumb-onsen{background:linear-gradient(135deg,#1a1207 0%,#2a1d10 50%,#0f0a05 100%)}
+.thumb-este{background:linear-gradient(135deg,#f4dcc5 0%,#c9a78f 50%,#a4826e 100%)}
+.thumb-seitai{background:linear-gradient(135deg,#1f2a2e 0%,#2d4a52 60%,#1f2a2e 100%)}
+.thumb-dental{background:linear-gradient(135deg,#0f4c5c 0%,#1b6f82 50%,#0f4c5c 100%)}
+.thumb-shigyo{background:linear-gradient(135deg,#0f1d30 0%,#1b2f4a 60%,#0f1d30 100%)}
+.thumb-biyoushitsu{background:linear-gradient(135deg,#2c2622 0%,#3d332c 50%,#2c2622 100%)}
+.thumb-nail{background:linear-gradient(135deg,#faeff4 0%,#f4dce4 50%,#c58fa8 100%);color:#3b2b31 !important}
+.thumb-nail .en,.thumb-nail .jp,.thumb-nail .card-thumb-deco{color:#3b2b31 !important}
+.thumb-cafe{background:linear-gradient(135deg,#1a1a18 0%,#2c2a27 60%,#1a1a18 100%)}
+
+.card-body{padding:28px 28px 32px}
+.card-body .tag{display:inline-block;padding:4px 12px;background:rgba(204,120,92,0.1);color:var(--accent);font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.3em;font-style:italic;border-radius:12px;margin-bottom:14px}
+.card-body h3{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:500;margin-bottom:8px;letter-spacing:0.05em}
+.card-body .sub{font-size:12px;color:var(--gray);letter-spacing:0.1em;margin-bottom:18px}
+.card-body p{font-size:13px;color:var(--gray);line-height:2;margin-bottom:22px;min-height:52px}
+.card-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:13px;font-weight:500;letter-spacing:0.15em;transition:gap 0.3s}
+.card-link:hover{gap:14px}
+
+.cta{background:var(--ink);color:white;padding:100px 40px;text-align:center;margin-top:100px;border-radius:16px;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(204,120,92,0.15) 0%,transparent 50%)}
+.cta-inner{position:relative;z-index:2}
+.cta .eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.5em;color:var(--accent);font-style:italic;margin-bottom:20px}
+.cta h2{font-family:'Noto Serif JP',serif;font-size:clamp(28px,3.5vw,40px);font-weight:500;margin-bottom:16px;letter-spacing:0.08em}
+.cta p{opacity:0.9;max-width:640px;margin:0 auto 40px;line-height:2;letter-spacing:0.08em}
+.cta-price{display:inline-block;padding:12px 28px;background:rgba(204,120,92,0.15);border:1px solid var(--accent);color:var(--accent);font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:0.1em;margin-bottom:36px;border-radius:30px}
+.cta-btn{display:inline-block;padding:18px 48px;background:var(--accent);color:white;font-size:13px;letter-spacing:0.3em;font-weight:500;border-radius:30px;transition:all 0.3s}
+.cta-btn:hover{background:#b86b52;transform:translateY(-2px);box-shadow:0 10px 30px rgba(204,120,92,0.4)}
+
+.footer{padding:60px 40px 40px;text-align:center;font-size:11px;color:var(--gray);letter-spacing:0.2em;line-height:2.2}
+.footer a{color:var(--accent)}
+
+@media (max-width:700px){.header{padding:80px 20px 50px}main{margin:40px auto;padding:0 20px}.cta{padding:70px 24px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <span class="badge">HP DESIGN GALLERY</span>
+    <h1>業種別 HP 制作 サンプル</h1>
+    <p>早川まいが制作可能なHPのサンプル集。<br>各業種に最適化したプレミアムデザインをご確認いただけます。</p>
+    <div class="subtitle">── 8 INDUSTRY PATTERNS ──</div>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>デ ザ イ ン パ タ ー ン</h2>
+    <p>ホテル業界の「ホテルオークラ」や、サロン系の「botanicalpoolclub」などのトップティア制作会社と同等のクオリティ基準で制作。<br>業種ごとの顧客心理・競合差別化・ブランド訴求を徹底研究した上でデザインしています。</p>
+  </div>
+
+  <div class="gallery">
+
+    <a href="./onsen_v2.html" class="card">
+      <div class="card-thumb thumb-onsen">
+        <div class="card-thumb-deco">湯</div>
+        <div class="card-thumb-content">
+          <span class="en">KUSATSU · ONSEN</span>
+          <div class="jp">月宿 草津の里</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">HOTEL / RYOKAN</span>
+        <h3>温泉旅館</h3>
+        <div class="sub">全室源泉かけ流し・和モダン</div>
+        <p>ダーク和モダン。山のシルエット+湯けむり+青海波SVGで日本情緒を表現。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./este_v2.html" class="card">
+      <div class="card-thumb thumb-este">
+        <div class="card-thumb-deco">☆</div>
+        <div class="card-thumb-content">
+          <span class="en">FACIAL ATELIER</span>
+          <div class="jp">Atelier Lumiere</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">SALON / BEAUTY</span>
+        <h3>エステサロン</h3>
+        <div class="sub">恵比寿の隠れ家・完全個室</div>
+        <p>ローズゴールド系のフェミニン配色+花モチーフSVG。大人女性ターゲット。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./seitai_v2.html" class="card">
+      <div class="card-thumb thumb-seitai">
+        <div class="card-thumb-deco">整</div>
+        <div class="card-thumb-content">
+          <span class="en">AOBA SEITAI</span>
+          <div class="jp">あおば整体院</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">THERAPY / HEALTH</span>
+        <h3>整体院</h3>
+        <div class="sub">国家資格者・腰痛肩こり専門</div>
+        <p>ダークグリーン×オレンジ。信頼感と親しみやすさの両立。15,000人実績訴求。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./dental_v2.html" class="card">
+      <div class="card-thumb thumb-dental">
+        <div class="card-thumb-deco">W</div>
+        <div class="card-thumb-content">
+          <span class="en">EBISU WHITE DENTAL</span>
+          <div class="jp">恵比寿ホワイト<br>デンタル</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">MEDICAL / DENTAL</span>
+        <h3>歯科医院</h3>
+        <div class="sub">予防歯科×審美歯科 専門</div>
+        <p>ティール×ゴールド。清潔×ハイエンド。同心円ビジュアル「予防第一主義」。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./shigyo_v2.html" class="card">
+      <div class="card-thumb thumb-shigyo">
+        <div class="card-thumb-deco">T</div>
+        <div class="card-thumb-content">
+          <span class="en">TAKAHASHI TAX</span>
+          <div class="jp">高橋税理士事務所</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">PROFESSIONAL</span>
+        <h3>税理士・士業</h3>
+        <div class="sub">中小企業向け税務顧問</div>
+        <p>ネイビー×ゴールドの格調デザイン。20年実績・300社顧問の信頼訴求。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./biyoushitsu_v2.html" class="card">
+      <div class="card-thumb thumb-biyoushitsu">
+        <div class="card-thumb-deco">ao.</div>
+        <div class="card-thumb-content">
+          <span class="en">HAIR SALON ao.</span>
+          <div class="jp">大人のための美容室</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">HAIR SALON</span>
+        <h3>美容室</h3>
+        <div class="sub">完全個室・予約制・大人ターゲット</div>
+        <p>ブラウン×ローズゴールド。髪の流れを表現する有機的SVG。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./nail_v2.html" class="card">
+      <div class="card-thumb thumb-nail">
+        <div class="card-thumb-deco">✿</div>
+        <div class="card-thumb-content">
+          <span class="en">NAIL ATELIER BLANC</span>
+          <div class="jp">Blanc</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">NAIL SALON</span>
+        <h3>ネイルサロン</h3>
+        <div class="sub">完全個室・パラジェル対応</div>
+        <p>ピンク/ローズ+花モチーフSVG。女性経営者・個人店に最適。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+    <a href="./cafe_v2.html" class="card">
+      <div class="card-thumb thumb-cafe">
+        <div class="card-thumb-deco">M</div>
+        <div class="card-thumb-content">
+          <span class="en">CAFÉ MONOCHROME</span>
+          <div class="jp">自家焙煎</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="tag">CAFÉ / RESTAURANT</span>
+        <h3>カフェ・飲食</h3>
+        <div class="sub">スペシャルティコーヒー専門</div>
+        <p>ダークブラウン×ゴールド。コーヒー豆モチーフ+自家焙煎訴求。</p>
+        <span class="card-link">View Sample →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <section class="cta">
+    <div class="cta-inner">
+      <div class="eyebrow">── Pricing Plan ──</div>
+      <h2>初期 0円 / 月額 4,980円 で HP を。</h2>
+      <p>AIと Claude Code を駆使した制作で、業界最安値水準を実現。<br>デザイン・機能は他社40万円〜の制作会社と同等品質でお届けします。</p>
+      <div class="cta-price">初期 ¥0 · 月額 ¥4,980〜</div>
+      <br>
+      <a href="./mai_lp.html" class="cta-btn">料 金 詳 細 を 見 る</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  © 2026 早川まい | AI×Web制作フリーランス<br>
+  <a href="mailto:0622hayakawamai@gmail.com">0622hayakawamai@gmail.com</a>
+</footer>
+
+</body>
+</html>

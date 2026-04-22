@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高橋税理士事務所 | 日本橋の中小企業向け総合税務顧問</title>
+<meta name="description" content="中央区日本橋の税理士事務所。中小企業・個人事業主300社以上の顧問実績。税務顧問・決算申告・事業承継・相続税まで総合サポート。初回相談無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #111a2e;
+  --navy: #1b2f4a;
+  --navy-deep: #0f1d30;
+  --navy-light: #2a4261;
+  --gold: #b8925a;
+  --gold-light: #d4b485;
+  --gold-soft: #e8d4b0;
+  --cream: #faf6ef;
+  --paper: #f3ede0;
+  --white: #ffffff;
+  --gray: #7a7467;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Serif JP', serif; color: var(--ink); line-height: 2; letter-spacing: 0.05em; background: var(--cream); font-weight: 400; }
+a { color: inherit; text-decoration: none; }
+.en { font-family: 'Cormorant Garamond', serif; letter-spacing: 0.3em; font-weight: 400; }
+
+.sample-note { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--navy-deep); color: var(--gold-light); padding: 9px 24px; font-size: 12px; text-align: center; letter-spacing: 0.08em; border-bottom: 1px solid var(--gold); }
+.sample-note a { color: var(--gold-soft); text-decoration: underline; margin-left: 8px; }
+
+.nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; padding: 22px 60px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+.nav.scrolled { background: rgba(250,246,239,0.97); backdrop-filter: blur(20px); box-shadow: 0 1px 25px rgba(0,0,0,0.05); }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; letter-spacing: 0.3em; color: white; transition: color 0.3s; }
+.nav.scrolled .nav-logo { color: var(--navy); }
+.nav-logo .jp { display: block; font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 0.25em; margin-top: 4px; opacity: 0.85; font-weight: 500; }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 11px; letter-spacing: 0.4em; color: white; transition: color 0.3s; }
+.nav.scrolled .nav-link { color: var(--navy); }
+.nav-cta { padding: 10px 24px; background: var(--gold); color: white !important; font-weight: 500; font-family: 'Noto Sans JP', sans-serif; font-size: 12px; }
+.nav-cta:hover { background: var(--navy); }
+
+/* Hero */
+.hero { min-height: 100vh; padding: 140px 60px 80px; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 75% 25%, rgba(184,146,90,0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 25% 75%, rgba(42,66,97,0.4) 0%, transparent 55%),
+              linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-deep) 100%);
+  color: white; display: flex; align-items: center; }
+.hero::before { content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(45deg, transparent 48%, rgba(184,146,90,0.05) 48%, rgba(184,146,90,0.05) 52%, transparent 52%);
+  background-size: 60px 60px; opacity: 0.5; }
+.hero-svg { position: absolute; top: 0; right: 0; width: 50%; height: 100%; opacity: 0.15; pointer-events: none; }
+.hero-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 2; width: 100%; }
+.hero-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.55em; color: var(--gold-light); font-style: italic; margin-bottom: 36px; font-weight: 400; }
+.hero-eyebrow::before { content: ''; display: inline-block; width: 40px; height: 1px; background: var(--gold); vertical-align: middle; margin-right: 24px; }
+.hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 500; line-height: 1.55; margin-bottom: 32px; letter-spacing: 0.12em; }
+.hero h1 em { font-style: normal; color: var(--gold-light); }
+.hero-sub { font-size: 16px; line-height: 2.4; opacity: 0.9; margin-bottom: 56px; letter-spacing: 0.1em; font-weight: 400; }
+.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; padding-top: 40px; border-top: 1px solid rgba(184,146,90,0.3); }
+.hero-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 42px; color: var(--gold-light); line-height: 1; font-weight: 400; margin-bottom: 10px; letter-spacing: 0.02em; }
+.hero-stat .label { font-size: 11px; letter-spacing: 0.3em; opacity: 0.8; font-family: 'Noto Sans JP', sans-serif; }
+
+.hero-card { background: rgba(250,246,239,0.98); color: var(--ink); padding: 52px 44px; border-top: 3px solid var(--gold); box-shadow: 0 30px 80px rgba(0,0,0,0.35); position: relative; }
+.hero-card::before { content: ''; position: absolute; top: -1px; left: -1px; right: -1px; bottom: -1px; border: 1px solid var(--gold); pointer-events: none; opacity: 0.3; }
+.hero-card-label { font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 12px; font-weight: 500; }
+.hero-card h3 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 500; margin-bottom: 28px; letter-spacing: 0.12em; color: var(--navy); border-bottom: 1px dashed rgba(184,146,90,0.4); padding-bottom: 20px; }
+.hero-card dl { margin-bottom: 8px; }
+.hero-card dt { font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.3em; color: var(--gold); margin-top: 18px; font-weight: 500; }
+.hero-card dt:first-child { margin-top: 0; }
+.hero-card dd { font-size: 14px; color: var(--navy); padding-bottom: 12px; font-weight: 500; border-bottom: 1px dashed rgba(184,146,90,0.25); letter-spacing: 0.05em; }
+.hero-card .highlight { font-family: 'Cormorant Garamond', serif; color: #c74d3c; font-size: 28px; font-weight: 400; border: none; }
+
+section { padding: 140px 60px; }
+.section-head { text-align: center; margin-bottom: 90px; }
+.section-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.6em; color: var(--gold); font-weight: 400; font-style: italic; margin-bottom: 20px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 500; letter-spacing: 0.2em; color: var(--navy); }
+.section-line { width: 60px; height: 1px; background: var(--gold); margin: 36px auto; }
+
+/* Message */
+.message { background: var(--white); position: relative; overflow: hidden; }
+.message::before { content: ''; position: absolute; top: -100px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(184,146,90,0.08) 0%, transparent 70%); }
+.message-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: center; position: relative; }
+.message-visual { aspect-ratio: 3/4; background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 60%, var(--navy-deep) 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--gold); }
+.message-visual::before { content: ''; position: absolute; inset: 20px; border: 1px solid rgba(184,146,90,0.3); pointer-events: none; }
+.message-visual-content { text-align: center; color: var(--gold-light); }
+.message-visual-content .en { font-size: 13px; letter-spacing: 0.5em; margin-bottom: 16px; display: block; font-style: italic; opacity: 0.9; }
+.message-visual-content .jp { font-family: 'Noto Serif JP', serif; font-size: 28px; letter-spacing: 0.25em; line-height: 1.8; margin-bottom: 20px; font-weight: 400; }
+.message-visual-content .sub { font-size: 11px; letter-spacing: 0.3em; opacity: 0.7; font-family: 'Noto Sans JP', sans-serif; }
+.message-text h3 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.12em; color: var(--navy); }
+.message-title { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 36px; font-weight: 500; }
+.message-text p { font-size: 15px; line-height: 2.4; margin-bottom: 20px; color: var(--ink); }
+
+/* Service */
+.service { background: var(--paper); }
+.service-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service-card { background: var(--white); padding: 48px 36px; border-top: 3px solid var(--gold); transition: all 0.4s; position: relative; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(27,47,74,0.08); }
+.service-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.45em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+.service-card h3 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 500; color: var(--navy); margin-bottom: 16px; letter-spacing: 0.12em; padding-bottom: 16px; border-bottom: 1px dashed rgba(184,146,90,0.4); }
+.service-card p { font-size: 14px; line-height: 2.2; color: var(--ink); opacity: 0.85; margin-bottom: 20px; }
+.service-card ul { list-style: none; }
+.service-card ul li { font-size: 13px; padding: 4px 0 4px 20px; position: relative; color: var(--navy); letter-spacing: 0.05em; }
+.service-card ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+
+/* Strength */
+.strength { background: var(--navy); color: white; }
+.strength .section-title { color: white; }
+.strength-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.strength-item { text-align: center; padding: 0 12px; }
+.strength-item .num { font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--gold-light); line-height: 1; font-weight: 300; margin-bottom: 20px; }
+.strength-item h3 { font-family: 'Noto Serif JP', serif; font-size: 18px; margin-bottom: 14px; letter-spacing: 0.12em; color: var(--gold-light); font-weight: 500; }
+.strength-item p { font-size: 13px; line-height: 2.1; opacity: 0.88; letter-spacing: 0.03em; }
+
+/* Fee */
+.fee { background: var(--white); }
+.fee-table { max-width: 900px; margin: 0 auto; border-collapse: collapse; width: 100%; background: var(--cream); }
+.fee-table thead { background: var(--navy); }
+.fee-table thead th { padding: 20px; color: white; text-align: left; font-weight: 500; letter-spacing: 0.15em; font-family: 'Noto Serif JP', serif; }
+.fee-table tbody tr:nth-child(even) { background: var(--paper); }
+.fee-table td { padding: 20px; border-bottom: 1px solid rgba(184,146,90,0.2); font-size: 15px; }
+.fee-table .price { color: #c74d3c; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; letter-spacing: 0.02em; }
+
+/* Flow */
+.flow { background: var(--paper); }
+.flow-list { max-width: 900px; margin: 0 auto; }
+.flow-item { display: grid; grid-template-columns: 100px 1fr; gap: 40px; padding: 32px 0; border-bottom: 1px solid rgba(184,146,90,0.2); align-items: center; }
+.flow-item:last-child { border-bottom: none; }
+.flow-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; color: var(--gold); line-height: 1; font-weight: 300; }
+.flow-content h4 { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.15em; color: var(--navy); }
+.flow-content p { font-size: 14px; line-height: 2.1; color: var(--ink); opacity: 0.85; }
+
+/* Office info */
+.office { background: var(--cream); }
+.office-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.office-visual { aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--gold); }
+.office-visual::before { content: ''; position: absolute; inset: 24px; border: 1px solid rgba(184,146,90,0.3); }
+.office-visual-content { text-align: center; color: var(--gold-light); z-index: 2; }
+.office-visual-content .en { font-size: 16px; letter-spacing: 0.5em; margin-bottom: 12px; display: block; }
+.office-visual-content .jp { font-size: 20px; letter-spacing: 0.3em; }
+.office-info dl dt { font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.45em; color: var(--gold); margin-top: 24px; font-weight: 500; font-style: italic; }
+.office-info dl dt:first-child { margin-top: 0; }
+.office-info dl dd { padding: 10px 0; border-bottom: 1px dashed rgba(184,146,90,0.3); font-size: 15px; color: var(--navy); line-height: 2; }
+
+/* Contact */
+.contact { padding: 160px 60px; background:
+  radial-gradient(ellipse at 30% 40%, rgba(184,146,90,0.2) 0%, transparent 50%),
+  linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: white; text-align: center; position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(45deg, transparent 49%, rgba(184,146,90,0.04) 49.5%, rgba(184,146,90,0.04) 50.5%, transparent 51%);
+  background-size: 40px 40px; }
+.contact-inner { position: relative; z-index: 2; }
+.contact h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(30px, 4vw, 46px); color: white; margin-bottom: 24px; letter-spacing: 0.18em; font-weight: 500; }
+.contact p { max-width: 600px; margin: 0 auto 50px; opacity: 0.92; line-height: 2.3; letter-spacing: 0.1em; }
+.contact-tel { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 62px); color: var(--gold-light); font-weight: 300; letter-spacing: 0.12em; margin: 30px 0 14px; }
+.contact-hours { font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.5em; opacity: 0.75; margin-bottom: 56px; font-style: italic; }
+.contact-btn { padding: 20px 56px; background: var(--gold); color: white; font-size: 12px; letter-spacing: 0.4em; font-weight: 500; font-family: 'Noto Sans JP', sans-serif; transition: all 0.3s; }
+.contact-btn:hover { background: var(--gold-light); color: var(--navy); }
+
+.footer { background: #070d15; color: rgba(255,255,255,0.5); padding: 60px 60px 40px; text-align: center; font-size: 11px; letter-spacing: 0.2em; line-height: 2.2; border-top: 1px solid rgba(184,146,90,0.2); }
+.footer a { color: var(--gold-light); }
+
+@media (max-width: 900px) {
+  .nav { padding: 16px 24px; } .nav-links { gap: 16px; } .nav-link:not(.nav-cta) { display: none; }
+  .hero-inner { grid-template-columns: 1fr; padding: 120px 20px 60px; gap: 50px; }
+  section { padding: 100px 20px; }
+  .message-inner { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .strength-grid { grid-template-columns: 1fr 1fr; gap: 40px 20px; }
+  .office-inner { grid-template-columns: 1fr; }
+  .fee-table td { padding: 14px; font-size: 13px; }
+  .fee-table .price { font-size: 15px; }
+}
+
+
+/* Injected hero image v2 */
+.hero { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=85") !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+.hero-svg, .hero-bg { opacity: 0.25 !important; }
+</style>
+</head>
+<body>
+
+<div class="sample-note">これは「高橋税理士事務所」様向けに早川まいが制作した<strong>無料サンプルページ</strong>です <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">TAKAHASHI TAX<span class="jp">高橋税理士事務所</span></a>
+  <div class="nav-links">
+    <a href="#message" class="nav-link">MESSAGE</a>
+    <a href="#service" class="nav-link">SERVICE</a>
+    <a href="#fee" class="nav-link">FEE</a>
+    <a href="#office" class="nav-link">OFFICE</a>
+    <a href="#contact" class="nav-link nav-cta">無料相談</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <svg class="hero-svg" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#d4b485" stroke-width="0.8" opacity="0.7">
+      <path d="M 100 200 L 500 200 L 500 700 L 100 700 Z"/>
+      <path d="M 120 230 L 480 230"/>
+      <path d="M 120 270 L 350 270"/>
+      <path d="M 120 320 L 460 320"/>
+      <path d="M 120 360 L 380 360"/>
+      <path d="M 120 420 L 450 420"/>
+      <path d="M 120 470 L 320 470"/>
+      <path d="M 120 520 L 460 520"/>
+    </g>
+    <g stroke="#d4b485" stroke-width="0.5" fill="#d4b485" opacity="0.5">
+      <rect x="390" y="540" width="90" height="140"/>
+      <rect x="400" y="550" width="70" height="2"/>
+      <rect x="400" y="560" width="70" height="2"/>
+      <rect x="400" y="570" width="70" height="2"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">TAX & BUSINESS CONSULTING · SINCE 2005</div>
+      <h1>中小企業の数字を、<br>経営の<em>味方に。</em></h1>
+      <p class="hero-sub">創業20年、300社以上の顧問実績。<br>税務代行にとどまらない、経営パートナーとしてお客様に伴走いたします。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">300+</div><div class="label">CLIENTS</div></div>
+        <div class="hero-stat"><div class="num">20</div><div class="label">YEARS</div></div>
+        <div class="hero-stat"><div class="num">24h</div><div class="label">RESPONSE</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">── FIRST CONSULTATION ──</div>
+      <h3>初回相談</h3>
+      <dl>
+        <dt>FEE</dt><dd class="highlight">完全無料</dd>
+        <dt>TIME</dt><dd>60 〜 90 分</dd>
+        <dt>STYLE</dt><dd>対面 / オンライン選択可</dd>
+        <dt>CONTENTS</dt><dd>現状ヒアリング・税務診断・ご提案</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="message" id="message">
+  <div class="section-head">
+    <div class="section-eyebrow">Our Message</div>
+    <h2 class="section-title">ご 挨 拶</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="message-inner">
+    <div class="message-visual">
+      <div class="message-visual-content">
+        <span class="en">TAKAHASHI</span>
+        <div class="jp">高 橋<br>税 理 士</div>
+        <div class="sub">──  REPRESENTATIVE  ──</div>
+      </div>
+    </div>
+    <div class="message-text">
+      <h3>高橋 太郎</h3>
+      <div class="message-title">代表税理士 / 東京税理士会 日本橋支部所属</div>
+      <p>大手監査法人・税理士法人での勤務を経て、中小企業支援を志し2005年に独立。</p>
+      <p>顧問先は創業期の個人事業主から従業員100名規模の企業まで、業種を問わず300社以上。「数字で経営を強くする」をモットーに、税務代行だけにとどまらない経営パートナーとしてお客様に伴走しています。</p>
+      <p>「数字が苦手」「税理士は話しづらい」という経営者の声を数多く聞いてきました。だからこそ、専門用語を使わず、わかりやすく、正直にお伝えすることを何より大切にしています。</p>
+      <p>事業の成長フェーズに応じた最適な税務戦略から、資金繰り改善、事業承継、相続税対策まで、ワンストップでご支援いたします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="service" id="service">
+  <div class="section-head">
+    <div class="section-eyebrow">Our Services</div>
+    <h2 class="section-title">サ ー ビ ス</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="service-grid">
+    <article class="service-card">
+      <div class="service-num">SERVICE 01</div>
+      <h3>税務顧問</h3>
+      <p>月次決算から年次決算、税務申告までワンストップでサポート。経営の数字を味方につける仕組みをご提供します。</p>
+      <ul>
+        <li>月次記帳代行</li>
+        <li>決算・申告書作成</li>
+        <li>節税アドバイス</li>
+        <li>税務調査対応</li>
+      </ul>
+    </article>
+    <article class="service-card">
+      <div class="service-num">SERVICE 02</div>
+      <h3>開業・法人化支援</h3>
+      <p>個人開業から法人設立まで、立ち上げ期の煩雑な手続きを丁寧にサポート。事業計画書から融資までご相談ください。</p>
+      <ul>
+        <li>開業届・青色申告承認</li>
+        <li>法人設立登記サポート</li>
+        <li>融資・補助金申請</li>
+        <li>事業計画書作成</li>
+      </ul>
+    </article>
+    <article class="service-card">
+      <div class="service-num">SERVICE 03</div>
+      <h3>相続・事業承継</h3>
+      <p>大切な事業と資産を次世代へ。相続税対策から実行まで伴走します。早めのご相談が選択肢を広げます。</p>
+      <ul>
+        <li>相続税シミュレーション</li>
+        <li>事業承継計画策定</li>
+        <li>贈与税対策</li>
+        <li>株価評価</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="strength">
+  <div class="section-head">
+    <div class="section-eyebrow">Our Strength</div>
+    <h2 class="section-title">当 事 務 所 の 強 み</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="strength-grid">
+    <div class="strength-item"><div class="num">01</div><h3>経営の見える化</h3><p>クラウド会計導入による月次レポートで、経営判断をデータドリブンに</p></div>
+    <div class="strength-item"><div class="num">02</div><h3>24h 以内 返信</h3><p>お問合せは原則24時間以内に一次返信。即断即決の経営を支えます</p></div>
+    <div class="strength-item"><div class="num">03</div><h3>業種特化の知見</h3><p>飲食・建設・IT・不動産等、業種別の税務ノウハウで最適提案</p></div>
+    <div class="strength-item"><div class="num">04</div><h3>明朗会計</h3><p>顧問料は売上規模で明確に提示。後から追加請求は一切ありません</p></div>
+  </div>
+</section>
+
+<section class="fee" id="fee">
+  <div class="section-head">
+    <div class="section-eyebrow">Fee Structure</div>
+    <h2 class="section-title">料 金 プ ラ ン</h2>
+    <div class="section-line"></div>
+  </div>
+  <table class="fee-table">
+    <thead><tr><th>年商</th><th>顧問料（月額）</th><th>決算料</th></tr></thead>
+    <tbody>
+      <tr><td>〜1,000万円（個人事業主）</td><td class="price">¥15,000〜</td><td class="price">¥100,000</td></tr>
+      <tr><td>1,000〜3,000万円</td><td class="price">¥30,000〜</td><td class="price">¥150,000</td></tr>
+      <tr><td>3,000〜5,000万円</td><td class="price">¥40,000〜</td><td class="price">¥200,000</td></tr>
+      <tr><td>5,000万〜1億円</td><td class="price">¥50,000〜</td><td class="price">¥250,000</td></tr>
+      <tr><td>1億円以上</td><td class="price">ご相談</td><td class="price">ご相談</td></tr>
+    </tbody>
+  </table>
+  <p style="text-align:center; margin-top:24px; font-size:12px; color:var(--gray); letter-spacing:0.15em;">※ すべて税別表示 / 業種・取引規模により変動します</p>
+</section>
+
+<section class="flow">
+  <div class="section-head">
+    <div class="section-eyebrow">Contract Flow</div>
+    <h2 class="section-title">ご 契 約 ま で の 流 れ</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">01</div>
+      <div class="flow-content"><h4>お 問 合 せ</h4><p>電話・メール・フォームよりお気軽にご連絡ください。ご質問だけでも構いません。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">02</div>
+      <div class="flow-content"><h4>初 回 無 料 相 談（60〜90分）</h4><p>現状ヒアリングのうえ、最適なプランをご提案いたします。対面・オンライン選択可。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">03</div>
+      <div class="flow-content"><h4>お 見 積 り ・ ご 契 約</h4><p>ご納得いただけましたら顧問契約を締結し、業務開始となります。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">04</div>
+      <div class="flow-content"><h4>業 務 開 始</h4><p>月次業務から年次決算・税務申告まで、安心してお任せください。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="office" id="office">
+  <div class="section-head">
+    <div class="section-eyebrow">Office Information</div>
+    <h2 class="section-title">事 務 所 情 報</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="office-inner">
+    <div class="office-visual">
+      <div class="office-visual-content">
+        <span class="en">NIHONBASHI</span>
+        <span class="jp">日 本 橋</span>
+      </div>
+    </div>
+    <div class="office-info">
+      <dl>
+        <dt>NAME</dt><dd>高橋税理士事務所</dd>
+        <dt>REPRESENTATIVE</dt><dd>税理士 高橋 太郎（東京税理士会 日本橋支部）</dd>
+        <dt>ADDRESS</dt><dd>東京都中央区日本橋X-X-X 日本橋ビル 8F</dd>
+        <dt>ACCESS</dt><dd>東京メトロ銀座線・東西線 日本橋駅 A1出口 徒歩3分</dd>
+        <dt>HOURS</dt><dd>平日 9:00 - 18:00（土日祝休）</dd>
+        <dt>TEL</dt><dd>03-XXXX-XXXX</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-eyebrow" style="color: var(--gold-light);">Free Consultation</div>
+    <h2>初回相談は、無料です。</h2>
+    <div class="section-line" style="background: var(--gold-light);"></div>
+    <p>税務のことはもちろん、経営のご不安やお悩みもお気軽にお話しください。<br>初回相談はお客様にご納得いただいてからのご契約となりますので、ご安心ください。</p>
+    <div class="contact-tel">03 · XXXX · XXXX</div>
+    <div class="contact-hours">MON - FRI  9:00 - 18:00</div>
+    <a href="#" class="contact-btn">W E B フ ォ ー ム で 相 談</a>
+  </div>
+</section>
+
+<footer class="footer">
+  高橋税理士事務所 / 東京都中央区日本橋X-X-X 日本橋ビル 8F / TEL 03-XXXX-XXXX<br>
+  © 2026 Takahashi Tax Accounting Office. All Rights Reserved.<br><br>
+  このページは <a href="mailto:0622hayakawamai@gmail.com">早川まい（HP制作フリーランス）</a>によるサンプル提案です
+</footer>
+
+<script>window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 80));</script>
+</body>
+</html>

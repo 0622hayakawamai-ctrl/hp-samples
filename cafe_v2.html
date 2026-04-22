@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAFÉ Monochrome | 代々木公園の一軒家スペシャルティコーヒー</title>
+<meta name="description" content="代々木公園駅徒歩5分、築60年の古民家を改装したスペシャルティコーヒー専門店。シングルオリジン・自家焙煎・朝からのモーニング。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root { --ink:#1a1a18; --primary:#2c2a27; --wood:#6a5a4a; --kinari:#f5efe7; --cream:#e8dfcf; --accent:#b58948; --accent-soft:#d9b579; --white:#ffffff; --gray:#8a847b; }
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);line-height:2;letter-spacing:0.04em;background:var(--kinari);font-weight:300}a{color:inherit;text-decoration:none}.en{font-family:'Cormorant Garamond',serif;letter-spacing:0.3em;font-weight:400}
+.sample-note{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--primary);color:var(--accent-soft);padding:9px 24px;font-size:12px;text-align:center;letter-spacing:0.08em}.sample-note a{color:var(--accent-soft);text-decoration:underline;margin-left:8px}
+.nav{position:fixed;top:36px;left:0;right:0;z-index:100;padding:24px 60px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s}.nav.scrolled{background:rgba(245,239,231,0.97);backdrop-filter:blur(20px);box-shadow:0 1px 18px rgba(0,0,0,0.05)}.nav-logo{display:flex;align-items:center;gap:10px}.nav-logo-mark{width:30px;height:30px;border:1.5px solid var(--kinari);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--kinari);font-style:italic;transition:all 0.3s}.nav.scrolled .nav-logo-mark{border-color:var(--primary);color:var(--primary)}.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:0.4em;color:var(--kinari);transition:color 0.3s}.nav.scrolled .nav-logo-text{color:var(--primary)}.nav-links{display:flex;gap:40px;align-items:center}.nav-link{font-size:11px;letter-spacing:0.4em;color:var(--kinari);transition:color 0.3s}.nav.scrolled .nav-link{color:var(--primary)}.nav-cta{padding:10px 22px;background:var(--accent);color:white !important;font-weight:500}
+
+.hero{min-height:100vh;padding:140px 60px 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 25%,rgba(181,137,72,0.2) 0%,transparent 50%),radial-gradient(ellipse at 25% 75%,rgba(106,90,74,0.4) 0%,transparent 60%),linear-gradient(135deg,#1a1a18 0%,#2c2a27 60%,#1a1a18 100%);color:var(--kinari);display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='20' cy='30' r='1' fill='%23d9b579' opacity='0.15'/><circle cx='70' cy='60' r='1.5' fill='%23d9b579' opacity='0.1'/><circle cx='40' cy='80' r='0.8' fill='%23d9b579' opacity='0.12'/></svg>");background-size:200px 200px}
+.hero-svg{position:absolute;bottom:0;right:-10%;width:55%;height:70%;opacity:0.2;pointer-events:none}
+.hero-inner{max-width:1300px;margin:0 auto;position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.55em;color:var(--accent-soft);font-style:italic;margin-bottom:36px;font-weight:400}
+.hero-eyebrow::before{content:'';display:inline-block;width:40px;height:1px;background:var(--accent-soft);vertical-align:middle;margin-right:22px}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(40px,5.5vw,72px);font-weight:400;line-height:1.45;margin-bottom:40px;letter-spacing:0.06em}
+.hero h1 em{font-style:italic;color:var(--accent-soft);font-family:'Cormorant Garamond',serif;font-weight:300}
+.hero-sub{font-size:15px;line-height:2.4;opacity:0.88;margin-bottom:56px;letter-spacing:0.12em}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:40px;border-top:1px solid rgba(217,181,121,0.25)}
+.hero-stat .num{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--accent-soft);line-height:1;font-weight:300;margin-bottom:8px}
+.hero-stat .label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.4em;opacity:0.85;font-style:italic}
+.hero-visual{aspect-ratio:3/4;background:linear-gradient(170deg,#3a3632 0%,#1a1a18 100%);border:1px solid rgba(181,137,72,0.4);padding:40px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+.hero-visual::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(217,181,121,0.25)}
+.hero-visual::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(217,181,121,0.2)}
+.hero-visual-content{position:relative;z-index:2;color:var(--accent-soft)}
+.hero-visual-content .en{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:0.5em;font-style:italic;margin-bottom:12px;display:block;opacity:0.9}
+.hero-visual-content .jp{font-family:'Noto Serif JP',serif;font-size:28px;letter-spacing:0.25em;line-height:1.6;font-weight:400;margin-bottom:20px;color:var(--kinari)}
+.hero-visual-content .sub{font-size:11px;letter-spacing:0.35em;opacity:0.7}
+
+section{padding:140px 60px}.section-head{text-align:center;margin-bottom:90px}.section-eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.55em;color:var(--accent);font-style:italic;margin-bottom:20px;font-weight:400}.section-title{font-family:'Noto Serif JP',serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;letter-spacing:0.2em;color:var(--primary)}.section-line{width:40px;height:1px;background:var(--accent);margin:34px auto}
+
+.story{background:var(--white)}
+.story-inner{max-width:820px;margin:0 auto;text-align:center}
+.story p{font-size:17px;line-height:2.7;margin-bottom:26px;color:var(--ink);font-weight:300}
+.story em{font-style:italic;color:var(--accent);font-weight:500;letter-spacing:0.06em}
+
+.menu{background:var(--cream)}
+.menu-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.menu-section h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--accent);letter-spacing:0.3em;font-style:italic;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid rgba(181,137,72,0.3);font-weight:500}
+.menu-item{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px dashed rgba(181,137,72,0.2)}
+.menu-item:last-child{border-bottom:none}
+.menu-item-name{font-family:'Noto Serif JP',serif;font-size:15px;color:var(--primary);font-weight:400;letter-spacing:0.08em}
+.menu-item-name small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--gray);letter-spacing:0.05em;margin-top:2px;font-weight:300}
+.menu-item-price{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--accent);font-weight:400;letter-spacing:0.02em}
+
+.beans{background:var(--primary);color:var(--kinari)}.beans .section-title{color:var(--kinari)}.beans .section-eyebrow{color:var(--accent-soft)}
+.beans-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.bean-card{padding:40px 32px;background:rgba(245,239,231,0.05);border:1px solid rgba(217,181,121,0.2);transition:all 0.4s}.bean-card:hover{background:rgba(245,239,231,0.08);border-color:var(--accent-soft)}
+.bean-country{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.45em;color:var(--accent-soft);font-style:italic;margin-bottom:14px}
+.bean-card h3{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:400;margin-bottom:18px;letter-spacing:0.1em}
+.bean-card p{font-size:13px;line-height:2.1;opacity:0.85}
+.bean-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.bean-tag{font-size:10px;letter-spacing:0.2em;padding:4px 12px;border:1px solid rgba(217,181,121,0.4);color:var(--accent-soft)}
+
+.info{background:var(--kinari)}
+.info-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.info-visual{aspect-ratio:4/5;background:linear-gradient(160deg,var(--wood) 0%,var(--primary) 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:40px}
+.info-visual::before{content:'';position:absolute;inset:16px;border:1px solid rgba(217,181,121,0.3)}
+.info-visual-text{position:relative;z-index:2;text-align:center;color:var(--accent-soft)}
+.info-visual-text .en{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:0.5em;font-style:italic;display:block;margin-bottom:12px;opacity:0.9}
+.info-visual-text .jp{font-family:'Noto Serif JP',serif;font-size:32px;letter-spacing:0.3em;font-weight:400;color:var(--kinari)}
+.info-data dl dt{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.45em;color:var(--accent);font-style:italic;margin-top:24px;font-weight:500}
+.info-data dl dt:first-child{margin-top:0}
+.info-data dl dd{padding:10px 0;border-bottom:1px dashed rgba(181,137,72,0.25);font-size:14px;color:var(--primary);line-height:1.9}
+
+.visit{padding:160px 60px;background:radial-gradient(ellipse at 30% 40%,rgba(181,137,72,0.2) 0%,transparent 50%),linear-gradient(135deg,var(--primary) 0%,#1a1a18 100%);color:var(--kinari);text-align:center;position:relative;overflow:hidden}
+.visit::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><circle cx='30' cy='30' r='1' fill='%23d9b579' opacity='0.1'/></svg>");background-size:60px 60px}
+.visit-inner{position:relative;z-index:2}
+.visit h2{font-family:'Noto Serif JP',serif;font-size:clamp(30px,4vw,46px);color:var(--kinari);margin-bottom:24px;letter-spacing:0.2em;font-weight:400}
+.visit .section-line{background:var(--accent-soft)}
+.visit p{max-width:600px;margin:0 auto 50px;opacity:0.88;line-height:2.3;letter-spacing:0.1em}
+.visit-hours{font-family:'Noto Serif JP',serif;font-size:24px;color:var(--accent-soft);letter-spacing:0.2em;margin:30px 0 14px;font-weight:400}
+.visit-close{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.5em;opacity:0.75;margin-bottom:52px;font-style:italic}
+.visit-info{display:flex;gap:50px;justify-content:center;padding-top:36px;border-top:1px solid rgba(217,181,121,0.2);flex-wrap:wrap}
+.visit-info-item{text-align:left}.visit-info-item .label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.4em;color:var(--accent-soft);font-style:italic;margin-bottom:4px;display:block}.visit-info-item .value{font-size:14px;color:var(--kinari);letter-spacing:0.08em}
+
+.footer{background:#0c0c0b;color:rgba(245,239,231,0.5);padding:60px 60px 40px;text-align:center;font-size:11px;letter-spacing:0.2em;line-height:2.2}.footer a{color:var(--accent-soft)}
+
+@media (max-width:900px){.nav{padding:16px 24px}.nav-links{gap:16px}.nav-link:not(.nav-cta){display:none}.hero-inner{grid-template-columns:1fr;padding:120px 20px 60px;gap:40px}section{padding:100px 20px}.menu-grid{grid-template-columns:1fr}.beans-grid{grid-template-columns:1fr}.info-inner{grid-template-columns:1fr}.visit-info{gap:24px}}
+
+
+/* Injected hero image v2 */
+.hero { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=85") !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+.hero-svg, .hero-bg { opacity: 0.25 !important; }
+</style>
+</head>
+<body>
+<div class="sample-note">これは「CAFÉ Monochrome」様向けに早川まいが制作した<strong>無料サンプルページ</strong>です <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+<nav class="nav" id="nav"><a href="#" class="nav-logo"><span class="nav-logo-mark">M</span><span class="nav-logo-text">MONOCHROME</span></a><div class="nav-links"><a href="#story" class="nav-link">STORY</a><a href="#menu" class="nav-link">MENU</a><a href="#beans" class="nav-link">BEANS</a><a href="#info" class="nav-link">INFO</a><a href="#visit" class="nav-link nav-cta">VISIT</a></div></nav>
+
+<section class="hero">
+<svg class="hero-svg" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+<g fill="#d9b579" opacity="0.8">
+<path d="M 250 400 C 250 350 280 330 300 330 C 320 330 350 350 350 400 C 350 500 320 560 300 560 C 280 560 250 500 250 400 Z"/>
+<path d="M 300 330 Q 290 280 310 250" stroke="#d9b579" stroke-width="2" fill="none"/>
+</g>
+<g fill="none" stroke="#d9b579" stroke-width="0.8" opacity="0.5">
+<ellipse cx="300" cy="400" rx="120" ry="140"/>
+<ellipse cx="300" cy="400" rx="160" ry="180"/>
+</g>
+</svg>
+<div>
+<div class="hero-eyebrow">Specialty Coffee · Since 2019</div>
+<h1>一杯に、<br>静けさを淹れる。<em>— slow moment —</em></h1>
+<p class="hero-sub">代々木公園の裏道、築60年の古民家カフェ。<br>シングルオリジン豆と、木のぬくもりのある空間で、時間を忘れる朝を。</p>
+<div class="hero-stats"><div class="hero-stat"><div class="num">8:00</div><div class="label">OPEN</div></div><div class="hero-stat"><div class="num">100%</div><div class="label">SPECIALTY</div></div><div class="hero-stat"><div class="num">32</div><div class="label">SEATS</div></div></div>
+</div>
+<div class="hero-visual">
+<div class="hero-visual-content">
+<span class="en">Roasted In-House</span>
+<div class="jp">自 家 焙 煎</div>
+<div class="sub">── FRESHLY ROASTED DAILY ──</div>
+</div>
+</div>
+</section>
+
+<section class="story" id="story">
+<div class="section-head"><div class="section-eyebrow">Our Story</div><h2 class="section-title">想 い</h2><div class="section-line"></div></div>
+<div class="story-inner">
+<p>コーヒーは、時間を区切る儀式だと思う。</p>
+<p>一日を始める前の静かな15分。<br>仕事の合間、ほっと一息つく10分。<br><em>自分のためだけの時間</em>を、ゆっくり味わう。</p>
+<p>Monochromeは、そんな時間を過ごすための場所。<br>世界各地のスペシャルティコーヒー豆を自家焙煎し、<br>一杯ずつハンドドリップで丁寧に淹れます。</p>
+</div>
+</section>
+
+<section class="menu" id="menu">
+<div class="section-head"><div class="section-eyebrow">Our Menu</div><h2 class="section-title">メ ニ ュ ー</h2><div class="section-line"></div></div>
+<div class="menu-grid">
+<div class="menu-section">
+<h3>Coffee</h3>
+<div class="menu-item"><div class="menu-item-name">ハンドドリップ<small>シングルオリジン（選択制）</small></div><div class="menu-item-price">¥680</div></div>
+<div class="menu-item"><div class="menu-item-name">エスプレッソ<small>本日の豆ブレンド</small></div><div class="menu-item-price">¥450</div></div>
+<div class="menu-item"><div class="menu-item-name">カフェラテ<small>ラテアート付き</small></div><div class="menu-item-price">¥580</div></div>
+<div class="menu-item"><div class="menu-item-name">アイスコーヒー<small>水出し12時間</small></div><div class="menu-item-price">¥680</div></div>
+<div class="menu-item"><div class="menu-item-name">カプチーノ<small>ふんわりフォーム</small></div><div class="menu-item-price">¥580</div></div>
+</div>
+<div class="menu-section">
+<h3>Brunch</h3>
+<div class="menu-item"><div class="menu-item-name">モーニングプレート<small>8:00 - 11:00 限定</small></div><div class="menu-item-price">¥1,280</div></div>
+<div class="menu-item"><div class="menu-item-name">エッグベネディクト<small>自家製ハム + イングリッシュマフィン</small></div><div class="menu-item-price">¥1,580</div></div>
+<div class="menu-item"><div class="menu-item-name">アボカドトースト<small>全粒粉パン + 半熟卵</small></div><div class="menu-item-price">¥1,280</div></div>
+<div class="menu-item"><div class="menu-item-name">自家製グラノーラ<small>季節のフルーツ + ヨーグルト</small></div><div class="menu-item-price">¥980</div></div>
+<div class="menu-item"><div class="menu-item-name">パンケーキ<small>メープルシロップ + 季節のフルーツ</small></div><div class="menu-item-price">¥1,180</div></div>
+</div>
+</div>
+</section>
+
+<section class="beans" id="beans">
+<div class="section-head"><div class="section-eyebrow">Our Beans</div><h2 class="section-title">厳 選 豆</h2><div class="section-line"></div></div>
+<div class="beans-grid">
+<article class="bean-card">
+<div class="bean-country">ETHIOPIA · YIRGACHEFFE</div>
+<h3>エチオピア・イルガチェフェ</h3>
+<p>柑橘系の爽やかな酸味と、ジャスミンのような華やかなフローラルノート。ハンドドリップでその個性を最大限引き出します。</p>
+<div class="bean-tags"><span class="bean-tag">FLORAL</span><span class="bean-tag">CITRUS</span><span class="bean-tag">LIGHT ROAST</span></div>
+</article>
+<article class="bean-card">
+<div class="bean-country">COLOMBIA · HUILA</div>
+<h3>コロンビア・ウイラ</h3>
+<p>バランスの取れた優しい甘みと、チョコレートのようなコク。初めての方にもおすすめの一杯。</p>
+<div class="bean-tags"><span class="bean-tag">CHOCOLATE</span><span class="bean-tag">BALANCED</span><span class="bean-tag">MEDIUM</span></div>
+</article>
+<article class="bean-card">
+<div class="bean-country">KENYA · NYERI</div>
+<h3>ケニア・ニエリ</h3>
+<p>ベリー系のジューシーな酸味と、深いボディ感。コーヒー上級者に人気のしっかりめの一杯。</p>
+<div class="bean-tags"><span class="bean-tag">BERRY</span><span class="bean-tag">JUICY</span><span class="bean-tag">MEDIUM DARK</span></div>
+</article>
+</div>
+</section>
+
+<section class="info" id="info">
+<div class="section-head"><div class="section-eyebrow">About Us</div><h2 class="section-title">店 舗 情 報</h2><div class="section-line"></div></div>
+<div class="info-inner">
+<div class="info-visual"><div class="info-visual-text"><span class="en">Yoyogi Park</span><span class="jp">古 民 家</span></div></div>
+<div class="info-data">
+<dl>
+<dt>ADDRESS</dt><dd>東京都渋谷区富ヶ谷X-X-X</dd>
+<dt>ACCESS</dt><dd>小田急小田原線 代々木八幡駅 徒歩5分<br>東京メトロ千代田線 代々木公園駅 徒歩6分</dd>
+<dt>HOURS</dt><dd>Morning 8:00 - 11:00<br>Lunch 11:00 - 15:00<br>Cafe 15:00 - 19:00（L.O. 18:30）</dd>
+<dt>CLOSED</dt><dd>毎週月曜日</dd>
+<dt>PAYMENT</dt><dd>現金 / 各種カード / QR決済</dd>
+<dt>SEATS</dt><dd>32席（カウンター6 / テーブル26）</dd>
+</dl>
+</div>
+</div>
+</section>
+
+<section class="visit" id="visit">
+<div class="visit-inner">
+<div class="section-eyebrow" style="color:var(--accent-soft);">Visit Us</div>
+<h2>お 越 し を お 待 ち し て い ま す</h2>
+<div class="section-line"></div>
+<p>ご予約なしでもご来店いただけます。<br>4名様以上のグループは事前のご連絡をおすすめいたします。</p>
+<div class="visit-hours">OPEN 8:00 - 19:00</div>
+<div class="visit-close">CLOSED MONDAY</div>
+<div class="visit-info"><div class="visit-info-item"><span class="label">ADDRESS</span><span class="value">渋谷区富ヶ谷X-X-X</span></div><div class="visit-info-item"><span class="label">TEL</span><span class="value">03-XXXX-XXXX</span></div><div class="visit-info-item"><span class="label">INSTAGRAM</span><span class="value">@monochrome.cafe</span></div></div>
+</div>
+</section>
+
+<footer class="footer">CAFÉ Monochrome / 東京都渋谷区富ヶ谷X-X-X / TEL 03-XXXX-XXXX<br>© 2026 Monochrome Cafe. All Rights Reserved.<br><br>このページは <a href="mailto:0622hayakawamai@gmail.com">早川まい（HP制作フリーランス）</a>によるサンプル提案です</footer>
+<script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80));</script>
+</body>
+</html>

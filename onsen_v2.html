@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>月宿 草津の里 - 源泉かけ流しの全室露天風呂付き 草津温泉の隠れ宿</title>
+<meta name="description" content="草津温泉の山間に佇む全10室の小さな宿。全室に源泉かけ流し露天風呂、上州牛と地元野菜の創作会席、1泊2食38,000円から。大人の静寂と美食を愉しむ隠れ宿。">
+<meta property="og:title" content="月宿 草津の里">
+<meta property="og:description" content="草津温泉 全室露天風呂付きの隠れ宿">
+<meta property="og:image" content="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1611;
+  --gold: #b89968;
+  --gold-soft: #d4b485;
+  --paper: #faf6ef;
+  --cream: #f3ede0;
+  --wa-red: #6d2c1f;
+  --stone: #857a6c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Shippori Mincho', serif;
+  color: var(--ink);
+  line-height: 2;
+  background: var(--paper);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+.serif-en { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 0.15em; }
+
+/* Sample banner */
+.sample-note {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(26,22,17,0.95); color: var(--gold);
+  padding: 9px 24px; font-size: 12px; text-align: center;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(184,153,104,0.3);
+}
+.sample-note a { color: var(--gold-soft); text-decoration: underline; margin-left: 8px; }
+
+/* Navigation */
+.nav {
+  position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  padding: 24px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.4s;
+}
+.nav.scrolled { background: rgba(250,246,239,0.96); backdrop-filter: blur(20px); }
+.nav-logo { font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.25em; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.nav.scrolled .nav-logo { color: var(--ink); text-shadow: none; }
+.nav-links { display: flex; gap: 40px; align-items: center; }
+.nav-link { font-size: 12px; letter-spacing: 0.3em; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.nav.scrolled .nav-link { color: var(--ink); text-shadow: none; }
+.nav-cta { padding: 10px 24px; border: 1px solid rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 0.3em; transition: all 0.3s; }
+.nav-cta:hover { background: rgba(255,255,255,0.1); }
+.nav.scrolled .nav-cta { border-color: var(--ink); }
+.nav.scrolled .nav-cta:hover { background: var(--ink); color: var(--paper); }
+
+/* Hero */
+.hero {
+  height: 100vh; min-height: 700px;
+  position: relative; overflow: hidden;
+}
+.hero-mountain {
+  position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 60%; z-index: 1;
+  pointer-events: none;
+}
+.hero-steam {
+  position: absolute; bottom: 10%; left: 50%;
+  transform: translateX(-50%);
+  width: 60%; max-width: 600px; height: auto;
+  z-index: 1; pointer-events: none;
+  animation: steamDrift 8s ease-in-out infinite;
+}
+@keyframes steamDrift {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-48%) translateY(-20px); opacity: 0.85; }
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,8,5,0.4) 0%, rgba(10,8,5,0.2) 50%, rgba(10,8,5,0.85) 100%),
+    radial-gradient(ellipse at 70% 20%, rgba(184,153,104,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 80%, rgba(109,44,31,0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #1a1207 0%, #2a1d10 40%, #0f0a05 100%);
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,220,180,0.08) 0%, transparent 3%),
+    radial-gradient(circle at 80% 70%, rgba(255,220,180,0.06) 0%, transparent 2%),
+    radial-gradient(circle at 50% 50%, rgba(255,220,180,0.05) 0%, transparent 4%);
+  background-size: 600px 600px, 400px 400px, 800px 800px;
+  animation: drift 30s linear infinite;
+}
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-30px, -50px); }
+}
+.hero-bg::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(45deg, transparent 48%, rgba(184,153,104,0.05) 48%, rgba(184,153,104,0.05) 52%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(184,153,104,0.05) 48%, rgba(184,153,104,0.05) 52%, transparent 52%);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  color: white; text-align: center;
+  padding: 0 40px;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; letter-spacing: 0.5em;
+  margin-bottom: 50px;
+  opacity: 0.9;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: inline-block;
+  width: 40px; height: 1px; background: var(--gold-soft);
+  vertical-align: middle; margin: 0 24px;
+}
+.hero h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(42px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  margin-bottom: 40px;
+}
+.hero-sub {
+  font-size: clamp(13px, 1.2vw, 16px);
+  letter-spacing: 0.3em;
+  opacity: 0.95;
+  margin-bottom: 80px;
+  line-height: 2.5;
+}
+.hero-scroll {
+  position: absolute; bottom: 50px; left: 50%;
+  transform: translateX(-50%);
+  color: white; font-size: 10px;
+  letter-spacing: 0.4em;
+  writing-mode: vertical-rl;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+.hero-scroll::after {
+  content: ''; display: block;
+  width: 1px; height: 40px; background: white;
+  margin: 12px auto 0;
+}
+@keyframes scrollPulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+/* Story - 想い */
+.story {
+  padding: 140px 40px;
+  background: var(--paper);
+  position: relative;
+}
+.story-inner {
+  max-width: 780px; margin: 0 auto;
+  text-align: center;
+}
+.section-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.5em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.section-title::after {
+  content: ''; display: block;
+  width: 40px; height: 1px; background: var(--gold);
+  margin: 36px auto;
+}
+.story-text {
+  font-size: 16px; line-height: 2.6;
+  color: var(--ink); opacity: 0.85;
+  margin-bottom: 20px;
+}
+.story-text em {
+  font-style: normal;
+  color: var(--wa-red);
+  letter-spacing: 0.15em;
+}
+.story-signature {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--stone);
+  margin-top: 40px;
+}
+
+/* Onsen - 温泉 */
+.onsen {
+  padding: 140px 0 0;
+  background: var(--ink);
+  color: var(--paper);
+  position: relative;
+}
+.onsen-head { text-align: center; padding: 0 40px 80px; }
+.onsen-head .section-eyebrow { color: var(--gold); }
+.onsen-head .section-title { color: var(--paper); }
+.onsen-head .section-title::after { background: var(--gold); }
+.onsen-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2px;
+  background: rgba(184,153,104,0.15);
+}
+.onsen-cell { aspect-ratio: 3/4; position: relative; overflow: hidden; }
+.onsen-cell:nth-child(1) { grid-row: span 2; aspect-ratio: 3/5; }
+.onsen-cell { background: linear-gradient(135deg, #1a1207 0%, #2a1d10 50%, #0f0a05 100%); }
+.onsen-cell:nth-child(1) { background: linear-gradient(160deg, #2a1d10 0%, #3a2817 40%, #1a1207 100%); }
+.onsen-cell:nth-child(2) { background: linear-gradient(135deg, #1f1508 0%, #1a1207 100%); }
+.onsen-cell:nth-child(3) { background: linear-gradient(170deg, #2a1d10 0%, #0f0a05 100%); }
+.onsen-cell:nth-child(4) { background: linear-gradient(200deg, #1a1207 0%, #0f0a05 100%); }
+.onsen-cell:nth-child(5) { background: linear-gradient(145deg, #2a1d10 0%, #1f1508 100%); }
+.onsen-cell-deco {
+  position: absolute; top: 24px; left: 28px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 140px; font-weight: 400;
+  color: rgba(184,153,104,0.12);
+  line-height: 1; pointer-events: none;
+  z-index: 1;
+}
+.onsen-cell-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  opacity: 0.35; z-index: 0;
+}
+.onsen-cell img { display: none; }
+.onsen-cell:hover img { transform: scale(1.05); }
+.onsen-cell::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(26,22,17,0.85) 100%);
+  pointer-events: none;
+}
+.onsen-cell-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px 32px 28px; z-index: 2;
+  color: white;
+}
+.onsen-cell-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.4em;
+  color: var(--gold-soft);
+  margin-bottom: 8px;
+}
+.onsen-cell h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px; letter-spacing: 0.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.onsen-cell p {
+  font-size: 12px; line-height: 1.9;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+}
+
+/* Rooms - 客室 */
+.rooms {
+  padding: 140px 40px;
+  background: var(--paper);
+}
+.rooms-head { text-align: center; margin-bottom: 80px; }
+.rooms-list {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-direction: column;
+  gap: 80px;
+}
+.room-item {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px; align-items: center;
+}
+.room-item:nth-child(even) { direction: rtl; }
+.room-item:nth-child(even) > * { direction: ltr; }
+.room-photo {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+.room-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s; }
+.room-photo:hover img { transform: scale(1.04); }
+.room-info .room-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.5em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.room-info h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 30px; letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.room-info .room-meta {
+  display: flex; gap: 24px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(133,122,108,0.25);
+}
+.room-meta span {
+  font-size: 12px; color: var(--stone);
+  letter-spacing: 0.2em;
+}
+.room-info p {
+  font-size: 14px; line-height: 2.4;
+  color: var(--ink); opacity: 0.85;
+  margin-bottom: 32px;
+}
+.room-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px; color: var(--wa-red);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+.room-price small {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 13px; color: var(--ink);
+  margin-left: 12px;
+  letter-spacing: 0.15em;
+}
+
+/* Cuisine - 会席 */
+.cuisine {
+  padding: 140px 40px;
+  background: linear-gradient(135deg, #2a231a 0%, #1a1611 100%);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.cuisine::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(184,153,104,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(109,44,31,0.2) 0%, transparent 50%);
+}
+.cuisine-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  position: relative; z-index: 2;
+}
+.cuisine-text .section-eyebrow { color: var(--gold); }
+.cuisine-text .section-title { color: var(--paper); }
+.cuisine-text .section-title::after { background: var(--gold); margin: 36px 0; }
+.cuisine-text p {
+  font-size: 15px; line-height: 2.4;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+.cuisine-photo { aspect-ratio: 4/5; overflow: hidden; }
+.cuisine-photo img { width: 100%; height: 100%; object-fit: cover; }
+.cuisine-course {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(184,153,104,0.3);
+}
+.cuisine-course h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px; letter-spacing: 0.5em;
+  color: var(--gold-soft);
+  margin-bottom: 20px;
+}
+.cuisine-course ol {
+  list-style: none; counter-reset: course;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px 32px;
+}
+.cuisine-course li {
+  counter-increment: course;
+  font-size: 14px; letter-spacing: 0.15em;
+  padding-left: 32px; position: relative;
+}
+.cuisine-course li::before {
+  content: counter(course, decimal-leading-zero);
+  position: absolute; left: 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold); font-size: 12px;
+  letter-spacing: 0;
+}
+
+/* Guest voice - 滞在記 */
+.voice {
+  padding: 140px 40px;
+  background: var(--cream);
+}
+.voice-head { text-align: center; margin-bottom: 80px; }
+.voice-list {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.voice-item {
+  background: var(--paper);
+  padding: 48px 40px;
+  position: relative;
+}
+.voice-item::before {
+  content: '"'; position: absolute;
+  top: 12px; left: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px; color: var(--gold);
+  line-height: 1;
+}
+.voice-season {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.voice-text {
+  font-size: 14px; line-height: 2.2;
+  color: var(--ink); opacity: 0.9;
+  margin-bottom: 28px;
+  min-height: 140px;
+}
+.voice-guest {
+  font-size: 12px; color: var(--stone);
+  letter-spacing: 0.15em;
+  padding-top: 16px;
+  border-top: 1px solid rgba(133,122,108,0.2);
+}
+
+/* Info - 案内 */
+.info {
+  padding: 140px 40px;
+  background: var(--paper);
+}
+.info-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.info-photo { aspect-ratio: 4/5; overflow: hidden; }
+.info-photo img { width: 100%; height: 100%; object-fit: cover; }
+.info-data .section-title::after { margin: 36px 0; }
+.info-list { list-style: none; }
+.info-list li {
+  display: grid; grid-template-columns: 100px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(133,122,108,0.2);
+  font-size: 14px;
+}
+.info-list li strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--gold); font-weight: 400;
+}
+
+/* Reserve CTA */
+.reserve {
+  padding: 160px 40px;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(184,153,104,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(109,44,31,0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #1a1207 0%, #2a1d10 50%, #0f0a05 100%);
+  position: relative;
+  color: white; text-align: center;
+  overflow: hidden;
+}
+.reserve::after {
+  content: '湯'; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 600px; color: rgba(184,153,104,0.04);
+  line-height: 1; pointer-events: none;
+  z-index: 0;
+}
+.reserve::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(45deg, transparent 49%, rgba(184,153,104,0.04) 49%, rgba(184,153,104,0.04) 51%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, rgba(184,153,104,0.04) 49%, rgba(184,153,104,0.04) 51%, transparent 51%);
+  background-size: 30px 30px;
+}
+.reserve-inner { position: relative; z-index: 2; }
+.reserve .section-eyebrow { color: var(--gold-soft); }
+.reserve h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.reserve-msg {
+  font-size: 14px; line-height: 2.4;
+  max-width: 600px; margin: 0 auto 60px;
+  letter-spacing: 0.15em;
+  opacity: 0.95;
+}
+.reserve-tel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 60px);
+  color: var(--gold-soft);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 40px 0 24px;
+}
+.reserve-hours {
+  font-size: 11px; letter-spacing: 0.4em;
+  opacity: 0.8;
+  margin-bottom: 60px;
+}
+.reserve-btn {
+  display: inline-block;
+  padding: 22px 80px;
+  background: white; color: var(--ink);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 13px; letter-spacing: 0.5em;
+  transition: all 0.3s;
+}
+.reserve-btn:hover { background: var(--gold-soft); transform: translateY(-2px); }
+
+/* Footer */
+.footer {
+  background: #0c0a07;
+  color: rgba(250,246,239,0.5);
+  padding: 60px 40px 40px;
+  font-size: 11px; letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 2.2;
+}
+.footer a { color: var(--gold-soft); }
+
+@media (max-width: 860px) {
+  .nav { padding: 16px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-link:not(.nav-cta) { display: none; }
+  .onsen-grid { grid-template-columns: 1fr 1fr; }
+  .onsen-cell:nth-child(1) { grid-row: auto; aspect-ratio: 3/4; }
+  .room-item { grid-template-columns: 1fr; gap: 30px; }
+  .room-item:nth-child(even) { direction: ltr; }
+  .cuisine-inner { grid-template-columns: 1fr; }
+  .cuisine-course ol { grid-template-columns: 1fr; }
+  .voice-list { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Injected hero image v2 */
+.hero { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1545158181-52a9c2d4f56f?w=1920&q=85") !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+.hero-svg, .hero-bg { opacity: 0.25 !important; }
+</style>
+</head>
+<body>
+
+<div class="sample-note">
+  ⚠ これは「月宿 草津の里」様向けに早川まいが制作した<strong>無料サンプルページ</strong>です
+  <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">月宿 草津の里</div>
+  <div class="nav-links">
+    <a href="#onsen" class="nav-link">TEMPLE</a>
+    <a href="#rooms" class="nav-link">ROOMS</a>
+    <a href="#cuisine" class="nav-link">CUISINE</a>
+    <a href="#info" class="nav-link">INFO</a>
+    <a href="#reserve" class="nav-link nav-cta">RESERVATION</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-mountain" viewBox="0 0 1920 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,600 L0,400 Q200,350 400,380 Q600,410 700,300 Q820,180 960,250 Q1100,320 1250,270 Q1400,220 1550,310 Q1720,400 1920,350 L1920,600 Z" fill="rgba(26,18,7,0.6)"/>
+    <path d="M0,600 L0,480 Q300,440 550,460 Q780,480 920,400 Q1080,310 1280,380 Q1480,440 1920,410 L1920,600 Z" fill="rgba(15,10,5,0.8)"/>
+  </svg>
+  <svg class="hero-steam" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="blurS"><feGaussianBlur stdDeviation="15"/></filter>
+    </defs>
+    <g filter="url(#blurS)" opacity="0.25">
+      <circle cx="100" cy="300" r="80" fill="#d4b485"/>
+      <circle cx="200" cy="250" r="60" fill="#d4b485"/>
+      <circle cx="320" cy="220" r="70" fill="#d4b485"/>
+      <circle cx="450" cy="260" r="50" fill="#d4b485"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-eyebrow serif-en">KUSATSU ONSEN · EST. 1982</div>
+    <h1>山の奥に、<br>忘れられた<br>静けさがある</h1>
+    <p class="hero-sub">
+      全十室・源泉かけ流し露天風呂付き<br>
+      上州の食と、四十余年の時が育んだもてなし
+    </p>
+    <div class="hero-scroll serif-en">SCROLL</div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-inner">
+    <div class="section-eyebrow">OUR STORY</div>
+    <h2 class="section-title">想 い</h2>
+    <p class="story-text">
+      昭和五十七年、草津の山間に小さな宿を構えました。<br>
+      当初は三室、祖母が一人で客を迎えていたと聞きます。
+    </p>
+    <p class="story-text">
+      四十余年、<em>「時間を忘れていただくこと」</em>だけを考えてまいりました。<br>
+      効率も、利便性も、この宿には似合いません。<br>
+      源泉の温もり、地の食材、そして、ただ静かに流れる時間。
+    </p>
+    <p class="story-text">
+      どうぞ、何も持たずにいらしてください。<br>
+      必要なものは、すべてこの宿にあります。
+    </p>
+    <div class="story-signature">── 三代目主人　草津 和彦</div>
+  </div>
+</section>
+
+<section class="onsen" id="onsen">
+  <div class="onsen-head">
+    <div class="section-eyebrow">HOT SPRING</div>
+    <h2 class="section-title">湯 処</h2>
+  </div>
+  <div class="onsen-grid">
+    <div class="onsen-cell">
+      <svg class="onsen-cell-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+        <g stroke="rgba(184,153,104,0.3)" stroke-width="1" fill="none">
+          <path d="M0,320 Q50,280 100,320 T200,320 T300,320" />
+          <path d="M0,340 Q50,300 100,340 T200,340 T300,340" />
+          <path d="M0,360 Q50,320 100,360 T200,360 T300,360" />
+        </g>
+        <g fill="rgba(184,153,104,0.2)" opacity="0.5">
+          <circle cx="80" cy="200" r="20"/>
+          <circle cx="130" cy="170" r="30"/>
+          <circle cx="200" cy="210" r="25"/>
+        </g>
+        <g fill="rgba(250,246,239,0.9)">
+          <circle cx="220" cy="60" r="28"/>
+        </g>
+      </svg>
+      <div class="onsen-cell-deco">湯</div>
+      <div class="onsen-cell-content">
+        <div class="onsen-cell-num serif-en">01 / PREMIUM</div>
+        <h3>檜 の 露 天</h3>
+        <p>客室「月」に設けた、樹齢百年の木曽檜を使った露天。源泉「万代鉱」を直接引き、季節により湯温を調整いたします。</p>
+      </div>
+    </div>
+    <div class="onsen-cell">
+      <svg class="onsen-cell-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+        <g fill="rgba(184,153,104,0.25)">
+          <ellipse cx="60" cy="280" rx="50" ry="30"/>
+          <ellipse cx="150" cy="260" rx="70" ry="35"/>
+          <ellipse cx="240" cy="290" rx="55" ry="28"/>
+        </g>
+        <g stroke="rgba(184,153,104,0.3)" stroke-width="1" fill="none">
+          <path d="M0,360 Q75,340 150,360 T300,360" />
+        </g>
+      </svg>
+      <div class="onsen-cell-deco">岩</div>
+      <div class="onsen-cell-content">
+        <div class="onsen-cell-num serif-en">02</div>
+        <h3>大 岩 の 湯</h3>
+        <p>地元の浅間石を組んだ岩風呂。朝と夕で男女入替制。</p>
+      </div>
+    </div>
+    <div class="onsen-cell">
+      <svg class="onsen-cell-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="150" cy="150" r="60" fill="rgba(250,246,239,0.15)"/>
+        <circle cx="170" cy="140" r="50" fill="rgba(26,18,7,0.8)"/>
+      </svg>
+      <div class="onsen-cell-deco">月</div>
+      <div class="onsen-cell-content">
+        <div class="onsen-cell-num serif-en">03</div>
+        <h3>貸 切 「宵 待 月」</h3>
+        <p>四十五分無料。一日三組限定、事前予約制。</p>
+      </div>
+    </div>
+    <div class="onsen-cell">
+      <svg class="onsen-cell-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+        <g stroke="rgba(184,153,104,0.25)" stroke-width="1" fill="none">
+          <path d="M0,100 Q100,80 200,110 T400,105" />
+          <path d="M0,160 Q100,130 200,155 T400,150" />
+          <path d="M0,220 Q100,190 200,210 T400,205" />
+          <path d="M0,280 Q100,250 200,270 T400,265" />
+        </g>
+      </svg>
+      <div class="onsen-cell-deco">霧</div>
+      <div class="onsen-cell-content">
+        <div class="onsen-cell-num serif-en">04</div>
+        <h3>内 湯 「朝 霧」</h3>
+        <p>広々とした畳敷きの脱衣場から、檜造りの内湯へ。</p>
+      </div>
+    </div>
+    <div class="onsen-cell">
+      <svg class="onsen-cell-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+        <g fill="rgba(184,153,104,0.2)">
+          <path d="M40,400 L40,200 Q40,150 50,150 Q60,150 60,200 L60,400 Z"/>
+          <path d="M45,180 Q30,160 20,140 M55,160 Q70,140 80,125"/>
+          <path d="M42,220 Q25,200 15,180 M58,210 Q75,190 85,170"/>
+        </g>
+        <g stroke="rgba(184,153,104,0.3)" stroke-width="1" fill="rgba(184,153,104,0.1)">
+          <path d="M200,380 Q205,350 210,340 Q215,345 220,380 Z"/>
+          <path d="M230,380 Q235,330 240,310 Q245,320 250,380 Z"/>
+          <path d="M260,380 Q265,340 270,325 Q275,335 280,380 Z"/>
+        </g>
+      </svg>
+      <div class="onsen-cell-deco">松</div>
+      <div class="onsen-cell-content">
+        <div class="onsen-cell-num serif-en">05</div>
+        <h3>露 天 「松 籟」</h3>
+        <p>松林に面した、当宿最大の露天。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms">
+  <div class="rooms-head">
+    <div class="section-eyebrow">GUEST ROOMS</div>
+    <h2 class="section-title">客 室</h2>
+  </div>
+  <div class="rooms-list">
+    <article class="room-item">
+      <div class="room-photo" style="background: linear-gradient(135deg, #2a1d10 0%, #1a1207 100%); display:flex; align-items:center; justify-content:center;">
+        <div style="font-family: 'Shippori Mincho', serif; color: rgba(184,153,104,0.3); font-size: 180px; line-height: 1;">月</div>
+      </div>
+      <div class="room-info">
+        <div class="room-name-en">SUITE · TSUKI</div>
+        <h3>月 の 間</h3>
+        <div class="room-meta">
+          <span>60㎡</span>
+          <span>2名定員</span>
+          <span>檜 露天風呂</span>
+          <span>和室10畳+広縁</span>
+        </div>
+        <p>
+          本館最奥に位置する、客室全10室のなかで最も静寂な一室。<br>
+          窓からは草津の山々が望め、朝は鳥のさえずりで目覚めます。床の間には季節の掛軸を設え、お抹茶とお干菓子をお待ちしております。
+        </p>
+        <div class="room-price">¥38,000<small>/お一人様・1泊2食</small></div>
+      </div>
+    </article>
+
+    <article class="room-item">
+      <div class="room-photo" style="background: linear-gradient(135deg, #1f1508 0%, #2a1d10 100%); display:flex; align-items:center; justify-content:center;">
+        <div style="font-family: 'Shippori Mincho', serif; color: rgba(184,153,104,0.3); font-size: 180px; line-height: 1;">雪</div>
+      </div>
+      <div class="room-info">
+        <div class="room-name-en">DELUXE · YUKI</div>
+        <h3>雪 の 間</h3>
+        <div class="room-meta">
+          <span>75㎡</span>
+          <span>4名定員</span>
+          <span>石造 露天風呂</span>
+          <span>和洋室</span>
+        </div>
+        <p>
+          和室と洋間をつなぐ、三世代に選ばれる広さの客室。<br>
+          大きな石造り露天風呂は大人四名でゆったりお入りいただけます。お子様連れやご夫婦での記念旅行に選ばれることの多いお部屋です。
+        </p>
+        <div class="room-price">¥52,000<small>/お一人様・1泊2食</small></div>
+      </div>
+    </article>
+
+    <article class="room-item">
+      <div class="room-photo" style="background: linear-gradient(135deg, #3a2817 0%, #2a1d10 100%); display:flex; align-items:center; justify-content:center;">
+        <div style="font-family: 'Shippori Mincho', serif; color: rgba(184,153,104,0.35); font-size: 180px; line-height: 1;">花</div>
+      </div>
+      <div class="room-info">
+        <div class="room-name-en">PRESIDENTIAL · HANA</div>
+        <h3>花 の 間 ── 特 別 室</h3>
+        <div class="room-meta">
+          <span>90㎡</span>
+          <span>2名定員</span>
+          <span>源泉2本引き</span>
+          <span>ヒノキ内湯+露天</span>
+        </div>
+        <p>
+          当宿に一室だけの最上級室。源泉を二本独立して引き込み、熱い湯・ぬるい湯を好みでお入りいただける贅沢な造り。<br>
+          銀婚式・金婚式でのご利用が多く、お祝いのお料理とシャンパンをご用意することも可能です。
+        </p>
+        <div class="room-price">¥68,000<small>/お一人様・1泊2食</small></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="cuisine" id="cuisine">
+  <div class="cuisine-inner">
+    <div class="cuisine-text">
+      <div class="section-eyebrow">CUISINE</div>
+      <h2 class="section-title">創 作 会 席</h2>
+      <p>
+        上州嬬恋の契約農家から届く朝採り野菜、<br>
+        赤城山麓で育った上州牛、<br>
+        日本海から直送される鮮魚。
+      </p>
+      <p>
+        料理長・山口が二十年の経験を注ぎ、<br>
+        日替わりの献立として組み上げます。
+      </p>
+      <p>
+        食材はすべて仕入れた日に使いきる<em>一期一会の献立</em>。<br>
+        同じ料理は、二度とお出しいたしません。
+      </p>
+
+      <div class="cuisine-course">
+        <h4>A TYPICAL COURSE</h4>
+        <ol>
+          <li>先 附 ── 南瓜の冷製</li>
+          <li>御 椀 ── 上州地鶏のお吸物</li>
+          <li>御 造 里 ── 本日の三点盛</li>
+          <li>焼 物 ── 上州牛の陶板焼</li>
+          <li>煮 物 ── 嬬恋キャベツと鴨の炊き合わせ</li>
+          <li>酢 物 ── 季節の和え物</li>
+          <li>食 事 ── 嬬恋米 と 味噌汁</li>
+          <li>水 菓 子 ── 嬬恋産ブルーベリー</li>
+        </ol>
+      </div>
+    </div>
+    <div class="cuisine-photo" style="background: linear-gradient(160deg, #2a1d10 0%, #1a1207 100%); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(184,153,104,0.2);">
+      <div style="font-family: 'Shippori Mincho', serif; color: rgba(184,153,104,0.3); font-size: 240px; line-height: 1;">膳</div>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="voice-head">
+    <div class="section-eyebrow">GUEST VOICE</div>
+    <h2 class="section-title">滞 在 記</h2>
+  </div>
+  <div class="voice-list">
+    <article class="voice-item">
+      <div class="voice-season serif-en">SPRING · APRIL</div>
+      <p class="voice-text">
+        「夫の定年祝いで花の間へ。源泉を二本引きというのに驚きましたが、熱めの湯とぬる湯を行ったり来たりする贅沢さはここでしか味わえません。主人ご家族の気さくさも、四十年続く理由が分かりました。」
+      </p>
+      <div class="voice-guest">K.M 様 ── 千葉県より</div>
+    </article>
+    <article class="voice-item">
+      <div class="voice-season serif-en">WINTER · JANUARY</div>
+      <p class="voice-text">
+        「雪見風呂を目的に冬にお伺い。檜の露天から見える雪景色と、上州牛の陶板焼、そして静けさ。東京で忘れていた時間の流れ方を、思い出させてくれました。」
+      </p>
+      <div class="voice-guest">A.Y 様 ── 東京都より</div>
+    </article>
+    <article class="voice-item">
+      <div class="voice-season serif-en">AUTUMN · OCTOBER</div>
+      <p class="voice-text">
+        「三世代九人で雪の間に。子供たちは大きな岩風呂に歓声、祖母はお食事の味に涙。家族の全員がそれぞれ楽しめた、稀なお宿でした。来年も必ず。」
+      </p>
+      <div class="voice-guest">T.S 様 ── 神奈川県より</div>
+    </article>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="info-grid">
+    <div class="info-photo" style="background: linear-gradient(160deg, #3a2817 0%, #1a1207 100%); display:flex; align-items:center; justify-content:center;">
+      <div style="font-family: 'Shippori Mincho', serif; color: rgba(184,153,104,0.35); font-size: 200px; line-height: 1; letter-spacing: -0.1em;">宿</div>
+    </div>
+    <div class="info-data">
+      <div class="section-eyebrow">ACCESS & INFO</div>
+      <h2 class="section-title">ご 案 内</h2>
+      <ul class="info-list">
+        <li><strong>ADDRESS</strong><span>群馬県吾妻郡草津町草津XXX<br>（草津温泉バスターミナルより徒歩12分）</span></li>
+        <li><strong>PICKUP</strong><span>JR長野原草津口駅より無料送迎<br>（事前予約制・14:30発）</span></li>
+        <li><strong>DRIVE</strong><span>関越自動車道 渋川伊香保ICより約70分</span></li>
+        <li><strong>PARKING</strong><span>無料駐車場 全12台</span></li>
+        <li><strong>CHECK IN</strong><span>15:00 — 18:00</span></li>
+        <li><strong>CHECK OUT</strong><span>11:00</span></li>
+        <li><strong>TOTAL ROOMS</strong><span>10室 / 全室源泉かけ流し露天風呂付</span></li>
+        <li><strong>SPRING</strong><span>万代鉱源泉 / 酸性・含硫黄 / 源泉100%</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="reserve-inner">
+    <div class="section-eyebrow">RESERVATION</div>
+    <h2>ご 予 約</h2>
+    <p class="reserve-msg">
+      一日六組様限定、すべて主人の目の届く範囲でお迎えいたします。<br>
+      お電話でのご予約を、心よりお待ちしております。
+    </p>
+    <div class="reserve-tel">0279 · XX · XXXX</div>
+    <div class="reserve-hours">受 付 時 間 9 : 0 0 ─ 2 0 : 0 0 ・ 年 中 無 休</div>
+    <a href="#" class="reserve-btn">W E B   予 約</a>
+  </div>
+</section>
+
+<footer class="footer">
+  月宿 草津の里 | 群馬県吾妻郡草津町草津XXX | TEL 0279-XX-XXXX<br>
+  © 2026 Tsuki-yado Kusatsu-no-sato<br><br>
+  このページは <a href="mailto:0622hayakawamai@gmail.com">早川まい（HP制作フリーランス）</a>によるサンプル提案です
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 80);
+  });
+</script>
+
+</body>
+</html>

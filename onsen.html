@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>月宿 草津の里 | 源泉かけ流しの温泉宿</title>
+<meta name="description" content="草津温泉の源泉かけ流しを愉しむ大人の隠れ宿。全室露天風呂付き、創作会席料理と季節の美食でおもてなし。">
+<style>
+:root { --ink: #2A1810; --wa-red: #8B2A1F; --paper: #F5EDE0; --gold: #C89B4A; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; color: var(--ink); background: var(--paper); line-height: 1.9; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.sample-note { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: linear-gradient(90deg, #E74C3C, #F39C12); color: white; padding: 10px; text-align: center; font-size: 13px; }
+.sample-note a { color: white; font-weight: bold; }
+.hero { min-height: 100vh; padding: 80px 20px; background: linear-gradient(rgba(42,24,16,0.6), rgba(42,24,16,0.4)), url('https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=1600') center/cover; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-inner { max-width: 800px; }
+.hero-motif { font-size: 14px; letter-spacing: 8px; color: var(--gold); margin-bottom: 40px; }
+.hero h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.5; margin-bottom: 30px; font-weight: 400; letter-spacing: 6px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.hero-sub { font-size: clamp(16px, 1.8vw, 20px); margin-bottom: 50px; letter-spacing: 3px; }
+.hero-btn { display: inline-block; padding: 16px 60px; background: var(--wa-red); color: white; text-decoration: none; letter-spacing: 4px; transition: all 0.3s; border: 1px solid var(--gold); }
+.hero-btn:hover { background: var(--gold); color: var(--ink); }
+section { padding: 100px 20px; }
+.section-head { text-align: center; margin-bottom: 60px; }
+.section-head .motif { font-size: 12px; letter-spacing: 8px; color: var(--wa-red); margin-bottom: 15px; display: block; }
+.section-head h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 400; letter-spacing: 6px; }
+.section-head h2::after { content: ""; display: block; width: 60px; height: 1px; background: var(--gold); margin: 20px auto; }
+.intro { background: var(--paper); }
+.intro-text { max-width: 700px; margin: 0 auto; text-align: center; font-size: 16px; line-height: 2.2; }
+.onsen { background: var(--ink); color: white; }
+.onsen .section-head h2 { color: white; }
+.onsen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.onsen-card { background: rgba(255,255,255,0.05); padding: 40px 30px; border: 1px solid rgba(200,155,74,0.3); }
+.onsen-card h3 { font-size: 22px; margin-bottom: 16px; letter-spacing: 2px; color: var(--gold); }
+.onsen-card p { font-size: 14px; opacity: 0.9; }
+.room { background: white; }
+.room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto; }
+.room-card { background: var(--paper); overflow: hidden; }
+.room-card .img { aspect-ratio: 4/3; background: linear-gradient(135deg, #8B2A1F, #2A1810); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 14px; letter-spacing: 3px; }
+.room-card .content { padding: 30px; }
+.room-card h3 { font-size: 20px; margin-bottom: 10px; letter-spacing: 2px; }
+.room-card .price { font-size: 24px; color: var(--wa-red); font-weight: 600; margin-top: 20px; padding-top: 20px; border-top: 1px solid #D5C8B0; }
+.cuisine { background: var(--paper); }
+.cuisine-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 15px; }
+.cuisine-list { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
+.cuisine-list li { list-style: none; padding: 15px 30px; background: white; border: 1px solid var(--gold); letter-spacing: 2px; }
+.access { background: var(--ink); color: white; }
+.access .section-head h2 { color: white; }
+.access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1000px; margin: 0 auto; }
+.access-info dl { line-height: 2.5; }
+.access-info dt { font-size: 13px; color: var(--gold); letter-spacing: 2px; }
+.access-info dd { margin-bottom: 20px; opacity: 0.9; }
+.access-map { aspect-ratio: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(200,155,74,0.3); display: flex; align-items: center; justify-content: center; opacity: 0.6; }
+.reserve { background: linear-gradient(135deg, var(--wa-red) 0%, #5A1814 100%); color: white; text-align: center; }
+.reserve h2 { color: white; font-size: clamp(28px, 4vw, 40px); letter-spacing: 6px; margin-bottom: 20px; }
+.reserve p { opacity: 0.95; max-width: 600px; margin: 0 auto 40px; letter-spacing: 2px; }
+.tel-display { font-size: clamp(32px, 5vw, 48px); color: var(--gold); font-weight: 600; letter-spacing: 4px; margin: 30px 0; }
+.footer { background: #1A0E08; color: rgba(255,255,255,0.5); padding: 40px 20px; text-align: center; font-size: 12px; letter-spacing: 2px; }
+@media (max-width: 768px) { .access-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="sample-note">⚠️ これは「月宿 草津の里」様向けに早川まいが制作した<b>無料サンプルページ</b>です → <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+
+<section class="hero" style="margin-top:40px;">
+  <div class="hero-inner">
+    <div class="hero-motif">─── 草 津 温 泉 ───</div>
+    <h1>月 宿 草 津 の 里</h1>
+    <p class="hero-sub">源泉かけ流しと創作会席で愉しむ 大人の隠れ宿</p>
+    <a href="#reserve" class="hero-btn">ご 予 約</a>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="section-head">
+    <span class="motif">CONCEPT</span>
+    <h2>想 い</h2>
+  </div>
+  <p class="intro-text">
+    創業四十年、草津の山間に佇む全十室の隠れ宿。<br>
+    昔ながらの木造建築に、現代の静けさを融合させました。<br>
+    すべてのお部屋に源泉かけ流しの露天風呂を備え、<br>
+    心ゆくまでお湯と季節の美食を愉しんでいただけます。
+  </p>
+</section>
+
+<section class="onsen">
+  <div class="section-head">
+    <span class="motif">HOT SPRING</span>
+    <h2>温 泉</h2>
+  </div>
+  <div class="onsen-grid container">
+    <div class="onsen-card">
+      <h3>源 泉 か け 流 し</h3>
+      <p>草津温泉 万代鉱源泉を100%使用。強い酸性のお湯は殺菌力が高く、肌トラブルに効果があると言われています。</p>
+    </div>
+    <div class="onsen-card">
+      <h3>全 室 露 天 風 呂</h3>
+      <p>十室すべてに専用露天風呂を設置。他のお客様を気にせず、時間を気にせず、お湯に身を任せるひとときを。</p>
+    </div>
+    <div class="onsen-card">
+      <h3>貸 切 岩 風 呂</h3>
+      <p>大岩をくり抜いた贅沢な岩風呂を、お一組様ずつ独占利用。45分の貸切は無料でご案内しております。</p>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="section-head">
+    <span class="motif">ROOMS</span>
+    <h2>客 室</h2>
+  </div>
+  <div class="room-grid container">
+    <div class="room-card">
+      <div class="img">月 の 間</div>
+      <div class="content">
+        <h3>月の間（60㎡・2名定員）</h3>
+        <p>檜の露天風呂付き、和室十畳+広縁。静寂と自然を愉しむ大人の空間。</p>
+        <div class="price">¥38,000<span style="font-size:14px;">/1泊2食・お一人様</span></div>
+      </div>
+    </div>
+    <div class="room-card">
+      <div class="img">雪 の 間</div>
+      <div class="content">
+        <h3>雪の間（75㎡・4名定員）</h3>
+        <p>石造りの露天風呂と広々とした和洋室。家族やご夫婦の記念旅行に。</p>
+        <div class="price">¥52,000<span style="font-size:14px;">/1泊2食・お一人様</span></div>
+      </div>
+    </div>
+    <div class="room-card">
+      <div class="img">花 の 間</div>
+      <div class="content">
+        <h3>花の間 特別室（90㎡・2名定員）</h3>
+        <p>当館最上級のお部屋。源泉2本引きの露天風呂とヒノキの内湯を備えた贅沢空間。</p>
+        <div class="price">¥68,000<span style="font-size:14px;">/1泊2食・お一人様</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cuisine">
+  <div class="section-head">
+    <span class="motif">CUISINE</span>
+    <h2>創 作 会 席</h2>
+  </div>
+  <p class="cuisine-text">
+    地元群馬の契約農家から届く旬の野菜、上州牛、<br>
+    日本海で獲れたばかりの魚介を、
+    当館料理長が創意工夫を凝らした会席料理に仕立てます。
+  </p>
+  <ul class="cuisine-list">
+    <li>先 附</li>
+    <li>御 造 里</li>
+    <li>台 の 物</li>
+    <li>鉢 物</li>
+    <li>水 菓 子</li>
+  </ul>
+</section>
+
+<section class="access">
+  <div class="section-head">
+    <span class="motif">ACCESS</span>
+    <h2>ア ク セ ス</h2>
+  </div>
+  <div class="access-grid">
+    <div class="access-info">
+      <dl>
+        <dt>所 在 地</dt>
+        <dd>群馬県吾妻郡草津町草津XXX</dd>
+        <dt>最 寄 駅</dt>
+        <dd>JR長野原草津口駅 より送迎バス25分</dd>
+        <dt>お 車 で</dt>
+        <dd>関越自動車道 渋川伊香保IC より約70分</dd>
+        <dt>駐 車 場</dt>
+        <dd>無料駐車場 12台</dd>
+        <dt>チェックイン</dt>
+        <dd>15:00 〜 18:00</dd>
+        <dt>チェックアウト</dt>
+        <dd>11:00</dd>
+      </dl>
+    </div>
+    <div class="access-map">GoogleMap 埋め込みエリア</div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="section-head">
+    <span class="motif" style="color:var(--gold);">RESERVATION</span>
+    <h2>ご 予 約</h2>
+  </div>
+  <p>お電話またはフォームよりお気軽にお問い合わせくださいませ</p>
+  <div class="tel-display">0279-XX-XXXX</div>
+  <p style="font-size:13px; opacity:0.8;">受付時間 9:00 〜 20:00（年中無休）</p>
+</section>
+
+<footer class="footer">
+  © 2026 月宿 草津の里 | このページは早川まい（HP制作フリーランス）によるサンプル提案です<br>
+  実際のHP制作のご相談: 0622hayakawamai@gmail.com
+</footer>
+</body>
+</html>

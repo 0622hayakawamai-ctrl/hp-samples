@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier Lumiere - 恵比寿の完全個室フェイシャルエステサロン</title>
+<meta name="description" content="恵比寿駅徒歩4分の完全個室フェイシャルエステ。30代からの肌が変わるオーダーメイドケア。初回90分3,980円、通常12,000円。医療提携サロン。">
+<meta property="og:title" content="Atelier Lumiere | 恵比寿のフェイシャルエステ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #3a2a2e;
+  --rose: #c9a78f;
+  --rose-deep: #a4826e;
+  --rose-soft: #e8d4c5;
+  --cream: #fbf5ee;
+  --cream-warm: #f5ebdf;
+  --white: #fffcf7;
+  --gray: #8b7b7e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Serif JP', serif;
+  color: var(--ink);
+  line-height: 1.9;
+  background: var(--cream);
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+.en { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 0.25em; }
+
+/* Banner */
+.sample-note {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: linear-gradient(90deg, var(--rose-deep), var(--rose));
+  color: white; padding: 9px 24px;
+  font-size: 12px; text-align: center; letter-spacing: 0.08em;
+}
+.sample-note a { color: white; text-decoration: underline; margin-left: 8px; }
+
+/* Nav */
+.nav {
+  position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  padding: 22px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: all 0.4s;
+}
+.nav.scrolled { background: rgba(251,245,238,0.95); backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(58,42,46,0.05); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; letter-spacing: 0.35em;
+  color: white; font-weight: 400;
+  transition: color 0.3s;
+}
+.nav.scrolled .nav-logo { color: var(--ink); }
+.nav-logo span { display: block; font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 0.4em; margin-top: 4px; opacity: 0.8; }
+.nav-links { display: flex; gap: 40px; align-items: center; }
+.nav-link { font-size: 11px; letter-spacing: 0.35em; color: white; transition: color 0.3s; }
+.nav.scrolled .nav-link { color: var(--ink); }
+.nav-cta {
+  padding: 10px 24px; border: 1px solid rgba(255,255,255,0.7);
+  font-size: 10px; letter-spacing: 0.35em;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: rgba(255,255,255,0.15); }
+.nav.scrolled .nav-cta { border-color: var(--rose-deep); color: var(--rose-deep); }
+.nav.scrolled .nav-cta:hover { background: var(--rose-deep); color: white; }
+
+/* Hero */
+.hero {
+  height: 100vh; min-height: 780px;
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(ellipse at 75% 35%, rgba(233,212,197,0.6) 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 75%, rgba(201,167,143,0.45) 0%, transparent 50%),
+    linear-gradient(155deg, #f5ebdf 0%, #e8d4c5 40%, #c9a78f 100%);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.3) 0%, transparent 2%),
+    radial-gradient(circle at 85% 60%, rgba(255,255,255,0.2) 0%, transparent 1.5%),
+    radial-gradient(circle at 45% 85%, rgba(255,255,255,0.25) 0%, transparent 2.5%);
+  background-size: 400px 400px, 600px 600px, 500px 500px;
+}
+.hero-svg {
+  position: absolute; top: 0; right: 0;
+  width: 55%; height: 100%; pointer-events: none;
+  z-index: 1; opacity: 0.8;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  height: 100%;
+  max-width: 1400px; margin: 0 auto;
+  padding: 140px 80px 80px;
+  display: grid; grid-template-columns: 1.15fr 1fr;
+  gap: 60px; align-items: center;
+}
+.hero-text {}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.55em;
+  color: var(--rose-deep); font-weight: 400;
+  margin-bottom: 36px;
+  font-style: italic;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--rose-deep);
+  font-weight: 500;
+}
+.hero-sub {
+  font-size: 15px; line-height: 2.3;
+  color: var(--ink); opacity: 0.8;
+  letter-spacing: 0.12em;
+  margin-bottom: 60px;
+}
+.hero-meta {
+  display: flex; gap: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(164,130,110,0.3);
+}
+.hero-meta-item .en { font-size: 11px; letter-spacing: 0.4em; color: var(--rose-deep); margin-bottom: 6px; display: block; }
+.hero-meta-item strong { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--ink); letter-spacing: 0.05em; }
+
+/* Hero price card */
+.hero-card {
+  background: rgba(255,252,247,0.92);
+  backdrop-filter: blur(10px);
+  padding: 56px 48px;
+  border: 1px solid rgba(164,130,110,0.3);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(58,42,46,0.12);
+}
+.hero-card::before {
+  content: ''; position: absolute;
+  top: -1px; left: -1px; right: -1px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--rose-deep), transparent);
+}
+.hero-card-tag {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--rose-deep); font-style: italic;
+  padding: 6px 16px;
+  border: 1px solid var(--rose-deep);
+  margin-bottom: 28px;
+}
+.hero-card h3 {
+  font-size: 22px; letter-spacing: 0.12em;
+  color: var(--ink); font-weight: 400;
+  margin-bottom: 8px;
+}
+.hero-card .minutes {
+  font-size: 12px; letter-spacing: 0.2em;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+.hero-card .strike {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; text-decoration: line-through;
+  color: var(--gray);
+}
+.hero-card .price-now {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px; font-weight: 300;
+  color: var(--rose-deep); line-height: 1;
+  letter-spacing: 0.02em;
+  margin: 8px 0 12px;
+}
+.hero-card .price-now small {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px; color: var(--ink);
+  font-weight: 400;
+}
+.hero-card .note {
+  font-size: 11px; color: var(--gray);
+  letter-spacing: 0.15em;
+  padding-top: 24px;
+  border-top: 1px solid rgba(164,130,110,0.2);
+}
+
+/* Section basics */
+section { padding: 160px 60px; }
+.section-head { text-align: center; margin-bottom: 100px; }
+.section-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; letter-spacing: 0.55em;
+  color: var(--rose-deep); font-style: italic;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+}
+.section-ornament {
+  width: 40px; height: 1px;
+  background: var(--rose);
+  margin: 32px auto;
+  position: relative;
+}
+.section-ornament::before {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 8px; height: 8px;
+  border: 1px solid var(--rose);
+  border-radius: 50%;
+  background: var(--cream);
+}
+
+/* Concept */
+.concept {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.concept::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,212,197,0.3) 0%, transparent 70%);
+}
+.concept-inner {
+  max-width: 880px; margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.concept p {
+  font-size: 17px; line-height: 2.8;
+  color: var(--ink); opacity: 0.85;
+  margin-bottom: 28px;
+}
+.concept p em {
+  font-style: normal;
+  color: var(--rose-deep);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* Menu */
+.menu {
+  background: var(--cream-warm);
+  position: relative;
+}
+.menu-list {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; gap: 40px;
+}
+.menu-item {
+  background: var(--white);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 220px 1fr 200px;
+  gap: 56px; align-items: center;
+  position: relative;
+  border: 1px solid rgba(164,130,110,0.15);
+  transition: all 0.4s;
+}
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(58,42,46,0.08);
+  border-color: var(--rose);
+}
+.menu-visual {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--rose-soft) 0%, var(--rose) 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.menu-visual::before {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 90%; height: 90%;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+.menu-visual .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; letter-spacing: 0.5em;
+  color: white; font-style: italic;
+  font-weight: 400;
+}
+.menu-info .en-small {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--rose-deep);
+  margin-bottom: 12px;
+}
+.menu-info h3 {
+  font-size: 26px; letter-spacing: 0.12em;
+  font-weight: 400; color: var(--ink);
+  margin-bottom: 8px;
+}
+.menu-info .time {
+  font-size: 12px; letter-spacing: 0.2em;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+.menu-info p {
+  font-size: 14px; line-height: 2.2;
+  color: var(--ink); opacity: 0.8;
+  margin-bottom: 20px;
+}
+.menu-info ul {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 8px;
+}
+.menu-info ul li {
+  font-size: 11px; letter-spacing: 0.15em;
+  padding: 4px 12px;
+  border: 1px solid rgba(164,130,110,0.4);
+  color: var(--rose-deep);
+}
+.menu-price {
+  text-align: right;
+  padding-left: 40px;
+  border-left: 1px solid rgba(164,130,110,0.2);
+}
+.menu-price .course {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--rose-deep);
+  margin-bottom: 12px; font-style: italic;
+}
+.menu-price .amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px; font-weight: 300;
+  color: var(--ink); line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.menu-price .amount small {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px; color: var(--ink);
+}
+.menu-price .tax {
+  font-size: 10px; color: var(--gray);
+  letter-spacing: 0.2em;
+}
+
+/* Why chosen */
+.why {
+  background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+}
+.why-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+.why-item { text-align: center; }
+.why-icon {
+  width: 80px; height: 80px;
+  border: 1px solid var(--rose);
+  border-radius: 50%;
+  margin: 0 auto 32px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: var(--white);
+}
+.why-icon::after {
+  content: ''; position: absolute; inset: -8px;
+  border-radius: 50%;
+  border: 1px dashed rgba(201,167,143,0.4);
+}
+.why-icon .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; color: var(--rose-deep);
+  font-style: italic;
+}
+.why-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--rose-deep); font-style: italic;
+  margin-bottom: 14px;
+}
+.why-item h3 {
+  font-size: 20px; letter-spacing: 0.1em;
+  font-weight: 400; color: var(--ink);
+  margin-bottom: 20px;
+}
+.why-item p {
+  font-size: 14px; line-height: 2.2;
+  color: var(--ink); opacity: 0.8;
+}
+
+/* Flow */
+.flow {
+  background: var(--cream-warm);
+}
+.flow-list {
+  max-width: 900px; margin: 0 auto;
+  position: relative;
+}
+.flow-list::before {
+  content: ''; position: absolute;
+  left: 40px; top: 40px; bottom: 40px;
+  width: 1px; background: rgba(164,130,110,0.3);
+}
+.flow-item {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 40px; padding: 28px 0;
+  position: relative;
+}
+.flow-num {
+  width: 80px; height: 80px;
+  background: var(--white);
+  border: 1px solid var(--rose);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; color: var(--rose-deep);
+  font-style: italic; font-weight: 400;
+  position: relative; z-index: 2;
+}
+.flow-item h4 {
+  font-size: 19px; letter-spacing: 0.1em;
+  font-weight: 400; color: var(--ink);
+  margin-bottom: 8px;
+  padding-top: 24px;
+}
+.flow-item .time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--rose-deep); font-style: italic;
+  margin-bottom: 12px;
+}
+.flow-item p {
+  font-size: 14px; line-height: 2;
+  color: var(--ink); opacity: 0.8;
+}
+
+/* Voice */
+.voice {
+  background: var(--white);
+  position: relative; overflow: hidden;
+}
+.voice::before {
+  content: ''; position: absolute;
+  bottom: -150px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,212,197,0.25) 0%, transparent 70%);
+}
+.voice-list {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative; z-index: 2;
+}
+.voice-item {
+  background: var(--cream);
+  padding: 56px 40px;
+  position: relative;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.voice-item:hover {
+  background: var(--white);
+  border-color: var(--rose);
+  box-shadow: 0 16px 40px rgba(58,42,46,0.06);
+}
+.voice-item::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px; line-height: 1;
+  color: var(--rose); font-weight: 400;
+}
+.voice-meta {
+  display: flex; justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-top: 20px;
+}
+.voice-stars { color: var(--rose-deep); letter-spacing: 0.2em; font-size: 14px; }
+.voice-months {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--gray); font-style: italic;
+}
+.voice-text {
+  font-size: 14px; line-height: 2.2;
+  color: var(--ink); opacity: 0.85;
+  min-height: 160px;
+  margin-bottom: 28px;
+}
+.voice-guest {
+  padding-top: 20px;
+  border-top: 1px solid rgba(164,130,110,0.2);
+  font-size: 12px; letter-spacing: 0.12em;
+  color: var(--gray);
+}
+
+/* Info */
+.info {
+  background: var(--cream-warm);
+}
+.info-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.info-visual {
+  aspect-ratio: 4/5;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.4) 0%, transparent 40%),
+    linear-gradient(160deg, var(--rose-soft) 0%, var(--rose) 60%, var(--rose-deep) 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.info-visual::before {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 70%; height: 70%;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+}
+.info-visual::after {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 50%; height: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+}
+.info-visual-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; letter-spacing: 0.4em;
+  color: white; font-style: italic;
+  position: relative; z-index: 2;
+  writing-mode: vertical-rl;
+  padding: 0 4px;
+}
+.info-data .section-eyebrow { text-align: left; }
+.info-data .section-title { text-align: left; }
+.info-data .section-ornament { margin: 32px 0; }
+.info-list { list-style: none; }
+.info-list li {
+  display: grid; grid-template-columns: 110px 1fr;
+  gap: 24px; padding: 18px 0;
+  border-bottom: 1px solid rgba(164,130,110,0.2);
+  font-size: 13px;
+}
+.info-list li strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--rose-deep); font-weight: 400;
+  font-style: italic;
+}
+.info-list li span { line-height: 1.9; }
+
+/* Reserve */
+.reserve {
+  padding: 180px 60px;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(255,252,247,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(233,212,197,0.6) 0%, transparent 50%),
+    linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
+  color: white; text-align: center;
+  position: relative; overflow: hidden;
+}
+.reserve::before {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.reserve::after {
+  content: ''; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.reserve-inner { position: relative; z-index: 2; }
+.reserve .section-eyebrow { color: rgba(255,252,247,0.9); }
+.reserve h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: 0.15em;
+  font-weight: 400; color: white;
+  margin-bottom: 24px;
+}
+.reserve .section-ornament { background: rgba(255,255,255,0.5); }
+.reserve .section-ornament::before {
+  border-color: rgba(255,255,255,0.5);
+  background: transparent;
+}
+.reserve-msg {
+  font-size: 15px; line-height: 2.3;
+  opacity: 0.92;
+  max-width: 580px; margin: 0 auto 56px;
+  letter-spacing: 0.12em;
+}
+.reserve-tel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 56px);
+  font-weight: 300; letter-spacing: 0.08em;
+  margin: 24px 0 16px;
+}
+.reserve-hours {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  opacity: 0.85; font-style: italic;
+  margin-bottom: 56px;
+}
+.reserve-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.reserve-btn {
+  display: inline-block;
+  padding: 20px 56px;
+  background: white; color: var(--rose-deep);
+  font-size: 12px; letter-spacing: 0.4em;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.reserve-btn:hover { background: var(--ink); color: white; }
+.reserve-btn.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.7); }
+.reserve-btn.outline:hover { background: rgba(255,255,255,0.15); color: white; }
+
+/* Footer */
+.footer {
+  background: var(--ink);
+  color: rgba(251,245,238,0.6);
+  padding: 60px 60px 40px;
+  text-align: center;
+  font-size: 11px; letter-spacing: 0.2em;
+  line-height: 2.2;
+}
+.footer a { color: var(--rose); }
+
+@media (max-width: 900px) {
+  .nav { padding: 16px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-link:not(.nav-cta) { display: none; }
+  section { padding: 100px 24px; }
+  .hero-inner { grid-template-columns: 1fr; padding: 120px 24px 60px; }
+  .menu-item { grid-template-columns: 1fr; gap: 30px; padding: 40px 28px; }
+  .menu-visual { aspect-ratio: 16/9; }
+  .menu-price { border-left: none; border-top: 1px solid rgba(164,130,110,0.2); padding-left: 0; padding-top: 24px; text-align: left; }
+  .why-grid { grid-template-columns: 1fr; gap: 40px; }
+  .voice-list { grid-template-columns: 1fr; }
+  .info-inner { grid-template-columns: 1fr; }
+}
+
+
+/* Injected hero image v2 */
+.hero { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=85") !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+.hero-svg, .hero-bg { opacity: 0.25 !important; }
+</style>
+</head>
+<body>
+
+<div class="sample-note">
+  これは「Atelier Lumiere」様向けに早川まいが制作した<strong>無料サンプルページ</strong>です
+  <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a>
+</div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    ATELIER LUMIERE
+    <span>アトリエ ルミエール</span>
+  </a>
+  <div class="nav-links">
+    <a href="#concept" class="nav-link">CONCEPT</a>
+    <a href="#menu" class="nav-link">MENU</a>
+    <a href="#why" class="nav-link">WHY US</a>
+    <a href="#voice" class="nav-link">VOICE</a>
+    <a href="#reserve" class="nav-link nav-cta">RESERVATION</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <svg class="hero-svg" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="flowerGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#fffcf7" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#c9a78f" stop-opacity="0.2"/>
+      </radialGradient>
+    </defs>
+    <g transform="translate(500, 300)" opacity="0.4">
+      <g>
+        <ellipse cx="0" cy="-60" rx="30" ry="80" fill="url(#flowerGrad)" transform="rotate(0)"/>
+        <ellipse cx="0" cy="-60" rx="30" ry="80" fill="url(#flowerGrad)" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-60" rx="30" ry="80" fill="url(#flowerGrad)" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-60" rx="30" ry="80" fill="url(#flowerGrad)" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-60" rx="30" ry="80" fill="url(#flowerGrad)" transform="rotate(288)"/>
+        <circle cx="0" cy="0" r="15" fill="#a4826e" opacity="0.6"/>
+      </g>
+    </g>
+    <g transform="translate(650, 550)" opacity="0.3">
+      <g>
+        <ellipse cx="0" cy="-40" rx="20" ry="55" fill="url(#flowerGrad)" transform="rotate(30)"/>
+        <ellipse cx="0" cy="-40" rx="20" ry="55" fill="url(#flowerGrad)" transform="rotate(102)"/>
+        <ellipse cx="0" cy="-40" rx="20" ry="55" fill="url(#flowerGrad)" transform="rotate(174)"/>
+        <ellipse cx="0" cy="-40" rx="20" ry="55" fill="url(#flowerGrad)" transform="rotate(246)"/>
+        <ellipse cx="0" cy="-40" rx="20" ry="55" fill="url(#flowerGrad)" transform="rotate(318)"/>
+        <circle cx="0" cy="0" r="10" fill="#a4826e" opacity="0.6"/>
+      </g>
+    </g>
+    <g stroke="rgba(164,130,110,0.3)" stroke-width="1" fill="none">
+      <path d="M 200,800 Q 250,600 300,500 Q 350,400 400,350"/>
+      <path d="M 280,520 Q 250,480 260,440"/>
+      <path d="M 320,470 Q 350,440 360,400"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Facial Atelier · Since 2015</div>
+      <h1>鏡を見るのが、<br>好きに<em>なる時間</em>。</h1>
+      <p class="hero-sub">
+        恵比寿の静かな路地、隠れ家のような完全個室で。<br>
+        ゆらぎ肌・乾燥・たるみ──<br>
+        あなたのためだけのオーダーメイド・フェイシャル。
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="en">EXPERIENCE</span>
+          <strong>8 Years</strong>
+        </div>
+        <div class="hero-meta-item">
+          <span class="en">ROOMS</span>
+          <strong>Private</strong>
+        </div>
+        <div class="hero-meta-item">
+          <span class="en">GUESTS</span>
+          <strong>2,400+</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="hero-card-tag">First Visit</span>
+      <h3>フェイシャル体験</h3>
+      <div class="minutes">90 min / カウンセリング・肌診断込み</div>
+      <div class="strike">通常 ¥12,000</div>
+      <div class="price-now">¥3,980<small> 税込</small></div>
+      <p class="note">※ お一人様1回限り・ご予約時に「初回」とお伝えください</p>
+    </div>
+  </div>
+</section>
+
+<section class="concept" id="concept">
+  <div class="section-head">
+    <div class="section-eyebrow">Our Concept</div>
+    <h2 class="section-title">コ ン セ プ ト</h2>
+    <div class="section-ornament"></div>
+  </div>
+  <div class="concept-inner">
+    <p>
+      30代を迎え、<em>鏡を見るのが少し苦手になった</em>という声。<br>
+      わたし自身がそうでした。
+    </p>
+    <p>
+      ゆらぎ、乾燥、シミ、たるみ──<br>
+      一つのメニューで全ての肌悩みが消えることはありません。<br>
+      だからこそ、肌診断を丁寧に、<br>
+      その日の肌に合わせた施術を組み立てます。
+    </p>
+    <p>
+      完全個室、他のお客様と顔を合わせることもありません。<br>
+      <em>90分、あなただけの時間を、ゆっくりと。</em>
+    </p>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="section-head">
+    <div class="section-eyebrow">Treatment Menu</div>
+    <h2 class="section-title">メ ニ ュ ー</h2>
+    <div class="section-ornament"></div>
+  </div>
+  <div class="menu-list">
+    <article class="menu-item">
+      <div class="menu-visual"><span class="en">BASIC</span></div>
+      <div class="menu-info">
+        <div class="en-small">COURSE 01</div>
+        <h3>フェイシャル ベーシック</h3>
+        <div class="time">60 分 / クレンジング + 角質ケア + パック</div>
+        <p>
+          毛穴のつまりやくすみが気になる方へ。<br>
+          月1回の定期ケアとして、多くのお客様にお選びいただいています。
+        </p>
+        <ul>
+          <li>毛穴ケア</li><li>くすみ改善</li><li>角質除去</li>
+        </ul>
+      </div>
+      <div class="menu-price">
+        <div class="course">REGULAR</div>
+        <div class="amount">¥8,800<small> 〜</small></div>
+        <div class="tax">税込 / 60分</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <div class="menu-visual" style="background: linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);"><span class="en">POPULAR</span></div>
+      <div class="menu-info">
+        <div class="en-small">COURSE 02 / 一番人気</div>
+        <h3>フェイシャル プレミアム</h3>
+        <div class="time">90 分 / 上記 + 小顔リフト + 美容液導入</div>
+        <p>
+          エイジングケアとリフトアップを同時に。<br>
+          特別な日の前日、結婚式、記念日にお選びいただけることが多いコースです。
+        </p>
+        <ul>
+          <li>リフトアップ</li><li>エイジングケア</li><li>美容液導入</li><li>小顔矯正</li>
+        </ul>
+      </div>
+      <div class="menu-price">
+        <div class="course">SIGNATURE</div>
+        <div class="amount">¥14,800<small> 〜</small></div>
+        <div class="tax">税込 / 90分</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <div class="menu-visual" style="background: linear-gradient(135deg, var(--rose-soft) 0%, var(--rose) 100%);"><span class="en">BODY</span></div>
+      <div class="menu-info">
+        <div class="en-small">COURSE 03</div>
+        <h3>ボディ & デコルテ ケア</h3>
+        <div class="time">60 分 / 全身リンパマッサージ + デコルテ重点</div>
+        <p>
+          冷え・むくみ・疲労の改善。<br>
+          デコルテの美しさは首元と鎖骨のラインに宿ります。結婚式前のお客様に人気。
+        </p>
+        <ul>
+          <li>リンパケア</li><li>むくみ改善</li><li>デコルテ美容</li>
+        </ul>
+      </div>
+      <div class="menu-price">
+        <div class="course">SIGNATURE</div>
+        <div class="amount">¥10,800<small> 〜</small></div>
+        <div class="tax">税込 / 60分</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="section-head">
+    <div class="section-eyebrow">Why Chosen</div>
+    <h2 class="section-title">選 ば れ る 理 由</h2>
+    <div class="section-ornament"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon"><span class="en">01</span></div>
+      <div class="why-num">POINT ONE</div>
+      <h3>丁寧な肌診断</h3>
+      <p>初回は30分のカウンセリング。普段のスキンケア・食事・生活習慣まで伺い、その方に合わせた施術を組み立てます。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><span class="en">02</span></div>
+      <div class="why-num">POINT TWO</div>
+      <h3>完全個室</h3>
+      <p>全3室、すべて完全個室。他のお客様と顔を合わせることも、音が響くこともありません。メイクを落とした自分を、誰にも見られない安心を。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon"><span class="en">03</span></div>
+      <div class="why-num">POINT THREE</div>
+      <h3>医療連携</h3>
+      <p>提携皮膚科医の監修のもと、肌トラブル時には医療機関への紹介も可能。エステで対応すべきか医療でみるべきかを判断します。</p>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="section-head">
+    <div class="section-eyebrow">First Visit Flow</div>
+    <h2 class="section-title">初 回 の 流 れ</h2>
+    <div class="section-ornament"></div>
+  </div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">01</div>
+      <div>
+        <h4>ご 予 約</h4>
+        <div class="time">ANYTIME</div>
+        <p>お電話・LINE・Web予約フォームよりお好きな方法で。初回の方は「初回体験」とお伝えください。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">02</div>
+      <div>
+        <h4>カ ウ ン セ リ ン グ</h4>
+        <div class="time">ABOUT 30 MINUTES</div>
+        <p>肌の悩みから生活習慣まで丁寧に伺います。必要に応じて肌診断機での測定も行います。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">03</div>
+      <div>
+        <h4>施 術</h4>
+        <div class="time">50 MINUTES</div>
+        <p>カウンセリングで決めた内容で、オーダーメイドの施術を開始。お休みいただいても大丈夫です。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">04</div>
+      <div>
+        <h4>ア フ タ ー ケ ア</h4>
+        <div class="time">10 MINUTES</div>
+        <p>ハーブティーをお召し上がりいただきながら、ご自宅でのケアをお伝えします。無理なご提案はいたしません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voice" id="voice">
+  <div class="section-head">
+    <div class="section-eyebrow">Guest Voice</div>
+    <h2 class="section-title">お 客 様 の 声</h2>
+    <div class="section-ornament"></div>
+  </div>
+  <div class="voice-list">
+    <article class="voice-item">
+      <div class="voice-meta">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-months">3 YEARS</div>
+      </div>
+      <p class="voice-text">
+        他のサロンを10軒以上経験してきましたが、Lumiereさんのカウンセリングの丁寧さは別格でした。自分の肌のことをここまで理解してくれる場所は、ほかにありません。3年通い続けています。
+      </p>
+      <div class="voice-guest">A.Y 様 / 42歳 / 会社員</div>
+    </article>
+    <article class="voice-item">
+      <div class="voice-meta">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-months">BRIDAL</div>
+      </div>
+      <p class="voice-text">
+        結婚式前にブライダルコースでお世話になりました。当日の肌の調子が最高で、カメラマンさんにも「お肌綺麗ですね」と言われて嬉しかったです。当日の安心感は、ここに通っていたおかげです。
+      </p>
+      <div class="voice-guest">M.K 様 / 36歳 / ブライダル</div>
+    </article>
+    <article class="voice-item">
+      <div class="voice-meta">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-months">FIRST VISIT</div>
+      </div>
+      <p class="voice-text">
+        初回体験で伺いました。フェイシャル後の鏡を見て感動しました。毛穴って消えるんだ…と。値段以上の価値がある施術でしたし、ゴリ押しの勧誘がなかったのも好印象でした。また通います。
+      </p>
+      <div class="voice-guest">K.T 様 / 48歳 / 初回プレミアム</div>
+    </article>
+  </div>
+</section>
+
+<section class="info">
+  <div class="info-inner">
+    <div class="info-visual">
+      <div class="info-visual-text">ATELIER LUMIERE</div>
+    </div>
+    <div class="info-data">
+      <div class="section-eyebrow">Information</div>
+      <h2 class="section-title">サ ロ ン 情 報</h2>
+      <div class="section-ornament"></div>
+      <ul class="info-list">
+        <li><strong>ADDRESS</strong><span>東京都渋谷区恵比寿西1-X-X<br>恵比寿ルミエールビル 3F</span></li>
+        <li><strong>ACCESS</strong><span>JR恵比寿駅 西口 徒歩4分<br>日比谷線 恵比寿駅 徒歩5分</span></li>
+        <li><strong>HOURS</strong><span>11:00 — 21:00（最終受付 20:00）</span></li>
+        <li><strong>CLOSED</strong><span>毎週火曜日・第3水曜日</span></li>
+        <li><strong>TEL</strong><span>03-XXXX-XXXX</span></li>
+        <li><strong>PAYMENT</strong><span>現金 / 各種カード / QR決済</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="reserve-inner">
+    <div class="section-eyebrow">Reservation</div>
+    <h2>ご 予 約</h2>
+    <div class="section-ornament"></div>
+    <p class="reserve-msg">
+      初回体験 ¥3,980 キャンペーン実施中。<br>
+      お電話、LINE、どちらからでもお気軽にご予約くださいませ。
+    </p>
+    <div class="reserve-tel">03 · XXXX · XXXX</div>
+    <div class="reserve-hours">11 : 00 - 21 : 00 / 火曜・第3水曜 定休</div>
+    <div class="reserve-buttons">
+      <a href="tel:03-XXXX-XXXX" class="reserve-btn">お 電 話 で 予 約</a>
+      <a href="#" class="reserve-btn outline">L I N E で 予 約</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Atelier Lumiere / 東京都渋谷区恵比寿西1-X-X / TEL 03-XXXX-XXXX<br>
+  © 2026 Atelier Lumiere All Rights Reserved<br><br>
+  このページは <a href="mailto:0622hayakawamai@gmail.com">早川まい（HP制作フリーランス）</a>によるサンプル提案です
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 80);
+  });
+</script>
+
+</body>
+</html>

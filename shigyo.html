@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高橋税理士事務所 | 中小企業のための税務顧問・経営サポート</title>
+<meta name="description" content="中央区日本橋の税理士事務所。中小企業・個人事業主の税務顧問、確定申告、節税対策、事業承継まで。初回相談無料。">
+<style>
+:root { --navy: #1B365D; --gold: #B8925A; --cream: #F7F4EE; --ink: #212121; --accent: #D35400; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Serif JP', serif; color: var(--ink); line-height: 1.9; background: white; }
+.sample-note { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: linear-gradient(90deg, #E74C3C, #F39C12); color: white; padding: 10px; text-align: center; font-size: 13px; }
+.sample-note a { color: white; font-weight: bold; }
+.nav { position: fixed; top: 40px; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.97); padding: 16px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-logo { font-weight: 700; font-size: 18px; color: var(--navy); letter-spacing: 2px; }
+.nav-logo span { color: var(--gold); }
+.nav-contact { background: var(--navy); color: white; padding: 10px 24px; font-size: 14px; text-decoration: none; }
+.hero { padding: 150px 20px 120px; background: linear-gradient(135deg, var(--navy) 0%, #2C4770 100%); color: white; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="white" stroke-width="0.3" opacity="0.15"/></svg>') repeat; background-size: 80px; }
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+.hero-motif { font-size: 14px; letter-spacing: 6px; color: var(--gold); margin-bottom: 30px; }
+.hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.5; font-weight: 500; letter-spacing: 2px; margin-bottom: 30px; }
+.hero h1 .hl { color: var(--gold); }
+.hero-sub { font-size: clamp(15px, 1.5vw, 18px); opacity: 0.95; margin-bottom: 40px; letter-spacing: 1px; }
+.hero-cta { display: flex; gap: 20px; flex-wrap: wrap; }
+.btn-gold { display: inline-block; padding: 18px 40px; background: var(--gold); color: white; text-decoration: none; font-weight: 600; letter-spacing: 2px; transition: all 0.3s; }
+.btn-gold:hover { background: #A37D4A; }
+.btn-outline { display: inline-block; padding: 18px 40px; border: 1px solid white; color: white; text-decoration: none; letter-spacing: 2px; }
+.hero-card { background: white; color: var(--ink); padding: 40px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.hero-card h3 { color: var(--navy); font-size: 20px; margin-bottom: 16px; letter-spacing: 2px; }
+.hero-card dl dt { color: var(--gold); font-size: 13px; margin-top: 12px; letter-spacing: 1px; font-weight: 600; }
+.hero-card dl dt:first-child { margin-top: 0; }
+.hero-card dl dd { padding-bottom: 10px; border-bottom: 1px dashed #E5E0D5; font-size: 14px; }
+section { padding: 100px 20px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 60px; }
+.section-title .en { display: block; font-size: 12px; letter-spacing: 6px; color: var(--gold); margin-bottom: 12px; font-weight: 600; }
+.section-title h2 { font-size: clamp(26px, 3.5vw, 38px); color: var(--navy); letter-spacing: 4px; font-weight: 500; }
+.section-title h2::after { content: ""; display: block; width: 60px; height: 2px; background: var(--gold); margin: 16px auto; }
+.message { background: var(--cream); }
+.message-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2.5fr; gap: 50px; align-items: center; }
+.message-photo { aspect-ratio: 3/4; background: linear-gradient(135deg, var(--navy), var(--gold)); display: flex; align-items: center; justify-content: center; color: white; font-size: 80px; }
+.message-text h3 { font-size: 22px; margin-bottom: 6px; color: var(--navy); letter-spacing: 2px; }
+.message-text .title { font-size: 14px; color: var(--gold); margin-bottom: 30px; letter-spacing: 2px; }
+.message-text p { margin-bottom: 16px; font-size: 15px; }
+.service { background: white; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.service-card { padding: 40px 30px; background: var(--cream); border-top: 3px solid var(--gold); transition: all 0.3s; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(27,54,93,0.1); }
+.service-card h3 { color: var(--navy); font-size: 20px; margin-bottom: 16px; letter-spacing: 2px; }
+.service-card p { font-size: 14px; color: #555; margin-bottom: 16px; }
+.service-card ul { list-style: none; font-size: 13px; color: #666; }
+.service-card ul li { padding: 4px 0; padding-left: 16px; position: relative; }
+.service-card ul li::before { content: "▸"; color: var(--gold); position: absolute; left: 0; }
+.strength { background: var(--navy); color: white; }
+.strength .section-title h2 { color: white; }
+.strength-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.strength-item { text-align: center; padding: 30px 20px; }
+.strength-item .num { font-size: 56px; color: var(--gold); font-weight: 300; line-height: 1; margin-bottom: 16px; font-family: 'Cormorant Garamond', serif; }
+.strength-item h3 { margin-bottom: 12px; font-size: 18px; color: var(--gold); letter-spacing: 2px; }
+.strength-item p { font-size: 14px; opacity: 0.9; }
+.flow { background: var(--cream); }
+.flow-list { max-width: 900px; margin: 0 auto; }
+.flow-item { display: grid; grid-template-columns: 80px 1fr; gap: 30px; padding: 30px 0; border-bottom: 1px solid #E0D8C5; align-items: center; }
+.flow-num { font-size: 48px; font-weight: 300; color: var(--gold); font-family: 'Cormorant Garamond', serif; line-height: 1; }
+.flow-content h3 { font-size: 18px; margin-bottom: 6px; color: var(--navy); letter-spacing: 2px; }
+.flow-content p { font-size: 14px; color: #555; }
+.fee { background: white; }
+.fee-table { max-width: 900px; margin: 0 auto; border-collapse: collapse; width: 100%; }
+.fee-table th, .fee-table td { padding: 20px; text-align: left; border-bottom: 1px solid #E5E0D5; }
+.fee-table th { background: var(--navy); color: white; font-weight: 500; letter-spacing: 2px; }
+.fee-table td { font-size: 15px; }
+.fee-table .price { color: var(--accent); font-weight: 700; font-size: 18px; }
+.info { background: var(--cream); }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1000px; margin: 0 auto; }
+.info-data dl dt { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-top: 20px; font-weight: 600; }
+.info-data dl dt:first-child { margin-top: 0; }
+.info-data dl dd { padding: 8px 0; border-bottom: 1px dashed #E0D8C5; font-size: 15px; }
+.info-map { aspect-ratio: 1; background: white; display: flex; align-items: center; justify-content: center; color: #999; }
+.contact { background: var(--navy); color: white; text-align: center; padding: 120px 20px; }
+.contact h2 { color: white; font-size: clamp(28px, 4vw, 40px); letter-spacing: 6px; margin-bottom: 20px; font-weight: 500; }
+.contact p { opacity: 0.9; max-width: 600px; margin: 0 auto 40px; letter-spacing: 1px; }
+.contact-tel { font-size: clamp(32px, 5vw, 44px); color: var(--gold); font-weight: 300; letter-spacing: 4px; margin: 30px 0; }
+.footer { background: #0E1E36; color: rgba(255,255,255,0.5); padding: 40px 20px; text-align: center; font-size: 12px; letter-spacing: 2px; }
+@media (max-width: 768px) { .hero-inner, .message-inner, .info-grid { grid-template-columns: 1fr; } .hero-card { margin-top: 40px; } }
+</style>
+</head>
+<body>
+<div class="sample-note">⚠️ これは「高橋税理士事務所」様向けに早川まいが制作した<b>無料サンプルページ</b>です → <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+
+<nav class="nav">
+  <div class="nav-logo">TAKAHASHI<span> TAX</span></div>
+  <a href="#contact" class="nav-contact">お問い合わせ</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-motif">── TAX & BUSINESS CONSULTING ──</div>
+      <h1>中小企業のための<br><span class="hl">信頼の税務顧問</span></h1>
+      <p class="hero-sub">
+        税務・経理・経営を総合的にサポート。<br>
+        業種・規模に合わせた最適な顧問プランをご提案いたします。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-gold">無料相談のお申込み</a>
+        <a href="#service" class="btn-outline">サービスを見る</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>─ 初回相談 ─</h3>
+      <dl>
+        <dt>相談料</dt>
+        <dd style="color:var(--accent); font-weight:700; font-size:24px;">完全無料</dd>
+        <dt>所要時間</dt>
+        <dd>60分 〜 90分</dd>
+        <dt>形式</dt>
+        <dd>対面 / オンライン選択可</dd>
+        <dt>内容</dt>
+        <dd>現状ヒアリング / 税務診断 / ご提案</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="message">
+  <div class="section-title">
+    <span class="en">MESSAGE</span>
+    <h2>ご挨拶</h2>
+  </div>
+  <div class="message-inner">
+    <div class="message-photo">👤</div>
+    <div class="message-text">
+      <h3>高橋 太郎</h3>
+      <div class="title">代表税理士 / 東京税理士会所属</div>
+      <p>大手監査法人勤務を経て、中小企業支援を志し独立。</p>
+      <p>顧問先は創業期の個人事業主から従業員100名規模の企業まで、業種を問わず300社以上。「数字で経営を強くする」をモットーに、税務代行にとどまらない経営パートナーとして伴走しています。</p>
+      <p>事業の成長フェーズに応じた最適な税務戦略、資金繰り改善、事業承継までトータルにサポートいたします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="service" id="service">
+  <div class="section-title">
+    <span class="en">SERVICE</span>
+    <h2>サービス</h2>
+  </div>
+  <div class="service-grid container">
+    <div class="service-card">
+      <h3>税務顧問</h3>
+      <p>月次決算・年次決算・税務申告を総合サポート。経営の数字を味方につけます。</p>
+      <ul>
+        <li>月次記帳代行</li>
+        <li>決算・申告書作成</li>
+        <li>節税アドバイス</li>
+        <li>税務調査対応</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <h3>開業・法人化支援</h3>
+      <p>個人開業から法人設立まで、立ち上げ期の煩雑な手続きをサポート。</p>
+      <ul>
+        <li>開業届・青色申告承認</li>
+        <li>法人設立登記サポート</li>
+        <li>融資・補助金申請</li>
+        <li>事業計画書作成</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <h3>相続・事業承継</h3>
+      <p>大切な事業と資産を次世代へ。相続税対策から承継実行まで伴走します。</p>
+      <ul>
+        <li>相続税シミュレーション</li>
+        <li>事業承継計画策定</li>
+        <li>贈与税対策</li>
+        <li>株価評価</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="strength">
+  <div class="section-title">
+    <span class="en">STRENGTH</span>
+    <h2>当事務所の強み</h2>
+  </div>
+  <div class="strength-grid container">
+    <div class="strength-item">
+      <div class="num">01</div>
+      <h3>経営の見える化</h3>
+      <p>クラウド会計を活用した月次レポートで、経営判断をデータドリブンに</p>
+    </div>
+    <div class="strength-item">
+      <div class="num">02</div>
+      <h3>迅速なレスポンス</h3>
+      <p>お問合せは原則24時間以内に一次返信。即断即決の経営を支えます</p>
+    </div>
+    <div class="strength-item">
+      <div class="num">03</div>
+      <h3>業種特化の知見</h3>
+      <p>飲食・建設・IT・不動産等、業種別の税務ノウハウで最適提案</p>
+    </div>
+    <div class="strength-item">
+      <div class="num">04</div>
+      <h3>明朗会計</h3>
+      <p>顧問料は売上規模で明確提示。後から追加請求は一切ありません</p>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="section-title">
+    <span class="en">FLOW</span>
+    <h2>お問合せから顧問契約まで</h2>
+  </div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">01</div>
+      <div class="flow-content">
+        <h3>お問合せ（電話・メール・フォーム）</h3>
+        <p>ご興味ありましたらお気軽にご連絡ください。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">02</div>
+      <div class="flow-content">
+        <h3>初回無料相談（60〜90分）</h3>
+        <p>現状ヒアリングのうえ、最適なプランをご提案いたします。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">03</div>
+      <div class="flow-content">
+        <h3>お見積り・ご契約</h3>
+        <p>ご納得いただけましたら顧問契約を締結し、業務開始。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">04</div>
+      <div class="flow-content">
+        <h3>業務開始</h3>
+        <p>月次業務・年次決算・税務申告を安心してお任せください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fee">
+  <div class="section-title">
+    <span class="en">FEE</span>
+    <h2>料金プラン</h2>
+  </div>
+  <table class="fee-table">
+    <thead>
+      <tr>
+        <th>年商</th>
+        <th>顧問料（月額）</th>
+        <th>決算料</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>〜1,000万円（個人事業主）</td><td class="price">¥15,000〜</td><td class="price">¥100,000</td></tr>
+      <tr><td>1,000〜3,000万円</td><td class="price">¥30,000〜</td><td class="price">¥150,000</td></tr>
+      <tr><td>3,000〜5,000万円</td><td class="price">¥40,000〜</td><td class="price">¥200,000</td></tr>
+      <tr><td>5,000万〜1億円</td><td class="price">¥50,000〜</td><td class="price">¥250,000</td></tr>
+      <tr><td>1億円〜</td><td class="price">ご相談</td><td class="price">ご相談</td></tr>
+    </tbody>
+  </table>
+  <p style="text-align:center; margin-top:20px; color:#666; font-size:13px;">※すべて税別表示</p>
+</section>
+
+<section class="info">
+  <div class="section-title">
+    <span class="en">OFFICE</span>
+    <h2>事務所情報</h2>
+  </div>
+  <div class="info-grid">
+    <div class="info-data">
+      <dl>
+        <dt>事務所名</dt>
+        <dd>高橋税理士事務所</dd>
+        <dt>代表</dt>
+        <dd>税理士 高橋 太郎（東京税理士会 日本橋支部）</dd>
+        <dt>所在地</dt>
+        <dd>東京都中央区日本橋X-X-X<br>日本橋ビル 8F</dd>
+        <dt>最寄駅</dt>
+        <dd>東京メトロ銀座線・東西線 日本橋駅 A1出口 徒歩3分</dd>
+        <dt>営業時間</dt>
+        <dd>平日 9:00 - 18:00（土日祝休）</dd>
+        <dt>TEL</dt>
+        <dd>03-XXXX-XXXX</dd>
+      </dl>
+    </div>
+    <div class="info-map">GoogleMap 埋め込みエリア</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <span class="en" style="color:var(--gold);">CONTACT</span>
+    <h2>お問い合わせ</h2>
+  </div>
+  <p>初回相談は無料です。お気軽にご連絡ください。</p>
+  <div class="contact-tel">03-XXXX-XXXX</div>
+  <p style="font-size:13px; opacity:0.8;">受付時間 平日 9:00 - 18:00</p>
+</section>
+
+<footer class="footer">
+  © 2026 高橋税理士事務所 | このページは早川まい（HP制作フリーランス）によるサンプル提案です<br>
+  実際のHP制作のご相談: 0622hayakawamai@gmail.com
+</footer>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>あおば整体院 | 新宿の国家資格者による腰痛・肩こり専門</title>
+<meta name="description" content="新宿駅徒歩5分の国家資格者による整体院。腰痛・肩こり・骨盤矯正。初回限定3,980円。15,000人の施術実績。">
+<style>
+:root { --main: #2E5266; --sub: #6BA18F; --bg: #F4F1ED; --accent: #E27D60; --ink: #263240; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans JP', sans-serif; color: var(--ink); line-height: 1.8; }
+.sample-note { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: linear-gradient(90deg, #E74C3C, #F39C12); color: white; padding: 10px; text-align: center; font-size: 13px; }
+.sample-note a { color: white; font-weight: bold; }
+.hero { min-height: 95vh; padding: 80px 20px; background: linear-gradient(135deg, var(--main) 0%, var(--sub) 100%); color: white; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="0.3" opacity="0.1"/></svg>') repeat; background-size: 200px; }
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+.hero-badge { display: inline-block; padding: 6px 16px; background: var(--accent); color: white; font-weight: 600; font-size: 13px; border-radius: 4px; margin-bottom: 24px; }
+.hero h1 { font-size: clamp(32px, 5vw, 54px); line-height: 1.3; margin-bottom: 24px; font-weight: 900; }
+.hero h1 .line { display: block; }
+.hero h1 .hl { background: linear-gradient(transparent 65%, var(--accent) 65%); padding: 0 5px; }
+.hero-sub { font-size: clamp(15px, 1.5vw, 18px); margin-bottom: 30px; opacity: 0.95; }
+.hero-cta { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
+.hero-btn { display: inline-block; padding: 18px 40px; background: var(--accent); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 18px; box-shadow: 0 10px 30px rgba(226,125,96,0.4); transition: all 0.3s; }
+.hero-btn:hover { transform: translateY(-3px); }
+.hero-tel { font-size: 24px; font-weight: 900; }
+.hero-tel small { display: block; font-size: 13px; opacity: 0.8; font-weight: 400; }
+.hero-price-card { background: white; color: var(--ink); padding: 40px 30px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); text-align: center; }
+.hero-price-card .tag { background: var(--accent); color: white; padding: 4px 12px; font-size: 12px; border-radius: 4px; display: inline-block; margin-bottom: 16px; font-weight: 600; }
+.hero-price-card h3 { font-size: 22px; margin-bottom: 20px; }
+.hero-price-card .price { font-size: 14px; color: #999; text-decoration: line-through; }
+.hero-price-card .price-now { font-size: 48px; font-weight: 900; color: var(--accent); line-height: 1; margin: 10px 0; }
+.hero-price-card .price-now small { font-size: 18px; color: var(--ink); font-weight: 400; }
+.hero-price-card .note { font-size: 13px; margin-top: 15px; color: #666; }
+section { padding: 100px 20px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 60px; }
+.section-title .en { display: block; font-size: 12px; letter-spacing: 4px; color: var(--sub); margin-bottom: 12px; font-weight: 600; }
+.section-title h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.5px; }
+.section-title h2 .hl { color: var(--main); }
+.problem { background: var(--bg); }
+.problem-list { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+.problem-list p { display: flex; align-items: center; padding: 15px 0; border-bottom: 1px dashed #E5E0DB; font-size: 17px; }
+.problem-list p:last-child { border: none; }
+.problem-list p::before { content: "✓"; color: var(--accent); font-weight: 900; font-size: 24px; margin-right: 20px; flex-shrink: 0; }
+.feature { background: white; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.feature-card { padding: 40px 30px; background: var(--bg); border-radius: 12px; text-align: center; transition: all 0.3s; }
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.feature-card .icon { font-size: 48px; margin-bottom: 20px; }
+.feature-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--main); }
+.feature-card p { font-size: 14px; color: #555; }
+.flow { background: var(--main); color: white; }
+.flow .section-title h2 { color: white; }
+.flow-list { max-width: 800px; margin: 0 auto; }
+.flow-item { display: flex; gap: 24px; padding: 24px; background: rgba(255,255,255,0.08); border-radius: 12px; margin-bottom: 16px; align-items: center; }
+.flow-num { flex-shrink: 0; width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px; }
+.flow-content h3 { margin-bottom: 4px; font-size: 17px; }
+.flow-content p { font-size: 14px; opacity: 0.85; }
+.voice { background: var(--bg); }
+.voice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.voice-card { background: white; padding: 30px; border-radius: 12px; border-top: 4px solid var(--accent); }
+.voice-card .stars { color: var(--accent); font-size: 20px; margin-bottom: 12px; }
+.voice-card p { font-size: 14px; margin-bottom: 16px; line-height: 1.7; }
+.voice-card cite { display: block; font-size: 13px; color: #666; font-style: normal; }
+.faq { background: white; }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid #E5E0DB; padding: 24px 0; }
+.faq-item dt { font-weight: 700; margin-bottom: 10px; padding-left: 35px; position: relative; font-size: 16px; }
+.faq-item dt::before { content: "Q"; position: absolute; left: 0; color: var(--accent); font-size: 20px; font-weight: 900; }
+.faq-item dd { padding-left: 35px; position: relative; color: #555; font-size: 14px; }
+.faq-item dd::before { content: "A"; position: absolute; left: 0; color: var(--sub); font-size: 18px; font-weight: 900; }
+.reserve { background: linear-gradient(135deg, var(--accent) 0%, #C95E45 100%); color: white; text-align: center; }
+.reserve h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 20px; }
+.reserve p { opacity: 0.95; max-width: 600px; margin: 0 auto 40px; }
+.reserve-cta { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+.reserve-cta a { display: inline-flex; align-items: center; gap: 12px; padding: 20px 50px; background: white; color: var(--accent); text-decoration: none; border-radius: 50px; font-weight: 900; font-size: 20px; }
+.footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 40px 20px; text-align: center; font-size: 13px; }
+@media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="sample-note">⚠️ これは「あおば整体院」様向けに早川まいが制作した<b>無料サンプルページ</b>です → <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+
+<section class="hero" style="margin-top:40px;">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">新宿駅 徒歩5分</span>
+      <h1>
+        <span class="line">その腰痛・肩こり</span>
+        <span class="line"><span class="hl">1回で変わります</span></span>
+      </h1>
+      <p class="hero-sub">国家資格者による根本改善施術。<br>15,000人が選んだ整体院です。</p>
+      <div class="hero-cta">
+        <a href="#reserve" class="hero-btn">LINEで予約</a>
+        <div class="hero-tel">☎ 03-XXXX-XXXX<br><small>受付 9:00-20:00</small></div>
+      </div>
+    </div>
+    <div class="hero-price-card">
+      <span class="tag">初回限定</span>
+      <h3>カウンセリング+整体</h3>
+      <div class="price">¥12,000</div>
+      <div class="price-now">¥3,980<small>円</small></div>
+      <p class="note">※ お一人様1回限り</p>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="section-title">
+    <span class="en">CONCERNS</span>
+    <h2>こんな<span class="hl">お悩み</span>ありませんか？</h2>
+  </div>
+  <div class="problem-list">
+    <p>朝起きた時から腰が痛い</p>
+    <p>デスクワークで肩・首がガチガチ</p>
+    <p>マッサージに行ってもすぐ戻る</p>
+    <p>産後の骨盤の歪みが気になる</p>
+    <p>スポーツでのケガのケアをしたい</p>
+    <p>病院では「異常なし」と言われた</p>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="section-title">
+    <span class="en">FEATURES</span>
+    <h2>あおば整体院が<span class="hl">選ばれる理由</span></h2>
+  </div>
+  <div class="feature-grid container">
+    <div class="feature-card">
+      <div class="icon">👨‍⚕️</div>
+      <h3>国家資格者施術</h3>
+      <p>柔道整復師・鍼灸師の国家資格を持つスタッフが対応。安心・安全な施術をお約束します。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎯</div>
+      <h3>根本原因にアプローチ</h3>
+      <p>痛みの「表面」ではなく、身体の歪み・筋肉バランスから根本改善を目指します。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">💬</div>
+      <h3>丁寧なカウンセリング</h3>
+      <p>初回30分のじっくりヒアリング。生活習慣・姿勢までトータルで把握します。</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📍</div>
+      <h3>駅チカ・夜20時まで</h3>
+      <p>新宿駅西口徒歩5分。夜20時まで営業でお仕事帰りにも通いやすい立地。</p>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="section-title">
+    <span class="en">FLOW</span>
+    <h2>ご来院の流れ</h2>
+  </div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div class="flow-content"><h3>ご予約（LINE or 電話）</h3><p>お好きな方法で簡単予約。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div class="flow-content"><h3>カウンセリング（15分）</h3><p>お悩み・生活習慣を丁寧にヒアリング。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div class="flow-content"><h3>姿勢チェック・施術（40分）</h3><p>歪みチェック+個別施術プラン実施。</p></div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div class="flow-content"><h3>アフターケアアドバイス（5分）</h3><p>セルフケア方法と次回プランをご案内。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="section-title">
+    <span class="en">VOICE</span>
+    <h2>お客様の声</h2>
+  </div>
+  <div class="voice-grid container">
+    <div class="voice-card">
+      <div class="stars">★★★★★</div>
+      <p>「長年の腰痛が1回で軽くなりました。どこに行ってもダメだったのに、ここに来て本当に良かった。」</p>
+      <cite>— 40代女性 / 会社員</cite>
+    </div>
+    <div class="voice-card">
+      <div class="stars">★★★★★</div>
+      <p>「産後の骨盤矯正でお世話になりました。スタッフさんも優しく、子連れOKで助かりました。」</p>
+      <cite>— 30代女性 / 主婦</cite>
+    </div>
+    <div class="voice-card">
+      <div class="stars">★★★★★</div>
+      <p>「デスクワークの肩こりがひどかったが、姿勢改善のアドバイスも含めてトータルで良くなりました。」</p>
+      <cite>— 50代男性 / IT会社経営</cite>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="section-title">
+    <span class="en">FAQ</span>
+    <h2>よくあるご質問</h2>
+  </div>
+  <dl class="faq-list">
+    <div class="faq-item">
+      <dt>予約なしで来院できますか？</dt>
+      <dd>原則ご予約制です。当日予約も可能ですので、まずはお電話 or LINEにてご連絡ください。</dd>
+    </div>
+    <div class="faq-item">
+      <dt>保険は使えますか？</dt>
+      <dd>当院は保険適用外の整体院となります。自由診療となりますのでご了承ください。</dd>
+    </div>
+    <div class="faq-item">
+      <dt>服装はどうすれば？</dt>
+      <dd>動きやすい服装でお越しください。お着替えも無料でご用意しております。</dd>
+    </div>
+    <div class="faq-item">
+      <dt>施術は痛いですか？</dt>
+      <dd>痛みを伴う強い施術は行っておりません。お客様の身体に合わせたソフトな施術です。</dd>
+    </div>
+  </dl>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="section-title">
+    <span class="en" style="color:rgba(255,255,255,0.8);">RESERVATION</span>
+    <h2>お気軽にご予約ください</h2>
+  </div>
+  <p>初回限定3,980円キャンペーン実施中。<br>腰痛・肩こりでお悩みの方、まずは1度お試しください。</p>
+  <div class="reserve-cta">
+    <a href="tel:03-XXXX-XXXX">☎ 03-XXXX-XXXX</a>
+    <a href="#">LINE予約</a>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 あおば整体院 | このページは早川まい（HP制作フリーランス）によるサンプル提案です<br>
+  実際のHP制作のご相談: 0622hayakawamai@gmail.com
+</footer>
+</body>
+</html>

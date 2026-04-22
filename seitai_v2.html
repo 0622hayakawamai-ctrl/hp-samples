@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>あおば整体院 - 新宿の国家資格者による根本改善整体</title>
+<meta name="description" content="新宿駅西口徒歩5分、国家資格者（柔道整復師）による根本改善整体。15,000人の施術実績。初回カウンセリング+整体3,980円。腰痛・肩こり・産後骨盤矯正。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1f2a2e;
+  --primary: #2d4a52;
+  --primary-light: #4a6d73;
+  --accent: #c77b50;
+  --accent-soft: #e4a980;
+  --paper: #f7f3ec;
+  --cream: #ebe4d5;
+  --gray: #7d8a8c;
+  --white: #fffefc;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--ink); line-height: 1.9; letter-spacing: 0.03em;
+  background: var(--paper); font-weight: 300;
+}
+a { color: inherit; text-decoration: none; }
+.en { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 0.25em; }
+.jp-serif { font-family: 'Noto Serif JP', serif; font-weight: 500; }
+
+.sample-note { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--primary); color: var(--accent-soft); padding: 9px 24px; font-size: 12px; text-align: center; letter-spacing: 0.08em; }
+.sample-note a { color: var(--accent-soft); text-decoration: underline; margin-left: 8px; }
+
+.nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; padding: 22px 60px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+.nav.scrolled { background: rgba(255,254,252,0.96); backdrop-filter: blur(20px); box-shadow: 0 1px 15px rgba(0,0,0,0.05); }
+.nav-logo { font-family: 'Noto Serif JP', serif; font-size: 19px; font-weight: 600; letter-spacing: 0.12em; color: white; transition: color 0.3s; }
+.nav.scrolled .nav-logo { color: var(--ink); }
+.nav-logo .en { display: block; font-family: 'Cormorant Garamond', serif; font-size: 10px; letter-spacing: 0.3em; margin-top: 2px; opacity: 0.8; font-weight: 400; }
+.nav-links { display: flex; gap: 40px; align-items: center; }
+.nav-link { font-size: 11px; letter-spacing: 0.35em; color: white; transition: color 0.3s; }
+.nav.scrolled .nav-link { color: var(--ink); }
+.nav-cta { padding: 10px 22px; background: var(--accent); color: white !important; font-weight: 500; border-radius: 2px; }
+.nav-cta:hover { background: #b06a42; }
+
+/* Hero */
+.hero { min-height: 100vh; padding: 140px 60px 80px; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 70% 30%, rgba(74,109,115,0.8) 0%, transparent 50%),
+              radial-gradient(ellipse at 30% 70%, rgba(45,74,82,0.9) 0%, transparent 60%),
+              linear-gradient(135deg, #1f2a2e 0%, #2d4a52 60%, #1f2a2e 100%);
+  color: white; display: flex; align-items: center; }
+.hero::before { content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px; }
+.hero-svg { position: absolute; bottom: 0; right: 0; width: 45%; height: 80%; opacity: 0.15; pointer-events: none; }
+.hero-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 2; width: 100%; }
+.hero-badge { display: inline-block; padding: 6px 18px; background: var(--accent); font-size: 11px; letter-spacing: 0.3em; font-weight: 500; margin-bottom: 32px; }
+.hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(36px, 5vw, 62px); font-weight: 600; line-height: 1.3; margin-bottom: 28px; letter-spacing: 0.05em; }
+.hero h1 em { font-style: normal; color: var(--accent-soft); position: relative; }
+.hero h1 em::after { content: ''; position: absolute; left: 0; right: 0; bottom: 6px; height: 10px; background: rgba(199,123,80,0.3); z-index: -1; }
+.hero-sub { font-size: 16px; line-height: 2.2; opacity: 0.92; margin-bottom: 48px; font-weight: 300; letter-spacing: 0.08em; }
+.hero-stats { display: flex; gap: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.15); }
+.hero-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--accent-soft); font-weight: 400; line-height: 1; margin-bottom: 8px; }
+.hero-stat .label { font-size: 11px; opacity: 0.8; letter-spacing: 0.25em; }
+
+.hero-card { background: rgba(255,254,252,0.96); color: var(--ink); padding: 48px 40px; border-top: 4px solid var(--accent); position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.3); }
+.hero-card-tag { display: inline-block; padding: 5px 14px; background: var(--accent); color: white; font-size: 10px; letter-spacing: 0.3em; font-weight: 500; margin-bottom: 20px; }
+.hero-card h3 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.08em; }
+.hero-card .meta { font-size: 11px; color: var(--gray); letter-spacing: 0.2em; margin-bottom: 28px; }
+.hero-card .strike { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--gray); text-decoration: line-through; }
+.hero-card .amount { font-family: 'Cormorant Garamond', serif; font-size: 68px; font-weight: 400; color: var(--accent); line-height: 1; margin: 4px 0 8px; letter-spacing: 0.01em; }
+.hero-card .amount small { font-family: 'Noto Sans JP', sans-serif; font-size: 16px; color: var(--ink); font-weight: 400; }
+.hero-card .note { font-size: 11px; color: var(--gray); letter-spacing: 0.1em; border-top: 1px dashed #ccc; padding-top: 16px; margin-top: 20px; }
+
+section { padding: 140px 60px; }
+.section-head { text-align: center; margin-bottom: 80px; }
+.section-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.55em; color: var(--accent); font-weight: 400; margin-bottom: 16px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 600; letter-spacing: 0.15em; margin-bottom: 12px; }
+.section-line { width: 40px; height: 2px; background: var(--accent); margin: 30px auto; }
+
+/* Problems section */
+.problems { background: var(--white); }
+.problems-grid { max-width: 900px; margin: 0 auto; background: var(--paper); padding: 60px 50px; border-left: 4px solid var(--accent); }
+.problems-grid ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 40px; }
+.problems-grid li { padding: 16px 0 16px 32px; position: relative; font-size: 15px; border-bottom: 1px dashed rgba(125,138,140,0.3); }
+.problems-grid li:last-child, .problems-grid li:nth-last-child(2) { border-bottom: none; }
+.problems-grid li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 18px; }
+.problems-lead { text-align: center; margin-top: 60px; font-size: 22px; color: var(--primary); font-family: 'Noto Serif JP', serif; font-weight: 500; letter-spacing: 0.1em; }
+
+/* Why chosen */
+.why { background: var(--primary); color: white; }
+.why .section-title { color: white; }
+.why-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px 80px; }
+.why-item { display: grid; grid-template-columns: 100px 1fr; gap: 30px; align-items: start; }
+.why-num { font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--accent-soft); line-height: 1; font-weight: 300; }
+.why-content h3 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.1em; color: var(--accent-soft); }
+.why-content p { font-size: 14px; line-height: 2.2; opacity: 0.9; }
+
+/* Flow */
+.flow { background: var(--paper); }
+.flow-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.flow-grid::before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: var(--accent); opacity: 0.3; }
+.flow-item { text-align: center; position: relative; padding: 0 16px; }
+.flow-circle { width: 80px; height: 80px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; margin: 0 auto 24px; box-shadow: 0 8px 20px rgba(199,123,80,0.3); position: relative; z-index: 2; }
+.flow-item h4 { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.1em; }
+.flow-item .time { font-size: 10px; letter-spacing: 0.3em; color: var(--accent); margin-bottom: 12px; }
+.flow-item p { font-size: 13px; line-height: 1.9; color: var(--gray); }
+
+/* Voice */
+.voice { background: var(--white); }
+.voice-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.voice-card { background: var(--paper); padding: 48px 36px; position: relative; border-top: 3px solid var(--accent); }
+.voice-stars { color: var(--accent); font-size: 16px; letter-spacing: 0.15em; margin-bottom: 20px; }
+.voice-text { font-size: 14px; line-height: 2.1; margin-bottom: 28px; min-height: 150px; }
+.voice-meta { font-size: 12px; color: var(--gray); letter-spacing: 0.1em; padding-top: 18px; border-top: 1px solid rgba(125,138,140,0.2); }
+
+/* FAQ */
+.faq { background: var(--cream); }
+.faq-list { max-width: 880px; margin: 0 auto; }
+.faq-item { background: white; margin-bottom: 12px; padding: 28px 36px; border-left: 3px solid var(--accent); }
+.faq-q { font-family: 'Noto Serif JP', serif; font-weight: 600; font-size: 16px; margin-bottom: 12px; padding-left: 36px; position: relative; letter-spacing: 0.05em; }
+.faq-q::before { content: 'Q.'; position: absolute; left: 0; color: var(--accent); font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; }
+.faq-a { font-size: 14px; padding-left: 36px; color: var(--gray); line-height: 2.1; position: relative; }
+.faq-a::before { content: 'A.'; position: absolute; left: 0; color: var(--primary); font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; }
+
+/* Reserve */
+.reserve { padding: 160px 60px; background:
+  radial-gradient(ellipse at 70% 20%, rgba(199,123,80,0.4) 0%, transparent 50%),
+  linear-gradient(135deg, var(--primary) 0%, var(--ink) 100%);
+  color: white; text-align: center; position: relative; overflow: hidden; }
+.reserve::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.03) 49.5%, rgba(255,255,255,0.03) 50.5%, transparent 51%); background-size: 20px 20px; }
+.reserve-inner { position: relative; z-index: 2; }
+.reserve h2 { font-family: 'Noto Serif JP', serif; font-size: clamp(30px, 4vw, 46px); color: white; margin-bottom: 24px; letter-spacing: 0.12em; font-weight: 600; }
+.reserve .section-line { background: var(--accent-soft); }
+.reserve p { max-width: 600px; margin: 0 auto 50px; opacity: 0.95; line-height: 2.2; letter-spacing: 0.08em; }
+.reserve-tel { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 60px); font-weight: 300; letter-spacing: 0.08em; color: var(--accent-soft); margin: 24px 0 12px; }
+.reserve-hours { font-size: 11px; letter-spacing: 0.4em; opacity: 0.75; margin-bottom: 56px; }
+.reserve-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.btn-line { padding: 20px 48px; font-size: 13px; letter-spacing: 0.3em; font-weight: 500; background: #00B900; color: white; transition: all 0.3s; }
+.btn-line:hover { background: #009900; transform: translateY(-2px); }
+.btn-outline { padding: 20px 48px; font-size: 13px; letter-spacing: 0.3em; font-weight: 500; border: 1px solid rgba(255,255,255,0.6); color: white; }
+
+.footer { background: #0f1618; color: rgba(255,255,255,0.5); padding: 60px 60px 40px; text-align: center; font-size: 11px; letter-spacing: 0.2em; line-height: 2.2; }
+.footer a { color: var(--accent-soft); }
+
+@media (max-width: 900px) {
+  .nav { padding: 16px 24px; } .nav-links { gap: 16px; } .nav-link:not(.nav-cta) { display: none; }
+  .hero-inner { grid-template-columns: 1fr; padding: 120px 20px 60px; gap: 50px; }
+  section { padding: 100px 20px; }
+  .problems-grid ul { grid-template-columns: 1fr; }
+  .why-grid, .voice-grid { grid-template-columns: 1fr; }
+  .flow-grid { grid-template-columns: 1fr 1fr; gap: 40px 20px; }
+  .flow-grid::before { display: none; }
+}
+
+
+/* Injected hero image v2 */
+.hero { background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=85") !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
+.hero-svg, .hero-bg { opacity: 0.25 !important; }
+</style>
+</head>
+<body>
+
+<div class="sample-note">これは「あおば整体院」様向けに早川まいが制作した<strong>無料サンプルページ</strong>です <a href="mailto:0622hayakawamai@gmail.com">ご相談はこちら</a></div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">あおば整体院<span class="en">AOBA SEITAI</span></a>
+  <div class="nav-links">
+    <a href="#problems" class="nav-link">SYMPTOMS</a>
+    <a href="#why" class="nav-link">WHY US</a>
+    <a href="#flow" class="nav-link">FLOW</a>
+    <a href="#voice" class="nav-link">VOICE</a>
+    <a href="#reserve" class="nav-link nav-cta">RESERVE</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <svg class="hero-svg" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#e4a980" stroke-width="1.5" opacity="0.6">
+      <path d="M 300 100 Q 340 200 320 280 Q 300 360 350 440 Q 400 520 380 600 Q 360 680 300 720"/>
+      <circle cx="300" cy="100" r="40"/>
+      <path d="M 260 260 L 220 340 M 340 260 L 380 340"/>
+      <path d="M 280 540 L 250 700 M 320 540 L 350 700"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">新宿駅西口 徒歩5分</span>
+      <h1>その<em>腰痛・肩こり</em>、<br>1回で、変わります。</h1>
+      <p class="hero-sub">国家資格保有者（柔道整復師）による根本改善施術。<br>累計15,000人が選んだ、結果が見える整体院です。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">15,000</div><div class="label">施術実績</div></div>
+        <div class="hero-stat"><div class="num">95.3%</div><div class="label">満足度</div></div>
+        <div class="hero-stat"><div class="num">8年</div><div class="label">地域で愛され</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="hero-card-tag">INITIAL OFFER</span>
+      <h3>初回カウンセリング+整体</h3>
+      <div class="meta">90 MINUTES / 問診+姿勢分析+施術</div>
+      <div class="strike">通常 ¥12,000</div>
+      <div class="amount">¥3,980<small> 税込</small></div>
+      <p class="note">※お一人様1回限り / ご予約時「初回希望」とお伝えください</p>
+    </div>
+  </div>
+</section>
+
+<section class="problems" id="problems">
+  <div class="section-head">
+    <div class="section-eyebrow">Common Symptoms</div>
+    <h2 class="section-title">こ ん な お 悩 み</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="problems-grid">
+    <ul>
+      <li>朝起きた時から腰が痛い</li>
+      <li>デスクワークで肩・首がガチガチ</li>
+      <li>マッサージに行ってもすぐ戻る</li>
+      <li>産後の骨盤の歪みが気になる</li>
+      <li>スポーツでのケガのケアをしたい</li>
+      <li>病院で「異常なし」と言われた</li>
+      <li>頭痛・めまい・自律神経の乱れ</li>
+      <li>姿勢の悪さを自覚している</li>
+    </ul>
+    <p class="problems-lead">──  一つでも当てはまる方、<br>一度当院にいらしてください。</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="section-head">
+    <div class="section-eyebrow">Why Chosen</div>
+    <h2 class="section-title">選 ば れ る 理 由</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-content">
+        <h3>国 家 資 格 者 施 術</h3>
+        <p>柔道整復師・鍼灸師の国家資格を持つスタッフが全員対応。3年以上の専門教育を経た施術者のみが在籍しています。</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-content">
+        <h3>根 本 原 因 に 対 処</h3>
+        <p>痛みの「表面」ではなく、身体の歪み・筋肉バランス・生活習慣から根本原因を特定し、再発しない状態を目指します。</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-content">
+        <h3>30 分 の ヒ ア リ ン グ</h3>
+        <p>初回は30分のカウンセリングからスタート。お悩み・生活習慣・既往歴まで丁寧にお伺いします。</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-content">
+        <h3>駅 チ カ ・ 夜 2 0 時</h3>
+        <p>新宿駅西口徒歩5分の駅チカ立地。夜20時まで営業で、お仕事帰りにも通いやすい環境です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow" id="flow">
+  <div class="section-head">
+    <div class="section-eyebrow">First Visit Flow</div>
+    <h2 class="section-title">ご 来 院 の 流 れ</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="flow-grid">
+    <div class="flow-item">
+      <div class="flow-circle">01</div>
+      <div class="time">ANYTIME</div>
+      <h4>ご予約</h4>
+      <p>LINE・電話・Webからお好きな方法でご予約ください</p>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle">02</div>
+      <div class="time">15 MIN</div>
+      <h4>カウンセリング</h4>
+      <p>お悩み・生活習慣を丁寧にお伺いします</p>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle">03</div>
+      <div class="time">60 MIN</div>
+      <h4>姿勢分析+施術</h4>
+      <p>歪みチェックをもとにオーダーメイド施術</p>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle">04</div>
+      <div class="time">15 MIN</div>
+      <h4>アフターケア</h4>
+      <p>セルフケアと次回プランをご案内</p>
+    </div>
+  </div>
+</section>
+
+<section class="voice" id="voice">
+  <div class="section-head">
+    <div class="section-eyebrow">Patient Voice</div>
+    <h2 class="section-title">お 客 様 の 声</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="voice-grid">
+    <article class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">10年悩んできた腰痛が、初回の施術で明らかに軽くなりました。どこに行ってもダメだったのに、ここに来て本当に良かった。今では月2回のメンテナンスで通っています。</p>
+      <div class="voice-meta">── 40代女性 / 会社員 / 3年通い続けています</div>
+    </article>
+    <article class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">産後の骨盤矯正でお世話になりました。スタッフさんもお母さんに優しく、キッズスペースもあり子連れOKでとても助かりました。産後の体型も戻り、感謝しかないです。</p>
+      <div class="voice-meta">── 30代女性 / ママ / 産後骨盤矯正</div>
+    </article>
+    <article class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">デスクワークの肩こりが酷く、頭痛までありましたが、姿勢改善のアドバイスも含めて総合的に良くなりました。施術だけでなく、日常の動き方を変える指導が素晴らしいです。</p>
+      <div class="voice-meta">── 50代男性 / IT会社経営</div>
+    </article>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="section-head">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">よ く あ る ご 質 問</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">予約なしで来院できますか？</p>
+      <p class="faq-a">原則ご予約制です。当日ご予約も可能ですのでお電話 or LINEにてお問合せください。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">保険は使えますか？</p>
+      <p class="faq-a">当院は保険適用外の整体院で、自由診療となっております。ご了承ください。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">服装はどうすれば？</p>
+      <p class="faq-a">動きやすい服装でお越しください。お着替えも無料でご用意しております。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">施術は痛いですか？</p>
+      <p class="faq-a">強い刺激の施術は行いません。お客様の身体に合わせた優しいソフトな施術を心がけています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="reserve-inner">
+    <div class="section-eyebrow" style="color: var(--accent-soft);">Reservation</div>
+    <h2>ご予約</h2>
+    <div class="section-line"></div>
+    <p>初回カウンセリング+整体 ¥3,980 キャンペーン実施中。<br>お電話・LINE・Webフォームのいずれかからお気軽にどうぞ。</p>
+    <div class="reserve-tel">03 · XXXX · XXXX</div>
+    <div class="reserve-hours">OPEN 9 : 00 - 20 : 00 / 日曜定休</div>
+    <div class="reserve-btns">
+      <a href="#" class="btn-line">LINEで予約</a>
+      <a href="tel:03-XXXX-XXXX" class="btn-outline">お電話で予約</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  あおば整体院 / 東京都新宿区西新宿1-X-X / TEL 03-XXXX-XXXX<br>
+  © 2026 Aoba Seitai. All Rights Reserved.<br><br>
+  このページは <a href="mailto:0622hayakawamai@gmail.com">早川まい（HP制作フリーランス）</a>によるサンプル提案です
+</footer>
+
+<script>window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 80));</script>
+</body>
+</html>
