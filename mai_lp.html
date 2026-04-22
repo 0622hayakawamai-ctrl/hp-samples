@@ -105,6 +105,20 @@ section { padding: 120px 24px; }
 .plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
 .plan-note { font-size: 12px; color: var(--sub); margin-top: 20px; line-height: 1.8; }
 
+.compare-section { background: var(--bg); padding: 120px 24px; }
+.compare-wrap { max-width: 1000px; margin: 0 auto; }
+.compare-label { font-size: 18px; font-weight: 500; text-align: center; margin-bottom: 24px; letter-spacing: 0.1em; color: var(--ink); }
+.compare-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
+.compare-row { display: grid; grid-template-columns: 2fr 1.2fr 1fr 1fr; padding: 18px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; }
+.compare-row:last-child { border-bottom: none; }
+.compare-row.head { background: var(--bg-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; color: var(--sub); }
+.compare-row.highlight { background: rgba(204,120,92,0.06); font-weight: 500; color: var(--ink); }
+.compare-row.highlight > div:first-child { color: var(--accent); font-weight: 700; }
+.compare-note { text-align: center; font-size: 12px; color: var(--sub); margin-top: 24px; letter-spacing: 0.05em; }
+@media (max-width: 768px) {
+  .compare-row { grid-template-columns: 1.5fr 1fr 1fr 0.8fr; padding: 12px 16px; font-size: 12px; }
+}
+
 .problems-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px; max-width: 1100px; margin: 0 auto;
@@ -263,6 +277,84 @@ section { padding: 120px 24px; }
       <a href="#contact" class="btn btn-secondary" style="margin-top: 20px;">このプランで相談</a>
     </div>
 
+  </div>
+</section>
+
+<section class="compare-section">
+  <div class="section-title">
+    <span class="en">── COMPETITIVE COMPARISON ──</span>
+    <h2>他 社 比 較</h2>
+    <p>同水準のサービス内容で価格を比較しています。</p>
+  </div>
+  <div class="compare-wrap container">
+    <h3 class="compare-label">HP制作単体プラン</h3>
+    <div class="compare-table">
+      <div class="compare-row head">
+        <div>サービス</div>
+        <div>初期費用</div>
+        <div>月額</div>
+        <div>返金保証</div>
+      </div>
+      <div class="compare-row">
+        <div>大手HP制作会社</div>
+        <div>30〜100万円</div>
+        <div>1〜3万円</div>
+        <div>なし</div>
+      </div>
+      <div class="compare-row">
+        <div>ホームページワン</div>
+        <div>0円</div>
+        <div>4,980円</div>
+        <div>なし</div>
+      </div>
+      <div class="compare-row">
+        <div>あきばれホームページ</div>
+        <div>5万円</div>
+        <div>9,800円</div>
+        <div>なし</div>
+      </div>
+      <div class="compare-row highlight">
+        <div>【当方】早川まい</div>
+        <div>0円</div>
+        <div>4,980円</div>
+        <div>14日間</div>
+      </div>
+    </div>
+
+    <h3 class="compare-label" style="margin-top: 72px;">AIコンサル+HP制作プラン</h3>
+    <div class="compare-table">
+      <div class="compare-row head">
+        <div>サービス</div>
+        <div>初期/初月</div>
+        <div>月額</div>
+        <div>HP制作</div>
+      </div>
+      <div class="compare-row">
+        <div>大手AIコンサル会社</div>
+        <div>100〜500万円</div>
+        <div>50〜200万円</div>
+        <div>別途費用</div>
+      </div>
+      <div class="compare-row">
+        <div>中堅AIコンサル</div>
+        <div>30〜50万円</div>
+        <div>20〜50万円</div>
+        <div>別途費用</div>
+      </div>
+      <div class="compare-row">
+        <div>フリーランスDX支援</div>
+        <div>10〜20万円</div>
+        <div>10〜30万円</div>
+        <div>別途費用</div>
+      </div>
+      <div class="compare-row highlight">
+        <div>【当方】早川まい</div>
+        <div>15万円（初月）</div>
+        <div>5万円</div>
+        <div>込み</div>
+      </div>
+    </div>
+    <p class="compare-note">※ 実測値は他社公開情報・相場価格を参考。具体的な相談は無料面談にて。</p>
   </div>
 </section>
 
