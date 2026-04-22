@@ -3,374 +3,408 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早川まい | AI×Web制作フリーランス</title>
-<meta name="description" content="中小企業・個人店のためのHP制作+AI業務改善。初期費用0円、月額4,980円〜。東京都内の美容・サロン・士業に選ばれています。">
-<meta property="og:title" content="早川まい | AI×Web制作フリーランス">
-<meta property="og:description" content="初期0円・月額4,980円のHP制作。AI業務改善コンサルも対応。">
+<title>早川まい | AIコンサル × HP制作</title>
+<meta name="description" content="AI業務コンサルにHP制作が込みのパッケージ。初月15万円、翌月以降月額5万円。HP制作単体なら月額4,980円。">
+<meta property="og:title" content="早川まい | AIコンサル × HP制作">
+<meta property="og:description" content="AIコンサル+HP制作セット 初月15万/翌月5万｜HP制作単体 月額4,980円">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --primary: #0A1929;
-  --accent: #CC785C;
-  --text: #1A1A1A;
-  --text-sub: #555;
-  --bg: #FAFAF8;
+  --ink: #0a0a0a;
+  --accent: #cc785c;
+  --sub: #666;
+  --line: #e8e6e0;
+  --bg: #ffffff;
+  --bg-soft: #fafaf8;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, 'Helvetica Neue', sans-serif; line-height: 1.7; color: var(--text); background: var(--bg); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+body { font-family: 'Noto Sans JP', -apple-system, sans-serif; line-height: 1.8; color: var(--ink); background: var(--bg); font-weight: 300; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(250,250,248,0.95); backdrop-filter: blur(10px);
-  padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+  padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--line);
 }
-.nav-logo { font-weight: 900; font-size: 20px; letter-spacing: -0.5px; }
-.nav-logo span { color: var(--accent); }
-.nav-link { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 14px; }
-.nav-cta { background: var(--accent); color: white !important; padding: 10px 24px; border-radius: 30px; }
+.nav-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.1em; }
+.nav-logo span { color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-left: 4px; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-link { font-size: 13px; letter-spacing: 0.1em; color: var(--sub); transition: color 0.3s; }
+.nav-link:hover { color: var(--accent); }
+.nav-cta { background: var(--ink); color: white; padding: 10px 22px; border-radius: 30px; font-size: 13px; letter-spacing: 0.05em; }
 
 .hero {
-  min-height: 100vh; padding: 120px 20px 80px;
+  min-height: 90vh; padding: 160px 24px 100px;
   display: flex; align-items: center;
-  background: linear-gradient(135deg, var(--primary) 0%, #1E3A5F 100%);
-  color: white;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
-.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+.hero-inner { max-width: 1200px; margin: 0 auto; }
 .hero-badge {
-  display: inline-block; padding: 6px 16px; border-radius: 20px;
-  background: rgba(204,120,92,0.2); color: var(--accent);
-  font-size: 12px; letter-spacing: 2px; margin-bottom: 24px;
+  display: inline-block; padding: 8px 18px; border: 1px solid var(--line); border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--accent);
+  font-style: italic; margin-bottom: 32px;
 }
 .hero h1 {
-  font-size: clamp(36px, 5vw, 56px); line-height: 1.3;
-  margin-bottom: 24px; font-weight: 900;
+  font-size: clamp(36px, 6vw, 72px); line-height: 1.25;
+  margin-bottom: 28px; font-weight: 700; letter-spacing: 0.02em;
 }
 .hero h1 .accent { color: var(--accent); }
 .hero-lead {
-  font-size: clamp(16px, 1.5vw, 18px); opacity: 0.9;
-  margin-bottom: 40px;
+  font-size: clamp(15px, 1.4vw, 17px); color: var(--sub);
+  margin-bottom: 48px; max-width: 680px; line-height: 2;
 }
-.hero-stats { display: flex; gap: 40px; margin-top: 40px; }
-.hero-stat strong { display: block; font-size: 32px; color: var(--accent); font-weight: 900; }
-.hero-stat span { font-size: 13px; opacity: 0.8; }
-.hero-visual { position: relative; }
-.hero-visual .card {
-  background: white; color: var(--text);
-  padding: 30px; border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-  transform: perspective(1000px) rotateY(-5deg) rotateX(3deg);
-}
-.hero-visual .card h4 { font-size: 14px; color: var(--text-sub); margin-bottom: 8px; }
-.hero-visual .card .price { font-size: 42px; color: var(--accent); font-weight: 900; }
-.hero-visual .card .price span { font-size: 16px; color: var(--text); font-weight: 400; }
-.hero-visual .card ul { margin-top: 24px; list-style: none; }
-.hero-visual .card ul li { padding: 8px 0; font-size: 14px; color: var(--text-sub); }
-.hero-visual .card ul li::before { content: "✓ "; color: var(--accent); font-weight: bold; margin-right: 5px; }
-
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn {
-  display: inline-block; padding: 16px 40px; border-radius: 50px;
-  text-decoration: none; font-weight: 600; font-size: 16px;
-  transition: all 0.3s; letter-spacing: 1px;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 18px 36px; border-radius: 50px;
+  font-size: 14px; letter-spacing: 0.1em; font-weight: 500;
+  transition: all 0.3s;
 }
-.btn-primary { background: var(--accent); color: white; }
-.btn-primary:hover { background: #B86B52; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(204,120,92,0.3); }
-.btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); margin-left: 16px; }
+.btn-primary { background: var(--ink); color: white; }
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+.btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn-secondary:hover { background: var(--ink); color: white; }
 
-section { padding: 100px 20px; }
-.section-title { text-align: center; margin-bottom: 60px; }
-.section-title .en { display: block; font-size: 12px; letter-spacing: 4px; color: var(--accent); margin-bottom: 12px; }
-.section-title h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.5px; }
+section { padding: 120px 24px; }
+.section-title { text-align: center; margin-bottom: 72px; }
+.section-title .en { display: block; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.5em; color: var(--accent); font-style: italic; margin-bottom: 16px; }
+.section-title h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 500; letter-spacing: 0.05em; }
+.section-title p { color: var(--sub); margin-top: 16px; font-size: 15px; }
 
-.problem-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.plans { background: var(--bg-soft); }
+.plans-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 24px; max-width: 1100px; margin: 0 auto;
 }
-.problem-card {
-  background: white; padding: 40px 30px; border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center;
+.plan {
+  background: white; border: 1px solid var(--line); border-radius: 16px;
+  padding: 48px 40px; transition: all 0.3s; position: relative;
 }
-.problem-card .icon { font-size: 40px; margin-bottom: 16px; }
-.problem-card h3 { margin-bottom: 12px; font-size: 18px; }
-.problem-card p { font-size: 14px; color: var(--text-sub); }
+.plan:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.06); border-color: var(--accent); }
+.plan.featured { border: 2px solid var(--accent); }
+.plan.featured::before {
+  content: 'RECOMMENDED'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: white; padding: 4px 16px; border-radius: 20px;
+  font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.3em; font-style: italic;
+}
+.plan-label { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: var(--accent); font-style: italic; margin-bottom: 12px; }
+.plan h3 { font-size: 22px; font-weight: 500; margin-bottom: 20px; letter-spacing: 0.05em; }
+.plan-price { margin: 28px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plan-price .initial { display: block; font-size: 13px; color: var(--sub); margin-bottom: 8px; letter-spacing: 0.05em; }
+.plan-price .amount { font-size: 42px; font-weight: 700; color: var(--ink); }
+.plan-price .amount small { font-size: 14px; font-weight: 400; color: var(--sub); margin-left: 4px; }
+.plan-price .monthly { display: block; margin-top: 12px; font-size: 14px; color: var(--sub); }
+.plan-price .monthly strong { color: var(--accent); font-weight: 500; }
+.plan-features { list-style: none; margin: 28px 0; }
+.plan-features li { padding: 10px 0; font-size: 14px; color: var(--sub); border-bottom: 1px dashed var(--line); padding-left: 26px; position: relative; }
+.plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
+.plan-note { font-size: 12px; color: var(--sub); margin-top: 20px; line-height: 1.8; }
 
-.price-section { background: var(--primary); color: white; }
-.price-section .section-title h2 { color: white; }
-.price-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px; max-width: 1100px; margin: 0 auto;
+.problems-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px; max-width: 1100px; margin: 0 auto;
 }
-.price-card {
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
-  padding: 40px; border-radius: 16px; backdrop-filter: blur(10px);
+.problem {
+  background: white; padding: 40px 32px; border: 1px solid var(--line); border-radius: 12px;
+  transition: all 0.3s;
 }
-.price-card.featured { background: rgba(204,120,92,0.15); border-color: var(--accent); transform: scale(1.05); }
-.price-card h3 { font-size: 22px; margin-bottom: 20px; letter-spacing: 1px; }
-.price-card .amount { font-size: 48px; color: var(--accent); font-weight: 900; margin-bottom: 8px; }
-.price-card .amount small { font-size: 14px; color: white; font-weight: 400; }
-.price-card .initial { font-size: 13px; opacity: 0.7; margin-bottom: 24px; }
-.price-card ul { list-style: none; margin-bottom: 30px; }
-.price-card ul li { padding: 10px 0; border-bottom: 1px dashed rgba(255,255,255,0.15); font-size: 14px; }
+.problem:hover { border-color: var(--accent); }
+.problem .num { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--accent); font-style: italic; margin-bottom: 16px; }
+.problem h3 { font-size: 17px; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.03em; }
+.problem p { font-size: 13px; color: var(--sub); line-height: 2; }
 
-.flow { background: var(--bg); }
-.flow-list { max-width: 800px; margin: 0 auto; }
-.flow-item {
-  display: flex; gap: 30px; padding: 30px 0;
-  border-bottom: 1px solid #E0DCD6;
-}
+.flow { background: var(--bg-soft); }
+.flow-list { max-width: 900px; margin: 0 auto; }
+.flow-item { display: flex; gap: 40px; padding: 36px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+.flow-item:last-child { border: none; }
 .flow-num {
-  flex-shrink: 0; width: 60px; height: 60px;
-  background: var(--accent); color: white;
+  flex-shrink: 0; width: 48px; height: 48px;
+  border: 1px solid var(--accent); color: var(--accent);
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 24px; font-weight: 900;
+  font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic;
 }
-.flow-content h3 { font-size: 18px; margin-bottom: 8px; }
-.flow-content p { font-size: 14px; color: var(--text-sub); }
+.flow-content h3 { font-size: 17px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.05em; }
+.flow-content p { font-size: 14px; color: var(--sub); line-height: 2; }
+.flow-content .time { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--accent); font-style: italic; letter-spacing: 0.2em; margin-top: 6px; display: inline-block; }
 
-.voice-section { background: white; }
-.voice-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px; max-width: 1100px; margin: 0 auto;
-}
-.voice-card {
-  padding: 40px 30px; background: var(--bg);
-  border-left: 3px solid var(--accent); border-radius: 8px;
-}
-.voice-card p { font-size: 14px; margin-bottom: 20px; }
-.voice-card cite { display: block; font-size: 13px; color: var(--text-sub); font-style: normal; }
-
-.about {
-  background: linear-gradient(135deg, var(--bg) 0%, white 100%);
-}
 .about-inner {
   max-width: 1000px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center;
 }
 .about-photo {
-  aspect-ratio: 1; background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 60px;
+  aspect-ratio: 1; background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--accent); font-family: 'Cormorant Garamond', serif; font-size: 80px; font-style: italic;
 }
-.about-text h3 { font-size: 28px; margin-bottom: 16px; }
-.about-text p { margin-bottom: 16px; color: var(--text-sub); }
+.about-photo small { font-size: 12px; color: var(--sub); letter-spacing: 0.3em; margin-top: 12px; font-family: 'Noto Sans JP'; font-style: normal; }
+.about-text h3 { font-size: 28px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.05em; }
+.about-text .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--accent); font-style: italic; letter-spacing: 0.3em; margin-bottom: 24px; }
+.about-text p { margin-bottom: 20px; font-size: 14px; color: var(--sub); line-height: 2; }
+.about-text .highlight { color: var(--ink); font-weight: 500; }
 
-.cta-section {
-  background: linear-gradient(135deg, var(--primary), #1E3A5F);
-  color: white; text-align: center;
+.samples { background: var(--bg-soft); }
+.samples-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px; max-width: 1200px; margin: 0 auto;
 }
-.cta-section h2 { color: white; font-size: clamp(28px, 4vw, 40px); margin-bottom: 20px; }
-.cta-section p { opacity: 0.9; max-width: 600px; margin: 0 auto 40px; }
+.sample { background: white; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
+.sample:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+.sample-thumb { aspect-ratio: 16/10; background: var(--ink); color: white; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; letter-spacing: 0.1em; }
+.sample-body { padding: 20px 24px; }
+.sample-body h4 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.sample-body p { font-size: 12px; color: var(--sub); }
+
+.cta-section { background: var(--ink); color: white; text-align: center; }
+.cta-section .section-title .en { color: var(--accent); }
+.cta-section .section-title h2 { color: white; }
+.cta-section .section-title p { color: rgba(255,255,255,0.7); }
+.cta-section .btn-primary { background: var(--accent); color: white; }
+.cta-section .btn-primary:hover { background: white; color: var(--ink); }
+.cta-email { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
+.cta-email a { color: var(--accent); }
 
 .footer {
-  background: #05101C; color: rgba(255,255,255,0.6);
-  padding: 60px 20px 40px; text-align: center; font-size: 13px;
+  background: var(--bg); color: var(--sub); padding: 60px 24px 40px;
+  text-align: center; font-size: 12px; border-top: 1px solid var(--line); letter-spacing: 0.05em;
 }
-.footer-links a {
-  color: rgba(255,255,255,0.7); margin: 0 15px; text-decoration: none; font-size: 13px;
-}
-.footer-copyright { margin-top: 30px; opacity: 0.5; }
+.footer-links a { margin: 0 20px; font-size: 12px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copyright { margin-top: 24px; font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 0.2em; font-size: 11px; }
 
 @media (max-width: 768px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .about-inner { grid-template-columns: 1fr; }
-  .price-card.featured { transform: none; }
+  .nav-links { gap: 12px; }
   .nav-link { display: none; }
-  .nav-cta { display: inline-block !important; }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 36px; }
+  .flow-item { gap: 20px; }
+  section { padding: 80px 24px; }
 }
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <div class="nav-logo">早川<span>まい</span></div>
-  <div>
-    <a href="#price" class="nav-link">料金</a>
-    <a href="#flow" class="nav-link">流れ</a>
-    <a href="#about" class="nav-link">プロフィール</a>
-    <a href="#contact" class="nav-link nav-cta">お問い合わせ</a>
+  <div class="nav-logo">早川<span>mai</span></div>
+  <div class="nav-links">
+    <a href="#plans" class="nav-link">PLANS</a>
+    <a href="#flow" class="nav-link">FLOW</a>
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="#contact" class="nav-cta">無料相談</a>
   </div>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
-    <div>
-      <span class="hero-badge">AI × WEB CREATOR</span>
-      <h1>初期<span class="accent">0円</span><br>月額<span class="accent">4,980円</span>で<br>HPが持てる時代</h1>
-      <p class="hero-lead">
-        AIとClaude Codeを駆使することで、<br>
-        業界最安値水準でクオリティを妥協せずHPをお届けします。
-      </p>
-      <a href="#contact" class="btn btn-primary">無料相談する</a>
-      <a href="#price" class="btn btn-secondary">料金を見る</a>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>7日</strong>
-          <span>最短公開</span>
-        </div>
-        <div class="hero-stat">
-          <strong>0円</strong>
-          <span>初期費用</span>
-        </div>
-        <div class="hero-stat">
-          <strong>30日</strong>
-          <span>返金保証</span>
-        </div>
-      </div>
+    <span class="hero-badge">AI CONSULTANT × HP CREATOR</span>
+    <h1>AIで事業を<br>次のステージへ<span class="accent">。</span></h1>
+    <p class="hero-lead">
+      AI業務コンサルにHP制作込みのセットパッケージ。初月15万円、翌月以降は月額5万円で継続伴走。<br>
+      HP制作だけなら月額4,980円から、いつでも解約可能です。
+    </p>
+    <div class="hero-cta">
+      <a href="#plans" class="btn btn-primary">料金プランを見る →</a>
+      <a href="#contact" class="btn btn-secondary">無料相談する</a>
     </div>
-    <div class="hero-visual">
-      <div class="card">
-        <h4>LIGHT PLAN</h4>
-        <div class="price">¥4,980<span>/月</span></div>
-        <ul>
-          <li>レスポンシブHP 〜5ページ</li>
-          <li>お問い合わせフォーム</li>
-          <li>SSL・ドメイン込み</li>
-          <li>月1回軽微更新</li>
-          <li>SEO基本最適化</li>
-        </ul>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <div class="section-title">
+    <span class="en">── PRICING PLANS ──</span>
+    <h2>料 金 プ ラ ン</h2>
+    <p>最初に費用を明示します。交渉なし、パッケージ型。</p>
+  </div>
+  <div class="plans-grid container">
+
+    <div class="plan featured">
+      <span class="plan-label">MAIN PLAN</span>
+      <h3>AIコンサル + HP制作</h3>
+      <div class="plan-price">
+        <span class="initial">初月</span>
+        <span class="amount">¥150,000<small>（税込）</small></span>
+        <span class="monthly">翌月以降 <strong>月額 ¥50,000</strong> で継続</span>
       </div>
+      <ul class="plan-features">
+        <li>AI業務改善コンサル（週1回30分MTG）</li>
+        <li>チャット相談（3営業日以内返信）</li>
+        <li>AI導入支援（ChatGPT / Claude / Gemini）</li>
+        <li>業務改善施策 月3つ提案</li>
+        <li>HP制作・公開（5ページまで）</li>
+        <li>HP月額運用費込み（別途費用なし）</li>
+        <li>いつでも解約可能</li>
+      </ul>
+      <p class="plan-note">コンサル卒業後も、HP月額4,980円プランに自動移行で継続利用可能です。</p>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">このプランで相談</a>
     </div>
+
+    <div class="plan">
+      <span class="plan-label">SIMPLE PLAN</span>
+      <h3>HP制作のみ</h3>
+      <div class="plan-price">
+        <span class="initial">制作費</span>
+        <span class="amount">¥0<small>（初期0円）</small></span>
+        <span class="monthly">月額 <strong>¥4,980</strong> で継続</span>
+      </div>
+      <ul class="plan-features">
+        <li>レスポンシブHP（5ページまで）</li>
+        <li>お問い合わせフォーム</li>
+        <li>SSL・ドメイン・サーバー込み</li>
+        <li>月1回の軽微修正無料</li>
+        <li>14日間全額返金保証</li>
+        <li>納期 7営業日</li>
+        <li>いつでも解約可能</li>
+      </ul>
+      <p class="plan-note">AIコンサルは不要で、HPだけ月額で持ちたい方向け。</p>
+      <a href="#contact" class="btn btn-secondary" style="margin-top: 20px;">このプランで相談</a>
+    </div>
+
   </div>
 </section>
 
 <section>
   <div class="section-title">
-    <span class="en">YOUR CONCERNS</span>
+    <span class="en">── YOUR CONCERNS ──</span>
     <h2>こんなお悩みありませんか？</h2>
   </div>
-  <div class="problem-grid container">
-    <div class="problem-card">
-      <div class="icon">📱</div>
-      <h3>スマホで見にくい</h3>
-      <p>5年以上前に作ったHPでモバイル対応できていない</p>
+  <div class="problems-grid container">
+    <div class="problem">
+      <div class="num">01</div>
+      <h3>AIを導入したいが、<br>何から始めるか分からない</h3>
+      <p>ChatGPTを触ってはみたが、業務でどう活かすか社内に知見がなく、プロジェクトが止まっている。</p>
     </div>
-    <div class="problem-card">
-      <div class="icon">💸</div>
-      <h3>他社見積もりが高い</h3>
-      <p>HP制作50万、毎月2万の保守費は高すぎる</p>
+    <div class="problem">
+      <div class="num">02</div>
+      <h3>HP制作会社の見積が高い</h3>
+      <p>制作費50〜100万円、毎月2〜3万円の保守費は小規模事業者にとって負担が大きい。</p>
     </div>
-    <div class="problem-card">
-      <div class="icon">🔍</div>
-      <h3>検索で見つからない</h3>
-      <p>SEOを意識した構造になっていない</p>
+    <div class="problem">
+      <div class="num">03</div>
+      <h3>社内にDX担当がいない</h3>
+      <p>小規模なのでDX専任を雇えない。外部の伴走パートナーが欲しいが、相場が不明。</p>
     </div>
-    <div class="problem-card">
-      <div class="icon">⏱</div>
-      <h3>納期が長すぎる</h3>
-      <p>他社だと3ヶ月待ち、もっと早く公開したい</p>
+    <div class="problem">
+      <div class="num">04</div>
+      <h3>提案書・資料作成に時間がかかる</h3>
+      <p>提案書1本に10時間。AIで効率化したいが、プロンプトの作り方・運用フローが分からない。</p>
     </div>
   </div>
 </section>
 
-<section class="price-section" id="price">
+<section class="samples" id="samples">
   <div class="section-title">
-    <span class="en">PRICING</span>
-    <h2>料金プラン</h2>
+    <span class="en">── WORK SAMPLES ──</span>
+    <h2>制 作 例</h2>
+    <p>8業種のプレミアムデザインをご用意しています。</p>
   </div>
-  <div class="price-grid container">
-    <div class="price-card">
-      <h3>HP 月額プラン</h3>
-      <div class="amount">¥4,980<small>/月</small></div>
-      <div class="initial">初期費用 0円 / 3ヶ月契約</div>
-      <ul>
-        <li>レスポンシブHP 〜5ページ</li>
-        <li>お問い合わせフォーム</li>
-        <li>SSL・ドメイン・サーバー</li>
-        <li>月1回軽微更新</li>
-        <li>納期 7営業日</li>
-      </ul>
-      <a href="#contact" class="btn btn-primary">相談する</a>
-    </div>
-    <div class="price-card featured">
-      <h3>AI業務改善コンサル</h3>
-      <div class="amount">¥50,000<small>/月</small></div>
-      <div class="initial">3ヶ月契約 / 以降いつでも解約可</div>
-      <ul>
-        <li>週1回30分MTG</li>
-        <li>チャット3営業日以内返信</li>
-        <li>AI導入支援（ChatGPT/Claude/Gemini）</li>
-        <li>業務改善施策 月3つ提案</li>
-        <li>月次レポート</li>
-      </ul>
-      <a href="#contact" class="btn btn-primary">相談する</a>
-    </div>
-    <div class="price-card">
-      <h3>AI経営パートナー</h3>
-      <div class="amount">¥100,000<small>/月</small></div>
-      <div class="initial">3ヶ月契約 / 効果保証付</div>
-      <ul>
-        <li>週1回60分MTG</li>
-        <li>業績KPI設計と追跡</li>
-        <li>経営ダッシュボード構築</li>
-        <li>人材育成（AI研修）</li>
-        <li>月次+四半期レビュー</li>
-      </ul>
-      <a href="#contact" class="btn btn-primary">相談する</a>
-    </div>
+  <div class="samples-grid container">
+    <a href="./biyoushitsu_v2.html" class="sample">
+      <div class="sample-thumb">Beauty Salon</div>
+      <div class="sample-body"><h4>美容室</h4><p>プライベートサロン・完全予約制</p></div>
+    </a>
+    <a href="./este_v2.html" class="sample">
+      <div class="sample-thumb">Esthetic</div>
+      <div class="sample-body"><h4>エステサロン</h4><p>恵比寿の隠れ家・完全個室</p></div>
+    </a>
+    <a href="./nail_v2.html" class="sample">
+      <div class="sample-thumb">Nail Salon</div>
+      <div class="sample-body"><h4>ネイルサロン</h4><p>大人女性向けプレミアム</p></div>
+    </a>
+    <a href="./dental_v2.html" class="sample">
+      <div class="sample-thumb">Dental Clinic</div>
+      <div class="sample-body"><h4>歯科医院</h4><p>予防歯科×審美歯科</p></div>
+    </a>
+    <a href="./seitai_v2.html" class="sample">
+      <div class="sample-thumb">Seitai</div>
+      <div class="sample-body"><h4>整体院</h4><p>国家資格・腰痛肩こり専門</p></div>
+    </a>
+    <a href="./shigyo_v2.html" class="sample">
+      <div class="sample-thumb">Tax Office</div>
+      <div class="sample-body"><h4>税理士・士業</h4><p>中小企業向け税務顧問</p></div>
+    </a>
+    <a href="./cafe_v2.html" class="sample">
+      <div class="sample-thumb">Cafe</div>
+      <div class="sample-body"><h4>カフェ</h4><p>スペシャリティコーヒー</p></div>
+    </a>
+    <a href="./onsen_v2.html" class="sample">
+      <div class="sample-thumb">Onsen Ryokan</div>
+      <div class="sample-body"><h4>温泉旅館</h4><p>全室源泉かけ流し・和モダン</p></div>
+    </a>
   </div>
 </section>
 
 <section class="flow" id="flow">
   <div class="section-title">
-    <span class="en">FLOW</span>
-    <h2>ご依頼の流れ</h2>
+    <span class="en">── FLOW ──</span>
+    <h2>ご 依 頼 の 流 れ</h2>
   </div>
   <div class="flow-list">
     <div class="flow-item">
       <div class="flow-num">1</div>
       <div class="flow-content">
-        <h3>無料相談（30分）</h3>
-        <p>Zoomで現状のご要望とご予算をヒアリング。サンプルHPを一緒に確認しながら進めます。</p>
+        <h3>無料オンライン相談（30分）</h3>
+        <p>Zoomで現状のご要望とご予算をヒアリング。パッケージから最適なプランをご提案します。</p>
+        <span class="time">TIMEREX PREDICTION</span>
       </div>
     </div>
     <div class="flow-item">
       <div class="flow-num">2</div>
       <div class="flow-content">
-        <h3>お見積もり・契約（1日以内）</h3>
-        <p>面談後すぐに契約書をメール送付。オンラインでサインのみお願いします。</p>
+        <h3>契約・お支払い</h3>
+        <p>面談後すぐに契約書をメール送付、オンラインでサイン。初月分を銀行振込後、制作開始。</p>
+        <span class="time">WITHIN 1 DAY</span>
       </div>
     </div>
     <div class="flow-item">
       <div class="flow-num">3</div>
       <div class="flow-content">
-        <h3>制作（3〜7営業日）</h3>
-        <p>Claude Codeの自動化で高速納品。中間確認を1回入れ、修正対応します。</p>
+        <h3>ヒアリング・制作</h3>
+        <p>Googleフォームでヒアリング後、Claude Code活用で高速制作。中間確認を1回入れます。</p>
+        <span class="time">3-7 BUSINESS DAYS</span>
       </div>
     </div>
     <div class="flow-item">
       <div class="flow-num">4</div>
       <div class="flow-content">
         <h3>公開・納品</h3>
-        <p>ご確認後、本番公開。操作方法の動画マニュアルもお送りします。</p>
+        <p>ご確認後、本番公開。操作マニュアル動画もお送りします。</p>
+        <span class="time">DAY OF DELIVERY</span>
       </div>
     </div>
     <div class="flow-item">
       <div class="flow-num">5</div>
       <div class="flow-content">
-        <h3>月額保守開始</h3>
-        <p>公開翌月から月額保守が発生。月1回の軽微更新、トラブル対応を行います。</p>
+        <h3>月額サポート開始</h3>
+        <p>公開翌月から月額サポート発生。AIコンサルの場合は週1MTGも継続。いつでも解約可能。</p>
+        <span class="time">FROM NEXT MONTH</span>
       </div>
     </div>
   </div>
 </section>
 
 <section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-photo">👩‍💻</div>
+  <div class="about-inner container">
+    <div class="about-photo">
+      M
+      <small>MAI HAYAKAWA</small>
+    </div>
     <div class="about-text">
       <h3>早川まい</h3>
-      <p><strong>AI×Web制作フリーランス / 個人事業主</strong></p>
+      <div class="subtitle">AI CONSULTANT / HP PRODUCER</div>
       <p>
-        生成AI（Claude・ChatGPT・Gemini）を武器に、Web制作と業務改善を提供しています。<br>
-        大手Web制作会社や事業会社での経験を経て、個人事業主として独立。
+        <span class="highlight">法人営業5年</span>の経験を経て、AI業務改善コンサルタントとして活動中。
+        HP制作会社・事業会社での営業経験を活かし、中小企業・個人事業主の<span class="highlight">「AIで成果を出す」</span>を伴走型で支援しています。
       </p>
       <p>
-        「AIで制作効率を10倍にして、その分を価格として還元する」をモットーに、
-        業界最安値水準でクオリティを妥協しないサービスをお届けします。
+        <span class="highlight">ClaudeやChatGPTを使った業務自動化</span>を実装し、提案資料作成を10時間から10分に短縮するなど、実績を積み上げています。
+        HPの制作・公開も内製化しており、AIコンサルの一環として提供可能です。
       </p>
-      <p style="font-size:13px; color:var(--text-sub);">
-        LinkedIn: AI業務改善コンサルタントとして活動<br>
-        対応エリア: 全国（オンライン対応）
+      <p style="font-size: 12px; color: var(--sub); letter-spacing: 0.05em;">
+        拠点: 東京 ／ 対応エリア: 全国（オンライン）
       </p>
     </div>
   </div>
@@ -379,14 +413,14 @@ section { padding: 100px 20px; }
 <section class="cta-section" id="contact">
   <div class="container">
     <div class="section-title">
-      <span class="en">CONTACT</span>
+      <span class="en">── LET'S TALK ──</span>
+      <h2>まずは30分の無料相談から</h2>
+      <p>プランの詳細・業種に合わせた具体提案をお話しします。無理な営業はいたしません。</p>
     </div>
-    <h2>まずは30分の無料相談から</h2>
-    <p>「自分の場合はどうなる？」そんな疑問もお気軽にご相談ください。無理な営業は一切いたしません。</p>
-    <a href="https://timerex.net/s/0622hayakawamai_630a/2ea1115d" class="btn btn-primary">予約する</a>
-    <p style="margin-top:30px; font-size:14px;">
-      またはメールで：<a href="mailto:0622hayakawamai@gmail.com" style="color:var(--accent);">0622hayakawamai@gmail.com</a>
-    </p>
+    <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" class="btn btn-primary">無料相談を予約する →</a>
+    <div class="cta-email">
+      メール: <a href="mailto:0622hayakawamai@gmail.com">0622hayakawamai@gmail.com</a>
+    </div>
   </div>
 </section>
 
@@ -397,7 +431,7 @@ section { padding: 100px 20px; }
     <a href="mailto:0622hayakawamai@gmail.com">お問い合わせ</a>
   </div>
   <div class="footer-copyright">
-    © 2026 早川まい | AI×Web制作フリーランス
+    © 2026 MAI HAYAKAWA
   </div>
 </footer>
 
