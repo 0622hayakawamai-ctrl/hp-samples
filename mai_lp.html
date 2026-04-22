@@ -169,6 +169,9 @@ section { padding: 120px 24px; }
 .achievement-list { list-style: none; margin: 0 0 16px 0; padding: 0; }
 .achievement-list li { padding: 8px 0; font-size: 14px; color: var(--ink); border-bottom: 1px dashed var(--line); padding-left: 24px; position: relative; }
 .achievement-list li::before { content: '🏆'; position: absolute; left: 0; }
+.achievement-list.results li::before { content: '✦'; color: var(--accent); font-weight: 700; }
+.achievement-list.results li { padding: 12px 0 12px 28px; font-size: 14px; line-height: 1.6; }
+.result-sub { display: block; font-size: 12px; color: var(--sub); margin-top: 4px; font-weight: 400; letter-spacing: 0.05em; }
 .achievement-list li:last-child { border: none; }
 .achievement-note { font-size: 13px; color: var(--sub); line-height: 1.8; margin-top: 8px; }
 .about-text .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--accent); font-style: italic; letter-spacing: 0.3em; margin-bottom: 24px; }
@@ -507,11 +510,19 @@ section { padding: 120px 24px; }
         HP制作会社・事業会社での営業経験を活かし、中小企業・個人事業主の<span class="highlight">「AIで成果を出す」</span>を伴走型で支援しています。
       </p>
       <p>
-        <span class="highlight">ClaudeやChatGPTを使った業務自動化</span>を実装し、提案資料作成を10時間から10分に短縮するなど、実績を積み上げています。
+        <span class="highlight">ClaudeやChatGPTを使った業務自動化</span>を実装し、クライアント企業で具体的な成果を積み上げています。
         HPの制作・公開も内製化しており、AIコンサルの一環として提供可能です。
       </p>
 
       <div class="achievements">
+        <div class="achievement-label">CONSULTING RESULTS</div>
+        <ul class="achievement-list results">
+          <li><strong>提案資料作成を10時間 → 10分に短縮</strong><br><span class="result-sub">制作会社A社／AIプロンプト設計で業務効率60倍</span></li>
+          <li><strong>個人コンサル伴走で1ヶ月で収益化30万円達成</strong><br><span class="result-sub">個人事業主B様／AI活用×マーケ設計で売上ゼロから立ち上げ</span></li>
+        </ul>
+      </div>
+
+      <div class="achievements" style="margin-top: 16px;">
         <div class="achievement-label">ATHLETIC BACKGROUND</div>
         <ul class="achievement-list">
           <li><strong>レスリング アジアジュニア 3位</strong></li>
