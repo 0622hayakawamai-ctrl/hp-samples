@@ -107,9 +107,10 @@ section { padding: 120px 24px; }
 
 .compare-section { background: var(--bg); padding: 120px 24px; }
 .compare-wrap { max-width: 1000px; margin: 0 auto; }
-.compare-label { font-size: 18px; font-weight: 500; text-align: center; margin-bottom: 24px; letter-spacing: 0.1em; color: var(--ink); }
+.compare-label { font-size: 18px; font-weight: 500; text-align: center; margin-bottom: 12px; letter-spacing: 0.1em; color: var(--ink); }
+.compare-sub { text-align: center; font-size: 13px; color: var(--sub); margin-bottom: 28px; letter-spacing: 0.05em; }
 .compare-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
-.compare-row { display: grid; grid-template-columns: 2fr 1.2fr 1fr 1fr; padding: 18px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; }
+.compare-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; padding: 18px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; gap: 12px; }
 .compare-row:last-child { border-bottom: none; }
 .compare-row.head { background: var(--bg-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; color: var(--sub); }
 .compare-row.highlight { background: rgba(204,120,92,0.06); font-weight: 500; color: var(--ink); }
@@ -306,39 +307,48 @@ section { padding: 120px 24px; }
     <p>同水準のサービス内容で価格を比較しています。</p>
   </div>
   <div class="compare-wrap container">
-    <h3 class="compare-label">HP制作単体プラン</h3>
+    <h3 class="compare-label">自作型 vs プロ制作型</h3>
+    <p class="compare-sub">HP制作サービスは大きく「自作型」と「プロ制作型」に分かれます。</p>
+
     <div class="compare-table">
       <div class="compare-row head">
-        <div>サービス</div>
+        <div>サービス種別</div>
         <div>初期費用</div>
         <div>月額</div>
-        <div>返金保証</div>
+        <div>作業主体</div>
       </div>
       <div class="compare-row">
-        <div>大手HP制作会社</div>
+        <div>自作型（Wix / Jimdo / STUDIO 等）</div>
+        <div>0円</div>
+        <div>0〜3,000円</div>
+        <div>自分で作る</div>
+      </div>
+      <div class="compare-row">
+        <div>自作+サポート型</div>
+        <div>0〜5万円</div>
+        <div>3,000〜4,000円</div>
+        <div>自分で作る+相談可</div>
+      </div>
+      <div class="compare-row">
+        <div>プロ制作サブスク型</div>
+        <div>0〜5万円</div>
+        <div>4,980〜9,800円</div>
+        <div>プロが作る</div>
+      </div>
+      <div class="compare-row">
+        <div>大手HP制作会社（買切り）</div>
         <div>30〜100万円</div>
         <div>1〜3万円</div>
-        <div>なし</div>
-      </div>
-      <div class="compare-row">
-        <div>サブスク型HP制作サービスA社</div>
-        <div>0円</div>
-        <div>4,980円〜</div>
-        <div>なし</div>
-      </div>
-      <div class="compare-row">
-        <div>サブスク型HP制作サービスB社</div>
-        <div>5万円</div>
-        <div>9,800円〜</div>
-        <div>なし</div>
+        <div>プロが作る</div>
       </div>
       <div class="compare-row highlight">
         <div>【当方】早川まい</div>
         <div>0円</div>
         <div>4,980円</div>
-        <div>14日間</div>
+        <div>プロが作る+返金保証</div>
       </div>
     </div>
+    <p class="compare-note">※ 「プロに作ってもらえる×月額定額×返金保証つき」は業界でも珍しいポジションです。</p>
 
     <h3 class="compare-label" style="margin-top: 72px;">AIコンサル+HP制作プラン</h3>
     <div class="compare-table">
