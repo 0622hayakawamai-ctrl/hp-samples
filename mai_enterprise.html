@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早川まい | エンタープライズAIコンサル【従業員50名以上企業向け】</title>
-<meta name="description" content="3ヶ月で社内にAIを浸透させる伴走型コンサル。50-100名企業50万、100-300名75万、300名以上100万〜。一括前払い・着金後開始。">
-<meta property="og:title" content="早川まい エンタープライズAIコンサル｜3ヶ月で社内AI浸透">
-<meta property="og:description" content="大手AIコンサルの1/5の費用で、社内にAI文化を根付かせる。3ヶ月一括前払いパッケージ。">
+<title>早川まい | エンタープライズAIコンサル【5名のキーマンに3ヶ月50万円】</title>
+<meta name="description" content="AI推進の5名のキーマンに3ヶ月専属で伴走するAIコンサル。50万円一括前払い・着金後開始。戦略設計・ツール選定・プロンプト設計・運用相談に特化。実装は含みません。">
+<meta property="og:title" content="早川まい エンタープライズAIコンサル｜5名のキーマンに3ヶ月50万円">
+<meta property="og:description" content="大手AIコンサルの1/5の費用で、AI推進5名に専属コンサル1名が3ヶ月伴走。戦略・相談特化型。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
@@ -107,30 +107,33 @@ section { padding: 120px 24px; }
 .problem h3 { font-size: 17px; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.03em; line-height: 1.5; }
 .problem p { font-size: 13px; color: var(--sub); line-height: 2; }
 
-.plans-section { background: var(--bg); }
-.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
-.plan {
-  background: white; border: 1px solid var(--line); border-radius: 16px;
-  padding: 48px 36px; transition: all 0.3s; position: relative;
+.plan-section { background: var(--bg); }
+.plan-single {
+  max-width: 720px; margin: 0 auto;
+  background: white; border: 2px solid var(--accent); border-radius: 16px;
+  padding: 60px 48px; position: relative; box-shadow: 0 20px 60px rgba(204,120,92,0.12);
 }
-.plan:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(10,25,41,0.08); border-color: var(--accent); }
-.plan.featured { border: 2px solid var(--accent); box-shadow: 0 12px 40px rgba(204,120,92,0.12); }
-.plan.featured::before {
-  content: 'MOST POPULAR'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: var(--accent); color: white; padding: 6px 18px; border-radius: 20px;
-  font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.3em; font-style: italic;
+.plan-single::before {
+  content: 'CORE PLAN'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: white; padding: 6px 22px; border-radius: 20px;
+  font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; font-style: italic;
 }
-.plan-scale { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: var(--gold); font-style: italic; margin-bottom: 8px; }
-.plan h3 { font-size: 20px; font-weight: 500; margin-bottom: 20px; letter-spacing: 0.05em; }
-.plan-price { margin: 24px 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.plan-price .period { display: block; font-size: 12px; color: var(--sub); margin-bottom: 6px; letter-spacing: 0.1em; }
-.plan-price .amount { font-size: 44px; font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: 0.02em; }
-.plan-price .amount small { font-size: 13px; font-weight: 400; color: var(--sub); margin-left: 4px; }
-.plan-price .payment { display: block; margin-top: 12px; font-size: 13px; color: var(--accent); font-weight: 500; }
-.plan-features { list-style: none; margin: 24px 0; }
-.plan-features li { padding: 9px 0; font-size: 13px; color: var(--sub); border-bottom: 1px dashed var(--line); padding-left: 24px; position: relative; line-height: 1.7; }
-.plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
+.plan-title { text-align: center; font-size: 22px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.08em; }
+.plan-subtitle { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--gold); font-style: italic; letter-spacing: 0.3em; margin-bottom: 36px; }
+.plan-price-wrap { text-align: center; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+.plan-price-wrap .period { display: block; font-size: 13px; color: var(--sub); margin-bottom: 8px; letter-spacing: 0.15em; }
+.plan-price-wrap .amount { font-size: 64px; font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: 0.02em; }
+.plan-price-wrap .amount small { font-size: 14px; font-weight: 400; color: var(--sub); margin-left: 4px; }
+.plan-price-wrap .payment { display: block; margin-top: 14px; font-size: 14px; color: var(--accent); font-weight: 500; letter-spacing: 0.05em; }
+.plan-features { list-style: none; margin: 0 0 32px 0; }
+.plan-features li { padding: 12px 0; font-size: 14px; color: var(--ink); border-bottom: 1px dashed var(--line); padding-left: 28px; position: relative; line-height: 1.8; }
+.plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 16px; }
 .plan-features li:last-child { border: none; }
+.plan-features li strong { color: var(--ink); font-weight: 500; }
+.plan-excluded { background: var(--bg-soft); padding: 20px 24px; border-radius: 8px; margin-bottom: 28px; font-size: 13px; color: var(--sub); line-height: 1.9; }
+.plan-excluded strong { color: var(--ink); font-weight: 500; display: block; margin-bottom: 6px; letter-spacing: 0.05em; }
+.plan-cta-wrap { text-align: center; }
+.plan-note { text-align: center; font-size: 12px; color: var(--sub); margin-top: 20px; letter-spacing: 0.05em; line-height: 1.8; }
 
 .deliverables { background: var(--bg-soft); }
 .deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
@@ -140,17 +143,25 @@ section { padding: 120px 24px; }
 .deliverable h4 { font-size: 15px; font-weight: 500; margin-bottom: 10px; letter-spacing: 0.05em; }
 .deliverable p { font-size: 12px; color: var(--sub); line-height: 1.8; }
 
-.compare-section { background: var(--bg); padding: 120px 24px; }
+.services { background: var(--bg); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.service-card { padding: 40px 32px; background: white; border: 1px solid var(--line); border-radius: 12px; transition: all 0.3s; }
+.service-card:hover { border-color: var(--accent); box-shadow: 0 12px 40px rgba(10,25,41,0.06); }
+.service-num { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em; color: var(--gold); font-style: italic; margin-bottom: 16px; display: block; }
+.service-card h4 { font-size: 17px; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.05em; }
+.service-card p { font-size: 13px; color: var(--sub); line-height: 1.9; }
+
+.compare-section { background: var(--bg-soft); padding: 120px 24px; }
 .compare-wrap { max-width: 1000px; margin: 0 auto; }
 .compare-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
-.compare-row { display: grid; grid-template-columns: 2fr 1fr 1.3fr; padding: 20px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; gap: 12px; }
+.compare-row { display: grid; grid-template-columns: 2fr 1fr 1.5fr; padding: 20px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; gap: 12px; }
 .compare-row:last-child { border-bottom: none; }
 .compare-row.head { background: var(--bg-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; color: var(--sub); }
 .compare-row.highlight { background: rgba(204,120,92,0.06); font-weight: 500; color: var(--ink); }
 .compare-row.highlight > div:first-child { color: var(--accent); font-weight: 700; }
 .compare-note { text-align: center; font-size: 12px; color: var(--sub); margin-top: 24px; letter-spacing: 0.05em; }
 @media (max-width: 768px) {
-  .compare-row { grid-template-columns: 1.4fr 1fr 1fr; padding: 14px 14px; font-size: 12px; gap: 8px; }
+  .compare-row { grid-template-columns: 1.3fr 0.9fr 1.2fr; padding: 14px 14px; font-size: 12px; gap: 8px; }
 }
 
 .roi { background: var(--bg-dark); color: white; padding: 120px 24px; position: relative; overflow: hidden; }
@@ -161,8 +172,8 @@ section { padding: 120px 24px; }
 .roi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
 .roi-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px 28px; backdrop-filter: blur(10px); }
 .roi-label { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.3em; color: var(--gold); font-style: italic; margin-bottom: 12px; display: block; }
-.roi-value { font-size: 36px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.02em; }
-.roi-value .unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.7); margin-left: 4px; }
+.roi-value { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.02em; line-height: 1.3; }
+.roi-value .unit { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.7); margin-left: 4px; }
 .roi-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.8; }
 
 .flow { background: var(--bg-soft); }
@@ -222,6 +233,8 @@ section { padding: 120px 24px; }
   section { padding: 80px 24px; }
   .hero-highlights { gap: 8px; }
   .hero-highlight { padding: 8px 14px; font-size: 11px; }
+  .plan-single { padding: 48px 28px; }
+  .plan-price-wrap .amount { font-size: 48px; }
 }
 </style>
 </head>
@@ -230,7 +243,7 @@ section { padding: 120px 24px; }
 <nav class="nav">
   <div class="nav-logo">早川<span>mai</span><span class="enterprise-tag">ENTERPRISE</span></div>
   <div class="nav-links">
-    <a href="#plans" class="nav-link">PLANS</a>
+    <a href="#plan" class="nav-link">PLAN</a>
     <a href="#flow" class="nav-link">FLOW</a>
     <a href="./mai_lp.html" class="nav-link">個人事業主向け</a>
     <a href="#contact" class="nav-cta">無料相談</a>
@@ -241,21 +254,22 @@ section { padding: 120px 24px; }
   <div class="hero-inner">
     <span class="hero-badge">ENTERPRISE AI CONSULTING</span>
     <h1>
-      3ヶ月で、社内に<br>
-      AIを<span class="gold">根付かせる</span><span class="accent">。</span>
+      <span class="gold">5名のキーマン</span>と、<br>
+      3ヶ月。AI導入を<br>
+      戦略から伴走する<span class="accent">。</span>
     </h1>
     <p class="hero-lead">
-      従業員50名以上の中小企業向けに、週1回の伴走型AIコンサルを3ヶ月パッケージで提供。<br>
-      大手AIコンサルの1/5の費用で、社員がAIを日常使いする文化まで設計します。
+      従業員30名以上の中小企業向け、AI推進の5名に専属コンサル1名が3ヶ月伴走。<br>
+      戦略設計・ツール選定・プロンプト設計・運用相談に特化。実装は含まず、大手AIコンサルの1/5の費用でご提供します。
     </p>
     <div class="hero-highlights">
-      <span class="hero-highlight"><span class="en">01</span>3ヶ月一括前払い</span>
+      <span class="hero-highlight"><span class="en">01</span>3ヶ月50万円一括前払い</span>
       <span class="hero-highlight"><span class="en">02</span>着金後サービス開始</span>
-      <span class="hero-highlight"><span class="en">03</span>AIツール1個開発・納品</span>
-      <span class="hero-highlight"><span class="en">04</span>参加人数無制限</span>
+      <span class="hero-highlight"><span class="en">03</span>5名まで専属伴走</span>
+      <span class="hero-highlight"><span class="en">04</span>戦略・相談特化</span>
     </div>
     <div class="hero-cta">
-      <a href="#plans" class="btn btn-primary">料金プランを見る →</a>
+      <a href="#plan" class="btn btn-primary">プラン詳細を見る →</a>
       <a href="#contact" class="btn btn-secondary">無料相談する</a>
     </div>
   </div>
@@ -280,122 +294,122 @@ section { padding: 120px 24px; }
     <div class="problem">
       <div class="num">03</div>
       <h3>社内にDX責任者・<br>AI人材がいない</h3>
-      <p>専任を採用しようにも人件費と採用コストが合わない。既存社員は通常業務で手一杯で学習する時間がない。</p>
+      <p>専任採用のコストは合わない。既存社員は通常業務で手一杯で学習する時間もない。相談できる外部パートナーが欲しい。</p>
     </div>
     <div class="problem">
       <div class="num">04</div>
-      <h3>一部の社員しか<br>AIを使えていない</h3>
-      <p>情シスや若手の数名は使っているが、部署横断で浸透していない。業務効率化のインパクトが限定的。</p>
+      <h3>どの部署から<br>手をつけるべきか</h3>
+      <p>全社一斉のAI導入は難易度が高い。まず部署を絞ってパイロット運用し、成功させて横展開したい。</p>
     </div>
   </div>
 </section>
 
-<section class="plans-section" id="plans">
+<section class="plan-section" id="plan">
   <div class="section-title">
-    <span class="en">── PRICING PLANS ──</span>
+    <span class="en">── CORE PLAN ──</span>
     <h2>料 金 プ ラ ン</h2>
-    <p>規模別の3プラン。3ヶ月一括前払い・着金確認後にサービス開始。</p>
+    <p>シンプルな1プラン構成。迷わず選べます。</p>
   </div>
-  <div class="plans-grid container">
-
-    <div class="plan">
-      <span class="plan-scale">── STARTER ──</span>
-      <h3>50 〜 100 名 規 模</h3>
-      <div class="plan-price">
-        <span class="period">3ヶ月一括</span>
-        <span class="amount">¥500,000<small>（税込）</small></span>
-        <span class="payment">一括前払い・着金後開始</span>
-      </div>
-      <ul class="plan-features">
-        <li>2時間オンラインキックオフMTG</li>
-        <li>週1回1時間のリモートMTG（参加人数無制限）</li>
-        <li>チャット相談（3営業日以内返信）</li>
-        <li>AIツール1個開発・納品</li>
-        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
-        <li>継続: 4ヶ月目以降 月10万円</li>
-      </ul>
-      <a href="#contact" class="btn btn-secondary" style="background:var(--ink);color:white;border:none;margin-top:20px;">このプランで相談</a>
+  <div class="plan-single container">
+    <div class="plan-title">AI推進コアプラン</div>
+    <div class="plan-subtitle">── 5 KEY PERSONS · 3 MONTHS ──</div>
+    <div class="plan-price-wrap">
+      <span class="period">3ヶ月一括</span>
+      <span class="amount">¥500,000<small>（税込）</small></span>
+      <span class="payment">一括前払い・着金後サービス開始</span>
     </div>
-
-    <div class="plan featured">
-      <span class="plan-scale">── STANDARD ──</span>
-      <h3>100 〜 300 名 規 模</h3>
-      <div class="plan-price">
-        <span class="period">3ヶ月一括</span>
-        <span class="amount">¥750,000<small>（税込）</small></span>
-        <span class="payment">一括前払い・着金後開始</span>
-      </div>
-      <ul class="plan-features">
-        <li>2時間オンラインキックオフMTG</li>
-        <li>週1回1時間のリモートMTG（参加人数無制限）</li>
-        <li>チャット相談（3営業日以内返信）</li>
-        <li>AIツール1個開発・納品</li>
-        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
-        <li>複数部署への個別セッション（月1回）</li>
-        <li>都内企業は月1回訪問オプション</li>
-        <li>継続: 4ヶ月目以降 月10万円</li>
-      </ul>
-      <a href="#contact" class="btn btn-primary" style="margin-top:20px;">このプランで相談</a>
+    <ul class="plan-features">
+      <li><strong>対象:</strong> 従業員30名以上の中小企業</li>
+      <li><strong>対応人数:</strong> AI推進メンバー <strong>5名まで</strong>（経営層・部長・現場担当など）</li>
+      <li><strong>キックオフMTG:</strong> 2時間オンライン（業務ヒアリング・ロードマップ合意）</li>
+      <li><strong>週次MTG:</strong> 週1回1時間のリモートMTG（全員参加）</li>
+      <li><strong>チャット相談:</strong> Slack/Teams で随時質問可（3営業日以内返信）</li>
+      <li><strong>成果物:</strong> AI戦略書・ツール選定表・プロンプト集等ドキュメント6種納品</li>
+      <li><strong>継続プラン:</strong> 4ヶ月目以降 月10万円〜で継続伴走可能</li>
+    </ul>
+    <div class="plan-excluded">
+      <strong>※ 本プランに含まれないもの</strong>
+      ツール開発・システム実装・プログラミング作業 ／ 社員向け研修プログラム ／ 6名以上の対応 ／ 常駐対応<br>
+      実装が必要な場合は、貴社内エンジニア・外部ベンダーへの発注をおすすめし、当方は選定・設計レビューまでサポートします。
     </div>
-
-    <div class="plan">
-      <span class="plan-scale">── PREMIUM ──</span>
-      <h3>300 名 以 上 規 模</h3>
-      <div class="plan-price">
-        <span class="period">3ヶ月一括</span>
-        <span class="amount">¥1,000,000〜<small>（税込）</small></span>
-        <span class="payment">一括前払い・着金後開始</span>
-      </div>
-      <ul class="plan-features">
-        <li>2時間オンラインキックオフMTG</li>
-        <li>週1回1時間のリモートMTG（参加人数無制限）</li>
-        <li>チャット相談（3営業日以内返信）</li>
-        <li>AIツール複数開発・納品（応相談）</li>
-        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
-        <li>複数部署への個別セッション（月2回）</li>
-        <li>都内企業は月2回訪問オプション</li>
-        <li>継続: 4ヶ月目以降 月15万円〜</li>
-      </ul>
-      <a href="#contact" class="btn btn-secondary" style="background:var(--ink);color:white;border:none;margin-top:20px;">このプランで相談</a>
+    <div class="plan-cta-wrap">
+      <a href="#contact" class="btn btn-primary" style="background:var(--ink);color:white;">無料相談で詳細を聞く →</a>
     </div>
-
+    <p class="plan-note">
+      ※ 人数を増やしたい・大規模展開したい場合は、面談にて個別にご相談ください。<br>
+      ※ 30名未満の企業様、個人事業主様は<a href="./mai_lp.html" style="color:var(--accent);">個人事業主向けプラン</a>をご覧ください。
+    </p>
   </div>
-  <p style="text-align:center;margin-top:40px;font-size:13px;color:var(--sub);letter-spacing:0.05em;max-width:720px;margin-left:auto;margin-right:auto;">
-    ※ 規模別の目安料金です。業種・業務内容により個別調整可能。<br>
-    ※ 全プラン「3ヶ月一括前払い・着金後にキックオフMTGを設定」の流れで統一しています。
-  </p>
+</section>
+
+<section class="services">
+  <div class="section-title">
+    <span class="en">── WHAT YOU GET ──</span>
+    <h2>サ ー ビ ス 内 容</h2>
+    <p>戦略・設計・相談に特化した4つのサービス。</p>
+  </div>
+  <div class="services-grid container">
+    <div class="service-card">
+      <span class="service-num">SERVICE 01</span>
+      <h4>キックオフMTG（2時間）</h4>
+      <p>対象5名と初回オンラインMTG。現状業務の棚卸し・AI活用余地の特定・3ヶ月ロードマップの合意まで行います。</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">SERVICE 02</span>
+      <h4>週次運用MTG（週1回1時間）</h4>
+      <p>5名全員参加のリモートMTG。課題の深掘り・戦略設計・ツール選定・プロンプトレビュー・次アクションまで議論します。</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">SERVICE 03</span>
+      <h4>チャット相談（3営業日以内返信）</h4>
+      <p>Slack / Teams で5名からの質問を随時受付。プロンプトの書き方・ツール選定の判断軸・運用の課題などに個別回答します。</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">SERVICE 04</span>
+      <h4>ドキュメント6種納品</h4>
+      <p>戦略書・ツール選定表・プロンプト集・運用マニュアル・ROI測定設計書・月次レポート。社内で再利用できる資産を納品します。</p>
+    </div>
+  </div>
 </section>
 
 <section class="deliverables">
   <div class="section-title">
-    <span class="en">── WHAT YOU GET ──</span>
-    <h2>サ ー ビ ス 内 容</h2>
+    <span class="en">── DELIVERABLES ──</span>
+    <h2>納 品 ド キ ュ メ ン ト</h2>
+    <p>3ヶ月で納品する成果物6種。貴社の資産として残ります。</p>
   </div>
   <div class="deliverables-grid container">
     <div class="deliverable">
       <span class="deliverable-icon">01</span>
-      <h4>キックオフMTG</h4>
-      <p>2時間のオンラインMTGで現状業務をヒアリング。AI活用余地を特定し、3ヶ月のロードマップを合意。</p>
+      <h4>AI活用戦略書</h4>
+      <p>現状診断・課題分析・3ヶ月の導入ロードマップを明文化。</p>
     </div>
     <div class="deliverable">
       <span class="deliverable-icon">02</span>
-      <h4>週次運用MTG</h4>
-      <p>週1回1時間のリモートMTG。進捗確認・課題解決・次アクション設計。参加人数は無制限。</p>
+      <h4>ツール選定表</h4>
+      <p>ChatGPT / Claude / Dify等から業務別の推奨ツールを一覧化。</p>
     </div>
     <div class="deliverable">
       <span class="deliverable-icon">03</span>
-      <h4>チャット相談</h4>
-      <p>Slack / Teams で質問を投げるだけ。3営業日以内に回答。プロンプト・運用フロー・ツール選定まで対応。</p>
+      <h4>プロンプト集</h4>
+      <p>業務別のプロンプトテンプレート10〜20本を納品。</p>
     </div>
     <div class="deliverable">
       <span class="deliverable-icon">04</span>
-      <h4>AIツール開発</h4>
-      <p>3ヶ月の中で、御社業務に特化したAIツールを1個開発・納品。プロンプト集・自動化スクリプト等。</p>
+      <h4>運用マニュアル</h4>
+      <p>AI活用の標準フロー・改善サイクルを社内展開用にまとめた手順書。</p>
+    </div>
+    <div class="deliverable">
+      <span class="deliverable-icon">05</span>
+      <h4>ROI測定設計書</h4>
+      <p>業務時間削減・コスト換算の測定方法を明文化。</p>
+    </div>
+    <div class="deliverable">
+      <span class="deliverable-icon">06</span>
+      <h4>月次レポート</h4>
+      <p>進捗・成果・次月アクションをまとめた月1回のレポート。</p>
     </div>
   </div>
-  <p style="text-align:center;margin-top:40px;font-size:13px;color:var(--sub);letter-spacing:0.05em;">
-    ※ HP制作はエンタープライズプランには含まれません。HP制作が必要な場合は別途ご相談ください。
-  </p>
 </section>
 
 <section class="compare-section">
@@ -409,27 +423,27 @@ section { padding: 120px 24px; }
       <div class="compare-row head">
         <div>提供元</div>
         <div>3ヶ月料金</div>
-        <div>対象・スコープ</div>
+        <div>体制・スコープ</div>
       </div>
       <div class="compare-row">
         <div>大手AIコンサル会社</div>
         <div>200〜500万円</div>
-        <div>大企業向け・固定プラン</div>
+        <div>分業制（営業/PM/コンサル）</div>
       </div>
       <div class="compare-row">
         <div>中堅コンサル</div>
         <div>100〜200万円</div>
-        <div>中堅企業向け・個別対応</div>
+        <div>2-3名チーム体制</div>
       </div>
       <div class="compare-row highlight">
         <div>【当方】早川まい</div>
-        <div>50〜100万円</div>
-        <div>中小企業向け・社内浸透特化</div>
+        <div>50万円</div>
+        <div>専属1名・5名窓口・戦略特化</div>
       </div>
       <div class="compare-row">
         <div>フリーランスDX支援</div>
         <div>20〜50万円</div>
-        <div>限定的・単発タスク中心</div>
+        <div>単発タスク中心</div>
       </div>
     </div>
     <p class="compare-note">※ 金額は一般的な相場・業界調査ベース。個別サービスの正確な料金は各社公式サイトをご確認ください。</p>
@@ -445,19 +459,19 @@ section { padding: 120px 24px; }
     </div>
     <div class="roi-grid">
       <div class="roi-card">
-        <span class="roi-label">── Penetration ──</span>
-        <div class="roi-value">複数部署<span class="unit">が日常使用</span></div>
-        <p>情シス・企画・営業・総務など、複数部署の社員がAIを日常業務で使う状態を作ります。</p>
+        <span class="roi-label">── Strategy ──</span>
+        <div class="roi-value">戦略<span class="unit">明文化</span></div>
+        <p>AI活用の全体戦略・部署別アクションプランがドキュメント化され、社内の意思統一が可能に。</p>
       </div>
       <div class="roi-card">
         <span class="roi-label">── Efficiency ──</span>
         <div class="roi-value">月20h<span class="unit">削減目安</span></div>
-        <p>業務時間削減の定量効果を可視化。提案書・議事録・翻訳等の定型業務で大きな削減が期待できます。</p>
+        <p>提案書・議事録・翻訳等の定型業務で5名の業務時間が大幅に削減。ROIを月次レポートで可視化。</p>
       </div>
       <div class="roi-card">
         <span class="roi-label">── Autonomy ──</span>
-        <div class="roi-value">自走体制<span class="unit">確立</span></div>
-        <p>御社内でAIツールを運用・改善できる体制を構築。コンサル卒業後も継続的に進化できる状態に。</p>
+        <div class="roi-value">運用<span class="unit">自走体制</span></div>
+        <p>5名のキーマンが社内でAI活用を主導できる状態に。4ヶ月目以降は最小限のサポートで継続可能。</p>
       </div>
       <div class="roi-card">
         <span class="roi-label">── Decision ──</span>
@@ -478,8 +492,8 @@ section { padding: 120px 24px; }
       <div class="flow-num">1</div>
       <div class="flow-content">
         <h3>無料オンライン相談（30分）</h3>
-        <p>Zoomで貴社の現状・AI活用状況・ご要望をヒアリング。規模・業務内容に合わせたプランをご提案します。</p>
-        <span class="time">TIMEREX PREDICTION</span>
+        <p>Zoomで貴社の現状・AI活用状況・ご要望をヒアリング。規模・課題に応じたご提案をします。人数を増やしたい等のご相談もこの場で対応します。</p>
+        <span class="time">TIMEREX RESERVATION</span>
       </div>
     </div>
     <div class="flow-item">
@@ -494,7 +508,7 @@ section { padding: 120px 24px; }
       <div class="flow-num">3</div>
       <div class="flow-content">
         <h3>着金確認・キックオフ</h3>
-        <p>着金を確認次第、2時間のキックオフMTGを設定。現状業務を深掘りヒアリングし、3ヶ月ロードマップを合意します。</p>
+        <p>着金を確認次第、AI推進5名とのキックオフMTG（2時間）を設定。現状業務を深掘りヒアリングし、3ヶ月ロードマップを合意します。</p>
         <span class="time">WITHIN 5 DAYS</span>
       </div>
     </div>
@@ -502,7 +516,7 @@ section { padding: 120px 24px; }
       <div class="flow-num">4</div>
       <div class="flow-content">
         <h3>週次伴走・チャット運用</h3>
-        <p>週1回1時間のMTG・チャット相談で日常的に伴走。AIツール1個を開発・中間確認・納品まで進めます。</p>
+        <p>週1回1時間のMTG・チャット相談で日常的に伴走。戦略設計・ツール選定・プロンプトレビューを継続的に行います。</p>
         <span class="time">WEEK 1 — WEEK 12</span>
       </div>
     </div>
@@ -510,7 +524,7 @@ section { padding: 120px 24px; }
       <div class="flow-num">5</div>
       <div class="flow-content">
         <h3>成果報告・継続判断</h3>
-        <p>3ヶ月末に成果報告書を提出。4ヶ月目以降は月額10万円〜で継続可能。卒業も自由です。</p>
+        <p>3ヶ月末にドキュメント6種納品＋成果報告。4ヶ月目以降は月額10万円〜で継続可能。卒業も自由です。</p>
         <span class="time">END OF MONTH 3</span>
       </div>
     </div>
@@ -524,14 +538,14 @@ section { padding: 120px 24px; }
     </div>
     <div class="about-text">
       <h3>早川まい</h3>
-      <div class="subtitle">AI CONSULTANT / BUSINESS TRANSFORMATION</div>
+      <div class="subtitle">AI CONSULTANT / STRATEGY PARTNER</div>
       <p>
         <span class="highlight">法人営業5年</span>の経験を経て、AI業務改善コンサルタントとして活動中。
-        制作会社・事業会社の両方で営業・業務設計を担当した経験を活かし、<span class="highlight">「現場が動くAI導入」</span>を伴走型で支援しています。
+        制作会社・事業会社の両方で営業・業務設計を担当した経験を活かし、<span class="highlight">「現場が動くAI導入」</span>を戦略設計と相談伴走で支援しています。
       </p>
       <p>
-        <span class="highlight">Claude・ChatGPT・Claude Code</span>を駆使した業務自動化を実装し、クライアント企業で具体的な成果を積み上げてきました。
-        トップダウンで終わらない、現場の社員がAIを日常使いする状態まで設計します。
+        <span class="highlight">Claude・ChatGPT・Claude Code</span>を使った業務改善のアドバイスを中心に、クライアント企業で具体的な成果を積み上げてきました。
+        実装は貴社または外部ベンダーへ委ねることで、中立的な戦略設計と費用最小化の両立を実現しています。
       </p>
 
       <div class="achievements">
@@ -552,7 +566,7 @@ section { padding: 120px 24px; }
       </div>
 
       <p style="font-size:12px;color:var(--sub);letter-spacing:0.05em;margin-top:24px;">
-        拠点: 東京 ／ 対応エリア: 全国（オンライン）／ 都内は訪問対応可
+        拠点: 東京 ／ 対応エリア: 全国（オンライン）
       </p>
     </div>
   </div>
@@ -565,28 +579,32 @@ section { padding: 120px 24px; }
   </div>
   <div class="faq-list container">
     <div class="faq-item">
+      <div class="faq-q">なぜ「5名まで」と人数を区切るのですか？</div>
+      <div class="faq-a">専属1名が3ヶ月間、貴社だけを深く見るためです。5名を超えるとMTGの議論密度が下がり、チャット対応もタイムリーにできなくなるため、成果に直結しない人数に水増しするより、効果の最大化を優先する設計としています。人数を増やしたい場合は面談で個別にご相談ください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">5名はどう選べばいいですか？</div>
+      <div class="faq-a">意思決定権を持つ責任者（部長・役員）1〜2名と、実務を回す現場担当3〜4名の構成を推奨します。経営層が入ることで稟議・実行がスムーズになり、現場の実感も反映できるバランスの良い体制になります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ツール開発はしてもらえますか？</div>
+      <div class="faq-a">当方は戦略設計・ツール選定・プロンプト設計・運用相談に特化しています。実装は貴社内のエンジニア、または外部ベンダーへの発注をおすすめし、当方が仕様書作成・選定レビューまでサポートします。戦略と実装を分離することで、ベンダーの言いなりにならない客観的な判断軸をご提供できます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">社員向けの研修プログラムはありますか？</div>
+      <div class="faq-a">本プランには含まれません。5名のキーマンへの伴走が主軸のため、全社員向けの研修は対象外です。全社研修が必要な場合は別途ご相談ください（規模により応相談）。</div>
+    </div>
+    <div class="faq-item">
       <div class="faq-q">分割払いは可能ですか？</div>
       <div class="faq-a">いいえ、3ヶ月一括前払いのみとさせていただいております。着金確認をもってサービス開始となります。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">オンラインだけですか？訪問対応はありますか？</div>
-      <div class="faq-a">基本はオンラインでの対応ですが、都内企業様のみ月1〜2回の訪問オプションをご用意しています（規模により頻度異なります）。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">MTGの参加人数に制限はありますか？</div>
-      <div class="faq-a">参加人数は無制限です。経営陣・現場担当者・情シスなど、貴社の必要なメンバーに自由にご参加いただけます。</div>
+      <div class="faq-a">基本はオンラインでの対応です。都内企業様で訪問対応ご希望の場合は、面談でご相談ください（交通費別途）。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">途中解約は可能ですか？</div>
       <div class="faq-a">3ヶ月パッケージ型のため、契約期間中の途中解約・返金はお受けしておりません。契約前にしっかりとご要望をすり合わせた上で、無理のない判断をしていただけるようサポートします。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">HP制作はお願いできますか？</div>
-      <div class="faq-a">エンタープライズプランにはHP制作は含まれません。HP制作が必要な場合は別途ご相談ください。なお、個人事業主向けのHP制作サブスク（月額4,980円〜）は<a href="./mai_lp.html" style="color:var(--accent);">こちら</a>をご覧ください。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">業種の縛りはありますか？</div>
-      <div class="faq-a">基本的に業種は問いません。これまで不動産・製造・建設・医療・士業などでAI導入支援の経験があります。業種特有の要件は初回相談でお伝えください。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">機密保持契約（NDA）は締結してもらえますか？</div>
@@ -600,7 +618,7 @@ section { padding: 120px 24px; }
     <div class="section-title">
       <span class="en">── LET'S TALK ──</span>
       <h2>まずは30分の無料相談から</h2>
-      <p>貴社の規模・課題に合わせた具体提案をお話しします。NDA対応可・無理な営業はいたしません。</p>
+      <p>貴社の規模・課題に合わせた具体提案をお話しします。人数増やしたい等のご相談もこの場で対応します。NDA対応可・無理な営業はいたしません。</p>
     </div>
     <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" class="btn btn-primary">無料相談を予約する →</a>
     <div class="cta-email">
