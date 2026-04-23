@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HP制作 ヒアリングシート | 早川まい</title>
+<meta name="description" content="HP制作にあたってのヒアリングフォーム。ご回答内容をもとに制作を進めます。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a0a0a;
+  --accent: #cc785c;
+  --sub: #666;
+  --line: #e8e6e0;
+  --bg: #ffffff;
+  --bg-soft: #fafaf8;
+  --error: #d14e3c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.8; color: var(--ink); background: var(--bg-soft); font-weight: 300; }
+
+.hero {
+  background: var(--ink); color: white; padding: 80px 24px 60px; text-align: center;
+}
+.hero-badge {
+  display: inline-block; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.4em; color: var(--accent); font-style: italic;
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: clamp(24px, 3vw, 36px); font-weight: 500; letter-spacing: 0.08em; margin-bottom: 16px; }
+.hero p { font-size: 14px; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 2; }
+
+.container { max-width: 760px; margin: -30px auto 80px; padding: 0 20px; }
+.form-wrap { background: white; border-radius: 12px; padding: 48px 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); }
+
+.section { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+.section:last-of-type { border-bottom: none; }
+.section-label { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--accent); font-style: italic; margin-bottom: 8px; }
+.section-title { font-size: 20px; font-weight: 500; margin-bottom: 24px; letter-spacing: 0.05em; }
+
+.field { margin-bottom: 24px; }
+.field label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.03em; }
+.field label .required { color: var(--accent); font-size: 11px; margin-left: 6px; font-weight: 400; letter-spacing: 0.1em; }
+.field label .optional { color: var(--sub); font-size: 11px; margin-left: 6px; font-weight: 400; letter-spacing: 0.1em; }
+.field .hint { font-size: 12px; color: var(--sub); margin-top: 4px; line-height: 1.6; }
+
+.input, .textarea, .select {
+  width: 100%; padding: 12px 14px; font-size: 14px;
+  border: 1px solid var(--line); border-radius: 6px; background: white;
+  font-family: inherit; line-height: 1.6; color: var(--ink);
+  transition: border 0.2s;
+}
+.input:focus, .textarea:focus, .select:focus { outline: none; border-color: var(--accent); }
+.textarea { resize: vertical; min-height: 80px; }
+
+.checkgroup { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.check-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; transition: all 0.2s; background: white; font-size: 13px; }
+.check-item:hover { border-color: var(--accent); background: rgba(204,120,92,0.03); }
+.check-item input[type="checkbox"], .check-item input[type="radio"] { accent-color: var(--accent); cursor: pointer; }
+.check-item input:checked ~ span { color: var(--accent); font-weight: 500; }
+
+.submit-wrap { margin-top: 48px; text-align: center; }
+.btn {
+  display: inline-block; padding: 18px 48px; background: var(--ink); color: white;
+  border: none; border-radius: 50px; font-size: 14px; font-weight: 500;
+  letter-spacing: 0.2em; cursor: pointer; transition: all 0.3s;
+  font-family: inherit;
+}
+.btn:hover { background: var(--accent); transform: translateY(-2px); }
+.submit-note { font-size: 12px; color: var(--sub); margin-top: 16px; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) {
+  .form-wrap { padding: 32px 24px; }
+  .row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-badge">HP PRODUCTION HEARING</div>
+  <h1>HP制作 ヒアリングシート</h1>
+  <p>このたびはご契約ありがとうございます。<br>最適なHPをお作りするため、以下ご回答ください（所要15〜20分）。</p>
+</section>
+
+<main class="container">
+  <form class="form-wrap" action="https://formsubmit.co/0622hayakawamai@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="【HP制作ヒアリング】新規回答">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://0622hayakawamai-ctrl.github.io/hp-samples/hearing_thanks.html">
+    <input type="hidden" name="_captcha" value="true">
+
+    <!-- 基本情報 -->
+    <div class="section">
+      <div class="section-label">── SECTION 01 ──</div>
+      <h2 class="section-title">基 本 情 報</h2>
+
+      <div class="field">
+        <label>店舗名・会社名 <span class="required">必須</span></label>
+        <input class="input" type="text" name="店舗名" required>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>屋号・ブランド名<span class="optional">任意</span></label>
+          <input class="input" type="text" name="屋号">
+        </div>
+        <div class="field">
+          <label>ご担当者様お名前 <span class="required">必須</span></label>
+          <input class="input" type="text" name="担当者名" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>メールアドレス <span class="required">必須</span></label>
+          <input class="input" type="email" name="メール" required>
+        </div>
+        <div class="field">
+          <label>電話番号<span class="optional">任意</span></label>
+          <input class="input" type="tel" name="電話">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>現在のHP URL<span class="optional">任意</span></label>
+        <input class="input" type="url" name="現在のHP">
+      </div>
+    </div>
+
+    <!-- サイトの目的 -->
+    <div class="section">
+      <div class="section-label">── SECTION 02 ──</div>
+      <h2 class="section-title">サ イ ト の 目 的</h2>
+
+      <div class="field">
+        <label>今回のHPで最も実現したいこと（複数選択可）<span class="required">必須</span></label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="checkbox" name="目的" value="新規集客"><span>新規集客</span></label>
+          <label class="check-item"><input type="checkbox" name="目的" value="ブランディング強化"><span>ブランディング強化</span></label>
+          <label class="check-item"><input type="checkbox" name="目的" value="スマホ対応"><span>スマホ対応</span></label>
+          <label class="check-item"><input type="checkbox" name="目的" value="情報発信"><span>情報発信</span></label>
+          <label class="check-item"><input type="checkbox" name="目的" value="採用強化"><span>採用強化</span></label>
+          <label class="check-item"><input type="checkbox" name="目的" value="その他"><span>その他</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>ターゲット顧客 <span class="required">必須</span></label>
+        <textarea class="textarea" name="ターゲット" required placeholder="例：30-50代の女性、東京都内在住、美容に関心が高い"></textarea>
+      </div>
+
+      <div class="field">
+        <label>参考にしているHP・競合サイト（URLを最大3つ）<span class="optional">任意</span></label>
+        <textarea class="textarea" name="競合サイト" placeholder="https://..."></textarea>
+      </div>
+    </div>
+
+    <!-- ページ構成 -->
+    <div class="section">
+      <div class="section-label">── SECTION 03 ──</div>
+      <h2 class="section-title">ペ ー ジ 構 成</h2>
+
+      <div class="field">
+        <label>希望ページ（最大5ページまで）<span class="required">必須</span></label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="checkbox" name="ページ" value="トップ" checked><span>トップページ（必須）</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="サービス"><span>サービス・メニュー</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="会社概要"><span>会社概要</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="アクセス"><span>アクセス・店舗情報</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="お客様の声"><span>お客様の声</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="FAQ"><span>よくある質問</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="ブログ"><span>ブログ・お知らせ</span></label>
+          <label class="check-item"><input type="checkbox" name="ページ" value="お問い合わせ" checked><span>お問い合わせ（必須）</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>キャッチコピー希望<span class="optional">任意</span></label>
+        <textarea class="textarea" name="キャッチコピー" placeholder="HPに載せたいメッセージ・キーワード"></textarea>
+      </div>
+    </div>
+
+    <!-- デザイン -->
+    <div class="section">
+      <div class="section-label">── SECTION 04 ──</div>
+      <h2 class="section-title">デ ザ イ ン</h2>
+
+      <div class="field">
+        <label>好きなデザインテイスト（複数選択可）<span class="required">必須</span></label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="checkbox" name="テイスト" value="ミニマル"><span>清潔感・シンプル・ミニマル</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="高級感"><span>高級感・ラグジュアリー</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="親しみ"><span>親しみやすい・温かみ</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="和モダン"><span>和モダン</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="ポップ"><span>ポップ・カジュアル</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="クラシック"><span>クラシック・伝統</span></label>
+          <label class="check-item"><input type="checkbox" name="テイスト" value="スタイリッシュ"><span>スタイリッシュ・モダン</span></label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>使いたい色<span class="optional">任意</span></label>
+          <input class="input" type="text" name="使いたい色" placeholder="例：ネイビー、ゴールド">
+        </div>
+        <div class="field">
+          <label>避けたい色<span class="optional">任意</span></label>
+          <input class="input" type="text" name="避けたい色" placeholder="例：赤、派手な色">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>ロゴデータ<span class="optional">任意</span></label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="radio" name="ロゴ" value="あり・提供可"><span>ロゴあり・データ提供可</span></label>
+          <label class="check-item"><input type="radio" name="ロゴ" value="あり・要デジタル化"><span>ロゴあり・データなし（要デジタル化）</span></label>
+          <label class="check-item"><input type="radio" name="ロゴ" value="なし・制作希望"><span>ロゴなし・制作希望</span></label>
+          <label class="check-item"><input type="radio" name="ロゴ" value="なし・文字ロゴOK"><span>なし（文字ロゴでOK）</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 写真素材 -->
+    <div class="section">
+      <div class="section-label">── SECTION 05 ──</div>
+      <h2 class="section-title">写 真 素 材</h2>
+
+      <div class="field">
+        <label>ご提供可能な写真素材（複数選択可）<span class="required">必須</span></label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="checkbox" name="写真素材" value="店内"><span>店内・施設の写真あり</span></label>
+          <label class="check-item"><input type="checkbox" name="写真素材" value="商品"><span>商品・サービスの写真あり</span></label>
+          <label class="check-item"><input type="checkbox" name="写真素材" value="スタッフ"><span>スタッフ写真あり</span></label>
+          <label class="check-item"><input type="checkbox" name="写真素材" value="Instagram"><span>Instagram・ブログ画像流用可</span></label>
+          <label class="check-item"><input type="checkbox" name="写真素材" value="AI生成希望"><span>AI生成・フリー素材希望</span></label>
+          <label class="check-item"><input type="checkbox" name="写真素材" value="写真少ない"><span>写真がほぼない</span></label>
+        </div>
+        <div class="hint">※ 早川まいは写真撮影は行っておりません。店舗写真が少ない場合はAI生成・フリー素材で補完します。</div>
+      </div>
+
+      <div class="field">
+        <label>写真データの共有方法<span class="optional">任意</span></label>
+        <textarea class="textarea" name="写真共有方法" placeholder="Google Drive / Dropbox / メール添付 等"></textarea>
+      </div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="section">
+      <div class="section-label">── SECTION 06 ──</div>
+      <h2 class="section-title">コ ン テ ン ツ</h2>
+
+      <div class="field">
+        <label>貴店・貴社の強み3つ <span class="required">必須</span></label>
+        <textarea class="textarea" name="強み" required placeholder="他店にはない独自の価値を3つ教えてください"></textarea>
+      </div>
+
+      <div class="field">
+        <label>主なサービス・メニュー<span class="optional">任意</span></label>
+        <textarea class="textarea" name="サービス" placeholder="メニュー・料金がある場合はここに記載（または別途送付）"></textarea>
+      </div>
+
+      <div class="field">
+        <label>お客様の声（掲載可能なものがあれば）<span class="optional">任意</span></label>
+        <textarea class="textarea" name="お客様の声" placeholder="Instagram/Googleレビュー等から抜粋OK"></textarea>
+      </div>
+    </div>
+
+    <!-- 機能 -->
+    <div class="section">
+      <div class="section-label">── SECTION 07 ──</div>
+      <h2 class="section-title">機 能 ・ 連 携</h2>
+
+      <div class="field">
+        <label>必要な機能（複数選択可）</label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="checkbox" name="機能" value="お問い合わせ" checked><span>お問い合わせフォーム</span></label>
+          <label class="check-item"><input type="checkbox" name="機能" value="予約"><span>予約受付（外部連携）</span></label>
+          <label class="check-item"><input type="checkbox" name="機能" value="SNSリンク"><span>SNSリンク（Instagram等）</span></label>
+          <label class="check-item"><input type="checkbox" name="機能" value="Googleマップ"><span>Googleマップ埋め込み</span></label>
+          <label class="check-item"><input type="checkbox" name="機能" value="Analytics"><span>Googleアナリティクス</span></label>
+          <label class="check-item"><input type="checkbox" name="機能" value="MEO"><span>Googleビジネスプロフィール連携</span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 公開 -->
+    <div class="section">
+      <div class="section-label">── SECTION 08 ──</div>
+      <h2 class="section-title">公 開 設 定</h2>
+
+      <div class="field">
+        <label>ドメイン</label>
+        <div class="checkgroup">
+          <label class="check-item"><input type="radio" name="ドメイン" value="既存あり"><span>既に独自ドメインあり</span></label>
+          <label class="check-item"><input type="radio" name="ドメイン" value="新規取得希望"><span>新規取得希望</span></label>
+          <label class="check-item"><input type="radio" name="ドメイン" value="無料でOK"><span>無料ドメインでOK</span></label>
+          <label class="check-item"><input type="radio" name="ドメイン" value="相談"><span>要相談</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>希望の公開時期<span class="optional">任意</span></label>
+        <input class="input" type="text" name="公開希望時期" placeholder="例：5月中 / 1週間以内 / 要相談">
+      </div>
+    </div>
+
+    <!-- 自由記入 -->
+    <div class="section">
+      <div class="field">
+        <label>その他ご要望・質問<span class="optional">任意</span></label>
+        <textarea class="textarea" name="その他" style="min-height: 120px;" placeholder="何でもお気軽にご記入ください"></textarea>
+      </div>
+    </div>
+
+    <div class="submit-wrap">
+      <button type="submit" class="btn">送 信 す る</button>
+      <p class="submit-note">回答内容は早川まい宛に送信されます。2〜3営業日以内にご連絡します。</p>
+    </div>
+  </form>
+</main>
+
+</body>
+</html>
