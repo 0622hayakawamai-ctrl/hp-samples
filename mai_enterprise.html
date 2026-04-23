@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>早川まい | エンタープライズAIコンサル【従業員50名以上企業向け】</title>
+<meta name="description" content="3ヶ月で社内にAIを浸透させる伴走型コンサル。50-100名企業50万、100-300名75万、300名以上100万〜。一括前払い・着金後開始。">
+<meta property="og:title" content="早川まい エンタープライズAIコンサル｜3ヶ月で社内AI浸透">
+<meta property="og:description" content="大手AIコンサルの1/5の費用で、社内にAI文化を根付かせる。3ヶ月一括前払いパッケージ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a1929;
+  --accent: #cc785c;
+  --gold: #b8935c;
+  --sub: #666;
+  --line: #e8e6e0;
+  --bg: #ffffff;
+  --bg-soft: #f7f5f0;
+  --bg-dark: #0a1929;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans JP', -apple-system, sans-serif; line-height: 1.8; color: var(--ink); background: var(--bg); font-weight: 300; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+  padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.nav-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.1em; }
+.nav-logo span { color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-left: 4px; }
+.nav-logo .enterprise-tag { font-family: 'Cormorant Garamond', serif; font-size: 10px; letter-spacing: 0.3em; color: var(--gold); margin-left: 10px; padding: 3px 8px; border: 1px solid var(--gold); border-radius: 4px; font-style: italic; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-link { font-size: 13px; letter-spacing: 0.1em; color: var(--sub); transition: color 0.3s; }
+.nav-link:hover { color: var(--accent); }
+.nav-cta { background: var(--ink); color: white; padding: 10px 22px; border-radius: 30px; font-size: 13px; letter-spacing: 0.05em; }
+
+.hero {
+  min-height: 95vh; padding: 180px 24px 100px;
+  display: flex; align-items: center;
+  background: linear-gradient(135deg, #0a1929 0%, #1e3a5f 60%, #0a1929 100%);
+  color: white; position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(45deg, transparent 49%, rgba(204,120,92,0.05) 49.5%, rgba(204,120,92,0.05) 50.5%, transparent 51%);
+  background-size: 80px 80px;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 30%, rgba(204,120,92,0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 70%, rgba(184,147,92,0.1) 0%, transparent 50%);
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-block; padding: 10px 22px; border: 1px solid var(--gold); border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--gold);
+  font-style: italic; margin-bottom: 32px; background: rgba(184,147,92,0.08);
+}
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 64px); line-height: 1.3;
+  margin-bottom: 28px; font-weight: 700; letter-spacing: 0.02em;
+}
+.hero h1 .accent { color: var(--accent); }
+.hero h1 .gold { color: var(--gold); }
+.hero-lead {
+  font-size: clamp(15px, 1.4vw, 17px); color: rgba(255,255,255,0.85);
+  margin-bottom: 48px; max-width: 720px; line-height: 2.1;
+}
+.hero-highlights { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-highlight {
+  padding: 12px 20px; background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 30px;
+  font-size: 13px; letter-spacing: 0.1em; color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+}
+.hero-highlight .en { color: var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-right: 8px; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 18px 36px; border-radius: 50px;
+  font-size: 14px; letter-spacing: 0.1em; font-weight: 500;
+  transition: all 0.3s;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(204,120,92,0.4); }
+.btn-secondary { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
+.btn-secondary:hover { background: white; color: var(--ink); border-color: white; }
+
+section { padding: 120px 24px; }
+.section-title { text-align: center; margin-bottom: 72px; }
+.section-title .en { display: block; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.5em; color: var(--accent); font-style: italic; margin-bottom: 16px; }
+.section-title h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 500; letter-spacing: 0.08em; }
+.section-title p { color: var(--sub); margin-top: 16px; font-size: 15px; }
+
+.problems { background: var(--bg-soft); }
+.problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.problem { background: white; padding: 40px 32px; border: 1px solid var(--line); border-radius: 12px; transition: all 0.3s; }
+.problem:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,25,41,0.06); }
+.problem .num { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--accent); font-style: italic; margin-bottom: 16px; line-height: 1; }
+.problem h3 { font-size: 17px; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.03em; line-height: 1.5; }
+.problem p { font-size: 13px; color: var(--sub); line-height: 2; }
+
+.plans-section { background: var(--bg); }
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+.plan {
+  background: white; border: 1px solid var(--line); border-radius: 16px;
+  padding: 48px 36px; transition: all 0.3s; position: relative;
+}
+.plan:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(10,25,41,0.08); border-color: var(--accent); }
+.plan.featured { border: 2px solid var(--accent); box-shadow: 0 12px 40px rgba(204,120,92,0.12); }
+.plan.featured::before {
+  content: 'MOST POPULAR'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: white; padding: 6px 18px; border-radius: 20px;
+  font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.3em; font-style: italic;
+}
+.plan-scale { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: var(--gold); font-style: italic; margin-bottom: 8px; }
+.plan h3 { font-size: 20px; font-weight: 500; margin-bottom: 20px; letter-spacing: 0.05em; }
+.plan-price { margin: 24px 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plan-price .period { display: block; font-size: 12px; color: var(--sub); margin-bottom: 6px; letter-spacing: 0.1em; }
+.plan-price .amount { font-size: 44px; font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: 0.02em; }
+.plan-price .amount small { font-size: 13px; font-weight: 400; color: var(--sub); margin-left: 4px; }
+.plan-price .payment { display: block; margin-top: 12px; font-size: 13px; color: var(--accent); font-weight: 500; }
+.plan-features { list-style: none; margin: 24px 0; }
+.plan-features li { padding: 9px 0; font-size: 13px; color: var(--sub); border-bottom: 1px dashed var(--line); padding-left: 24px; position: relative; line-height: 1.7; }
+.plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
+.plan-features li:last-child { border: none; }
+
+.deliverables { background: var(--bg-soft); }
+.deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.deliverable { background: white; padding: 32px 24px; border: 1px solid var(--line); border-radius: 12px; text-align: center; transition: all 0.3s; }
+.deliverable:hover { border-color: var(--accent); }
+.deliverable-icon { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-style: italic; color: var(--accent); margin-bottom: 12px; display: block; }
+.deliverable h4 { font-size: 15px; font-weight: 500; margin-bottom: 10px; letter-spacing: 0.05em; }
+.deliverable p { font-size: 12px; color: var(--sub); line-height: 1.8; }
+
+.compare-section { background: var(--bg); padding: 120px 24px; }
+.compare-wrap { max-width: 1000px; margin: 0 auto; }
+.compare-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
+.compare-row { display: grid; grid-template-columns: 2fr 1fr 1.3fr; padding: 20px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; gap: 12px; }
+.compare-row:last-child { border-bottom: none; }
+.compare-row.head { background: var(--bg-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; color: var(--sub); }
+.compare-row.highlight { background: rgba(204,120,92,0.06); font-weight: 500; color: var(--ink); }
+.compare-row.highlight > div:first-child { color: var(--accent); font-weight: 700; }
+.compare-note { text-align: center; font-size: 12px; color: var(--sub); margin-top: 24px; letter-spacing: 0.05em; }
+@media (max-width: 768px) {
+  .compare-row { grid-template-columns: 1.4fr 1fr 1fr; padding: 14px 14px; font-size: 12px; gap: 8px; }
+}
+
+.roi { background: var(--bg-dark); color: white; padding: 120px 24px; position: relative; overflow: hidden; }
+.roi::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(204,120,92,0.15) 0%, transparent 50%); }
+.roi-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+.roi .section-title h2 { color: white; }
+.roi .section-title p { color: rgba(255,255,255,0.75); }
+.roi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.roi-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px 28px; backdrop-filter: blur(10px); }
+.roi-label { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.3em; color: var(--gold); font-style: italic; margin-bottom: 12px; display: block; }
+.roi-value { font-size: 36px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.02em; }
+.roi-value .unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.7); margin-left: 4px; }
+.roi-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.8; }
+
+.flow { background: var(--bg-soft); }
+.flow-list { max-width: 900px; margin: 0 auto; }
+.flow-item { display: flex; gap: 40px; padding: 36px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+.flow-item:last-child { border: none; }
+.flow-num { flex-shrink: 0; width: 56px; height: 56px; border: 2px solid var(--accent); color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 500; }
+.flow-content h3 { font-size: 17px; font-weight: 500; margin-bottom: 10px; letter-spacing: 0.05em; }
+.flow-content p { font-size: 14px; color: var(--sub); line-height: 2; }
+.flow-content .time { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--accent); font-style: italic; letter-spacing: 0.2em; margin-top: 8px; display: inline-block; }
+
+.about-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center; }
+.about-photo { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; position: relative; background: url("./mai_photo.jpg") center/cover no-repeat; }
+.about-photo .about-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.75)); padding: 20px; color: white; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.3em; font-style: italic; text-align: right; }
+.about-text h3 { font-size: 28px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.05em; }
+.about-text .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--accent); font-style: italic; letter-spacing: 0.3em; margin-bottom: 24px; }
+.about-text p { margin-bottom: 20px; font-size: 14px; color: var(--sub); line-height: 2; }
+.about-text .highlight { color: var(--ink); font-weight: 500; }
+.achievements { margin-top: 32px; padding: 24px; background: var(--bg-soft); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
+.achievement-label { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--accent); font-style: italic; margin-bottom: 16px; }
+.achievement-list { list-style: none; margin: 0; padding: 0; }
+.achievement-list li { padding: 10px 0; font-size: 14px; color: var(--ink); border-bottom: 1px dashed var(--line); padding-left: 28px; position: relative; line-height: 1.6; }
+.achievement-list li:last-child { border: none; }
+.achievement-list.results li::before { content: '✦'; color: var(--accent); font-weight: 700; position: absolute; left: 0; }
+.achievement-list.sports li::before { content: '🏆'; position: absolute; left: 0; }
+.result-sub { display: block; font-size: 12px; color: var(--sub); margin-top: 4px; font-weight: 400; letter-spacing: 0.05em; }
+
+.faq { background: var(--bg); }
+.faq-list { max-width: 900px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 28px 0; }
+.faq-item:last-child { border: none; }
+.faq-q { font-size: 16px; font-weight: 500; margin-bottom: 12px; padding-left: 36px; position: relative; letter-spacing: 0.03em; }
+.faq-q::before { content: 'Q.'; position: absolute; left: 0; font-family: 'Cormorant Garamond', serif; color: var(--accent); font-style: italic; font-size: 20px; font-weight: 500; }
+.faq-a { font-size: 14px; color: var(--sub); padding-left: 36px; position: relative; line-height: 2; }
+.faq-a::before { content: 'A.'; position: absolute; left: 0; font-family: 'Cormorant Garamond', serif; color: var(--sub); font-style: italic; font-size: 20px; font-weight: 500; }
+
+.cta-section { background: linear-gradient(135deg, #0a1929 0%, #1e3a5f 60%, #0a1929 100%); color: white; text-align: center; padding: 120px 24px; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(204,120,92,0.15) 0%, transparent 60%); }
+.cta-section > .container { position: relative; z-index: 2; }
+.cta-section .section-title .en { color: var(--gold); }
+.cta-section .section-title h2 { color: white; }
+.cta-section .section-title p { color: rgba(255,255,255,0.75); }
+.cta-email { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
+.cta-email a { color: var(--accent); }
+
+.footer { background: var(--bg); color: var(--sub); padding: 60px 24px 40px; text-align: center; font-size: 12px; border-top: 1px solid var(--line); letter-spacing: 0.05em; }
+.footer-links a { margin: 0 16px; font-size: 12px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copyright { margin-top: 24px; font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 0.2em; font-size: 11px; }
+
+@media (max-width: 768px) {
+  .nav-links { gap: 10px; }
+  .nav-link { display: none; }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 36px; }
+  .flow-item { gap: 20px; }
+  section { padding: 80px 24px; }
+  .hero-highlights { gap: 8px; }
+  .hero-highlight { padding: 8px 14px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">早川<span>mai</span><span class="enterprise-tag">ENTERPRISE</span></div>
+  <div class="nav-links">
+    <a href="#plans" class="nav-link">PLANS</a>
+    <a href="#flow" class="nav-link">FLOW</a>
+    <a href="./mai_lp.html" class="nav-link">個人事業主向け</a>
+    <a href="#contact" class="nav-cta">無料相談</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">ENTERPRISE AI CONSULTING</span>
+    <h1>
+      3ヶ月で、社内に<br>
+      AIを<span class="gold">根付かせる</span><span class="accent">。</span>
+    </h1>
+    <p class="hero-lead">
+      従業員50名以上の中小企業向けに、週1回の伴走型AIコンサルを3ヶ月パッケージで提供。<br>
+      大手AIコンサルの1/5の費用で、社員がAIを日常使いする文化まで設計します。
+    </p>
+    <div class="hero-highlights">
+      <span class="hero-highlight"><span class="en">01</span>3ヶ月一括前払い</span>
+      <span class="hero-highlight"><span class="en">02</span>着金後サービス開始</span>
+      <span class="hero-highlight"><span class="en">03</span>AIツール1個開発・納品</span>
+      <span class="hero-highlight"><span class="en">04</span>参加人数無制限</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#plans" class="btn btn-primary">料金プランを見る →</a>
+      <a href="#contact" class="btn btn-secondary">無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<section class="problems">
+  <div class="section-title">
+    <span class="en">── YOUR CHALLENGES ──</span>
+    <h2>こ ん な 課 題 あ り ま せ ん か</h2>
+  </div>
+  <div class="problems-grid container">
+    <div class="problem">
+      <div class="num">01</div>
+      <h3>AI導入が<br>トップダウンで止まっている</h3>
+      <p>経営層が導入号令をかけたが、現場にどう降ろせばいいか分からず、数ヶ月経っても活用が進んでいない。</p>
+    </div>
+    <div class="problem">
+      <div class="num">02</div>
+      <h3>大手コンサルの<br>見積が桁違いに高い</h3>
+      <p>3ヶ月300〜500万円、初期費だけで200万円。中小企業には重すぎて導入判断ができない。</p>
+    </div>
+    <div class="problem">
+      <div class="num">03</div>
+      <h3>社内にDX責任者・<br>AI人材がいない</h3>
+      <p>専任を採用しようにも人件費と採用コストが合わない。既存社員は通常業務で手一杯で学習する時間がない。</p>
+    </div>
+    <div class="problem">
+      <div class="num">04</div>
+      <h3>一部の社員しか<br>AIを使えていない</h3>
+      <p>情シスや若手の数名は使っているが、部署横断で浸透していない。業務効率化のインパクトが限定的。</p>
+    </div>
+  </div>
+</section>
+
+<section class="plans-section" id="plans">
+  <div class="section-title">
+    <span class="en">── PRICING PLANS ──</span>
+    <h2>料 金 プ ラ ン</h2>
+    <p>規模別の3プラン。3ヶ月一括前払い・着金確認後にサービス開始。</p>
+  </div>
+  <div class="plans-grid container">
+
+    <div class="plan">
+      <span class="plan-scale">── STARTER ──</span>
+      <h3>50 〜 100 名 規 模</h3>
+      <div class="plan-price">
+        <span class="period">3ヶ月一括</span>
+        <span class="amount">¥500,000<small>（税込）</small></span>
+        <span class="payment">一括前払い・着金後開始</span>
+      </div>
+      <ul class="plan-features">
+        <li>2時間オンラインキックオフMTG</li>
+        <li>週1回30分のリモートMTG（参加人数無制限）</li>
+        <li>チャット相談（3営業日以内返信）</li>
+        <li>AIツール1個開発・納品</li>
+        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
+        <li>継続: 4ヶ月目以降 月10万円</li>
+      </ul>
+      <a href="#contact" class="btn btn-secondary" style="background:var(--ink);color:white;border:none;margin-top:20px;">このプランで相談</a>
+    </div>
+
+    <div class="plan featured">
+      <span class="plan-scale">── STANDARD ──</span>
+      <h3>100 〜 300 名 規 模</h3>
+      <div class="plan-price">
+        <span class="period">3ヶ月一括</span>
+        <span class="amount">¥750,000<small>（税込）</small></span>
+        <span class="payment">一括前払い・着金後開始</span>
+      </div>
+      <ul class="plan-features">
+        <li>2時間オンラインキックオフMTG</li>
+        <li>週1回30分のリモートMTG（参加人数無制限）</li>
+        <li>チャット相談（3営業日以内返信）</li>
+        <li>AIツール1個開発・納品</li>
+        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
+        <li>複数部署への個別セッション（月1回）</li>
+        <li>都内企業は月1回訪問オプション</li>
+        <li>継続: 4ヶ月目以降 月10万円</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" style="margin-top:20px;">このプランで相談</a>
+    </div>
+
+    <div class="plan">
+      <span class="plan-scale">── PREMIUM ──</span>
+      <h3>300 名 以 上 規 模</h3>
+      <div class="plan-price">
+        <span class="period">3ヶ月一括</span>
+        <span class="amount">¥1,000,000〜<small>（税込）</small></span>
+        <span class="payment">一括前払い・着金後開始</span>
+      </div>
+      <ul class="plan-features">
+        <li>2時間オンラインキックオフMTG</li>
+        <li>週1回30分のリモートMTG（参加人数無制限）</li>
+        <li>チャット相談（3営業日以内返信）</li>
+        <li>AIツール複数開発・納品（応相談）</li>
+        <li>ChatGPT / Claude / Gemini 社内展開支援</li>
+        <li>複数部署への個別セッション（月2回）</li>
+        <li>都内企業は月2回訪問オプション</li>
+        <li>継続: 4ヶ月目以降 月15万円〜</li>
+      </ul>
+      <a href="#contact" class="btn btn-secondary" style="background:var(--ink);color:white;border:none;margin-top:20px;">このプランで相談</a>
+    </div>
+
+  </div>
+  <p style="text-align:center;margin-top:40px;font-size:13px;color:var(--sub);letter-spacing:0.05em;max-width:720px;margin-left:auto;margin-right:auto;">
+    ※ 規模別の目安料金です。業種・業務内容により個別調整可能。<br>
+    ※ 全プラン「3ヶ月一括前払い・着金後にキックオフMTGを設定」の流れで統一しています。
+  </p>
+</section>
+
+<section class="deliverables">
+  <div class="section-title">
+    <span class="en">── WHAT YOU GET ──</span>
+    <h2>サ ー ビ ス 内 容</h2>
+  </div>
+  <div class="deliverables-grid container">
+    <div class="deliverable">
+      <span class="deliverable-icon">01</span>
+      <h4>キックオフMTG</h4>
+      <p>2時間のオンラインMTGで現状業務をヒアリング。AI活用余地を特定し、3ヶ月のロードマップを合意。</p>
+    </div>
+    <div class="deliverable">
+      <span class="deliverable-icon">02</span>
+      <h4>週次運用MTG</h4>
+      <p>週1回30分のリモートMTG。進捗確認・課題解決・次アクション設計。参加人数は無制限。</p>
+    </div>
+    <div class="deliverable">
+      <span class="deliverable-icon">03</span>
+      <h4>チャット相談</h4>
+      <p>Slack / Teams で質問を投げるだけ。3営業日以内に回答。プロンプト・運用フロー・ツール選定まで対応。</p>
+    </div>
+    <div class="deliverable">
+      <span class="deliverable-icon">04</span>
+      <h4>AIツール開発</h4>
+      <p>3ヶ月の中で、御社業務に特化したAIツールを1個開発・納品。プロンプト集・自動化スクリプト等。</p>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:40px;font-size:13px;color:var(--sub);letter-spacing:0.05em;">
+    ※ HP制作はエンタープライズプランには含まれません。HP制作が必要な場合は別途ご相談ください。
+  </p>
+</section>
+
+<section class="compare-section">
+  <div class="section-title">
+    <span class="en">── COMPETITIVE COMPARISON ──</span>
+    <h2>他 社 比 較</h2>
+    <p>同水準のAIコンサルサービスで価格を比較しています。</p>
+  </div>
+  <div class="compare-wrap container">
+    <div class="compare-table">
+      <div class="compare-row head">
+        <div>提供元</div>
+        <div>3ヶ月料金</div>
+        <div>対象・スコープ</div>
+      </div>
+      <div class="compare-row">
+        <div>大手AIコンサル会社</div>
+        <div>200〜500万円</div>
+        <div>大企業向け・固定プラン</div>
+      </div>
+      <div class="compare-row">
+        <div>中堅コンサル</div>
+        <div>100〜200万円</div>
+        <div>中堅企業向け・個別対応</div>
+      </div>
+      <div class="compare-row highlight">
+        <div>【当方】早川まい</div>
+        <div>50〜100万円</div>
+        <div>中小企業向け・社内浸透特化</div>
+      </div>
+      <div class="compare-row">
+        <div>フリーランスDX支援</div>
+        <div>20〜50万円</div>
+        <div>限定的・単発タスク中心</div>
+      </div>
+    </div>
+    <p class="compare-note">※ 金額は一般的な相場・業界調査ベース。個別サービスの正確な料金は各社公式サイトをご確認ください。</p>
+  </div>
+</section>
+
+<section class="roi">
+  <div class="roi-inner">
+    <div class="section-title">
+      <span class="en">── EXPECTED OUTCOMES ──</span>
+      <h2>3 ヶ 月 後 の ゴ ー ル</h2>
+      <p>サービス終了時点で、以下の状態を目指します。</p>
+    </div>
+    <div class="roi-grid">
+      <div class="roi-card">
+        <span class="roi-label">── Penetration ──</span>
+        <div class="roi-value">複数部署<span class="unit">が日常使用</span></div>
+        <p>情シス・企画・営業・総務など、複数部署の社員がAIを日常業務で使う状態を作ります。</p>
+      </div>
+      <div class="roi-card">
+        <span class="roi-label">── Efficiency ──</span>
+        <div class="roi-value">月20h<span class="unit">削減目安</span></div>
+        <p>業務時間削減の定量効果を可視化。提案書・議事録・翻訳等の定型業務で大きな削減が期待できます。</p>
+      </div>
+      <div class="roi-card">
+        <span class="roi-label">── Autonomy ──</span>
+        <div class="roi-value">自走体制<span class="unit">確立</span></div>
+        <p>御社内でAIツールを運用・改善できる体制を構築。コンサル卒業後も継続的に進化できる状態に。</p>
+      </div>
+      <div class="roi-card">
+        <span class="roi-label">── Decision ──</span>
+        <div class="roi-value">投資判断<span class="unit">可能な知識</span></div>
+        <p>経営陣がAI関連の投資判断（ツール購入・採用・外注）を自信を持って下せる知識水準まで引き上げ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow" id="flow">
+  <div class="section-title">
+    <span class="en">── FLOW ──</span>
+    <h2>ご 依 頼 の 流 れ</h2>
+  </div>
+  <div class="flow-list container">
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div class="flow-content">
+        <h3>無料オンライン相談（30分）</h3>
+        <p>Zoomで貴社の現状・AI活用状況・ご要望をヒアリング。規模・業務内容に合わせたプランをご提案します。</p>
+        <span class="time">TIMEREX PREDICTION</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div class="flow-content">
+        <h3>ご契約・お支払い</h3>
+        <p>契約書を電子送付、オンラインでサイン。契約締結後5営業日以内に3ヶ月分一括を銀行振込していただきます。</p>
+        <span class="time">CONTRACT · PAYMENT</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div class="flow-content">
+        <h3>着金確認・キックオフ</h3>
+        <p>着金を確認次第、2時間のキックオフMTGを設定。現状業務を深掘りヒアリングし、3ヶ月ロードマップを合意します。</p>
+        <span class="time">WITHIN 5 DAYS</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div class="flow-content">
+        <h3>週次伴走・チャット運用</h3>
+        <p>週1回30分のMTG・チャット相談で日常的に伴走。AIツール1個を開発・中間確認・納品まで進めます。</p>
+        <span class="time">WEEK 1 — WEEK 12</span>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">5</div>
+      <div class="flow-content">
+        <h3>成果報告・継続判断</h3>
+        <p>3ヶ月末に成果報告書を提出。4ヶ月目以降は月額10万円〜で継続可能。卒業も自由です。</p>
+        <span class="time">END OF MONTH 3</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" style="background:var(--bg);padding:120px 24px;">
+  <div class="about-inner">
+    <div class="about-photo">
+      <div class="about-caption">MAI HAYAKAWA</div>
+    </div>
+    <div class="about-text">
+      <h3>早川まい</h3>
+      <div class="subtitle">AI CONSULTANT / BUSINESS TRANSFORMATION</div>
+      <p>
+        <span class="highlight">法人営業5年</span>の経験を経て、AI業務改善コンサルタントとして活動中。
+        制作会社・事業会社の両方で営業・業務設計を担当した経験を活かし、<span class="highlight">「現場が動くAI導入」</span>を伴走型で支援しています。
+      </p>
+      <p>
+        <span class="highlight">Claude・ChatGPT・Claude Code</span>を駆使した業務自動化を実装し、クライアント企業で具体的な成果を積み上げてきました。
+        トップダウンで終わらない、現場の社員がAIを日常使いする状態まで設計します。
+      </p>
+
+      <div class="achievements">
+        <div class="achievement-label">CONSULTING RESULTS</div>
+        <ul class="achievement-list results">
+          <li><strong>提案資料作成を10時間 → 10分に短縮</strong><br><span class="result-sub">制作会社A社／AIプロンプト設計で業務効率60倍</span></li>
+          <li><strong>個人コンサル伴走で1ヶ月で収益化30万円達成</strong><br><span class="result-sub">個人事業主B様／AI活用×マーケ設計で売上ゼロから立ち上げ</span></li>
+        </ul>
+      </div>
+
+      <div class="achievements" style="margin-top:16px;">
+        <div class="achievement-label">ATHLETIC BACKGROUND</div>
+        <ul class="achievement-list sports">
+          <li><strong>レスリング アジアジュニア 3位</strong></li>
+          <li><strong>国際女子相撲選抜堺大会 3位</strong></li>
+        </ul>
+        <p style="font-size:13px;color:var(--sub);line-height:1.8;margin-top:8px;">格闘技アスリートとして培った「粘り強さ」と「勝ち切る力」で、貴社の事業成果に伴走します。</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--sub);letter-spacing:0.05em;margin-top:24px;">
+        拠点: 東京 ／ 対応エリア: 全国（オンライン）／ 都内は訪問対応可
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="section-title">
+    <span class="en">── FAQ ──</span>
+    <h2>よ く あ る ご 質 問</h2>
+  </div>
+  <div class="faq-list container">
+    <div class="faq-item">
+      <div class="faq-q">分割払いは可能ですか？</div>
+      <div class="faq-a">いいえ、3ヶ月一括前払いのみとさせていただいております。着金確認をもってサービス開始となります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">オンラインだけですか？訪問対応はありますか？</div>
+      <div class="faq-a">基本はオンラインでの対応ですが、都内企業様のみ月1〜2回の訪問オプションをご用意しています（規模により頻度異なります）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">MTGの参加人数に制限はありますか？</div>
+      <div class="faq-a">参加人数は無制限です。経営陣・現場担当者・情シスなど、貴社の必要なメンバーに自由にご参加いただけます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">途中解約は可能ですか？</div>
+      <div class="faq-a">3ヶ月パッケージ型のため、契約期間中の途中解約・返金はお受けしておりません。契約前にしっかりとご要望をすり合わせた上で、無理のない判断をしていただけるようサポートします。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">HP制作はお願いできますか？</div>
+      <div class="faq-a">エンタープライズプランにはHP制作は含まれません。HP制作が必要な場合は別途ご相談ください。なお、個人事業主向けのHP制作サブスク（月額4,980円〜）は<a href="./mai_lp.html" style="color:var(--accent);">こちら</a>をご覧ください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">業種の縛りはありますか？</div>
+      <div class="faq-a">基本的に業種は問いません。これまで不動産・製造・建設・医療・士業などでAI導入支援の経験があります。業種特有の要件は初回相談でお伝えください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">機密保持契約（NDA）は締結してもらえますか？</div>
+      <div class="faq-a">もちろんです。ご契約前にNDAを締結いたします。貴社のフォーマットでも、当方のフォーマットでも対応可能です。</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <span class="en">── LET'S TALK ──</span>
+      <h2>まずは30分の無料相談から</h2>
+      <p>貴社の規模・課題に合わせた具体提案をお話しします。NDA対応可・無理な営業はいたしません。</p>
+    </div>
+    <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" class="btn btn-primary">無料相談を予約する →</a>
+    <div class="cta-email">
+      メール: <a href="mailto:0622hayakawamai@gmail.com">0622hayakawamai@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="./mai_lp.html">個人事業主向けプラン</a>
+    <a href="./index.html">制作事例ギャラリー</a>
+    <a href="./tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="mailto:0622hayakawamai@gmail.com">お問い合わせ</a>
+  </div>
+  <div class="footer-copyright">
+    © 2026 MAI HAYAKAWA · ENTERPRISE
+  </div>
+</footer>
+
+</body>
+</html>
