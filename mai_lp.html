@@ -3,230 +3,461 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早川まい | Claude Code活用 HP制作｜初期3万・月額9,980円</title>
-<meta name="description" content="Claude Code活用で制作するオリジナルHP。初期30,000円、月額9,980円。テンプレ不使用・業種別オーダーメイド・14日間全額返金保証付き。">
-<meta property="og:title" content="早川まい | Claude Code活用HP制作">
-<meta property="og:description" content="初期30,000円・月額9,980円｜オリジナルデザイン・Claude Code活用・返金保証付き">
+<title>早川まい | HP制作×AIコンサル｜モニターセット498,000円（先着3社）</title>
+<meta name="description" content="HP制作98,000円・AIコンサル3ヶ月780,000円。両方まとめるモニターセットなら498,000円（先着3社・5月末まで）。Claude Code活用・14日間全額返金保証付き。">
+<meta property="og:title" content="早川まい | HP制作×AIコンサル｜モニターセット498,000円">
+<meta property="og:description" content="HP制作×AIコンサル両方まとめて498,000円（通常878,000円・43%OFF）先着3社モニター枠限定">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink: #0a0a0a;
   --accent: #cc785c;
+  --gold: #c9a978;
+  --navy: #0f1a3a;
+  --red: #d63031;
   --sub: #666;
   --line: #e8e6e0;
   --bg: #ffffff;
   --bg-soft: #fafaf8;
+  --bg-dark: #0a0a0a;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body { font-family: 'Noto Sans JP', -apple-system, sans-serif; line-height: 1.8; color: var(--ink); background: var(--bg); font-weight: 300; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
+/* Campaign Banner (sticky top) */
+.campaign-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: linear-gradient(90deg, #d63031 0%, #cc785c 100%);
+  color: #fff; text-align: center; padding: 11px 24px;
+  font-size: 13px; letter-spacing: 0.08em; font-weight: 500;
+  box-shadow: 0 2px 12px rgba(214,48,49,0.25);
+}
+.campaign-banner strong { font-weight: 700; letter-spacing: 0.1em; }
+.campaign-banner .spark { display: inline-block; margin: 0 6px; }
+
 .nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 40px; left: 0; right: 0; z-index: 100;
   background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-  padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
   border-bottom: 1px solid var(--line);
 }
 .nav-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.1em; }
 .nav-logo span { color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-left: 4px; }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-link { font-size: 13px; letter-spacing: 0.1em; color: var(--sub); transition: color 0.3s; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-link { font-size: 12px; letter-spacing: 0.12em; color: var(--sub); transition: color 0.3s; font-weight: 500; }
 .nav-link:hover { color: var(--accent); }
-.nav-cta { background: var(--ink); color: white; padding: 10px 22px; border-radius: 30px; font-size: 13px; letter-spacing: 0.05em; }
+.nav-cta { background: var(--ink); color: white; padding: 10px 22px; border-radius: 30px; font-size: 12px; letter-spacing: 0.08em; }
 
+/* Hero */
 .hero {
-  min-height: 90vh; padding: 160px 24px 100px;
-  display: flex; align-items: center;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  min-height: 100vh; padding: 180px 24px 80px;
+  display: flex; align-items: center; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #fafaf8 0%, #fff 50%, #faf5f0 100%);
 }
-.hero-inner { max-width: 1200px; margin: 0 auto; }
+.hero::before {
+  content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(204,120,92,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -200px; left: -200px; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201,169,120,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 .hero-badge {
-  display: inline-block; padding: 8px 18px; border: 1px solid var(--line); border-radius: 30px;
+  display: inline-block; padding: 10px 22px;
+  background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+  border: 1px solid var(--line); border-radius: 30px;
   font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--accent);
-  font-style: italic; margin-bottom: 32px;
+  font-style: italic; margin-bottom: 36px;
 }
 .hero h1 {
-  font-size: clamp(36px, 6vw, 72px); line-height: 1.25;
-  margin-bottom: 28px; font-weight: 700; letter-spacing: 0.02em;
+  font-size: clamp(44px, 7.5vw, 110px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em;
+  margin-bottom: 40px; color: var(--ink);
 }
 .hero h1 .accent { color: var(--accent); }
+.hero h1 .gold {
+  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 50%, #c9a978 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
 .hero-lead {
-  font-size: clamp(15px, 1.4vw, 17px); color: var(--sub);
-  margin-bottom: 48px; max-width: 680px; line-height: 2;
+  font-size: 17px; line-height: 2; color: var(--sub); margin-bottom: 48px; max-width: 720px;
+  font-weight: 400;
 }
-.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-lead strong { color: var(--ink); font-weight: 700; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 .btn {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 18px 36px; border-radius: 50px;
-  font-size: 14px; letter-spacing: 0.1em; font-weight: 500;
-  transition: all 0.3s;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 18px 40px; border-radius: 40px; font-size: 14px; letter-spacing: 0.08em;
+  font-weight: 500; transition: all 0.3s; white-space: nowrap;
 }
-.btn-primary { background: var(--ink); color: white; }
-.btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
-.btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn-primary {
+  background: var(--ink); color: white;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,0,0,0.25); background: #1a1a1a; }
+.btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
 .btn-secondary:hover { background: var(--ink); color: white; }
+.btn-gold {
+  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 100%);
+  color: var(--ink); font-weight: 700;
+  box-shadow: 0 8px 28px rgba(201,169,120,0.35);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(201,169,120,0.5); }
 
-section { padding: 120px 24px; }
-.section-title { text-align: center; margin-bottom: 72px; }
-.section-title .en { display: block; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.5em; color: var(--accent); font-style: italic; margin-bottom: 16px; }
-.section-title h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 500; letter-spacing: 0.05em; }
-.section-title p { color: var(--sub); margin-top: 16px; font-size: 15px; }
+.hero-metric {
+  display: inline-flex; gap: 30px; margin-top: 56px;
+  padding: 24px 36px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
+  border: 1px solid var(--line); border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  flex-wrap: wrap;
+}
+.metric-item { display: flex; flex-direction: column; gap: 4px; }
+.metric-num {
+  font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; line-height: 1;
+  color: var(--accent); letter-spacing: -0.02em;
+}
+.metric-label { font-size: 11px; letter-spacing: 0.15em; color: var(--sub); text-transform: uppercase; }
 
+/* Sections */
+section { padding: 140px 24px; }
+.section-title { text-align: center; margin-bottom: 80px; }
+.section-title .en {
+  display: block; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 13px; color: var(--accent); letter-spacing: 0.6em; margin-bottom: 16px;
+}
+.section-title h2 {
+  font-size: clamp(32px, 4.5vw, 56px); font-weight: 900; letter-spacing: 0.1em; line-height: 1.3;
+  margin-bottom: 20px;
+}
+.section-title p { font-size: 15px; color: var(--sub); max-width: 640px; margin: 0 auto; line-height: 2; }
+
+/* Campaign Hero (big banner-like) */
+.campaign-hero {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1535 55%, #0f1a3a 100%);
+  color: #fff; position: relative; overflow: hidden;
+  padding: 120px 24px;
+}
+.campaign-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(201,169,120,0.18) 0%, transparent 50%),
+              radial-gradient(circle at 80% 30%, rgba(204,120,92,0.15) 0%, transparent 50%);
+}
+.campaign-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, transparent 0 30px, rgba(255,255,255,0.02) 30px 31px);
+}
+.campaign-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+.campaign-tag {
+  display: inline-block; padding: 10px 24px;
+  background: linear-gradient(90deg, #d63031, #cc785c);
+  border-radius: 30px; font-size: 12px; letter-spacing: 0.3em; font-weight: 700;
+  margin-bottom: 30px; box-shadow: 0 4px 20px rgba(214,48,49,0.4);
+}
+.campaign-hero h2 {
+  font-size: clamp(36px, 6vw, 80px); font-weight: 900; line-height: 1.15;
+  margin-bottom: 32px; letter-spacing: -0.01em;
+}
+.campaign-hero h2 .gold {
+  background: linear-gradient(135deg, #c9a978 0%, #f0d8a8 50%, #c9a978 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.campaign-hero h2 .strike {
+  font-size: 0.55em; font-weight: 400; color: rgba(255,255,255,0.4);
+  text-decoration: line-through; display: inline-block; margin-right: 14px;
+}
+.campaign-sub {
+  font-size: 16px; color: rgba(255,255,255,0.75); max-width: 720px; margin: 0 auto 40px;
+  line-height: 2; letter-spacing: 0.05em;
+}
+.campaign-urgency {
+  display: inline-flex; gap: 40px; padding: 20px 40px;
+  background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;
+  flex-wrap: wrap; justify-content: center; margin-bottom: 40px;
+}
+.urgency-item { text-align: center; }
+.urgency-num {
+  font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; line-height: 1;
+  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.urgency-label { font-size: 10px; letter-spacing: 0.25em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 6px; }
+
+/* Plans */
 .plans { background: var(--bg-soft); }
 .plans-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 24px; max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 28px;
+  max-width: 1200px; margin: 0 auto; align-items: stretch;
 }
 .plan {
-  background: white; border: 1px solid var(--line); border-radius: 16px;
-  padding: 48px 40px; transition: all 0.3s; position: relative;
-}
-.plan:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.06); border-color: var(--accent); }
-.plan.featured { border: 2px solid var(--accent); }
-.plan.featured::before {
-  content: 'RECOMMENDED'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-  background: var(--accent); color: white; padding: 4px 16px; border-radius: 20px;
-  font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.3em; font-style: italic;
-}
-.plan-label { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: var(--accent); font-style: italic; margin-bottom: 12px; }
-.plan h3 { font-size: 22px; font-weight: 500; margin-bottom: 20px; letter-spacing: 0.05em; }
-.plan-price { margin: 28px 0; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.plan-price .initial { display: block; font-size: 13px; color: var(--sub); margin-bottom: 8px; letter-spacing: 0.05em; }
-.plan-price .amount { font-size: 42px; font-weight: 700; color: var(--ink); }
-.plan-price .amount small { font-size: 14px; font-weight: 400; color: var(--sub); margin-left: 4px; }
-.plan-price .monthly { display: block; margin-top: 12px; font-size: 14px; color: var(--sub); }
-.plan-price .monthly strong { color: var(--accent); font-weight: 500; }
-.plan-features { list-style: none; margin: 28px 0; }
-.plan-features li { padding: 10px 0; font-size: 14px; color: var(--sub); border-bottom: 1px dashed var(--line); padding-left: 26px; position: relative; }
-.plan-features li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
-.plan-note { font-size: 12px; color: var(--sub); margin-top: 20px; line-height: 1.8; }
-
-.compare-section { background: var(--bg); padding: 120px 24px; }
-.compare-wrap { max-width: 1000px; margin: 0 auto; }
-.compare-label { font-size: 18px; font-weight: 500; text-align: center; margin-bottom: 12px; letter-spacing: 0.1em; color: var(--ink); }
-.compare-sub { text-align: center; font-size: 13px; color: var(--sub); margin-bottom: 28px; letter-spacing: 0.05em; }
-.compare-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
-.compare-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; padding: 18px 24px; border-bottom: 1px solid var(--line); font-size: 14px; align-items: center; gap: 12px; }
-.compare-row:last-child { border-bottom: none; }
-.compare-row.head { background: var(--bg-soft); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; color: var(--sub); }
-.compare-row.highlight { background: rgba(204,120,92,0.06); font-weight: 500; color: var(--ink); }
-.compare-row.highlight > div:first-child { color: var(--accent); font-weight: 700; }
-.compare-note { text-align: center; font-size: 12px; color: var(--sub); margin-top: 24px; letter-spacing: 0.05em; }
-@media (max-width: 768px) {
-  .compare-row { grid-template-columns: 1.5fr 1fr 1fr 0.8fr; padding: 12px 16px; font-size: 12px; }
-}
-
-.problems-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px; max-width: 1100px; margin: 0 auto;
-}
-.problem {
-  background: white; padding: 40px 32px; border: 1px solid var(--line); border-radius: 12px;
+  background: #fff; padding: 48px 36px; border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  position: relative; display: flex; flex-direction: column;
   transition: all 0.3s;
 }
-.problem:hover { border-color: var(--accent); }
-.problem .num { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--accent); font-style: italic; margin-bottom: 16px; }
-.problem h3 { font-size: 17px; font-weight: 500; margin-bottom: 12px; letter-spacing: 0.03em; }
-.problem p { font-size: 13px; color: var(--sub); line-height: 2; }
+.plan:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
+.plan-label {
+  display: inline-block; padding: 6px 14px; background: var(--line); color: var(--sub);
+  font-size: 10px; letter-spacing: 0.25em; font-weight: 700; border-radius: 30px;
+  margin-bottom: 16px; width: fit-content;
+}
+.plan h3 { font-size: 22px; font-weight: 700; margin-bottom: 20px; line-height: 1.4; }
+.plan-price { margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.plan-price-label { display: block; font-size: 11px; color: var(--sub); letter-spacing: 0.15em; margin-bottom: 8px; }
+.plan-price-main {
+  font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; line-height: 1;
+  color: var(--ink); letter-spacing: -0.02em;
+}
+.plan-price-sub { display: block; font-size: 13px; color: var(--sub); margin-top: 10px; }
+.plan-features { list-style: none; flex: 1; margin-bottom: 28px; }
+.plan-features li {
+  position: relative; padding: 10px 0 10px 24px; font-size: 13.5px;
+  line-height: 1.7; border-bottom: 1px dashed var(--line);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700;
+}
+.plan-features li strong { color: var(--ink); font-weight: 700; }
 
-.flow { background: var(--bg-soft); }
-.flow-list { max-width: 900px; margin: 0 auto; }
-.flow-item { display: flex; gap: 40px; padding: 36px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
-.flow-item:last-child { border: none; }
-.flow-num {
-  flex-shrink: 0; width: 48px; height: 48px;
-  border: 1px solid var(--accent); color: var(--accent);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic;
+.plan-featured {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1535 55%, #0f1a3a 100%);
+  color: #fff; border: 2px solid #c9a978;
+  box-shadow: 0 16px 48px rgba(15,26,58,0.25);
+  transform: scale(1.02);
 }
-.flow-content h3 { font-size: 17px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.05em; }
-.flow-content p { font-size: 14px; color: var(--sub); line-height: 2; }
-.flow-content .time { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--accent); font-style: italic; letter-spacing: 0.2em; margin-top: 6px; display: inline-block; }
+.plan-featured:hover { transform: scale(1.02) translateY(-6px); box-shadow: 0 24px 60px rgba(15,26,58,0.35); }
+.plan-featured .plan-label {
+  background: linear-gradient(90deg, #d63031, #cc785c); color: #fff;
+}
+.plan-featured h3 { color: #fff; }
+.plan-featured .plan-price-label { color: rgba(255,255,255,0.5); }
+.plan-featured .plan-price { border-bottom-color: rgba(255,255,255,0.15); }
+.plan-featured .plan-price-main {
+  background: linear-gradient(135deg, #c9a978 0%, #f0d8a8 50%, #c9a978 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.plan-featured .plan-price-sub { color: rgba(255,255,255,0.6); }
+.plan-featured .plan-features li { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.1); }
+.plan-featured .plan-features li::before { color: #c9a978; }
+.plan-featured .plan-features li strong { color: #fff; }
+.plan-strike { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: line-through; margin-right: 8px; }
+.plan-save {
+  display: inline-block; padding: 4px 12px;
+  background: #d63031; color: #fff;
+  border-radius: 20px; font-size: 10px; letter-spacing: 0.15em; font-weight: 700;
+  margin-top: 10px;
+}
 
-.about-inner {
-  max-width: 1000px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center;
+.plan-cta {
+  display: block; text-align: center; padding: 14px 24px; border-radius: 30px;
+  font-size: 13px; letter-spacing: 0.1em; font-weight: 700;
+  background: var(--ink); color: #fff; transition: all 0.3s;
 }
-.about-photo {
-  aspect-ratio: 1; border: 1px solid var(--line);
-  border-radius: 12px; overflow: hidden; position: relative;
-  background: url("./mai_photo.jpg") center/cover no-repeat;
+.plan-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.plan-featured .plan-cta {
+  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 100%); color: var(--ink);
 }
-.about-photo .about-caption {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.75));
-  padding: 20px; color: white;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 12px; letter-spacing: 0.3em; font-style: italic;
-  text-align: right;
-}
-.about-text h3 { font-size: 28px; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.05em; }
-.achievements { margin-top: 32px; padding: 24px; background: var(--bg-soft); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
-.achievement-label { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.4em; color: var(--accent); font-style: italic; margin-bottom: 16px; }
-.achievement-list { list-style: none; margin: 0 0 16px 0; padding: 0; }
-.achievement-list li { padding: 8px 0; font-size: 14px; color: var(--ink); border-bottom: 1px dashed var(--line); padding-left: 24px; position: relative; }
-.achievement-list li::before { content: '🏆'; position: absolute; left: 0; }
-.achievement-list.results li::before { content: '✦'; color: var(--accent); font-weight: 700; }
-.achievement-list.results li { padding: 12px 0 12px 28px; font-size: 14px; line-height: 1.6; }
-.result-sub { display: block; font-size: 12px; color: var(--sub); margin-top: 4px; font-weight: 400; letter-spacing: 0.05em; }
-.achievement-list li:last-child { border: none; }
-.achievement-note { font-size: 13px; color: var(--sub); line-height: 1.8; margin-top: 8px; }
-.about-text .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--accent); font-style: italic; letter-spacing: 0.3em; margin-bottom: 24px; }
-.about-text p { margin-bottom: 20px; font-size: 14px; color: var(--sub); line-height: 2; }
-.about-text .highlight { color: var(--ink); font-weight: 500; }
 
-.samples { background: var(--bg-soft); }
-.samples-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px; max-width: 1200px; margin: 0 auto;
+/* Monitor Details Section */
+.monitor-detail {
+  background: #fff; padding: 140px 24px;
 }
-.sample { background: white; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
-.sample:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
-.sample-thumb { aspect-ratio: 16/10; background: var(--ink); color: white; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; letter-spacing: 0.1em; }
-.sample-body { padding: 20px 24px; }
-.sample-body h4 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
-.sample-body p { font-size: 12px; color: var(--sub); }
+.monitor-inner { max-width: 1100px; margin: 0 auto; }
+.monitor-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  margin-top: 64px; align-items: start;
+}
+.monitor-card {
+  padding: 40px; background: var(--bg-soft); border-radius: 20px;
+  border: 1px solid var(--line);
+}
+.monitor-card h3 {
+  font-size: 22px; font-weight: 700; margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 2px solid var(--accent); display: inline-block;
+}
+.monitor-list { list-style: none; }
+.monitor-list li {
+  padding: 12px 0 12px 32px; position: relative; font-size: 14.5px; line-height: 1.8;
+}
+.monitor-list li::before {
+  content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700;
+}
+.monitor-list li strong { color: var(--ink); font-weight: 700; }
 
-.cta-section { background: var(--ink); color: white; text-align: center; }
-.cta-section .section-title .en { color: var(--accent); }
-.cta-section .section-title h2 { color: white; }
-.cta-section .section-title p { color: rgba(255,255,255,0.7); }
-.cta-section .btn-primary { background: var(--accent); color: white; }
-.cta-section .btn-primary:hover { background: white; color: var(--ink); }
-.cta-email { margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
-.cta-email a { color: var(--accent); }
+/* HP Section */
+.section-hp { background: var(--bg-soft); }
+.hp-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  max-width: 1200px; margin: 0 auto; align-items: center;
+}
+.hp-visual {
+  background: linear-gradient(135deg, #fafaf8 0%, #f0ebe0 100%);
+  padding: 60px 40px; border-radius: 20px; position: relative; min-height: 400px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.04);
+}
+.hp-visual-card {
+  background: #fff; padding: 30px; border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  max-width: 320px; text-align: center;
+}
+.hp-visual-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.hp-visual-card p { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.hp-visual-price { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: var(--accent); margin-top: 14px; }
+
+.hp-content h3 {
+  font-size: 32px; font-weight: 900; margin-bottom: 24px; line-height: 1.4;
+}
+.hp-content h3 span { color: var(--accent); }
+.hp-content p { font-size: 15px; color: var(--sub); line-height: 2; margin-bottom: 28px; }
+.hp-features {
+  list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px;
+}
+.hp-features li {
+  padding: 10px 0 10px 24px; position: relative; font-size: 13px; color: var(--ink);
+}
+.hp-features li::before { content: '○'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+/* AI Section */
+.section-ai { background: var(--bg-dark); color: #fff; }
+.section-ai .section-title h2 { color: #fff; }
+.section-ai .section-title p { color: rgba(255,255,255,0.6); }
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: center; }
+.ai-content h3 { font-size: 32px; font-weight: 900; margin-bottom: 24px; line-height: 1.4; color: #fff; }
+.ai-content h3 span {
+  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.ai-content p { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 2; margin-bottom: 28px; }
+.ai-features { list-style: none; margin-top: 24px; }
+.ai-features li {
+  padding: 14px 0 14px 28px; position: relative; font-size: 14px; color: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.ai-features li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); }
+.ai-visual {
+  background: linear-gradient(135deg, rgba(201,169,120,0.15) 0%, rgba(15,26,58,0.6) 100%);
+  padding: 50px; border-radius: 20px; border: 1px solid rgba(201,169,120,0.3);
+  min-height: 400px; display: flex; flex-direction: column; justify-content: center; gap: 20px;
+}
+.ai-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(201,169,120,0.25); }
+.ai-stat:last-child { border-bottom: none; }
+.ai-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.1em; }
+.ai-stat-value { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #c9a978; }
+
+/* Why Section */
+.section-why { background: #fff; }
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  max-width: 1200px; margin: 0 auto;
+}
+.why-item {
+  padding: 48px 32px; background: var(--bg-soft); border-radius: 20px;
+  border: 1px solid var(--line); transition: all 0.3s;
+}
+.why-item:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.06); border-color: var(--accent); }
+.why-num {
+  font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900;
+  color: var(--accent); line-height: 1; margin-bottom: 16px;
+  background: linear-gradient(135deg, #cc785c 0%, #c9a978 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.why-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 14px; line-height: 1.5; }
+.why-item p { font-size: 13.5px; color: var(--sub); line-height: 1.9; }
+
+/* FAQ */
+.section-faq { background: var(--bg-soft); }
+.faq-list { max-width: 900px; margin: 0 auto; }
+.faq-item {
+  background: #fff; margin-bottom: 16px; padding: 28px 32px;
+  border-radius: 14px; border: 1px solid var(--line); transition: all 0.3s;
+}
+.faq-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+.faq-q { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--ink); padding-left: 32px; position: relative; }
+.faq-q::before { content: 'Q.'; position: absolute; left: 0; color: var(--accent); font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; line-height: 0.9; }
+.faq-a { font-size: 14px; color: var(--sub); line-height: 1.9; padding-left: 32px; position: relative; }
+.faq-a::before { content: 'A.'; position: absolute; left: 0; color: var(--ink); font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; line-height: 0.9; }
+
+/* About */
+.section-about { background: #fff; }
+.about-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.about-inner p { font-size: 15.5px; line-height: 2.2; color: var(--sub); margin-bottom: 24px; }
+.about-inner p strong { color: var(--ink); font-weight: 700; }
+.about-sig { margin-top: 40px; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--accent); }
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1535 55%, #0f1a3a 100%);
+  color: #fff; padding: 140px 24px; text-align: center; position: relative; overflow: hidden;
+}
+.cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(201,169,120,0.15) 0%, transparent 50%);
+}
+.cta-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 900; line-height: 1.2; margin-bottom: 24px; }
+.cta h2 .gold { background: linear-gradient(135deg, #c9a978 0%, #f0d8a8 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.cta p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 2; margin-bottom: 40px; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta .btn-gold { padding: 22px 50px; font-size: 15px; }
+.cta-email { margin-top: 30px; font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; }
+.cta-email a { color: #c9a978; }
 
 .footer {
   background: var(--bg); color: var(--sub); padding: 60px 24px 40px;
   text-align: center; font-size: 12px; border-top: 1px solid var(--line); letter-spacing: 0.05em;
 }
-.footer-links a { margin: 0 20px; font-size: 12px; transition: color 0.3s; }
+.footer-links a { margin: 0 18px; font-size: 12px; transition: color 0.3s; }
 .footer-links a:hover { color: var(--accent); }
 .footer-copyright { margin-top: 24px; font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 0.2em; font-size: 11px; }
 
-@media (max-width: 768px) {
-  .nav-links { gap: 12px; }
-  .nav-link { display: none; }
-  .about-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero h1 { font-size: 36px; }
-  .flow-item { gap: 20px; }
+/* Reveal animation */
+.reveal { opacity: 0; transform: translateY(24px); transition: all 0.8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .plans-grid { grid-template-columns: 1fr; }
+  .plan-featured { transform: none; }
+  .monitor-grid, .hp-grid, .ai-grid { grid-template-columns: 1fr; gap: 40px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .hp-features { grid-template-columns: 1fr; }
   section { padding: 80px 24px; }
+  .nav-link { display: none; }
+  .campaign-banner { font-size: 11px; padding: 9px 16px; letter-spacing: 0.04em; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 150px 20px 60px; }
+  .hero-metric { gap: 16px; padding: 18px 22px; }
+  .metric-num { font-size: 30px; }
+  .campaign-hero { padding: 80px 20px; }
+  .plan { padding: 36px 24px; }
 }
 </style>
 </head>
 <body>
 
+<div class="campaign-banner">
+  <span class="spark">🎯</span>
+  <strong>モニターセット498,000円</strong>（通常878,000円・<strong>43%OFF</strong>）先着3社限定・2026年5月末まで
+  <span class="spark">🎯</span>
+</div>
+
 <nav class="nav">
   <div class="nav-logo">早川<span>mai</span></div>
   <div class="nav-links">
+    <a href="#campaign" class="nav-link">CAMPAIGN</a>
     <a href="#plans" class="nav-link">PLANS</a>
-    <a href="#samples" class="nav-link">SAMPLES</a>
+    <a href="#hp" class="nav-link">HP制作</a>
+    <a href="#ai" class="nav-link">AIコンサル</a>
     <a href="./index.html" class="nav-link">GALLERY</a>
-    <a href="./mai_enterprise.html" class="nav-link">ENTERPRISE</a>
     <a href="#about" class="nav-link">ABOUT</a>
     <a href="#contact" class="nav-cta">無料相談</a>
   </div>
@@ -234,15 +465,70 @@ section { padding: 120px 24px; }
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-badge">AI CONSULTANT × HP CREATOR</span>
-    <h1>AIで事業を<br>次のステージへ<span class="accent">。</span></h1>
+    <span class="hero-badge">AI × HP × BUSINESS GROWTH</span>
+    <h1>
+      AI×HP制作で<br>
+      事業を<span class="gold">次のステージ</span>へ<span class="accent">。</span>
+    </h1>
     <p class="hero-lead">
-      Claude Code活用で制作するオリジナルHP。初期30,000円、月額9,980円。<br>
-      テンプレート使用なし・業種別完全オーダーメイド制作・14日間全額返金保証付き。
+      Claude Code活用で制作する<strong>オリジナルHP</strong>と、<br>
+      経営キーマン5名に伴走する<strong>AIコンサル3ヶ月</strong>。<br>
+      両方まとめてモニター価格<strong>498,000円</strong>（通常878,000円）。
     </p>
     <div class="hero-cta">
-      <a href="#plans" class="btn btn-primary">料金プランを見る →</a>
+      <a href="#campaign" class="btn btn-gold">🎯 モニター価格を見る</a>
       <a href="#contact" class="btn btn-secondary">無料相談する</a>
+    </div>
+    <div class="hero-metric">
+      <div class="metric-item">
+        <div class="metric-num">¥498,000</div>
+        <div class="metric-label">Monitor Set</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num">43%</div>
+        <div class="metric-label">OFF</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num">3社</div>
+        <div class="metric-label">Limited</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num">14日</div>
+        <div class="metric-label">Refund Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="campaign-hero" id="campaign">
+  <div class="campaign-inner">
+    <span class="campaign-tag">🎯 2026 MAY MONITOR CAMPAIGN</span>
+    <h2>
+      <span class="strike">¥878,000</span><br>
+      <span class="gold">¥498,000</span>で、<br>
+      HP制作もAIコンサルも。
+    </h2>
+    <p class="campaign-sub">
+      「HP制作」と「AIコンサル3ヶ月」の両方を、モニターセット価格498,000円で提供。<br>
+      導入事例として成果の公開にご協力いただける企業・個人事業主さま先着3社限定。<br>
+      2026年5月31日までの契約分が対象です。
+    </p>
+    <div class="campaign-urgency">
+      <div class="urgency-item">
+        <div class="urgency-num">3</div>
+        <div class="urgency-label">社限定</div>
+      </div>
+      <div class="urgency-item">
+        <div class="urgency-num">5/31</div>
+        <div class="urgency-label">最終締切</div>
+      </div>
+      <div class="urgency-item">
+        <div class="urgency-num">¥380K</div>
+        <div class="urgency-label">合計お得</div>
+      </div>
+    </div>
+    <div>
+      <a href="#contact" class="btn btn-gold">今すぐ無料相談する →</a>
     </div>
   </div>
 </section>
@@ -250,324 +536,321 @@ section { padding: 120px 24px; }
 <section class="plans" id="plans">
   <div class="section-title">
     <span class="en">── PRICING PLANS ──</span>
-    <h2>料 金 プ ラ ン</h2>
-    <p>最初に費用を明示します。交渉なし、パッケージ型。</p>
+    <h2>3 つ の プ ラ ン</h2>
+    <p>単体でも、まとめてモニターでも。事業フェーズに合わせて選べます。</p>
   </div>
-  <div class="plans-grid container" style="grid-template-columns: 1fr; max-width: 640px;">
+  <div class="plans-grid container">
 
-    <div class="plan featured">
-      <span class="plan-label">PROFESSIONAL PLAN</span>
-      <h3>Claude Code活用 HP制作</h3>
+    <div class="plan">
+      <span class="plan-label">HP CREATION</span>
+      <h3>HP制作プラン</h3>
       <div class="plan-price">
-        <span class="initial">初期制作費</span>
-        <span class="amount">¥30,000<small>（税込）</small></span>
-        <span class="monthly">月額 <strong>¥9,980</strong> で継続運用</span>
+        <span class="plan-price-label">初期制作費</span>
+        <span class="plan-price-main">¥98,000</span>
+        <span class="plan-price-sub">＋ 月額 ¥9,980（運用保守）</span>
       </div>
       <ul class="plan-features">
-        <li><strong>オリジナルデザイン</strong>（テンプレート不使用）</li>
-        <li><strong>Claude Code活用</strong>の業種特化オーダーメイド制作</li>
-        <li>レスポンシブHP（10ページまで）</li>
-        <li>AI画像生成素材 5点まで込み</li>
-        <li>SEO基本対策（キーワード設計・タイトル・メタ最適化）</li>
-        <li>お問い合わせフォーム・LINE連携</li>
+        <li><strong>完全オーダーメイド</strong>（テンプレ不使用）</li>
+        <li>Claude Code活用・業種特化制作</li>
+        <li>レスポンシブHP 10ページ</li>
+        <li>AI画像生成素材 5点込み</li>
+        <li>SEO基本対策（KW設計・メタ最適化）</li>
+        <li>お問い合わせ・LINE連携</li>
         <li>SSL・独自ドメイン・サーバー込み</li>
-        <li>月1回の軽微修正無料</li>
+        <li>月1回軽微修正無料</li>
         <li><strong>14日間全額返金保証</strong></li>
-        <li>納期 7営業日</li>
-        <li>いつでも解約可能</li>
+        <li>納期 10営業日</li>
       </ul>
-      <p class="plan-note">他社：テンプレート使い回し／当方：業種別オーダーメイド。<br>他社月額10,000〜14,000円帯のクオリティを初期3万円＋月9,980円でご提供。</p>
-      <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">無料相談する →</a>
+      <a href="#contact" class="plan-cta">HP制作を相談する</a>
     </div>
 
-  </div>
-  <p style="text-align:center;margin-top:36px;font-size:13px;color:var(--sub);letter-spacing:0.05em;">
-    ※ 写真素材: 貴店提供 or AI生成 / お客様側での撮影サポートもご案内します<br>
-    ※ 納品後の大幅改修は別途ご相談（月1-2回軽微修正は月額内）
-  </p>
-</section>
-
-<section class="compare-section">
-  <div class="section-title">
-    <span class="en">── COMPETITIVE COMPARISON ──</span>
-    <h2>他 社 比 較</h2>
-    <p>同水準のサービス内容で価格を比較しています。</p>
-  </div>
-  <div class="compare-wrap container">
-    <h3 class="compare-label">自作型 vs プロ制作型</h3>
-    <p class="compare-sub">HP制作サービスは大きく「自作型」と「プロ制作型」に分かれます。</p>
-
-    <div class="compare-table">
-      <div class="compare-row head">
-        <div>サービス種別</div>
-        <div>初期費用</div>
-        <div>月額</div>
-        <div>作業主体</div>
+    <div class="plan plan-featured">
+      <span class="plan-label">🎯 MONITOR SET</span>
+      <h3>HP制作 × AIコンサル<br>モニターセット</h3>
+      <div class="plan-price">
+        <span class="plan-price-label">3ヶ月パッケージ一括</span>
+        <span class="plan-price-main">¥498,000</span>
+        <span class="plan-price-sub">
+          <span class="plan-strike">¥878,000</span>
+          ▲¥380,000（43%OFF）
+        </span>
+        <span class="plan-save">先着3社・5月末まで</span>
       </div>
-      <div class="compare-row">
-        <div>自作型（Wix / Jimdo / STUDIO 等）</div>
-        <div>0円</div>
-        <div>0〜3,000円</div>
-        <div>自分で作る</div>
-      </div>
-      <div class="compare-row">
-        <div>自作+サポート型</div>
-        <div>0〜5万円</div>
-        <div>3,000〜4,000円</div>
-        <div>自分で作る+相談可</div>
-      </div>
-      <div class="compare-row">
-        <div>プロ制作サブスク型</div>
-        <div>0〜5万円</div>
-        <div>5,000〜10,000円</div>
-        <div>プロが作る</div>
-      </div>
-      <div class="compare-row">
-        <div>大手HP制作会社（買切り）</div>
-        <div>30〜100万円</div>
-        <div>1〜3万円</div>
-        <div>プロが作る</div>
-      </div>
-      <div class="compare-row highlight">
-        <div>【当方】早川まい</div>
-        <div>30,000円</div>
-        <div>9,980円</div>
-        <div>オリジナル+Claude Code活用</div>
-      </div>
+      <ul class="plan-features">
+        <li><strong>HP制作すべて</strong>（通常¥98,000相当）</li>
+        <li><strong>AIコンサル3ヶ月</strong>（通常¥780,000相当）</li>
+        <li>Claude Code活用戦略伴走</li>
+        <li>週1回60分オンラインMTG</li>
+        <li>チャット無制限相談</li>
+        <li>AI戦略書など6種ドキュメント納品</li>
+        <li>5名まで同時コーチング可</li>
+        <li>導入事例の公開ご協力が条件</li>
+        <li><strong>14日間全額返金保証</strong></li>
+        <li>月額HP運用は4ヶ月目から</li>
+      </ul>
+      <a href="#contact" class="plan-cta">🎯 モニター枠に応募する</a>
     </div>
-    <p class="compare-note">※ 同価格帯の他社はテンプレート使い回しが一般的。当方はClaude Code活用で業種別オーダーメイド制作を実現。</p>
 
-    <h3 class="compare-label" style="margin-top: 72px;">他社サブスクHP制作との比較</h3>
-    <div class="compare-table">
-      <div class="compare-row head">
-        <div>提供元</div>
-        <div>初期費用</div>
-        <div>月額</div>
-        <div>制作方式</div>
+    <div class="plan">
+      <span class="plan-label">AI CONSULTING</span>
+      <h3>AIコンサル 3ヶ月</h3>
+      <div class="plan-price">
+        <span class="plan-price-label">3ヶ月一括</span>
+        <span class="plan-price-main">¥780,000</span>
+        <span class="plan-price-sub">大手AIコンサルの約1/5</span>
       </div>
-      <div class="compare-row">
-        <div>A社（サブスクHP）</div>
-        <div>5,500円</div>
-        <div>10,780円</div>
-        <div>テンプレート活用</div>
-      </div>
-      <div class="compare-row">
-        <div>B社（サブスクHP）</div>
-        <div>66,000円</div>
-        <div>7,590円</div>
-        <div>オリジナル</div>
-      </div>
-      <div class="compare-row">
-        <div>C社（サブスクHP）</div>
-        <div>0円</div>
-        <div>9,980円</div>
-        <div>オーダーメイド</div>
-      </div>
-      <div class="compare-row">
-        <div>大手HP制作会社（買切り）</div>
-        <div>30〜100万円</div>
-        <div>1〜3万円</div>
-        <div>オリジナル</div>
-      </div>
-      <div class="compare-row highlight">
-        <div>【当方】早川まい</div>
-        <div>30,000円</div>
-        <div>9,980円</div>
-        <div>Claude Code活用オリジナル</div>
-      </div>
+      <ul class="plan-features">
+        <li><strong>5名のキーマン</strong>に専属1名が3ヶ月伴走</li>
+        <li>週1回60分オンラインMTG</li>
+        <li>チャット無制限相談</li>
+        <li>戦略設計・ツール選定・プロンプト設計</li>
+        <li>業務自動化指導</li>
+        <li><strong>AI戦略書など6種</strong>納品</li>
+        <li>Claude Code活用指導込み</li>
+        <li>成果レポート月次</li>
+        <li>14日間全額返金保証</li>
+        <li>延長契約も可（別途）</li>
+      </ul>
+      <a href="#contact" class="plan-cta">AIコンサルを相談する</a>
     </div>
-    <p class="compare-note">※ 金額は2026年4月時点の業界調査ベース。正確な料金は各社公式サイトをご確認ください。</p>
+
   </div>
 </section>
 
-<section>
-  <div class="section-title">
-    <span class="en">── YOUR CONCERNS ──</span>
-    <h2>こんなお悩みありませんか？</h2>
-  </div>
-  <div class="problems-grid container">
-    <div class="problem">
-      <div class="num">01</div>
-      <h3>HP制作会社の見積が<br>50〜100万円と高すぎる</h3>
-      <p>大手の買切り制作は個人事業主・小規模店舗には負担が重い。毎月の保守費も別途必要。</p>
-    </div>
-    <div class="problem">
-      <div class="num">02</div>
-      <h3>サブスクHPは<br>テンプレ使い回しが多い</h3>
-      <p>月額1万円前後のサブスクHPは数多いが、テンプレ流用でデザインが他店と似てしまう。</p>
-    </div>
-    <div class="problem">
-      <div class="num">03</div>
-      <h3>Wix / Jimdo で自作は<br>時間が取れない</h3>
-      <p>本業が忙しく、HP作成に時間をかけられない。プロに任せたいが予算がない。</p>
-    </div>
-    <div class="problem">
-      <div class="num">04</div>
-      <h3>HPに載せる写真・文章が<br>用意できない</h3>
-      <p>プロカメラマンを呼ぶ予算がない。文章もなかなか書けない。でもHPは欲しい。</p>
-    </div>
-  </div>
-</section>
-
-<section class="samples" id="samples">
-  <div class="section-title">
-    <span class="en">── WORK SAMPLES ──</span>
-    <h2>制 作 例</h2>
-    <p>8業種のプレミアムデザインをご用意しています。</p>
-  </div>
-  <div class="samples-grid container">
-    <a href="./biyoushitsu_v2.html" class="sample">
-      <div class="sample-thumb">Beauty Salon</div>
-      <div class="sample-body"><h4>美容室</h4><p>プライベートサロン・完全予約制</p></div>
-    </a>
-    <a href="./este_v2.html" class="sample">
-      <div class="sample-thumb">Esthetic</div>
-      <div class="sample-body"><h4>エステサロン</h4><p>恵比寿の隠れ家・完全個室</p></div>
-    </a>
-    <a href="./nail_v2.html" class="sample">
-      <div class="sample-thumb">Nail Salon</div>
-      <div class="sample-body"><h4>ネイルサロン</h4><p>大人女性向けプレミアム</p></div>
-    </a>
-    <a href="./dental_v2.html" class="sample">
-      <div class="sample-thumb">Dental Clinic</div>
-      <div class="sample-body"><h4>歯科医院</h4><p>予防歯科×審美歯科</p></div>
-    </a>
-    <a href="./seitai_v2.html" class="sample">
-      <div class="sample-thumb">Seitai</div>
-      <div class="sample-body"><h4>整体院</h4><p>国家資格・腰痛肩こり専門</p></div>
-    </a>
-    <a href="./shigyo_v2.html" class="sample">
-      <div class="sample-thumb">Tax Office</div>
-      <div class="sample-body"><h4>税理士・士業</h4><p>中小企業向け税務顧問</p></div>
-    </a>
-    <a href="./cafe_v2.html" class="sample">
-      <div class="sample-thumb">Cafe</div>
-      <div class="sample-body"><h4>カフェ</h4><p>スペシャリティコーヒー</p></div>
-    </a>
-    <a href="./onsen_v2.html" class="sample">
-      <div class="sample-thumb">Onsen Ryokan</div>
-      <div class="sample-body"><h4>温泉旅館</h4><p>全室源泉かけ流し・和モダン</p></div>
-    </a>
-  </div>
-  <div style="text-align:center;margin-top:48px;">
-    <a href="./index.html" class="btn btn-secondary">全制作例ギャラリーを見る →</a>
-  </div>
-</section>
-
-<section class="flow" id="flow">
-  <div class="section-title">
-    <span class="en">── FLOW ──</span>
-    <h2>ご 依 頼 の 流 れ</h2>
-  </div>
-  <div class="flow-list">
-    <div class="flow-item">
-      <div class="flow-num">1</div>
-      <div class="flow-content">
-        <h3>無料オンライン相談（30分）</h3>
-        <p>Zoomで現状のご要望とご予算をヒアリング。パッケージから最適なプランをご提案します。</p>
-        <span class="time">TIMEREX PREDICTION</span>
-      </div>
-    </div>
-    <div class="flow-item">
-      <div class="flow-num">2</div>
-      <div class="flow-content">
-        <h3>契約・お支払い</h3>
-        <p>面談後すぐに契約書をメール送付、オンラインでサイン。初期費用30,000円を銀行振込後、制作開始。</p>
-        <span class="time">WITHIN 1 DAY</span>
-      </div>
-    </div>
-    <div class="flow-item">
-      <div class="flow-num">3</div>
-      <div class="flow-content">
-        <h3>ヒアリング・制作</h3>
-        <p>Googleフォームでヒアリング後、Claude Code活用で高速制作。中間確認を1回入れます。</p>
-        <span class="time">3-7 BUSINESS DAYS</span>
-      </div>
-    </div>
-    <div class="flow-item">
-      <div class="flow-num">4</div>
-      <div class="flow-content">
-        <h3>公開・納品</h3>
-        <p>ご確認後、本番公開。操作マニュアル動画もお送りします。</p>
-        <span class="time">DAY OF DELIVERY</span>
-      </div>
-    </div>
-    <div class="flow-item">
-      <div class="flow-num">5</div>
-      <div class="flow-content">
-        <h3>月額サポート開始</h3>
-        <p>公開翌月から月額運用サポート発生。月1回の軽微修正は月額内で対応。いつでも解約可能。</p>
-        <span class="time">FROM NEXT MONTH</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="about-inner container">
-    <div class="about-photo">
-      <div class="about-caption">MAI HAYAKAWA</div>
-    </div>
-    <div class="about-text">
-      <h3>早川まい</h3>
-      <div class="subtitle">HP PRODUCER / AI SPECIALIST</div>
-      <p>
-        <span class="highlight">法人営業5年</span>の経験を経て、Claude Code活用のHP制作・AIコンサルタントとして活動中。
-        HP制作会社・事業会社での営業経験を活かし、<span class="highlight">「本業が忙しい個人事業主・小規模店舗」</span>のHP制作を得意としています。
-      </p>
-      <p>
-        <span class="highlight">Claude Codeを毎日実務で活用</span>しており、テンプレートに頼らない業種別オーダーメイド制作を実現。
-        写真素材はAI画像生成で補完可能、撮影がなくてもプロクオリティのHPをご提供します。
-      </p>
-
-      <div class="achievements">
-        <div class="achievement-label">CONSULTING RESULTS</div>
-        <ul class="achievement-list results">
-          <li><strong>提案資料作成を10時間 → 10分に短縮</strong><br><span class="result-sub">制作会社A社／AIプロンプト設計で業務効率60倍</span></li>
-          <li><strong>個人コンサル伴走で1ヶ月で収益化30万円達成</strong><br><span class="result-sub">個人事業主B様／AI活用×マーケ設計で売上ゼロから立ち上げ</span></li>
-        </ul>
-      </div>
-
-      <div class="achievements" style="margin-top: 16px;">
-        <div class="achievement-label">ATHLETIC BACKGROUND</div>
-        <ul class="achievement-list">
-          <li><strong>レスリング アジアジュニア 3位</strong></li>
-          <li><strong>国際女子相撲選抜堺大会 3位</strong></li>
-        </ul>
-        <p class="achievement-note">格闘技アスリートとして培った「粘り強さ」と「勝ち切る力」で、クライアントの事業成果に伴走します。</p>
-      </div>
-
-      <p style="font-size: 12px; color: var(--sub); letter-spacing: 0.05em; margin-top: 24px;">
-        拠点: 東京 ／ 対応エリア: 全国（オンライン）
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section" id="contact">
-  <div class="container">
+<section class="monitor-detail" id="monitor">
+  <div class="monitor-inner">
     <div class="section-title">
-      <span class="en">── LET'S TALK ──</span>
-      <h2>まずは30分の無料相談から</h2>
-      <p>プランの詳細・業種に合わせた具体提案をお話しします。無理な営業はいたしません。</p>
+      <span class="en">── MONITOR CAMPAIGN DETAILS ──</span>
+      <h2>モニター条件・対象</h2>
+      <p>事例公開へのご協力と引き換えに、セット価格498,000円で提供いたします。</p>
     </div>
-    <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" class="btn btn-primary">無料相談を予約する →</a>
+    <div class="monitor-grid">
+      <div class="monitor-card">
+        <h3>モニター条件</h3>
+        <ul class="monitor-list">
+          <li><strong>導入事例の公開</strong>（社名・業種・成果数値を早川LP/SNSで公開）</li>
+          <li><strong>30分インタビュー1回</strong>（匿名可・顔出しNGでも対応）</li>
+          <li><strong>ビフォアフ数値の提供</strong>（月次・KPI報告）</li>
+          <li>契約期間中の誠実なフィードバック</li>
+          <li>契約書にモニター条項明記</li>
+        </ul>
+      </div>
+      <div class="monitor-card">
+        <h3>対象・期間</h3>
+        <ul class="monitor-list">
+          <li><strong>先着3社のみ</strong>（枠埋まり次第終了）</li>
+          <li><strong>2026年5月31日</strong>までにご契約分</li>
+          <li>個人事業主・法人どちらもOK</li>
+          <li>業種問わず（反社・違法除く）</li>
+          <li>お支払いは<strong>銀行振込一括前払い</strong>（税込¥498,000）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-hp" id="hp">
+  <div class="section-title">
+    <span class="en">── HP CREATION ──</span>
+    <h2>H P 制 作 プ ラ ン</h2>
+    <p>個人事業主・小規模店舗向け。Claude Code活用で大手制作会社の1/10の価格。</p>
+  </div>
+  <div class="hp-grid container">
+    <div class="hp-visual">
+      <div class="hp-visual-card">
+        <h4>業種別オーダーメイド</h4>
+        <p>美容・整体・飲食・士業など、業種の心理学に沿ったUI/UX設計。テンプレート不使用の完全オリジナル制作。</p>
+        <div class="hp-visual-price">¥98,000<small style="font-size:14px; font-weight:400;">〜</small></div>
+      </div>
+    </div>
+    <div class="hp-content">
+      <h3>テンプレなし・<span>業種特化</span>・7営業日納品。</h3>
+      <p>
+        Wix・Jimdoの見た目チープなHPからの脱却。Claude Code活用で、大手制作会社30〜100万円帯のクオリティを初期98,000円で実現しました。独自ドメイン・SSL・AI画像素材5点込み、月1回軽微修正無料。14日間全額返金保証付き。
+      </p>
+      <ul class="hp-features">
+        <li>完全オーダーメイド</li>
+        <li>Claude Code活用</li>
+        <li>10ページまで</li>
+        <li>AI画像素材5点込み</li>
+        <li>SEO基本対策</li>
+        <li>LINE連携</li>
+        <li>SSL・独自ドメイン込み</li>
+        <li>14日間返金保証</li>
+      </ul>
+      <div style="margin-top:32px;">
+        <a href="./index.html" class="btn btn-primary">制作サンプルを見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-ai" id="ai">
+  <div class="section-title">
+    <span class="en">── ENTERPRISE AI CONSULTING ──</span>
+    <h2>A I コ ン サ ル 3 ヶ 月</h2>
+    <p>5名のキーマンに専属1名が3ヶ月伴走。大手AIコンサルの約1/5の費用で。</p>
+  </div>
+  <div class="ai-grid container">
+    <div class="ai-content">
+      <h3>Claude Codeで業務を<br><span>6 0 倍</span>速くする。</h3>
+      <p>
+        AI推進のキーマン5名に専属コンサル1名が3ヶ月伴走。戦略設計・ツール選定・プロンプト設計・業務自動化指導まで包括サポート。大手AIコンサル会社の1/5の費用で、中小企業規模に合わせた現実的な導入プランをご提供します。
+      </p>
+      <ul class="ai-features">
+        <li>週1回60分オンラインMTG</li>
+        <li>チャット無制限相談</li>
+        <li>AI戦略書など6種ドキュメント納品</li>
+        <li>Claude Code毎日活用者が担当</li>
+        <li>提案資料作成10時間→10分短縮実績</li>
+        <li>月次成果レポート</li>
+      </ul>
+    </div>
+    <div class="ai-visual">
+      <div class="ai-stat">
+        <span class="ai-stat-label">提案資料作成</span>
+        <span class="ai-stat-value">1/60</span>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-stat-label">大手AIコンサル比</span>
+        <span class="ai-stat-value">1/5</span>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-stat-label">対象キーマン</span>
+        <span class="ai-stat-value">5名</span>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-stat-label">契約期間</span>
+        <span class="ai-stat-value">3ヶ月</span>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-stat-label">料金（通常）</span>
+        <span class="ai-stat-value">¥780K</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-why" id="why">
+  <div class="section-title">
+    <span class="en">── WHY HAYAKAWA MAI ──</span>
+    <h2>選 ば れ る 理 由</h2>
+    <p>なぜ早川まいに依頼するのか。3つの明確な理由。</p>
+  </div>
+  <div class="why-grid container">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <h4>Claude Code毎日活用</h4>
+      <p>早川まい自身がClaude Codeをメインツールとして日常的に活用。知識だけの講師ではなく、実務者が直接指導します。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <h4>大手の1/5〜1/10の費用</h4>
+      <p>大手AIコンサルは3ヶ月300〜500万円、大手制作会社は1サイト50〜100万円。早川は1/5〜1/10の費用で、中小規模に最適化。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <h4>14日間全額返金保証</h4>
+      <p>HP制作・AIコンサルともに14日間の全額返金保証付き。納得いかなければ返金。リスクゼロで始められます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-faq">
+  <div class="section-title">
+    <span class="en">── FAQ ──</span>
+    <h2>よ く あ る ご 質 問</h2>
+  </div>
+  <div class="faq-list container">
+    <div class="faq-item">
+      <div class="faq-q">モニターセットは誰でも対象ですか？</div>
+      <div class="faq-a">個人事業主・法人どちらも対象です。導入事例の公開（社名・業種・成果数値）にご協力いただける方限定・先着3社です。業種は問いません（反社・違法業種を除く）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">モニター条件が難しい場合は？</div>
+      <div class="faq-a">顔出しNG・社名匿名希望にも対応します。最低限必要なのは「業種・規模・Before/After数値」の公開です。ご希望に応じて柔軟に調整します。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">HP制作のみ・AIコンサルのみでも依頼できますか？</div>
+      <div class="faq-a">はい、単体でも可能です。HP制作は通常¥98,000+月¥9,980、AIコンサル3ヶ月は通常¥780,000です。セットでのモニター割引（¥498,000）は、両方ご契約いただける方限定となります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">支払い方法は？</div>
+      <div class="faq-a">銀行振込（一括前払い）のみに対応しています。お申込み確定後、請求書を発行します。分割払い・クレジットカード・PayPalには現時点では対応しておりません。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">14日間全額返金保証の適用条件は？</div>
+      <div class="faq-a">契約後14日以内にご連絡いただければ、理由問わず全額返金いたします。HP制作は着手前・AIコンサルは初回MTG前までの条件となります。詳細は契約書に明記します。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">会社ではなく個人（早川まい）に依頼するのが不安です。</div>
+      <div class="faq-a">ご契約は個人事業主「早川まい」として請求書・契約書を発行します。返金保証・インボイス対応も完備しています。法人登記はしておりませんが、ご心配の場合は面談で詳細をご説明します。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-about" id="about">
+  <div class="section-title">
+    <span class="en">── ABOUT ──</span>
+    <h2>早 川 ま い に つ い て</h2>
+  </div>
+  <div class="about-inner">
+    <p>
+      AI業務改善コンサルタント / HPクリエイター。<br>
+      <strong>Claude Codeを毎日活用</strong>し、提案資料作成を10時間→10分に短縮した実績のあるプラクティショナー。
+    </p>
+    <p>
+      大手AIコンサル・大手制作会社の1/5〜1/10の費用で、個人事業主・中小企業に「実務で使える」AI導入とHP制作を提供。<br>
+      <strong>理論より実装、知識より成果</strong>を重視。
+    </p>
+    <p>
+      現在は個人で受注しており、<strong>モニター事例を拡大中</strong>。貴社の成功事例を一緒につくらせてください。
+    </p>
+    <div class="about-sig">— Mai Hayakawa</div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <h2>
+      今すぐ、<br>
+      <span class="gold">¥498,000</span>の<br>
+      モニター枠を確保する。
+    </h2>
+    <p>
+      30分の無料オンライン相談で、貴社/貴店の状況を伺い、最適プランをご提案します。<br>
+      無理な営業・強引な勧誘は一切ございません。
+    </p>
+    <div class="cta-btns">
+      <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" class="btn btn-gold" target="_blank">📅 無料相談を予約する</a>
+      <a href="mailto:0622hayakawamai@gmail.com" class="btn btn-secondary" style="color:#fff; border-color:rgba(255,255,255,0.3);">✉ メールで問い合わせ</a>
+    </div>
     <div class="cta-email">
-      メール: <a href="mailto:0622hayakawamai@gmail.com">0622hayakawamai@gmail.com</a>
+      直接メール: <a href="mailto:0622hayakawamai@gmail.com">0622hayakawamai@gmail.com</a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer-links">
-    <a href="./tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="./index.html">制作サンプル</a>
+    <a href="./tokushoho.html">特定商取引法</a>
     <a href="./privacy.html">プライバシーポリシー</a>
-    <a href="mailto:0622hayakawamai@gmail.com">お問い合わせ</a>
+    <a href="#contact">お問い合わせ</a>
   </div>
-  <div class="footer-copyright">
-    © 2026 MAI HAYAKAWA
-  </div>
+  <div class="footer-copyright">© 2026 Mai Hayakawa. All rights reserved.</div>
 </footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('section, .plan, .why-item, .faq-item, .monitor-card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
