@@ -383,6 +383,76 @@ section { padding: 140px 24px; }
 .ai-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.1em; }
 .ai-stat-value { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #c9a978; }
 
+/* Samples */
+.section-samples { background: var(--bg-soft); }
+.samples-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  max-width: 1200px; margin: 0 auto;
+}
+.sample-card {
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s; text-decoration: none; color: var(--ink);
+}
+.sample-card:hover {
+  transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+.sample-thumb {
+  height: 180px; background: linear-gradient(135deg, var(--bg-soft) 0%, #f0ebe0 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+}
+.sample-info { padding: 18px 20px; }
+.sample-genre { font-size: 11px; color: var(--accent); letter-spacing: 0.2em; font-weight: 700; margin-bottom: 6px; }
+.sample-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.sample-price { font-size: 12px; color: var(--sub); }
+
+@media (max-width: 900px) {
+  .samples-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .samples-grid { grid-template-columns: 1fr; }
+}
+
+/* Pricing Summary Table */
+.section-pricing { background: #fff; }
+.pricing-table {
+  max-width: 900px; margin: 0 auto;
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid var(--line);
+}
+.pricing-row {
+  display: grid; grid-template-columns: 2fr 1fr 1.5fr;
+  padding: 18px 24px; border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.pricing-row:last-child { border-bottom: none; }
+.pricing-row.head {
+  background: var(--ink); color: #fff;
+  font-size: 12px; letter-spacing: 0.15em; font-weight: 700;
+}
+.pricing-row.category {
+  background: var(--bg-soft);
+  font-size: 12px; letter-spacing: 0.2em; font-weight: 700;
+  color: var(--accent); grid-template-columns: 1fr;
+}
+.pricing-row.featured {
+  background: linear-gradient(90deg, rgba(201,169,120,0.08), rgba(201,169,120,0.02));
+  border-left: 4px solid var(--gold);
+}
+.pricing-name { font-size: 14px; font-weight: 700; }
+.pricing-name small { display:block; font-size:11px; color: var(--sub); font-weight:400; margin-top:4px; }
+.pricing-amount { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 900; color: var(--ink); }
+.pricing-amount.gold { background: linear-gradient(135deg, #c9a978 0%, #cc785c 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.pricing-note { font-size: 12px; color: var(--sub); line-height: 1.6; }
+
+@media (max-width: 700px) {
+  .pricing-row { grid-template-columns: 1fr; gap: 8px; }
+  .pricing-row.head { display: none; }
+  .pricing-amount { font-size: 20px; }
+}
+
 .section-why { background: #fff; }
 .why-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
@@ -518,7 +588,8 @@ section { padding: 140px 24px; }
     <a href="#plans" class="nav-link">PLANS</a>
     <a href="#hp" class="nav-link">HP制作</a>
     <a href="#ai" class="nav-link">AIコンサル</a>
-    <a href="./index.html" class="nav-link">GALLERY</a>
+    <a href="#samples" class="nav-link">事例</a>
+    <a href="#pricing" class="nav-link">料金一覧</a>
     <a href="#about" class="nav-link">ABOUT</a>
     <a href="#contact" class="nav-cta">無料相談</a>
   </div>
@@ -537,8 +608,8 @@ section { padding: 140px 24px; }
       <strong>法人・個人事業主問わず同一料金</strong>。両方まとめてモニター価格<strong>¥398,000</strong>（通常¥596,000・先着3社限定）
     </p>
     <div class="hero-cta">
-      <a href="#campaign" class="btn btn-gold">🎯 モニター価格を見る</a>
-      <a href="#contact" class="btn btn-secondary">無料相談する</a>
+      <a href="https://forms.gle/GTzhbMZsLbSSNC148" target="_blank" class="btn btn-gold">📝 ヒアリングフォーム回答（即着手）</a>
+      <a href="#campaign" class="btn btn-secondary">モニター価格を見る</a>
     </div>
     <div class="hero-metric">
       <div class="metric-item">
@@ -744,10 +815,87 @@ section { padding: 140px 24px; }
         <li>14日間返金保証</li>
       </ul>
       <div style="margin-top:32px;">
-        <a href="./index.html" class="btn btn-primary">制作サンプルを見る →</a>
+        <a href="#samples" class="btn btn-primary">制作サンプルを見る →</a>
       </div>
     </div>
   </div>
+</section>
+
+<section class="section-samples" id="samples">
+  <div class="section-title">
+    <span class="en">── WORK SAMPLES ──</span>
+    <h2>制 作 事 例</h2>
+    <p>業種別オーダーメイドのサンプルHP。Claude Code活用で制作した8業種のクオリティをご確認ください。</p>
+  </div>
+  <div class="samples-grid container">
+    <a href="./biyoushitsu_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">💇‍♀️</div>
+      <div class="sample-info">
+        <div class="sample-genre">BEAUTY SALON</div>
+        <div class="sample-title">美容室・ヘアサロン</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./nail_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">💅</div>
+      <div class="sample-info">
+        <div class="sample-genre">NAIL SALON</div>
+        <div class="sample-title">ネイルサロン</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./este_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">✨</div>
+      <div class="sample-info">
+        <div class="sample-genre">ESTHETIC</div>
+        <div class="sample-title">エステサロン</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./seitai_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">🤲</div>
+      <div class="sample-info">
+        <div class="sample-genre">CHIROPRACTIC</div>
+        <div class="sample-title">整体院・治療院</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./cafe_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">☕</div>
+      <div class="sample-info">
+        <div class="sample-genre">CAFE</div>
+        <div class="sample-title">カフェ・喫茶店</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./dental_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">🦷</div>
+      <div class="sample-info">
+        <div class="sample-genre">DENTAL</div>
+        <div class="sample-title">歯科医院</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./shigyo_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">⚖️</div>
+      <div class="sample-info">
+        <div class="sample-genre">PROFESSIONAL</div>
+        <div class="sample-title">士業（弁護士・税理士）</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+    <a href="./onsen_v2.html" target="_blank" class="sample-card">
+      <div class="sample-thumb">♨️</div>
+      <div class="sample-info">
+        <div class="sample-genre">HOTEL</div>
+        <div class="sample-title">温泉・宿泊業</div>
+        <div class="sample-price">¥98,000〜</div>
+      </div>
+    </a>
+  </div>
+  <p style="text-align:center; margin-top:48px; font-size:13px; color:var(--sub);">
+    ※ 上記以外の業種もご相談ください。Claude Code活用で柔軟に対応いたします。
+  </p>
 </section>
 
 <section class="section-ai" id="ai">
@@ -794,6 +942,124 @@ section { padding: 140px 24px; }
         <span class="ai-stat-value" style="font-size:24px;">¥498,000</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section-pricing" id="pricing">
+  <div class="section-title">
+    <span class="en">── ALL PRICING ──</span>
+    <h2>料 金 一 覧（すべて）</h2>
+    <p>追加料金・オプションも含めた全料金。隠れた費用は一切ありません。</p>
+  </div>
+  <div class="pricing-table">
+
+    <div class="pricing-row head">
+      <div>サービス</div>
+      <div>料金</div>
+      <div>備考</div>
+    </div>
+
+    <div class="pricing-row category">▼ メインプラン</div>
+
+    <div class="pricing-row featured">
+      <div class="pricing-name">🎯 モニターセット<small>HP制作 + AIコンサル3ヶ月（5名まで）</small></div>
+      <div class="pricing-amount gold">¥398,000</div>
+      <div class="pricing-note">先着3社・5月末まで／一括前払い／14日返金保証</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">HP制作 買切<small>オリジナル10P・ソース納品</small></div>
+      <div class="pricing-amount">¥98,000</div>
+      <div class="pricing-note">一括／14日返金保証／納期目安2〜4週間</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">AIコンサル3ヶ月<small>キーマン5名まで・週1×60分MTG</small></div>
+      <div class="pricing-amount">¥498,000</div>
+      <div class="pricing-note">3ヶ月一括／14日返金保証</div>
+    </div>
+
+    <div class="pricing-row category">▼ オプション・追加サービス</div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">microCMS連携オプション<small>自分でブログ・お知らせ更新したい方</small></div>
+      <div class="pricing-amount">+¥50,000</div>
+      <div class="pricing-note">HP制作と同時申込／初期設定一括</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">HP修正 都度依頼<small>テキスト・画像差替え等</small></div>
+      <div class="pricing-amount">¥10,000<small style="font-size:11px;">/回</small></div>
+      <div class="pricing-note">任意・依頼制／簡易修正のみ</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">月額メンテナンス契約<small>サーバー管理・月X回修正対応</small></div>
+      <div class="pricing-amount">¥3,980<small style="font-size:11px;">/月</small></div>
+      <div class="pricing-note">いつでも解約可</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">月額更新代行サービス<small>月3記事まで代行執筆</small></div>
+      <div class="pricing-amount">¥10,000<small style="font-size:11px;">/月〜</small></div>
+      <div class="pricing-note">いつでも解約可／Claude Code活用</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">AIコンサル キーマン追加<small>6名以上指導希望時</small></div>
+      <div class="pricing-amount">+¥50,000<small style="font-size:11px;">/名</small></div>
+      <div class="pricing-note">面談時に相談</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">AIコンサル延長<small>4ヶ月目以降の継続希望時</small></div>
+      <div class="pricing-amount">¥98,000<small style="font-size:11px;">/月</small></div>
+      <div class="pricing-note">任意／いつでも解約可</div>
+    </div>
+
+    <div class="pricing-row category">▼ お客様負担（早川経由ではない外部費用）</div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">独自ドメイン<small>例: yourshop.com</small></div>
+      <div class="pricing-amount">¥1,500<small style="font-size:11px;">/年</small></div>
+      <div class="pricing-note">お名前.com等で取得・客が直接契約</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">サーバー</div>
+      <div class="pricing-amount">¥0<small style="font-size:11px;">/月</small></div>
+      <div class="pricing-note">GitHub Pages（無料）使用・追加費用なし</div>
+    </div>
+
+    <div class="pricing-row">
+      <div class="pricing-name">microCMS（オプション利用時）</div>
+      <div class="pricing-amount">¥0<small style="font-size:11px;">/月</small></div>
+      <div class="pricing-note">無料プラン内（月10記事まで）</div>
+    </div>
+
+  </div>
+
+  <p style="text-align:center; margin-top:48px; font-size:14px; color:var(--sub); line-height:2;">
+    ※ すべて税抜表示。消費税は別途加算。<br>
+    ※ 価格に隠れた追加費用はありません。<br>
+    ※ お見積もり・カスタマイズはお問い合わせください。
+  </p>
+</section>
+
+<section style="background: linear-gradient(135deg, #fafaf8 0%, #fff 100%); padding: 100px 24px;">
+  <div class="section-title">
+    <span class="en">── INSTANT START ──</span>
+    <h2>ヒ ア リ ン グ フ ォ ー ム</h2>
+    <p>面談不要・<strong>このフォームに回答するだけで、即HP制作・デモ作成スタート可能</strong>。<br>3〜5分で完了します。</p>
+  </div>
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <a href="https://forms.gle/GTzhbMZsLbSSNC148" target="_blank" class="btn btn-gold" style="padding: 24px 56px; font-size: 16px;">
+      📝 ヒアリングフォームに回答する →
+    </a>
+    <p style="margin-top: 28px; font-size: 13px; color: var(--sub);">
+      回答内容を元に、貴社業種に最適なHPデザインを<strong>無料デモ作成</strong>いたします。<br>
+      ご納得いただいてから契約・お支払いの流れです。
+    </p>
   </div>
 </section>
 
