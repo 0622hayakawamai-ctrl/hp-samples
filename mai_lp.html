@@ -175,19 +175,54 @@ section { padding: 140px 24px; }
   font-size: 16px; color: rgba(255,255,255,0.75); max-width: 720px; margin: 0 auto 40px;
   line-height: 2; letter-spacing: 0.05em;
 }
-.campaign-urgency {
-  display: inline-flex; gap: 40px; padding: 20px 40px;
+.campaign-compare {
+  display: flex; gap: 24px; align-items: stretch; justify-content: center;
+  margin: 0 auto 48px; max-width: 800px; flex-wrap: wrap;
+}
+.compare-box {
+  flex: 1; min-width: 220px;
+  padding: 28px 24px; border-radius: 16px;
   background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;
-  flex-wrap: wrap; justify-content: center; margin-bottom: 40px;
+  border: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
 }
-.urgency-item { text-align: center; }
-.urgency-num {
-  font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; line-height: 1;
-  background: linear-gradient(135deg, #c9a978 0%, #e6c89a 100%);
+.compare-box.normal { border-color: rgba(255,255,255,0.15); }
+.compare-box.monitor {
+  background: linear-gradient(135deg, rgba(201,169,120,0.18) 0%, rgba(201,169,120,0.05) 100%);
+  border: 2px solid #c9a978;
+  box-shadow: 0 8px 32px rgba(201,169,120,0.25);
+}
+.compare-label {
+  font-size: 11px; letter-spacing: 0.25em; color: rgba(255,255,255,0.5);
+  text-transform: uppercase; margin-bottom: 14px; font-weight: 700;
+}
+.compare-monitor-tag {
+  display: inline-block; padding: 4px 12px; background: #d63031; color: #fff;
+  font-size: 10px; letter-spacing: 0.2em; font-weight: 700; border-radius: 20px;
+  margin-bottom: 14px;
+}
+.compare-price {
+  font-family: 'Noto Sans JP', sans-serif; font-size: 36px; font-weight: 900; line-height: 1;
+  letter-spacing: -0.01em; margin-bottom: 8px;
+}
+.compare-price.normal { color: rgba(255,255,255,0.5); text-decoration: line-through; }
+.compare-price.gold {
+  background: linear-gradient(135deg, #c9a978 0%, #f0d8a8 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  font-size: 44px;
 }
-.urgency-label { font-size: 10px; letter-spacing: 0.25em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 6px; }
+.compare-arrow {
+  display: flex; align-items: center; color: #c9a978;
+  font-size: 32px; font-weight: 700;
+}
+.compare-savings {
+  font-size: 13px; color: #c9a978; margin-top: 8px; font-weight: 700; letter-spacing: 0.05em;
+}
+.compare-conditions {
+  font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 24px;
+  letter-spacing: 0.08em; line-height: 1.8;
+}
+.compare-conditions strong { color: #c9a978; font-weight: 700; }
 
 .plans { background: var(--bg-soft); }
 .plans-grid {
@@ -503,20 +538,22 @@ section { padding: 140px 24px; }
       導入事例として成果の公開にご協力いただける企業・個人事業主さま<strong>先着3社限定</strong>。<br>
       2026年5月31日までの契約分が対象です。
     </p>
-    <div class="campaign-urgency">
-      <div class="urgency-item">
-        <div class="urgency-num">3</div>
-        <div class="urgency-label">社限定</div>
+    <div class="campaign-compare">
+      <div class="compare-box normal">
+        <div class="compare-label">通常価格</div>
+        <div class="compare-price normal">¥596,000</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:8px;">HP制作 + AIコンサル単体合計</div>
       </div>
-      <div class="urgency-item">
-        <div class="urgency-num">5/31</div>
-        <div class="urgency-label">最終締切</div>
-      </div>
-      <div class="urgency-item">
-        <div class="urgency-num">¥198,000</div>
-        <div class="urgency-label">合計お得</div>
+      <div class="compare-arrow">→</div>
+      <div class="compare-box monitor">
+        <span class="compare-monitor-tag">🎯 モニター価格</span>
+        <div class="compare-price gold">¥398,000</div>
+        <div class="compare-savings">▲¥198,000 OFF（33%引き）</div>
       </div>
     </div>
+    <p class="compare-conditions">
+      <strong>先着3社限定</strong>　／　<strong>2026年5月31日</strong> までの契約分　／　事例公開協力が条件
+    </p>
     <div>
       <a href="#contact" class="btn btn-gold">今すぐ無料相談する →</a>
     </div>
