@@ -62,7 +62,11 @@ a { color: inherit; text-decoration: none; }
 .hero {
   min-height: 100vh; padding: 140px 24px 80px;
   display: flex; align-items: center; position: relative; overflow: hidden;
-  background: linear-gradient(135deg, #fefcf8 0%, #faf2e2 50%, #fef5ec 100%);
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(135deg, rgba(254,252,248,0.92) 0%, rgba(250,242,226,0.85) 50%, rgba(254,245,236,0.92) 100%),
+              url('./images/img1.jpg') center/cover no-repeat;
 }
 .hero::before {
   content: ''; position: absolute; top: 10%; right: -10%; width: 500px; height: 500px;
@@ -160,6 +164,11 @@ section { padding: 120px 24px; }
   color: var(--gold); margin-bottom: 16px;
 }
 .strength-icon { font-size: 40px; margin-bottom: 20px; }
+.strength-img {
+  width: calc(100% + 64px); margin: -50px -32px 24px;
+  height: 200px; overflow: hidden; border-radius: 14px 14px 0 0;
+}
+.strength-img img { width: 100%; height: 100%; object-fit: cover; }
 .strength-title {
   font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700;
   margin-bottom: 16px; line-height: 1.6;
@@ -370,6 +379,7 @@ section { padding: 120px 24px; }
 </nav>
 
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
     <span class="hero-eyebrow">YAMANASHI'S FIRST SLEEP THERAPY</span>
     <h1 class="hero-title">
@@ -419,20 +429,20 @@ section { padding: 120px 24px; }
   </div>
   <div class="strengths-grid container">
     <div class="strength-item">
+      <div class="strength-img"><img src="./images/img2.jpg" alt="睡眠整体"></div>
       <div class="strength-num">01</div>
-      <div class="strength-icon">🌙</div>
       <h3 class="strength-title">睡眠健康上級指導士<br>×整体セラピスト</h3>
       <p class="strength-desc">睡眠の専門資格と整体技術を併せ持つ、山梨でも数少ないセラピストが施術。「眠れる体」を専門にサポートします。</p>
     </div>
     <div class="strength-item">
+      <div class="strength-img"><img src="./images/img4.jpg" alt="血流・姿勢・呼吸"></div>
       <div class="strength-num">02</div>
-      <div class="strength-icon">🌿</div>
       <h3 class="strength-title">血流・姿勢・呼吸の<br>3軸ケア</h3>
       <p class="strength-desc">不調の根本原因にアプローチ。体の歪みを整え、血流を促し、自然な呼吸が戻ることで、自律神経のバランスが回復します。</p>
     </div>
     <div class="strength-item">
+      <div class="strength-img"><img src="./images/img5.jpg" alt="サロン×整体"></div>
       <div class="strength-num">03</div>
-      <div class="strength-icon">🤲</div>
       <h3 class="strength-title">サロン×整体の<br>真ん中スタイル</h3>
       <p class="strength-desc">「ゴリゴリ整体は苦手」「でもただのリラクゼーションでは物足りない」そんな方のためのちょうどいい施術スタイルです。</p>
     </div>
@@ -550,9 +560,22 @@ section { padding: 120px 24px; }
         <dd>完全予約制（LINE 24時間受付 / 電話 営業時間内）</dd>
       </dl>
     </div>
-    <div class="access-map">
-      Googleマップ埋め込み予定<br>（住所確定後）
+    <div class="access-map" style="background-image: url('./images/img6.jpg'); background-size: cover; background-position: center;">
+      <span style="background: rgba(255,255,255,0.85); padding: 8px 16px; border-radius: 4px;">Googleマップ埋め込み予定<br>（住所確定後）</span>
     </div>
+  </div>
+</section>
+
+<section style="padding: 0; background: var(--bg);">
+  <div class="section-title" style="padding-top: 100px;">
+    <span class="section-eyebrow">― GALLERY ―</span>
+    <h2>店内・施術風景</h2>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; max-width: 1400px; margin: 0 auto;">
+    <div style="aspect-ratio: 1/1; overflow: hidden;"><img src="./images/img7.jpg" alt="店内" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+    <div style="aspect-ratio: 1/1; overflow: hidden;"><img src="./images/img8.jpg" alt="施術風景" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+    <div style="aspect-ratio: 1/1; overflow: hidden;"><img src="./images/img9.jpg" alt="リラックス空間" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+    <div style="aspect-ratio: 1/1; overflow: hidden;"><img src="./images/img10.jpg" alt="セラピスト" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
   </div>
 </section>
 
