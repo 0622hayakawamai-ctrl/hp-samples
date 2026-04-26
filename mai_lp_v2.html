@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早川まい | HP制作 月額¥9,980｜縛りなし・完全オーダーメイド</title>
-<meta name="description" content="HP制作サービス。月額¥9,980（縛りなし）または一括¥98,000。テンプレ不使用の完全オーダーメイド。14日間全額返金保証付き。">
-<meta property="og:title" content="早川まい | HP制作 月額¥9,980｜縛りなし">
-<meta property="og:description" content="月額¥9,980（縛りなし）または一括¥98,000。完全オーダーメイド・14日返金保証">
+<title>早川まい | HP制作 月額¥7,980｜縛りなし・完全オーダーメイド</title>
+<meta name="description" content="HP制作サービス。月額¥7,980（縛りなし）または一括¥98,000。テンプレ不使用の完全オーダーメイド。14日間全額返金保証付き。">
+<meta property="og:title" content="早川まい | HP制作 月額¥7,980｜縛りなし">
+<meta property="og:description" content="月額¥7,980（縛りなし）または一括¥98,000。完全オーダーメイド・14日返金保証">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
@@ -204,6 +204,25 @@ section { padding: 120px 24px; }
 .target-icon { font-size: 36px; margin-bottom: 12px; }
 .target-name { font-size: 14px; font-weight: 700; line-height: 1.6; }
 
+/* Profile */
+.section-profile { background: white; }
+.profile-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 50px; align-items: center; }
+.profile-photo { aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.12); border: 3px solid white; outline: 1px solid var(--line); }
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+.profile-name { font-size: 26px; font-weight: 900; margin-bottom: 4px; letter-spacing: 0.05em; }
+.profile-name .accent { color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.7em; margin-left: 8px; font-weight: 500; }
+.profile-role { font-size: 12px; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 18px; font-weight: 700; }
+.profile-text p { font-size: 14px; line-height: 2.1; color: var(--sub); margin-bottom: 14px; }
+.profile-text strong { color: var(--ink); font-weight: 700; }
+.profile-tags { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.profile-tag { padding: 6px 14px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 11px; color: var(--ink); font-weight: 500; }
+.profile-tag strong { color: var(--accent); }
+@media (max-width: 768px) {
+  .profile-inner { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .profile-photo { max-width: 200px; margin: 0 auto; }
+  .profile-tags { justify-content: center; }
+}
+
 /* FAQ */
 .section-faq { background: var(--bg-soft); }
 .faq-list { max-width: 800px; margin: 0 auto; }
@@ -254,6 +273,7 @@ section { padding: 120px 24px; }
     <a href="#plans" class="nav-link">プラン</a>
     <a href="#compare" class="nav-link">他社比較</a>
     <a href="#samples" class="nav-link">事例</a>
+    <a href="#profile" class="nav-link">私について</a>
     <a href="#faq" class="nav-link">FAQ</a>
     <a href="#contact" class="nav-cta">無料相談</a>
   </div>
@@ -264,7 +284,7 @@ section { padding: 120px 24px; }
     <span class="hero-eyebrow">CUSTOM WEB CREATION</span>
     <h1>
       HP制作、<br>
-      <span class="underline accent">縛りなし</span>で月¥9,980から。
+      <span class="underline accent">縛りなし</span>で月¥7,980から。
     </h1>
     <p class="hero-lead">
       <strong>テンプレ不使用の完全オーダーメイド制作</strong>。<br>
@@ -273,7 +293,7 @@ section { padding: 120px 24px; }
     </p>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">¥9,980</div>
+        <div class="stat-num">¥7,980</div>
         <div class="stat-label">月額〜（縛りなし）</div>
       </div>
       <div class="stat-item">
@@ -340,7 +360,7 @@ section { padding: 120px 24px; }
       <h3>HP制作 サブスクプラン</h3>
       <p class="plan-target">月額で気軽に始めたい方／契約縛りが嫌な方／継続的に修正したい方向け</p>
       <div class="plan-price">
-        <span class="plan-price-main">¥9,980<span class="plan-price-unit">/月</span></span>
+        <span class="plan-price-main">¥7,980<span class="plan-price-unit">/月</span></span>
         <span class="plan-price-tax">税込¥10,978・縛りなし</span>
       </div>
       <ul class="plan-features">
@@ -434,7 +454,7 @@ section { padding: 120px 24px; }
     </div>
     <div class="compare-row us">
       <div class="label">⭐ 早川まい</div>
-      <div class="cell cell-good">¥9,980</div>
+      <div class="cell cell-good">¥7,980</div>
       <div class="cell cell-good">なし</div>
       <div class="cell cell-good">完全オーダーメイド</div>
       <div class="cell cell-good">プロが作る</div>
@@ -503,6 +523,40 @@ section { padding: 120px 24px; }
   <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub); line-height: 1.9;">
     ※ 上記は業種別オーダーメイドのデモ・サンプルです。実案件の事例は順次掲載予定。
   </p>
+</section>
+
+<section class="section-profile" id="profile">
+  <div class="section-title">
+    <span class="en">── ABOUT ME ──</span>
+    <h2>制作する人について</h2>
+  </div>
+  <div class="profile-inner">
+    <div class="profile-photo">
+      <img src="./profile_mai.jpg" alt="早川まい">
+    </div>
+    <div>
+      <div class="profile-name">早川 まい<span class="accent">Mai Hayakawa</span></div>
+      <div class="profile-role">HPクリエイター / 個人事業主</div>
+      <p>
+        個人事業主として、HP制作を1案件ずつ手作業で完全オーダーメイド制作しています。<br>
+        テンプレ流用や作業の使い回しは一切せず、<strong>業種・店舗の個性に合わせて毎回ゼロから設計</strong>。
+      </p>
+      <p>
+        「大手制作会社では細かい要望が通らない」「テンプレ型サービスだとどこも同じ見た目になる」<br>
+        ―― そんなお声に応えるため、<strong>個人ならではの密なコミュニケーションと柔軟な対応</strong>を大切にしています。
+      </p>
+      <p style="margin-top:18px; font-size:13px;">
+        まずはヒアリングフォームご回答後、<strong>無料デモから始めましょう</strong>。<br>
+        ご納得いただいてからの契約・お支払いです。
+      </p>
+      <div class="profile-tags">
+        <span class="profile-tag">📅 <strong>1998年</strong>生まれ・愛知県出身</span>
+        <span class="profile-tag">🥉 <strong>レスリング</strong>アジアジュニア3位</span>
+        <span class="profile-tag">🥉 <strong>女子相撲</strong>選抜堺大会3位</span>
+        <span class="profile-tag">🏠 <strong>東京都</strong>新宿区</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section-faq" id="faq">
