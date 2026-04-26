@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>整体 たしろ｜山梨初の睡眠整体サロン｜韮崎市・南アルプス市・甲斐市</title>
+<meta name="description" content="山梨県韮崎市の睡眠特化型整体サロン「整体 たしろ」。睡眠健康上級指導士×整体セラピストによる「眠れる体づくり」サポート。30-60代女性の睡眠悩み・自律神経・更年期不調に対応。完全予約制。">
+<meta property="og:title" content="整体 たしろ｜山梨初の睡眠整体サロン">
+<meta property="og:description" content="眠れる体を、整体で取り戻す。睡眠健康上級指導士による施術。山梨県韮崎市">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #2a2522;
+  --gold: #b89968;
+  --gold-light: #d4b888;
+  --cream: #f5ede0;
+  --bg: #fefcf8;
+  --bg-soft: #faf5eb;
+  --sub: #786c61;
+  --line: #e8ddc8;
+  --pink: #f5ebe8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', -apple-system, sans-serif;
+  line-height: 1.9; color: var(--ink); background: var(--bg);
+  font-weight: 400; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.serif { font-family: 'Noto Serif JP', serif; }
+
+/* Nav */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(254,252,248,0.96); backdrop-filter: blur(12px);
+  padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.nav-logo {
+  font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px;
+  letter-spacing: 0.15em; color: var(--ink);
+}
+.nav-logo span {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  color: var(--gold); margin-left: 6px; font-size: 14px;
+}
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-link { font-size: 13px; letter-spacing: 0.1em; color: var(--ink); transition: color 0.3s; }
+.nav-link:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold); color: white; padding: 10px 24px;
+  border-radius: 30px; font-size: 12px; letter-spacing: 0.1em;
+}
+.nav-cta:hover { background: var(--ink); }
+
+/* Hero */
+.hero {
+  min-height: 100vh; padding: 140px 24px 80px;
+  display: flex; align-items: center; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #fefcf8 0%, #faf2e2 50%, #fef5ec 100%);
+}
+.hero::before {
+  content: ''; position: absolute; top: 10%; right: -10%; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(184,153,104,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 5%; left: -10%; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(245,235,232,0.5) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;
+  text-align: center;
+}
+.hero-eyebrow {
+  display: inline-block; padding: 10px 24px;
+  background: rgba(255,255,255,0.7); border: 1px solid var(--line); border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.4em;
+  color: var(--gold); font-style: italic; margin-bottom: 36px;
+}
+.hero-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(36px, 6vw, 72px); font-weight: 700; line-height: 1.4;
+  letter-spacing: 0.05em; color: var(--ink); margin-bottom: 36px;
+}
+.hero-title .accent { color: var(--gold); }
+.hero-title .small { font-size: 0.55em; font-weight: 500; display: block; margin-top: 12px; letter-spacing: 0.15em; }
+.hero-lead {
+  font-size: 16px; line-height: 2.1; color: var(--sub); max-width: 700px; margin: 0 auto 48px;
+}
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 18px 42px; border-radius: 50px; font-size: 14px; letter-spacing: 0.15em;
+  font-weight: 500; transition: all 0.3s;
+}
+.btn-primary {
+  background: var(--ink); color: white;
+  box-shadow: 0 8px 24px rgba(42,37,34,0.2);
+}
+.btn-primary:hover { transform: translateY(-2px); background: var(--gold); }
+.btn-line {
+  background: #06C755; color: white;
+  box-shadow: 0 8px 24px rgba(6,199,85,0.25);
+}
+.btn-line:hover { transform: translateY(-2px); background: #05a647; }
+.btn-secondary {
+  background: transparent; color: var(--ink); border: 1.5px solid var(--ink);
+}
+.btn-secondary:hover { background: var(--ink); color: white; }
+
+/* Sections */
+section { padding: 120px 24px; }
+.section-title { text-align: center; margin-bottom: 80px; }
+.section-eyebrow {
+  display: block; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 13px; color: var(--gold); letter-spacing: 0.5em; margin-bottom: 16px;
+}
+.section-title h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: 0.1em; line-height: 1.4;
+  margin-bottom: 20px;
+}
+.section-title p { font-size: 15px; color: var(--sub); max-width: 640px; margin: 0 auto; line-height: 2; }
+
+/* Story / Concept */
+.section-concept { background: var(--bg-soft); }
+.concept-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.concept-inner p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px; line-height: 2.4; color: var(--ink); margin-bottom: 28px;
+  letter-spacing: 0.05em;
+}
+.concept-inner p strong { color: var(--gold); font-weight: 700; }
+
+/* Strengths */
+.section-strengths { background: var(--bg); }
+.strengths-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  max-width: 1100px; margin: 0 auto;
+}
+.strength-item {
+  background: var(--bg-soft); padding: 50px 32px; border-radius: 20px;
+  text-align: center; border: 1px solid var(--line);
+  transition: all 0.3s;
+}
+.strength-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(184,153,104,0.12);
+  border-color: var(--gold);
+}
+.strength-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em;
+  color: var(--gold); margin-bottom: 16px;
+}
+.strength-icon { font-size: 40px; margin-bottom: 20px; }
+.strength-title {
+  font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700;
+  margin-bottom: 16px; line-height: 1.6;
+}
+.strength-desc { font-size: 14px; color: var(--sub); line-height: 2; }
+
+/* Menu */
+.section-menu { background: var(--bg-soft); }
+.menu-list {
+  max-width: 800px; margin: 0 auto;
+  background: white; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+}
+.menu-item {
+  padding: 32px 36px; border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+}
+.menu-item:last-child { border-bottom: none; }
+.menu-item.featured {
+  background: linear-gradient(90deg, rgba(184,153,104,0.05), transparent);
+  border-left: 4px solid var(--gold);
+}
+.menu-info h3 {
+  font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; margin-bottom: 6px;
+}
+.menu-info .featured-tag {
+  display: inline-block; padding: 3px 12px;
+  background: var(--gold); color: white;
+  font-size: 10px; letter-spacing: 0.2em; border-radius: 20px;
+  margin-left: 10px; vertical-align: middle;
+}
+.menu-info p { font-size: 13.5px; color: var(--sub); line-height: 1.8; }
+.menu-price {
+  text-align: right;
+}
+.menu-price-amount {
+  font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700;
+  color: var(--ink); display: block;
+}
+.menu-price-note { font-size: 11px; color: var(--sub); }
+.menu-note {
+  text-align: center; margin-top: 32px; font-size: 13px; color: var(--sub); line-height: 2;
+}
+
+/* Voice */
+.section-voice {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+.voice-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  max-width: 1100px; margin: 0 auto;
+}
+.voice-card {
+  background: white; padding: 36px 28px; border-radius: 16px;
+  border: 1px solid var(--line);
+  position: relative;
+}
+.voice-card::before {
+  content: '"'; position: absolute; top: 8px; left: 18px;
+  font-family: 'Cormorant Garamond', serif; font-size: 60px; color: var(--gold-light);
+  line-height: 1;
+}
+.voice-text {
+  font-family: 'Noto Serif JP', serif; font-size: 15px; line-height: 2;
+  margin-bottom: 24px; padding-top: 18px;
+}
+.voice-meta { font-size: 12px; color: var(--sub); letter-spacing: 0.05em; }
+
+/* Access */
+.section-access { background: white; }
+.access-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  max-width: 1100px; margin: 0 auto; align-items: center;
+}
+.access-info dl { margin-top: 24px; }
+.access-info dt {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 6px;
+}
+.access-info dd {
+  font-size: 14.5px; line-height: 2; color: var(--ink); margin-bottom: 20px;
+}
+.access-map {
+  width: 100%; height: 380px; border-radius: 16px; overflow: hidden;
+  background: var(--bg-soft); display: flex; align-items: center; justify-content: center;
+  color: var(--sub); font-size: 13px; border: 1px solid var(--line);
+}
+
+/* CTA */
+.section-cta {
+  background: linear-gradient(135deg, var(--ink) 0%, #3a3128 100%);
+  color: white; text-align: center; position: relative; overflow: hidden;
+}
+.section-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(184,153,104,0.15) 0%, transparent 50%);
+}
+.cta-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.cta-inner h2 {
+  font-family: 'Noto Serif JP', serif; color: white;
+  font-size: clamp(28px, 4vw, 48px); font-weight: 700; line-height: 1.5;
+  margin-bottom: 24px; letter-spacing: 0.05em;
+}
+.cta-inner p {
+  font-size: 15px; color: rgba(255,255,255,0.75); line-height: 2;
+  margin-bottom: 40px;
+}
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-tel {
+  display: block; margin-top: 36px; font-family: 'Noto Serif JP', serif;
+  color: var(--gold-light);
+}
+.cta-tel-num {
+  font-size: 32px; font-weight: 700; letter-spacing: 0.05em; display: block;
+}
+.cta-tel-time { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; letter-spacing: 0.1em; }
+
+/* FAQ */
+.section-faq { background: var(--bg); }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item {
+  background: white; margin-bottom: 14px; padding: 26px 32px;
+  border-radius: 14px; border: 1px solid var(--line);
+}
+.faq-q {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px; font-weight: 700; margin-bottom: 12px;
+  padding-left: 32px; position: relative;
+}
+.faq-q::before {
+  content: 'Q.'; position: absolute; left: 0; color: var(--gold);
+  font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; line-height: 0.9;
+}
+.faq-a {
+  font-size: 14px; color: var(--sub); line-height: 2;
+  padding-left: 32px; position: relative;
+}
+.faq-a::before {
+  content: 'A.'; position: absolute; left: 0; color: var(--ink);
+  font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; line-height: 0.9;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-soft); padding: 60px 24px 40px;
+  text-align: center; border-top: 1px solid var(--line);
+}
+.footer-logo {
+  font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700;
+  letter-spacing: 0.15em; margin-bottom: 24px;
+}
+.footer-info {
+  font-size: 13px; color: var(--sub); line-height: 2; margin-bottom: 24px;
+}
+.footer-sns {
+  display: flex; gap: 16px; justify-content: center; margin-bottom: 24px;
+}
+.footer-sns a {
+  width: 40px; height: 40px; border-radius: 50%; background: white;
+  border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+  font-size: 16px; transition: all 0.3s;
+}
+.footer-sns a:hover { background: var(--gold); color: white; }
+.footer-copyright {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 11px; color: var(--sub); letter-spacing: 0.2em;
+}
+
+/* Floating Reservation */
+.floating-cta {
+  position: fixed; bottom: 24px; right: 24px; z-index: 99;
+  background: var(--gold); color: white;
+  padding: 16px 28px; border-radius: 50px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+  box-shadow: 0 8px 32px rgba(184,153,104,0.4);
+  display: flex; align-items: center; gap: 8px;
+}
+.floating-cta:hover { background: var(--ink); transform: translateY(-2px); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .strengths-grid { grid-template-columns: 1fr; }
+  .voice-grid { grid-template-columns: 1fr; }
+  .access-grid { grid-template-columns: 1fr; gap: 40px; }
+  .nav-link:not(.nav-cta) { display: none; }
+  section { padding: 80px 24px; }
+  .menu-item { grid-template-columns: 1fr; gap: 8px; }
+  .menu-price { text-align: left; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 120px 20px 60px; }
+  .floating-cta { font-size: 12px; padding: 14px 22px; bottom: 16px; right: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">整体 たしろ <span>Tashiro</span></div>
+  <div class="nav-links">
+    <a href="#concept" class="nav-link">想い</a>
+    <a href="#menu" class="nav-link">メニュー</a>
+    <a href="#voice" class="nav-link">お客様の声</a>
+    <a href="#access" class="nav-link">アクセス</a>
+    <a href="./faq.html" class="nav-link">FAQ</a>
+    <a href="#contact" class="nav-cta">ご予約</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">YAMANASHI'S FIRST SLEEP THERAPY</span>
+    <h1 class="hero-title">
+      眠れる体を、<br>
+      整体で<span class="accent">取り戻す</span>。
+      <span class="small">山梨初の睡眠特化型整体サロン</span>
+    </h1>
+    <p class="hero-lead">
+      「眠っても疲れが取れない」「夜中に何度も目が覚める」<br>
+      その不調、<strong>体の歪み・自律神経の乱れ</strong>が原因かもしれません。<br>
+      睡眠健康上級指導士×整体セラピストが、<strong>眠れる体</strong>づくりをサポートします。
+    </p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-line">📱 LINEで予約する</a>
+      <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-concept" id="concept">
+  <div class="concept-inner">
+    <span class="section-eyebrow">― OUR STORY ―</span>
+    <h2 class="serif" style="font-size: clamp(24px, 3.5vw, 36px); margin-bottom: 40px; line-height: 1.5; letter-spacing: 0.1em;">
+      頭痛で悩んだ日々が、<br>
+      この場所をつくりました。
+    </h2>
+    <p>
+      自分自身が長年、<strong>原因不明の頭痛</strong>に悩まされてきました。<br>
+      「検査では異常なし」と言われ続け、行き着いた先が<strong>睡眠の質</strong>でした。
+    </p>
+    <p>
+      眠りは、すべての不調の入り口。<br>
+      体の歪みを整え、血流・姿勢・呼吸を整えれば、<br>
+      <strong>自然と眠れる体</strong>に戻っていきます。
+    </p>
+    <p>
+      整体 たしろは、リラクゼーションサロンと整体院の真ん中。<br>
+      心と体の両方に、優しく寄り添います。
+    </p>
+  </div>
+</section>
+
+<section class="section-strengths">
+  <div class="section-title">
+    <span class="section-eyebrow">― WHY US ―</span>
+    <h2>選ばれる3つの理由</h2>
+  </div>
+  <div class="strengths-grid container">
+    <div class="strength-item">
+      <div class="strength-num">01</div>
+      <div class="strength-icon">🌙</div>
+      <h3 class="strength-title">睡眠健康上級指導士<br>×整体セラピスト</h3>
+      <p class="strength-desc">睡眠の専門資格と整体技術を併せ持つ、山梨でも数少ないセラピストが施術。「眠れる体」を専門にサポートします。</p>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">02</div>
+      <div class="strength-icon">🌿</div>
+      <h3 class="strength-title">血流・姿勢・呼吸の<br>3軸ケア</h3>
+      <p class="strength-desc">不調の根本原因にアプローチ。体の歪みを整え、血流を促し、自然な呼吸が戻ることで、自律神経のバランスが回復します。</p>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">03</div>
+      <div class="strength-icon">🤲</div>
+      <h3 class="strength-title">サロン×整体の<br>真ん中スタイル</h3>
+      <p class="strength-desc">「ゴリゴリ整体は苦手」「でもただのリラクゼーションでは物足りない」そんな方のためのちょうどいい施術スタイルです。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-menu" id="menu">
+  <div class="section-title">
+    <span class="section-eyebrow">― MENU ―</span>
+    <h2>メニュー・料金</h2>
+    <p>すべて完全予約制／税込価格</p>
+  </div>
+  <div class="menu-list container">
+
+    <div class="menu-item">
+      <div class="menu-info">
+        <h3>短縮整体 30分</h3>
+        <p>気になる部分をピンポイントでケア。お試しにも。</p>
+      </div>
+      <div class="menu-price">
+        <span class="menu-price-amount">¥3,000</span>
+        <span class="menu-price-note">税込</span>
+      </div>
+    </div>
+
+    <div class="menu-item featured">
+      <div class="menu-info">
+        <h3>通常整体 60分<span class="featured-tag">おすすめ</span></h3>
+        <p>全身のバランス調整・基本コース。睡眠の質改善に最適。</p>
+      </div>
+      <div class="menu-price">
+        <span class="menu-price-amount">¥4,800</span>
+        <span class="menu-price-note">初回 ¥5,800（税込）</span>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-info">
+        <h3>重点整体 90分</h3>
+        <p>不調が強い方向け。じっくり時間をかけて整えます。</p>
+      </div>
+      <div class="menu-price">
+        <span class="menu-price-amount">¥7,200</span>
+        <span class="menu-price-note">初回 ¥8,200（税込）</span>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-info">
+        <h3>月額メンテナンス（月1回・60分）</h3>
+        <p>定期ケアで不調を未然に予防。</p>
+      </div>
+      <div class="menu-price">
+        <span class="menu-price-amount">¥3,980</span>
+        <span class="menu-price-note">月額（税込）</span>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-info">
+        <h3>月額メンテナンス（月2回・60分）</h3>
+        <p>継続的に体を整えたい方向け。</p>
+      </div>
+      <div class="menu-price">
+        <span class="menu-price-amount">¥7,600</span>
+        <span class="menu-price-note">月額（税込）</span>
+      </div>
+    </div>
+
+  </div>
+  <p class="menu-note">
+    ※ オプションメニュー、コース変更などはご来店時にご相談ください<br>
+    ※ <a href="./service.html" style="color:var(--gold); border-bottom: 1px solid var(--gold);">サービス詳細はこちら</a>
+  </p>
+</section>
+
+<section class="section-voice" id="voice">
+  <div class="section-title">
+    <span class="section-eyebrow">― CUSTOMER VOICE ―</span>
+    <h2>お客様の声</h2>
+  </div>
+  <div class="voice-grid container">
+    <div class="voice-card">
+      <p class="voice-text">終わった後、体が軽くて姿勢まできれいに見えました。鏡を見て驚きました。</p>
+      <div class="voice-meta">― 50代女性 / 慢性肩こり</div>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">眠りが深くなって、朝の顔のむくみが違いました。続けたい施術です。</p>
+      <div class="voice-meta">― 40代女性 / 睡眠の質改善</div>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">毎回その日の不調に合わせてくれるのが安心です。何度通っても新鮮な発見があります。</p>
+      <div class="voice-meta">― 60代女性 / 自律神経・更年期不調</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-access" id="access">
+  <div class="section-title">
+    <span class="section-eyebrow">― ACCESS ―</span>
+    <h2>アクセス・店舗情報</h2>
+  </div>
+  <div class="access-grid container">
+    <div class="access-info">
+      <dl>
+        <dt>STORE NAME</dt>
+        <dd>整体 たしろ</dd>
+        <dt>ADDRESS</dt>
+        <dd>山梨県韮崎市<br>※詳細はご予約時にご案内いたします</dd>
+        <dt>OPEN</dt>
+        <dd>平日 10:00 - 19:00<br>土曜 10:00 - 18:00<br>定休日: 日曜・祝日</dd>
+        <dt>SERVICE AREA</dt>
+        <dd>韮崎市 / 南アルプス市 / 甲斐市 / 近隣市町村</dd>
+        <dt>RESERVATION</dt>
+        <dd>完全予約制（LINE 24時間受付 / 電話 営業時間内）</dd>
+      </dl>
+    </div>
+    <div class="access-map">
+      Googleマップ埋め込み予定<br>（住所確定後）
+    </div>
+  </div>
+</section>
+
+<section class="section-faq">
+  <div class="section-title">
+    <span class="section-eyebrow">― FAQ ―</span>
+    <h2>よくあるご質問</h2>
+  </div>
+  <div class="faq-list container">
+    <div class="faq-item">
+      <div class="faq-q">睡眠改善に本当に整体は効きますか？</div>
+      <div class="faq-a">体の歪みや筋肉の緊張は、自律神経の乱れに直結します。睡眠の質が改善するには、リラックスできる「副交感神経優位」の状態が必要です。整体で血流・姿勢・呼吸を整えることで、眠れる体に戻していきます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">どのくらい通えば変化を感じますか？</div>
+      <div class="faq-a">個人差はありますが、初回〜3回程度で「眠りが深くなった」というお声を多くいただきます。慢性的な不調の場合は月1〜2回の継続ケアをおすすめしています。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">男性でも利用できますか？</div>
+      <div class="faq-a">主に女性のお客様にご利用いただいておりますが、男性のご予約もお受けしております。お気軽にお問い合わせください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">予約方法を教えてください。</div>
+      <div class="faq-a">LINEまたはお電話にてご予約ください。LINEは24時間受付、電話は営業時間内のみ対応しております。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">服装はどうすればよいですか？</div>
+      <div class="faq-a">楽な服装でお越しください。施術着のご用意もございますので、お仕事帰りにもご利用いただけます。</div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 32px;">
+    <a href="./faq.html" style="color: var(--gold); font-size: 13px; letter-spacing: 0.1em; border-bottom: 1px solid var(--gold);">すべてのよくある質問を見る →</a>
+  </div>
+</section>
+
+<section class="section-cta" id="contact">
+  <div class="cta-inner">
+    <h2>
+      眠れる体を、<br>
+      取り戻しませんか。
+    </h2>
+    <p>
+      初めての方には、まず<strong>通常整体60分（初回¥5,800）</strong>をおすすめしております。<br>
+      ご不明点・ご相談は、お気軽にLINEまたはお電話でお問い合わせください。
+    </p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-line">📱 LINEで予約する</a>
+      <a href="tel:07064311677" class="btn btn-secondary" style="color:white; border-color:rgba(255,255,255,0.3);">📞 電話で予約する</a>
+    </div>
+    <div class="cta-tel">
+      <span class="cta-tel-num">070-6431-1677</span>
+      <span class="cta-tel-time">受付：平日 10:00-19:00 / 土 10:00-18:00</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-logo">整体 たしろ</div>
+  <div class="footer-info">
+    山梨県韮崎市 / 完全予約制<br>
+    睡眠特化型整体サロン
+  </div>
+  <div class="footer-sns">
+    <a href="#" aria-label="Instagram">📷</a>
+    <a href="#" aria-label="LINE">💬</a>
+    <a href="#" aria-label="Google Maps">📍</a>
+  </div>
+  <div class="footer-copyright">© 2026 整体 たしろ. All rights reserved.</div>
+</footer>
+
+<a href="#contact" class="floating-cta">
+  <span>📅</span>
+  <span>ご予約はこちら</span>
+</a>
+
+</body>
+</html>
