@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>早川まい | HP制作 月額¥9,980｜縛りなし・最短30分納品｜Claude Code活用</title>
+<meta name="description" content="個人事業主・小規模法人（工務店・塗装業など）向けのHP制作サービス。月額¥9,980（縛りなし）または一括¥98,000。Claude Code活用で完全オリジナル・テンプレ不使用。最短30分でデモ納品。14日間全額返金保証付き。">
+<meta property="og:title" content="早川まい | HP制作 月額¥9,980｜縛りなし">
+<meta property="og:description" content="月額¥9,980（縛りなし）または一括¥98,000。Claude Code活用・最短30分納品・14日返金保証">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0a0a0a;
+  --accent: #2d7e6e;
+  --accent-light: #5fa999;
+  --gold: #c9a978;
+  --sub: #555;
+  --line: #e8e6e0;
+  --bg: #ffffff;
+  --bg-soft: #f8faf9;
+  --bg-dark: #0a0a0a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', -apple-system, sans-serif; line-height: 1.85; color: var(--ink); background: var(--bg); font-weight: 400; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Top notice bar */
+.top-bar {
+  background: var(--ink); color: #fff; text-align: center;
+  padding: 10px 24px; font-size: 12px; letter-spacing: 0.08em;
+}
+.top-bar strong { color: var(--accent-light); }
+
+/* Nav */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(12px);
+  padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.nav-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.1em; }
+.nav-logo span { color: var(--accent); font-family: 'Cormorant Garamond', serif; font-style: italic; margin-left: 6px; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-link { font-size: 13px; letter-spacing: 0.1em; color: var(--sub); transition: color 0.3s; font-weight: 500; }
+.nav-link:hover { color: var(--accent); }
+.nav-cta { background: var(--accent); color: white; padding: 11px 24px; border-radius: 30px; font-size: 12px; letter-spacing: 0.1em; font-weight: 700; }
+.nav-cta:hover { background: var(--ink); }
+
+/* Hero */
+.hero {
+  padding: 120px 24px 100px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #f8faf9 0%, #fff 50%, #f0f7f4 100%);
+}
+.hero::before {
+  content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(45,126,110,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+.hero-eyebrow {
+  display: inline-block; padding: 8px 22px; background: rgba(255,255,255,0.7); border: 1px solid var(--line);
+  border-radius: 30px; font-family: 'Cormorant Garamond', serif; font-size: 12px;
+  letter-spacing: 0.4em; color: var(--accent); font-style: italic; margin-bottom: 32px;
+}
+.hero h1 {
+  font-size: clamp(36px, 6.5vw, 80px); font-weight: 900; line-height: 1.15; letter-spacing: -0.01em;
+  margin-bottom: 32px; color: var(--ink);
+}
+.hero h1 .accent { color: var(--accent); }
+.hero h1 .underline { background: linear-gradient(transparent 70%, rgba(45,126,110,0.25) 70%); padding: 0 4px; }
+.hero-lead {
+  font-size: 17px; line-height: 2.1; color: var(--sub); margin-bottom: 40px; max-width: 720px; margin-left: auto; margin-right: auto;
+}
+.hero-lead strong { color: var(--ink); font-weight: 700; }
+.hero-stats {
+  display: inline-flex; gap: 28px; padding: 20px 32px; background: white;
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  flex-wrap: wrap; justify-content: center;
+  margin-bottom: 40px;
+}
+.stat-item { text-align: left; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: var(--accent); line-height: 1; }
+.stat-label { font-size: 11px; color: var(--sub); margin-top: 4px; letter-spacing: 0.1em; }
+.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 18px 38px; border-radius: 50px; font-size: 14px; letter-spacing: 0.1em;
+  font-weight: 700; transition: all 0.3s;
+}
+.btn-primary { background: var(--accent); color: white; box-shadow: 0 8px 24px rgba(45,126,110,0.25); }
+.btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
+.btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.btn-secondary:hover { background: var(--ink); color: white; }
+
+/* Sections */
+section { padding: 120px 24px; }
+.section-title { text-align: center; margin-bottom: 72px; }
+.section-title .en {
+  display: block; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 13px; color: var(--accent); letter-spacing: 0.5em; margin-bottom: 14px;
+}
+.section-title h2 {
+  font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; letter-spacing: 0.1em; line-height: 1.4;
+  margin-bottom: 20px;
+}
+.section-title p { font-size: 15px; color: var(--sub); max-width: 700px; margin: 0 auto; line-height: 2; }
+
+/* Why */
+.section-why { background: var(--bg-soft); }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.why-card { background: white; padding: 36px 24px; border-radius: 14px; text-align: center; border: 1px solid var(--line); transition: all 0.3s; }
+.why-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); border-color: var(--accent); }
+.why-icon { font-size: 32px; margin-bottom: 14px; }
+.why-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 10px; line-height: 1.5; }
+.why-card p { font-size: 13px; color: var(--sub); line-height: 1.9; }
+
+/* Plans */
+.section-plans { background: white; }
+.plans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1000px; margin: 0 auto; }
+.plan {
+  position: relative; background: white; padding: 48px 36px; border-radius: 20px;
+  border: 2px solid var(--line); display: flex; flex-direction: column; transition: all 0.3s;
+}
+.plan:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
+.plan-recommended {
+  border-color: var(--accent); box-shadow: 0 16px 48px rgba(45,126,110,0.12);
+}
+.plan-badge {
+  position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: white; padding: 8px 20px; border-radius: 30px;
+  font-size: 11px; letter-spacing: 0.2em; font-weight: 700;
+}
+.plan-label { font-size: 11px; color: var(--accent); letter-spacing: 0.3em; font-weight: 700; margin-bottom: 12px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; }
+.plan h3 { font-size: 22px; font-weight: 900; margin-bottom: 16px; line-height: 1.4; }
+.plan-target { font-size: 13px; color: var(--sub); margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px dashed var(--line); }
+.plan-price { margin-bottom: 28px; }
+.plan-price-main {
+  font-family: 'Noto Sans JP', sans-serif; font-size: 44px; font-weight: 900; line-height: 1; color: var(--ink);
+}
+.plan-price-unit { font-size: 16px; font-weight: 500; color: var(--sub); margin-left: 6px; }
+.plan-price-tax { display: block; font-size: 11px; color: var(--sub); margin-top: 8px; }
+.plan-features { list-style: none; flex: 1; margin-bottom: 28px; }
+.plan-features li {
+  position: relative; padding: 11px 0 11px 28px; font-size: 13.5px; line-height: 1.7;
+  border-bottom: 1px dashed var(--line);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li::before {
+  content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 16px;
+}
+.plan-features li strong { color: var(--ink); font-weight: 700; }
+.plan-cta {
+  display: block; text-align: center; padding: 16px; border-radius: 30px;
+  font-size: 14px; letter-spacing: 0.08em; font-weight: 700; transition: all 0.3s;
+}
+.plan-recommended .plan-cta { background: var(--accent); color: white; }
+.plan-recommended .plan-cta:hover { background: var(--ink); }
+.plan:not(.plan-recommended) .plan-cta { background: var(--ink); color: white; }
+.plan:not(.plan-recommended) .plan-cta:hover { background: var(--accent); }
+
+/* Compare */
+.section-compare { background: var(--bg-soft); }
+.compare-table { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
+.compare-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; padding: 16px 24px; border-bottom: 1px solid var(--line); align-items: center; font-size: 13px; }
+.compare-row:last-child { border-bottom: none; }
+.compare-row.head { background: var(--ink); color: white; font-weight: 700; letter-spacing: 0.1em; font-size: 12px; }
+.compare-row.us { background: rgba(45,126,110,0.05); border-left: 4px solid var(--accent); }
+.compare-row.us .label { font-weight: 700; color: var(--accent); }
+.compare-row .label { font-weight: 700; }
+.compare-row .cell { text-align: center; }
+.compare-row .cell-good { color: var(--accent); font-weight: 700; }
+.compare-row .cell-bad { color: #999; }
+
+/* Flow */
+.section-flow { background: white; }
+.flow-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; max-width: 1100px; margin: 0 auto; }
+.flow-step { text-align: center; padding: 28px 16px; background: var(--bg-soft); border-radius: 14px; border: 1px solid var(--line); position: relative; }
+.flow-step.featured { background: linear-gradient(135deg, rgba(45,126,110,0.08), rgba(45,126,110,0.02)); border: 2px solid var(--accent); }
+.flow-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px; }
+.flow-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+.flow-desc { font-size: 11px; color: var(--sub); line-height: 1.7; }
+
+/* Samples */
+.section-samples { background: var(--bg-soft); }
+.samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.sample-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; text-decoration: none; color: var(--ink); }
+.sample-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+.sample-thumb { height: 160px; background: linear-gradient(135deg, #fafaf8 0%, #e8efeb 100%); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.sample-info { padding: 16px 20px; }
+.sample-genre { font-size: 11px; color: var(--accent); letter-spacing: 0.2em; font-weight: 700; margin-bottom: 4px; }
+.sample-title { font-size: 14px; font-weight: 700; }
+
+/* Target */
+.section-target { background: white; }
+.target-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.target-item { text-align: center; padding: 32px 20px; background: var(--bg-soft); border-radius: 14px; }
+.target-icon { font-size: 36px; margin-bottom: 12px; }
+.target-name { font-size: 14px; font-weight: 700; line-height: 1.6; }
+
+/* FAQ */
+.section-faq { background: var(--bg-soft); }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { background: white; margin-bottom: 14px; padding: 24px 30px; border-radius: 14px; border: 1px solid var(--line); }
+.faq-q { font-size: 15px; font-weight: 700; margin-bottom: 10px; padding-left: 32px; position: relative; }
+.faq-q::before { content: 'Q.'; position: absolute; left: 0; color: var(--accent); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; line-height: 0.9; }
+.faq-a { font-size: 13.5px; color: var(--sub); line-height: 1.9; padding-left: 32px; position: relative; }
+.faq-a::before { content: 'A.'; position: absolute; left: 0; color: var(--ink); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; line-height: 0.9; }
+
+/* CTA */
+.cta-section { background: linear-gradient(135deg, var(--ink) 0%, #1a1a1a 100%); color: white; text-align: center; }
+.cta-inner { max-width: 800px; margin: 0 auto; }
+.cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; line-height: 1.3; margin-bottom: 24px; color: white; }
+.cta-section h2 .accent { color: var(--accent-light); }
+.cta-section p { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 2; margin-bottom: 36px; }
+.cta-section .btn-primary { background: var(--accent); }
+.cta-section .btn-primary:hover { background: white; color: var(--ink); }
+
+/* Footer */
+.footer { background: white; padding: 50px 24px 36px; text-align: center; font-size: 12px; color: var(--sub); border-top: 1px solid var(--line); }
+.footer-links a { margin: 0 16px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-services { margin-bottom: 16px; font-size: 11px; letter-spacing: 0.1em; color: #999; }
+.footer-copyright { margin-top: 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 0.2em; font-size: 11px; }
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .plans-grid { grid-template-columns: 1fr; }
+  .flow-steps { grid-template-columns: repeat(2, 1fr); }
+  .samples-grid { grid-template-columns: repeat(2, 1fr); }
+  .target-list { grid-template-columns: 1fr; }
+  .compare-row { grid-template-columns: 1.5fr repeat(4, 1fr); font-size: 11px; padding: 12px 14px; }
+  .nav-link:not(.nav-cta) { display: none; }
+  section { padding: 80px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  ⚡ <strong>最短30分でデモ納品・縛りなし・14日間全額返金保証付き</strong>
+</div>
+
+<nav class="nav">
+  <div class="nav-logo">早川<span>mai</span></div>
+  <div class="nav-links">
+    <a href="#why" class="nav-link">特徴</a>
+    <a href="#plans" class="nav-link">プラン</a>
+    <a href="#compare" class="nav-link">他社比較</a>
+    <a href="#samples" class="nav-link">事例</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#contact" class="nav-cta">無料相談</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">CLAUDE CODE × WEB CREATION</span>
+    <h1>
+      HP制作、<br>
+      <span class="underline accent">縛りなし</span>で月¥9,980から。
+    </h1>
+    <p class="hero-lead">
+      個人事業主・小規模法人（工務店・塗装業・サロン等）向け。<br>
+      <strong>Claude Code活用で完全オリジナル制作・最短30分でデモ納品</strong>。<br>
+      月額プランも、買切プランも、用途に合わせて選べます。
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">¥9,980</div>
+        <div class="stat-label">月額〜（縛りなし）</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30分</div>
+        <div class="stat-label">最短デモ納品</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">14日</div>
+        <div class="stat-label">全額返金保証</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">オーダーメイド</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#plans" class="btn btn-primary">プランを見る →</a>
+      <a href="#contact" class="btn btn-secondary">無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-why" id="why">
+  <div class="section-title">
+    <span class="en">── WHY US ──</span>
+    <h2>選ばれる4つの特徴</h2>
+    <p>競合と何が違うのか、明確にお伝えします。</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🤖</div>
+      <h4>Claude Code活用<br>完全オリジナル制作</h4>
+      <p>テンプレート流用なし。最新AIで業種特化のオーダーメイドHPを制作します。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h4>最短30分<br>デモ納品</h4>
+      <p>ヒアリング後、最短30分でデモを提示。スピード感が違います。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔓</div>
+      <h4>縛りなし<br>いつでも解約可</h4>
+      <p>月額プランでも契約期間の縛りなし。納得いかなければ翌月解約OK。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🛡️</div>
+      <h4>14日間<br>全額返金保証</h4>
+      <p>HPが気に入らなければ着手前まで全額返金。リスクゼロで始められます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-plans" id="plans">
+  <div class="section-title">
+    <span class="en">── PRICING ──</span>
+    <h2>2 つ の プ ラ ン</h2>
+    <p>「月額で気軽に」「一括で買切」、用途に合わせて選べます。</p>
+  </div>
+  <div class="plans-grid container">
+
+    <div class="plan plan-recommended">
+      <span class="plan-badge">⭐ おすすめ</span>
+      <span class="plan-label">SUBSCRIPTION</span>
+      <h3>HP制作 サブスクプラン</h3>
+      <p class="plan-target">月額で気軽に始めたい方／契約縛りが嫌な方／継続的に修正したい方向け</p>
+      <div class="plan-price">
+        <span class="plan-price-main">¥9,980<span class="plan-price-unit">/月</span></span>
+        <span class="plan-price-tax">税込¥10,978・縛りなし</span>
+      </div>
+      <ul class="plan-features">
+        <li><strong>オリジナルHP制作</strong>（Claude Code活用・10ページまで）</li>
+        <li>サーバー・SSL運用すべて<strong>込み</strong></li>
+        <li><strong>月3回まで軽微修正無料</strong>（毎月リセット）</li>
+        <li>最短30分でデモ納品</li>
+        <li><strong>縛りなし・いつでも解約OK</strong>（翌月から有効）</li>
+        <li>14日間全額返金保証</li>
+      </ul>
+      <a href="#contact" class="plan-cta">サブスクプランで始める →</a>
+    </div>
+
+    <div class="plan">
+      <span class="plan-label">ONE-TIME</span>
+      <h3>HP制作 買切プラン</h3>
+      <p class="plan-target">一括で完成させたい方／月額管理が嫌な方／永久所有したい方向け</p>
+      <div class="plan-price">
+        <span class="plan-price-main">¥98,000</span>
+        <span class="plan-price-tax">税込¥107,800・一括前払い</span>
+      </div>
+      <ul class="plan-features">
+        <li><strong>オリジナルHP制作</strong>（Claude Code活用・10ページまで）</li>
+        <li><strong>ソース一式納品</strong>・永久所有</li>
+        <li>無料サーバー（GitHub Pages）設定</li>
+        <li>納品後の運用は<strong>客側で自由</strong></li>
+        <li>修正依頼は1回¥10,000で都度対応</li>
+        <li>14日間全額返金保証</li>
+      </ul>
+      <a href="#contact" class="plan-cta">買切プランで始める →</a>
+    </div>
+
+  </div>
+  <p style="text-align:center; max-width: 700px; margin: 48px auto 0; font-size: 13px; color: var(--sub); line-height: 1.9;">
+    ※ 独自ドメインは別途・年¥1,500（取得代行は+¥3,000で承ります）<br>
+    ※ サブスク制作中（10営業日以内）の解約は制作料¥30,000を請求<br>
+    ※ 反社・違法業種・MLM・出会い系のお申込みはお断りしております
+  </p>
+</section>
+
+<section class="section-compare" id="compare">
+  <div class="section-title">
+    <span class="en">── COMPETITOR COMPARISON ──</span>
+    <h2>他 社 比 較</h2>
+    <p>主要なサブスク型HP制作サービスとの比較です。</p>
+  </div>
+  <div class="compare-table">
+    <div class="compare-row head">
+      <div class="label">サービス</div>
+      <div class="cell">月額</div>
+      <div class="cell">縛り</div>
+      <div class="cell">制作タイプ</div>
+      <div class="cell">納期</div>
+    </div>
+    <div class="compare-row">
+      <div class="label">Kurumi</div>
+      <div class="cell">¥9,800</div>
+      <div class="cell cell-bad">12ヶ月</div>
+      <div class="cell">テンプレ</div>
+      <div class="cell">2-3週間</div>
+    </div>
+    <div class="compare-row">
+      <div class="label">プロパゲート</div>
+      <div class="cell">¥10,780</div>
+      <div class="cell cell-bad">12ヶ月</div>
+      <div class="cell">テンプレ</div>
+      <div class="cell">2-4週間</div>
+    </div>
+    <div class="compare-row">
+      <div class="label">ビズサイ</div>
+      <div class="cell">¥6,000〜</div>
+      <div class="cell cell-bad">6ヶ月</div>
+      <div class="cell">テンプレ</div>
+      <div class="cell">2-3週間</div>
+    </div>
+    <div class="compare-row us">
+      <div class="label">⭐ 早川まい</div>
+      <div class="cell cell-good">¥9,980</div>
+      <div class="cell cell-good">なし</div>
+      <div class="cell cell-good">完全オリジナル</div>
+      <div class="cell cell-good">最短30分</div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub);">
+    ※ 各社2026年4月時点公式情報。同水準サービス内容での比較。
+  </p>
+</section>
+
+<section class="section-flow">
+  <div class="section-title">
+    <span class="en">── 5 STEP FLOW ──</span>
+    <h2>制作フロー</h2>
+    <p>ヒアリング回答から最短30分でデモ納品まで。</p>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">01</div>
+      <div class="flow-title">ヒアリング</div>
+      <div class="flow-desc">フォーム回答（3-5分）</div>
+    </div>
+    <div class="flow-step featured">
+      <div class="flow-num">02</div>
+      <div class="flow-title">無料デモ作成</div>
+      <div class="flow-desc">Claude Codeで30分</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">03</div>
+      <div class="flow-title">無料相談MTG</div>
+      <div class="flow-desc">デモ確認＋微修正</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">04</div>
+      <div class="flow-title">ご契約・お支払い</div>
+      <div class="flow-desc">月額 or 買切</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">05</div>
+      <div class="flow-title">本制作・公開</div>
+      <div class="flow-desc">独自ドメイン設定</div>
+    </div>
+  </div>
+  <p style="text-align:center; max-width: 700px; margin: 36px auto 0; font-size: 13px; color: var(--sub);">
+    ステップ01〜03は<strong>完全無料</strong>。ご契約は内容にご納得いただいてから。
+  </p>
+</section>
+
+<section class="section-target">
+  <div class="section-title">
+    <span class="en">── FOR ──</span>
+    <h2>こんな方向けです</h2>
+  </div>
+  <div class="target-list">
+    <div class="target-item">
+      <div class="target-icon">🔨</div>
+      <div class="target-name">工務店・塗装業<br>建築・リフォーム</div>
+    </div>
+    <div class="target-item">
+      <div class="target-icon">💆</div>
+      <div class="target-name">美容・整体<br>サロン・治療院</div>
+    </div>
+    <div class="target-item">
+      <div class="target-icon">⚖️</div>
+      <div class="target-name">士業<br>税理士・行政書士等</div>
+    </div>
+    <div class="target-item">
+      <div class="target-icon">🍱</div>
+      <div class="target-name">飲食店<br>カフェ・レストラン</div>
+    </div>
+    <div class="target-item">
+      <div class="target-icon">🏢</div>
+      <div class="target-name">小規模法人<br>少人数の会社</div>
+    </div>
+    <div class="target-item">
+      <div class="target-icon">👤</div>
+      <div class="target-name">個人事業主<br>フリーランス</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-samples" id="samples">
+  <div class="section-title">
+    <span class="en">── DESIGN SAMPLES ──</span>
+    <h2>デ ザ イ ン サ ン プ ル</h2>
+    <p>Claude Code活用で制作したデモ・サンプルHP（8業種）</p>
+  </div>
+  <div class="samples-grid container">
+    <a href="./biyoushitsu_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">💇‍♀️</div><div class="sample-info"><div class="sample-genre">BEAUTY</div><div class="sample-title">美容室</div></div></a>
+    <a href="./nail_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">💅</div><div class="sample-info"><div class="sample-genre">NAIL</div><div class="sample-title">ネイルサロン</div></div></a>
+    <a href="./este_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">✨</div><div class="sample-info"><div class="sample-genre">ESTHETIC</div><div class="sample-title">エステサロン</div></div></a>
+    <a href="./seitai_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">🤲</div><div class="sample-info"><div class="sample-genre">CHIRO</div><div class="sample-title">整体院</div></div></a>
+    <a href="./cafe_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">☕</div><div class="sample-info"><div class="sample-genre">CAFE</div><div class="sample-title">カフェ</div></div></a>
+    <a href="./dental_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">🦷</div><div class="sample-info"><div class="sample-genre">DENTAL</div><div class="sample-title">歯科医院</div></div></a>
+    <a href="./shigyo_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">⚖️</div><div class="sample-info"><div class="sample-genre">PROFESSIONAL</div><div class="sample-title">士業</div></div></a>
+    <a href="./onsen_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">♨️</div><div class="sample-info"><div class="sample-genre">HOTEL</div><div class="sample-title">温泉・宿泊</div></div></a>
+  </div>
+  <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub); line-height: 1.9;">
+    ※ 上記はClaude Code活用で制作したデモ・サンプルです。実案件の事例は順次掲載予定。
+  </p>
+</section>
+
+<section class="section-faq" id="faq">
+  <div class="section-title">
+    <span class="en">── FAQ ──</span>
+    <h2>よくあるご質問</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">サブスクと買切、どちらがおすすめですか？</div>
+      <div class="faq-a">月々のキャッシュフローを抑えたい・継続して修正したい方は<strong>サブスク</strong>。一括で完成させて永久所有したい・予算ある方は<strong>買切</strong>がおすすめです。両方とも14日間返金保証付きです。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">本当に縛りなしで解約できますか？</div>
+      <div class="faq-a">はい。サブスクプランは契約期間の縛りなし、いつでも解約できます。解約は翌月から有効となります。違約金もありません。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">月3回の修正って毎月リセットですか？</div>
+      <div class="faq-a">はい、毎月リセットです（繰越なし）。1月に3回使い切っても、2月にまた3回まで無料で対応します。4回目以降は1回¥3,000で承ります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">最短30分とは？本当に？</div>
+      <div class="faq-a">Claude Code活用により、ヒアリングフォームへの回答内容から最短30分でデモを生成します。実際の制作着手後の本格的な微調整・最終公開までは2〜4週間程度かかります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ドメインはどうすれば？</div>
+      <div class="faq-a">独自ドメインは年¥1,500程度（お名前.com等）で別途必要です。お客様自身で取得していただくか、+¥3,000で取得代行を承ります。ドメイン名義はお客様となりますので、解約後も自由にご利用いただけます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">解約したらHPはどうなりますか？</div>
+      <div class="faq-a">サブスクプラン解約後、HPは閉鎖となります（運用継続にはサーバー管理が必要なため）。ソースコードご希望の方は+¥9,800で納品いたします。買切プランは最初からソース納品なので解約概念がありません。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">対応できない業種はありますか？</div>
+      <div class="faq-a">反社会的勢力・違法業種・MLM（マルチ商法）・出会い系などはお断りしております。それ以外の業種は基本的に対応可能です。</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <h2>
+      まずは<span class="accent">無料デモ</span>から、<br>
+      気軽に始めませんか？
+    </h2>
+    <p>
+      ヒアリングフォーム回答 → 30分でデモ作成 → 無料相談 → ご契約。<br>
+      ステップ3まではすべて無料。リスクゼロでお試しいただけます。
+    </p>
+    <div class="hero-cta">
+      <a href="https://forms.gle/GTzhbMZsLbSSNC148" target="_blank" class="btn btn-primary">📝 ヒアリングフォームに回答する</a>
+      <a href="https://timerex.net/s/hayakawa.mai_7f0d/bcfc9c9f" target="_blank" class="btn btn-secondary" style="color:white; border-color:rgba(255,255,255,0.3);">📅 無料相談を予約する</a>
+    </div>
+    <p style="margin-top: 28px; font-size: 12px; color: rgba(255,255,255,0.5);">
+      お問い合わせ: 0622hayakawamai@gmail.com
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-services">SERVICES: HP制作 / AIコンサル（応相談）</div>
+  <div class="footer-links">
+    <a href="./index.html">制作サンプル</a>
+    <a href="./tokushoho.html">特定商取引法</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+  <div class="footer-copyright">© 2026 早川まい. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
