@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>早川まい | HP制作 月額¥9,980｜縛りなし・完全オーダーメイド</title>
-<meta name="description" content="個人事業主・小規模法人（工務店・塗装業など）向けのHP制作サービス。月額¥9,980（縛りなし）または一括¥98,000。テンプレ不使用の完全オーダーメイド。14日間全額返金保証付き。">
+<meta name="description" content="HP制作サービス。月額¥9,980（縛りなし）または一括¥98,000。テンプレ不使用の完全オーダーメイド。14日間全額返金保証付き。">
 <meta property="og:title" content="早川まい | HP制作 月額¥9,980｜縛りなし">
 <meta property="og:description" content="月額¥9,980（縛りなし）または一括¥98,000。完全オーダーメイド・14日返金保証">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -186,13 +186,16 @@ section { padding: 120px 24px; }
 
 /* Samples */
 .section-samples { background: var(--bg-soft); }
-.samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
-.sample-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; text-decoration: none; color: var(--ink); }
-.sample-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
-.sample-thumb { height: 160px; background: linear-gradient(135deg, #fafaf8 0%, #e8efeb 100%); display: flex; align-items: center; justify-content: center; font-size: 48px; }
-.sample-info { padding: 16px 20px; }
-.sample-genre { font-size: 11px; color: var(--accent); letter-spacing: 0.2em; font-weight: 700; margin-bottom: 4px; }
-.sample-title { font-size: 14px; font-weight: 700; }
+.samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+.sample-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.08); transition: all 0.3s; text-decoration: none; color: var(--ink); cursor: pointer; }
+.sample-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+.sample-thumb { height: 220px; display: flex; align-items: center; justify-content: center; font-size: 80px; position: relative; }
+.sample-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.05) 100%); }
+.sample-info { padding: 20px 22px; }
+.sample-genre { font-size: 11px; color: var(--accent); letter-spacing: 0.25em; font-weight: 700; margin-bottom: 6px; }
+.sample-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.sample-cta { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.05em; }
+.sample-card:hover .sample-cta { color: var(--ink); }
 
 /* Target */
 .section-target { background: white; }
@@ -264,8 +267,8 @@ section { padding: 120px 24px; }
       <span class="underline accent">縛りなし</span>で月¥9,980から。
     </h1>
     <p class="hero-lead">
-      個人事業主・小規模法人（工務店・塗装業・サロン等）向け。<br>
       <strong>テンプレ不使用の完全オーダーメイド制作</strong>。<br>
+      業種・規模を問わず、貴社にぴったりのHPを1案件ずつお作りします。<br>
       月額プランも、買切プランも、用途に合わせて選べます。
     </p>
     <div class="hero-stats">
@@ -342,11 +345,20 @@ section { padding: 120px 24px; }
       </div>
       <ul class="plan-features">
         <li><strong>オリジナルHP制作</strong>（10ページまで・テンプレ不使用）</li>
-        <li>サーバー・SSL運用すべて<strong>込み</strong></li>
+        <li>公開に必要な<strong>基本セットすべて込み</strong>（運用・管理込み）</li>
         <li><strong>月3回まで軽微修正無料</strong>（毎月リセット）</li>
         <li><strong>縛りなし・いつでも解約OK</strong>（翌月から有効）</li>
         <li>14日間全額返金保証</li>
       </ul>
+      <div style="background:var(--bg-soft); border-radius:10px; padding:16px; margin-bottom:20px; font-size:12px; line-height:1.8;">
+        <strong style="color:var(--accent); display:block; margin-bottom:6px;">✨ こんな方におすすめ</strong>
+        ・初期費用を抑えて気軽に始めたい<br>
+        ・継続的に修正・改善していきたい<br>
+        ・契約縛りが嫌い<br><br>
+        <strong style="color:#999; display:block; margin-bottom:6px;">⚠️ 向いていない方</strong>
+        ・HP所有権を完全に持ちたい（解約後は閉鎖）<br>
+        ・修正をほぼしない予定の方
+      </div>
       <a href="#contact" class="plan-cta">サブスクプランで始める →</a>
     </div>
 
@@ -361,67 +373,76 @@ section { padding: 120px 24px; }
       <ul class="plan-features">
         <li><strong>オリジナルHP制作</strong>（10ページまで・テンプレ不使用）</li>
         <li><strong>ソース一式納品</strong>・永久所有</li>
-        <li>無料サーバー（GitHub Pages）設定</li>
-        <li>納品後の運用は<strong>客側で自由</strong></li>
+        <li>公開設定・運用環境のセットアップ込み</li>
+        <li>納品後の運用は<strong>お客様側で自由</strong></li>
         <li>修正依頼は1回¥10,000で都度対応</li>
         <li>14日間全額返金保証</li>
       </ul>
+      <div style="background:var(--bg-soft); border-radius:10px; padding:16px; margin-bottom:20px; font-size:12px; line-height:1.8;">
+        <strong style="color:var(--accent); display:block; margin-bottom:6px;">✨ こんな方におすすめ</strong>
+        ・予算があり一括で済ませたい<br>
+        ・HPを完全に自社所有したい<br>
+        ・月額管理が面倒<br><br>
+        <strong style="color:#999; display:block; margin-bottom:6px;">⚠️ 向いていない方</strong>
+        ・初期負担を避けたい<br>
+        ・頻繁に修正したい（4回目以降¥10,000/回）
+      </div>
       <a href="#contact" class="plan-cta">買切プランで始める →</a>
     </div>
 
   </div>
   <p style="text-align:center; max-width: 700px; margin: 48px auto 0; font-size: 13px; color: var(--sub); line-height: 1.9;">
     ※ 独自ドメインは別途・年¥1,500（取得代行は+¥3,000で承ります）<br>
-    ※ サブスク制作中（10営業日以内）の解約は制作料¥30,000を請求<br>
-    ※ 反社・違法業種・MLM・出会い系のお申込みはお断りしております
+    ※ サブスク制作中（10営業日以内）の解約は制作料¥30,000を請求
   </p>
 </section>
 
 <section class="section-compare" id="compare">
   <div class="section-title">
-    <span class="en">── COMPETITOR COMPARISON ──</span>
-    <h2>他 社 比 較</h2>
-    <p>主要なサブスク型HP制作サービスとの比較です。</p>
+    <span class="en">── SERVICE TYPE COMPARISON ──</span>
+    <h2>サ ー ビ ス 種 別 比 較</h2>
+    <p>HP制作サービスは大きく4タイプに分かれます。それぞれの特徴です。</p>
   </div>
   <div class="compare-table">
     <div class="compare-row head">
-      <div class="label">サービス</div>
-      <div class="cell">月額</div>
-      <div class="cell">縛り</div>
-      <div class="cell">制作タイプ</div>
-      <div class="cell">納期</div>
+      <div class="label">サービス種別</div>
+      <div class="cell">月額目安</div>
+      <div class="cell">契約縛り</div>
+      <div class="cell">制作スタイル</div>
+      <div class="cell">作業主体</div>
     </div>
     <div class="compare-row">
-      <div class="label">Kurumi</div>
-      <div class="cell">¥9,800</div>
-      <div class="cell cell-bad">12ヶ月</div>
-      <div class="cell">テンプレ</div>
-      <div class="cell">2-3週間</div>
+      <div class="label">自作型サービス</div>
+      <div class="cell">¥0〜3,000</div>
+      <div class="cell">なし</div>
+      <div class="cell">テンプレート</div>
+      <div class="cell cell-bad">自分で作る</div>
     </div>
     <div class="compare-row">
-      <div class="label">プロパゲート</div>
-      <div class="cell">¥10,780</div>
-      <div class="cell cell-bad">12ヶ月</div>
-      <div class="cell">テンプレ</div>
-      <div class="cell">2-4週間</div>
+      <div class="label">テンプレ型サブスク</div>
+      <div class="cell">¥6,000〜10,000</div>
+      <div class="cell cell-bad">6〜12ヶ月</div>
+      <div class="cell">テンプレ流用</div>
+      <div class="cell">プロが組む</div>
     </div>
     <div class="compare-row">
-      <div class="label">ビズサイ</div>
-      <div class="cell">¥6,000〜</div>
-      <div class="cell cell-bad">6ヶ月</div>
-      <div class="cell">テンプレ</div>
-      <div class="cell">2-3週間</div>
+      <div class="label">大手制作会社（買切）</div>
+      <div class="cell">¥0（保守別）</div>
+      <div class="cell">なし</div>
+      <div class="cell">オーダーメイド</div>
+      <div class="cell">プロが作る</div>
     </div>
     <div class="compare-row us">
       <div class="label">⭐ 早川まい</div>
       <div class="cell cell-good">¥9,980</div>
       <div class="cell cell-good">なし</div>
-      <div class="cell cell-good">完全オリジナル</div>
-      <div class="cell cell-good">柔軟対応</div>
+      <div class="cell cell-good">完全オーダーメイド</div>
+      <div class="cell cell-good">プロが作る</div>
     </div>
   </div>
-  <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub);">
-    ※ 各社2026年4月時点公式情報。同水準サービス内容での比較。
+  <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub); line-height:1.9;">
+    ※ 業界一般的な相場です（2026年4月時点）<br>
+    ※ サブスク型でオーダーメイド・縛りなしを両立しているサービスは少数です
   </p>
 </section>
 
@@ -463,39 +484,6 @@ section { padding: 120px 24px; }
   </p>
 </section>
 
-<section class="section-target">
-  <div class="section-title">
-    <span class="en">── FOR ──</span>
-    <h2>こんな方向けです</h2>
-  </div>
-  <div class="target-list">
-    <div class="target-item">
-      <div class="target-icon">🔨</div>
-      <div class="target-name">工務店・塗装業<br>建築・リフォーム</div>
-    </div>
-    <div class="target-item">
-      <div class="target-icon">💆</div>
-      <div class="target-name">美容・整体<br>サロン・治療院</div>
-    </div>
-    <div class="target-item">
-      <div class="target-icon">⚖️</div>
-      <div class="target-name">士業<br>税理士・行政書士等</div>
-    </div>
-    <div class="target-item">
-      <div class="target-icon">🍱</div>
-      <div class="target-name">飲食店<br>カフェ・レストラン</div>
-    </div>
-    <div class="target-item">
-      <div class="target-icon">🏢</div>
-      <div class="target-name">小規模法人<br>少人数の会社</div>
-    </div>
-    <div class="target-item">
-      <div class="target-icon">👤</div>
-      <div class="target-name">個人事業主<br>フリーランス</div>
-    </div>
-  </div>
-</section>
-
 <section class="section-samples" id="samples">
   <div class="section-title">
     <span class="en">── DESIGN SAMPLES ──</span>
@@ -503,14 +491,14 @@ section { padding: 120px 24px; }
     <p>業種別オーダーメイドのデモ・サンプルHP（8業種）</p>
   </div>
   <div class="samples-grid container">
-    <a href="./biyoushitsu_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">💇‍♀️</div><div class="sample-info"><div class="sample-genre">BEAUTY</div><div class="sample-title">美容室</div></div></a>
-    <a href="./nail_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">💅</div><div class="sample-info"><div class="sample-genre">NAIL</div><div class="sample-title">ネイルサロン</div></div></a>
-    <a href="./este_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">✨</div><div class="sample-info"><div class="sample-genre">ESTHETIC</div><div class="sample-title">エステサロン</div></div></a>
-    <a href="./seitai_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">🤲</div><div class="sample-info"><div class="sample-genre">CHIRO</div><div class="sample-title">整体院</div></div></a>
-    <a href="./cafe_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">☕</div><div class="sample-info"><div class="sample-genre">CAFE</div><div class="sample-title">カフェ</div></div></a>
-    <a href="./dental_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">🦷</div><div class="sample-info"><div class="sample-genre">DENTAL</div><div class="sample-title">歯科医院</div></div></a>
-    <a href="./shigyo_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">⚖️</div><div class="sample-info"><div class="sample-genre">PROFESSIONAL</div><div class="sample-title">士業</div></div></a>
-    <a href="./onsen_v2.html" target="_blank" class="sample-card"><div class="sample-thumb">♨️</div><div class="sample-info"><div class="sample-genre">HOTEL</div><div class="sample-title">温泉・宿泊</div></div></a>
+    <a href="./biyoushitsu_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);">💇‍♀️</div><div class="sample-info"><div class="sample-genre">BEAUTY SALON</div><div class="sample-title">美容室・ヘアサロン</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./nail_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);">💅</div><div class="sample-info"><div class="sample-genre">NAIL SALON</div><div class="sample-title">ネイルサロン</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./este_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">✨</div><div class="sample-info"><div class="sample-genre">ESTHETIC</div><div class="sample-title">エステサロン</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./seitai_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">🤲</div><div class="sample-info"><div class="sample-genre">CHIROPRACTIC</div><div class="sample-title">整体院・治療院</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./cafe_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);">☕</div><div class="sample-info"><div class="sample-genre">CAFE</div><div class="sample-title">カフェ・喫茶店</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./dental_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">🦷</div><div class="sample-info"><div class="sample-genre">DENTAL</div><div class="sample-title">歯科医院</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./shigyo_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);">⚖️</div><div class="sample-info"><div class="sample-genre">PROFESSIONAL</div><div class="sample-title">士業（弁護士・税理士）</div><div class="sample-cta">サンプルを見る →</div></div></a>
+    <a href="./onsen_v2.html" target="_blank" class="sample-card"><div class="sample-thumb" style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);">♨️</div><div class="sample-info"><div class="sample-genre">HOTEL</div><div class="sample-title">温泉・旅館</div><div class="sample-cta">サンプルを見る →</div></div></a>
   </div>
   <p style="text-align:center; margin-top: 36px; font-size: 12px; color: var(--sub); line-height: 1.9;">
     ※ 上記は業種別オーダーメイドのデモ・サンプルです。実案件の事例は順次掲載予定。
@@ -549,7 +537,7 @@ section { padding: 120px 24px; }
     </div>
     <div class="faq-item">
       <div class="faq-q">対応できない業種はありますか？</div>
-      <div class="faq-a">反社会的勢力・違法業種・MLM（マルチ商法）・出会い系などはお断りしております。それ以外の業種は基本的に対応可能です。</div>
+      <div class="faq-a">公序良俗に反する業種・法令違反となる事業はお断りしております。それ以外の業種は基本的に対応可能です。</div>
     </div>
   </div>
 </section>
