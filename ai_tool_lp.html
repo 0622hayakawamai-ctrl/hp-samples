@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>サロン向け「話すだけAIツール」 | 早川まい</title>
+<meta name="description" content="美容室・サロン向け。話す・選ぶだけでお客様返信・SNS投稿・口コミ返信・求人票を自動作成するAIツール。設定はこちら、御社は使うだけ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a1929;--accent:#cc785c;--paper:#fafaf8;--gray:#666;--border:rgba(10,25,41,0.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);line-height:1.9;background:var(--paper);letter-spacing:.03em;font-weight:300}
+a{color:inherit}
+.hero{padding:90px 24px 70px;background:linear-gradient(135deg,#0a1929 0%,#1e3a5f 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.hero .ey{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.4em;color:var(--accent);font-style:italic;margin-bottom:20px}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(26px,5vw,44px);font-weight:500;line-height:1.5;letter-spacing:.06em}
+.hero p{font-size:15px;opacity:.9;max-width:640px;margin:20px auto 0;line-height:2}
+.cta-btn{display:inline-block;margin-top:34px;background:var(--accent);color:#fff;padding:16px 40px;border-radius:40px;font-weight:500;letter-spacing:.1em;text-decoration:none;transition:.3s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(204,120,92,.35)}
+main{max-width:920px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.4em;color:var(--accent);font-style:italic;text-align:center;margin-bottom:12px}
+h2{font-family:'Noto Serif JP',serif;font-size:clamp(20px,3.5vw,28px);font-weight:500;text-align:center;letter-spacing:.06em;margin-bottom:14px}
+.lead{text-align:center;color:var(--gray);font-size:14px;max-width:640px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.f{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px;box-shadow:0 4px 22px rgba(10,25,41,.05)}
+.f .n{font-family:'Cormorant Garamond',serif;color:var(--accent);font-size:22px;font-style:italic;margin-bottom:10px}
+.f h3{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:500;margin-bottom:8px}
+.f p{font-size:13px;color:var(--gray);line-height:1.9}
+.pain{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 28px;max-width:640px;margin:0 auto}
+.pain li{list-style:none;padding:10px 0 10px 30px;position:relative;font-size:14px;border-bottom:1px dashed var(--border)}
+.pain li:last-child{border:none}
+.pain li:before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+.price{background:linear-gradient(135deg,#2c2622,#3d332c);color:#fff;border-radius:18px;padding:44px 30px;text-align:center;max-width:520px;margin:0 auto}
+.price .tag{font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.3em;color:var(--accent);font-size:13px}
+.price .amt{font-family:'Noto Serif JP',serif;font-size:44px;font-weight:600;margin:14px 0 4px}
+.price .amt small{font-size:16px;font-weight:400;opacity:.8}
+.price .sub{font-size:13px;opacity:.85;margin-bottom:22px}
+.price ul{text-align:left;max-width:340px;margin:0 auto 8px;font-size:13.5px}
+.price li{list-style:none;padding:7px 0 7px 26px;position:relative;opacity:.95}
+.price li:before{content:'✓';position:absolute;left:0;color:var(--accent)}
+.note{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 24px;max-width:640px;margin:26px auto 0;font-size:13px;color:var(--gray);line-height:1.9}
+.steps{max-width:560px;margin:0 auto}
+.step{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--border)}
+.step:last-child{border:none}
+.step .c{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic}
+.step .t{font-size:14px}
+.step .t b{font-weight:500}
+.foot{text-align:center;padding:40px 24px;font-size:12px;color:var(--gray);line-height:2}
+.foot a{color:var(--accent);text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="ey">SALON AI TOOL</div>
+  <h1>御社は、喋るだけ。<br>面倒な文章づくりは、AIに。</h1>
+  <p>お客様返信・SNS投稿・口コミ返信・求人票——サロンの「書くのが面倒」を、話す・選ぶだけで解決するAIツール。設定・導入サポートはこちらで行います。</p>
+  <a class="cta-btn" href="hearing_form.html">まずは相談する（無料）</a>
+</div>
+
+<main>
+  <section>
+    <div class="eyebrow">FEATURES</div>
+    <h2>できること</h2>
+    <p class="lead">スマホでもPCでも。話しかけるか選ぶだけで、そのまま使える文章ができます。</p>
+    <div class="grid">
+      <div class="f"><div class="n">01</div><h3>お客様への返信</h3><p>予約・問い合わせへの丁寧な返信文を数秒で。LINEにそのまま貼るだけ。</p></div>
+      <div class="f"><div class="n">02</div><h3>SNS投稿</h3><p>Instagram・LINEの投稿文をハッシュタグ付きで自動作成。ネタ切れ知らず。</p></div>
+      <div class="f"><div class="n">03</div><h3>口コミ返信</h3><p>高評価にも低評価にも、品位ある返信を。対応の手間と気疲れを削減。</p></div>
+      <div class="f"><div class="n">04</div><h3>求人票</h3><p>応募したくなるスタッフ募集文を作成。人手不足対策に。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">WHY</div>
+    <h2>こんなサロンにおすすめ</h2>
+    <ul class="pain">
+      <li>返信やSNSに毎日地味に時間を取られている</li>
+      <li>「AIって難しそう」で今まで手が出せなかった</li>
+      <li>高機能なツールは月額が高く、機能も多すぎる</li>
+      <li>設定や運用は誰かに任せたい（自分は使うだけがいい）</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="eyebrow">HOW IT WORKS</div>
+    <h2>使い方はかんたん</h2>
+    <div class="steps">
+      <div class="step"><div class="c">1</div><div class="t"><b>初回だけ設定</b>（AIキーの登録はこちらで代行します）</div></div>
+      <div class="step"><div class="c">2</div><div class="t"><b>作りたいものを選ぶ</b>（返信・SNS・口コミ・求人）</div></div>
+      <div class="step"><div class="c">3</div><div class="t"><b>内容を話す or 入力</b>して「作成」を押す</div></div>
+      <div class="step"><div class="c">4</div><div class="t"><b>コピーして使うだけ</b></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">PRICE</div>
+    <h2>料金</h2>
+    <div class="price">
+      <div class="tag">BUY ONCE</div>
+      <div class="amt">¥50,000<small>（買い切り）</small></div>
+      <div class="sub">初期設定・導入サポート込み</div>
+      <ul>
+        <li>ツール一式（御社サロン名入り）</li>
+        <li>AIキーの取得・設定を代行</li>
+        <li>使い方の動画・サポート付き</li>
+      </ul>
+    </div>
+    <div class="note">
+      <b>AI利用料について（明朗）</b><br>
+      文章生成のAI利用料は、御社ご自身のアカウントからお支払いいただく従量制です（当方が初期設定を代行します）。
+      おすすめ設定での目安は<b>1回あたり数十銭程度</b>。月に数百件ご利用でも<b>数百円〜千円前後</b>が目安です（利用量により変動します）。<br>
+      ※「キー管理もお任せしたい」場合は、API込みの月額おまかせプランもご用意できます。ご相談ください。
+    </div>
+  </section>
+
+  <section style="text-align:center;border:none">
+    <div class="eyebrow">GET STARTED</div>
+    <h2>まずは気軽にご相談ください</h2>
+    <p class="lead">「うちのサロンで使えるか知りたい」だけでも大歓迎です。</p>
+    <a class="cta-btn" href="hearing_form.html">無料で相談する</a>
+  </section>
+</main>
+
+<div class="foot">
+  早川まい ｜ AI × Web制作<br>
+  <a href="tokushoho.html">特定商取引法に基づく表記</a> ｜ <a href="privacy.html">プライバシーポリシー</a> ｜ <a href="index.html">制作サンプル一覧</a>
+</div>
+</body>
+</html>
